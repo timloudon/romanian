@@ -1,0 +1,27 @@
+{
+  "_comment": "Hand-maintained denylist of proper nouns, brand names, and stray non-Romanian tokens found in the hermitdave/FrequencyWords OpenSubtitles-derived list (content/2016/ro/ro_50k.txt). Seeded by manually scanning several rank bands across the full top-10k range, NOT an exhaustive audit — this is a subtitle corpus full of film/TV character names, so more contamination almost certainly remains unaudited. Extend opportunistically as more turns up; when in doubt, leave a word IN rather than risk excluding a real Romanian word.",
+  "words": [
+    "holt", "gardner", "ewing", "prue", "kelso", "marcel", "jung", "bundy", "newton", "cass",
+    "karan", "damien", "doris", "simone", "javier", "cohen", "crawford", "melinda", "trish",
+    "clarence", "liv", "tyson", "ozzy", "zoey", "abe", "juliet", "jeannie", "peterson", "wang",
+    "killerino", "patricia", "indiana", "cho", "kara", "obama", "mercedes", "sabrina", "elsa",
+    "esther", "marcy", "kitt", "gerald", "russ", "franco", "nash", "bender", "trent", "mccoy",
+    "luthor", "marissa", "sanchez", "priya", "silas", "celia", "michel", "dani", "doe",
+    "christy", "phillips", "addison", "otis", "crichton", "colby", "jamal", "gideon", "bryan",
+    "simmons", "ramon", "tessa", "mckay", "frost", "google", "tina", "lucas", "andrew", "bruce",
+    "marcus", "cole", "marty", "stan", "wilson", "rebecca", "catherine", "cooper", "edward",
+    "dylan", "ethan", "russell", "frankie", "boston", "johnson", "michelle", "dick", "brown",
+    "jay", "carlos", "casey", "eva", "jess", "ian", "angela", "carol", "margaret", "liz",
+    "gloria", "texas", "jessica", "sophie", "scully", "ruby", "facebook", "buddy", "dallas",
+    "sullivan", "bauer", "khan", "freddy", "doyle", "lawrence", "yang", "noah", "joy", "denny",
+    "singh", "joel", "hunt", "rocky", "beverly", "carson", "paula", "miguel", "daphne", "lenny",
+    "sheldon", "richie", "silver", "alexander", "lydia", "hall", "marge", "brennan", "sandra",
+    "stuart", "fox", "trevor", "clyde", "buffy", "thompson", "morris", "douglas", "baker", "eve",
+    "pierre", "austin", "sharon", "chad", "gwen", "sonny", "isaac", "hanna", "jeffrey", "young",
+    "roberts", "potter", "ling", "burt", "peyton", "gavin", "dorothy", "oz", "sasha", "mario",
+    "bruno", "stevens", "vivian", "nigel", "murray", "iris", "klaus", "keller", "arnold", "willy",
+    "chelsea", "maurice", "luca", "pedro", "rodney", "timmy", "wong", "joyce", "rusty", "lola",
+    "otto", "agnes", "dawson", "chang", "teresa", "courtney", "columbia", "county", "world",
+    "that", "this", "with", "just", "down", "lucky", "wolf", "tiger", "jr"
+  ]
+}
