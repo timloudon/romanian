@@ -4,7 +4,9 @@ let keepAliveAudio: HTMLAudioElement | null = null
  *  lock-screen controls — that's the element the OS actually treats as "now playing," not the
  *  short-lived speechSynthesis utterances used for the prompts/answers themselves. */
 export function getKeepAliveElement(): HTMLAudioElement {
-  keepAliveAudio ??= new Audio('/audio/silence-loop.wav')
+  // BASE_URL, not a root-absolute path: the app is served from a subpath on GitHub Pages, and
+  // Vite only rewrites asset URLs in HTML/imports — not string literals like this one.
+  keepAliveAudio ??= new Audio(`${import.meta.env.BASE_URL}audio/silence-loop.wav`)
   keepAliveAudio.loop = true
   return keepAliveAudio
 }

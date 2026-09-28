@@ -50,8 +50,8 @@ function playStaticFile(url: string, signal?: AbortSignal): Promise<void> {
  */
 export const audioResolver = {
   async speak(id: string, text: string, options: SpeakOptions): Promise<void> {
-    const fileUrl = staticAudioManifest[id]
-    if (fileUrl) return playStaticFile(fileUrl, options.signal)
+    const filePath = staticAudioManifest[id]
+    if (filePath) return playStaticFile(`${import.meta.env.BASE_URL}${filePath}`, options.signal)
     return speak(text, options)
   },
   stop(): void {
