@@ -16,11 +16,20 @@ interface TypedModePlayerProps {
   headerLabel: string
   completeMessage: string
   emptyMessage?: string
+  exitHref?: string
+  exitLabel?: string
 }
 
-/** The typed-mode player shared by a regular lesson and the Review queue — same engine, same
- *  UI, just a different queue and framing text. */
-export function TypedModePlayer({ queue, headerLabel, completeMessage, emptyMessage }: TypedModePlayerProps) {
+/** The typed-mode player shared by lessons, weekly topics, and the Review queue — same engine,
+ *  same UI, just a different queue and framing text. */
+export function TypedModePlayer({
+  queue,
+  headerLabel,
+  completeMessage,
+  emptyMessage,
+  exitHref = '/',
+  exitLabel = 'Back home',
+}: TypedModePlayerProps) {
   const { romanianVoice, status: voiceStatus } = useVoices()
   const { state, item, selfAssess, dispatch } = usePlayerMachine('typed', queue)
   const drill = item?.kind === 'drill' ? item.drill : undefined
@@ -40,8 +49,8 @@ export function TypedModePlayer({ queue, headerLabel, completeMessage, emptyMess
     return (
       <div className="p-6 text-center">
         <p className="text-ink-muted">{emptyMessage ?? 'Nothing here right now.'}</p>
-        <Link to="/" className="mt-4 inline-block text-flag-blue">
-          Back home
+        <Link to={exitHref} className="mt-4 inline-block text-flag-blue">
+          {exitLabel}
         </Link>
       </div>
     )
@@ -52,8 +61,8 @@ export function TypedModePlayer({ queue, headerLabel, completeMessage, emptyMess
       <div className="p-6 text-center">
         <h1 className="text-2xl font-bold text-flag-blue">All done</h1>
         <p className="mt-2 text-ink-muted">{completeMessage}</p>
-        <Link to="/" className="mt-6 inline-block rounded-xl bg-flag-blue px-6 py-3 font-semibold text-white">
-          Back home
+        <Link to={exitHref} className="mt-6 inline-block rounded-xl bg-flag-blue px-6 py-3 font-semibold text-white">
+          {exitLabel}
         </Link>
       </div>
     )

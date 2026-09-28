@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { TypedModePlayer } from '../components/lesson/TypedModePlayer'
-import { roCore } from '../content/courses/ro-core'
-import { allDrills, type SessionItem } from '../engine/session'
+import { dueQueue, type SessionItem } from '../engine/session'
 import { getDueItems } from '../storage/progressRepo'
 
 export function ReviewRoute() {
@@ -10,14 +9,7 @@ export function ReviewRoute() {
   useEffect(() => {
     let cancelled = false
     void getDueItems().then((due) => {
-      if (cancelled) return
-      const drillsById = new Map(allDrills(roCore).map((drill) => [drill.id, drill]))
-      const items: SessionItem[] = due
-        .filter((reviewState) => reviewState.kind === 'drill')
-        .map((reviewState) => drillsById.get(reviewState.id))
-        .filter((drill) => drill !== undefined)
-        .map((drill) => ({ kind: 'drill' as const, drill }))
-      setQueue(items)
+      if (!cancelled) setQueue(dueQueue(due))
     })
     return () => {
       cancelled = true

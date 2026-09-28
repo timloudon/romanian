@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { TypedModePlayer } from '../components/lesson/TypedModePlayer'
 import { roCore } from '../content/courses/ro-core'
 import type { Lesson } from '../content/types'
-import type { SessionItem } from '../engine/session'
+import { drillQueue } from '../engine/session'
 
 function findLesson(lessonId: string | undefined): Lesson | undefined {
   if (!lessonId) return undefined
@@ -17,10 +17,7 @@ function findLesson(lessonId: string | undefined): Lesson | undefined {
 export function LessonRoute() {
   const { lessonId } = useParams<{ lessonId: string }>()
   const lesson = useMemo(() => findLesson(lessonId), [lessonId])
-  const queue = useMemo<SessionItem[]>(
-    () => (lesson ? lesson.drills.map((drill) => ({ kind: 'drill' as const, drill })) : []),
-    [lesson],
-  )
+  const queue = useMemo(() => (lesson ? drillQueue(lesson.drills) : []), [lesson])
 
   if (!lesson) {
     return (

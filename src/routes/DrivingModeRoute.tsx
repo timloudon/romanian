@@ -1,33 +1,36 @@
-import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useMemo, useState } from 'react'
+import { Link, useSearchParams } from 'react-router-dom'
 import { startKeepAlive } from '../audio/silentKeepAlive'
 import { DrivingPlayer } from '../components/driving/DrivingPlayer'
-import { roCore } from '../content/courses/ro-core'
-import { allDrills, type SessionItem } from '../engine/session'
+import { findLifeTopic } from '../content/life'
+import { drillQueue, dueQueue, type SessionItem } from '../engine/session'
 import { getDueItems } from '../storage/progressRepo'
 import { getSettings, updateSettings } from '../storage/settingsRepo'
 
+/** Drives either a weekly topic's phrases (`?topic=<id>`, launched from the This week tab) or,
+ *  by default, whatever's due for review. */
 export function DrivingModeRoute() {
-  const [queue, setQueue] = useState<SessionItem[] | null>(null)
+  const [searchParams] = useSearchParams()
+  const topicId = searchParams.get('topic')
+  const topic = findLifeTopic(topicId)
+  const topicQueue = useMemo(() => (topic ? drillQueue(topic.drills) : null), [topic])
+  const [dueItems, setDueItems] = useState<SessionItem[] | null>(null)
   const [started, setStarted] = useState(false)
   const [noticeAcknowledged, setNoticeAcknowledged] = useState(() => getSettings().drivingNoticeAcknowledged)
 
   useEffect(() => {
+    if (topicId) return
     let cancelled = false
     void getDueItems().then((due) => {
-      if (cancelled) return
-      const drillsById = new Map(allDrills(roCore).map((drill) => [drill.id, drill]))
-      const items: SessionItem[] = due
-        .filter((reviewState) => reviewState.kind === 'drill')
-        .map((reviewState) => drillsById.get(reviewState.id))
-        .filter((drill) => drill !== undefined)
-        .map((drill) => ({ kind: 'drill' as const, drill }))
-      setQueue(items)
+      if (!cancelled) setDueItems(dueQueue(due))
     })
     return () => {
       cancelled = true
     }
-  }, [])
+  }, [topicId])
+
+  const queue = topicId ? topicQueue : dueItems
+  const exitHref = topicId ? '/week' : '/'
 
   function handleStart() {
     // Both calls must happen synchronously inside this gesture handler — that's what satisfies
@@ -42,6 +45,17 @@ export function DrivingModeRoute() {
     setStarted(true)
   }
 
+  if (topicId && !topic) {
+    return (
+      <div className="flex min-h-dvh flex-col items-center justify-center gap-4 bg-flag-blue p-6 text-center text-white">
+        <p>That topic doesn't exist.</p>
+        <Link to="/week" className="rounded-xl bg-white px-6 py-3 font-semibold text-flag-blue">
+          Back to This week
+        </Link>
+      </div>
+    )
+  }
+
   if (queue === null) {
     return (
       <div className="flex min-h-dvh items-center justify-center bg-flag-blue text-white">
@@ -54,7 +68,7 @@ export function DrivingModeRoute() {
     return (
       <div className="flex min-h-dvh flex-col items-center justify-center gap-4 bg-flag-blue p-6 text-center text-white">
         <p>Nothing due for review right now.</p>
-        <Link to="/" className="rounded-xl bg-white px-6 py-3 font-semibold text-flag-blue">
+        <Link to={exitHref} className="rounded-xl bg-white px-6 py-3 font-semibold text-flag-blue">
           Back home
         </Link>
       </div>
@@ -71,7 +85,9 @@ export function DrivingModeRoute() {
             Bluetooth controls only.
           </p>
         )}
-        <p className="text-lg">{queue.length} due for review</p>
+        <p className="text-lg">
+          {topic ? `${topic.emoji} ${topic.title} · ${queue.length} phrases` : `${queue.length} due for review`}
+        </p>
         <button
           type="button"
           onClick={handleStart}
@@ -79,12 +95,20 @@ export function DrivingModeRoute() {
         >
           {noticeAcknowledged ? 'Start' : 'I understand — start'}
         </button>
-        <Link to="/" className="text-white/70 underline">
+        <Link to={exitHref} className="text-white/70 underline">
           Cancel
         </Link>
       </div>
     )
   }
 
-  return <DrivingPlayer queue={queue} />
+  return (
+    <DrivingPlayer
+      queue={queue}
+      exitHref={exitHref}
+      completeMessage={
+        topic ? "That's this week's phrases — now go use them for real." : "You're through everything due for now."
+      }
+    />
+  )
 }

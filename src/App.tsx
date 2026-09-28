@@ -7,6 +7,8 @@ import { HomeRoute } from './routes/HomeRoute'
 import { LessonRoute } from './routes/LessonRoute'
 import { ReviewRoute } from './routes/ReviewRoute'
 import { SettingsRoute } from './routes/SettingsRoute'
+import { WeekPracticeRoute } from './routes/WeekPracticeRoute'
+import { WeekRoute } from './routes/WeekRoute'
 
 function App() {
   // Driving Mode is a deliberately chrome-free, full-viewport experience — no nav bar or
@@ -20,6 +22,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomeRoute />} />
           <Route path="/lesson/:lessonId" element={<LessonRoute />} />
+          <Route path="/week" element={<WeekRoute />} />
+          <Route path="/week/:topicId/practice" element={<WeekPracticeRoute />} />
           <Route path="/review" element={<ReviewRoute />} />
           <Route path="/driving" element={<DrivingModeRoute />} />
           <Route path="/settings" element={<SettingsRoute />} />

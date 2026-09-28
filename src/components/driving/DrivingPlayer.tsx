@@ -17,9 +17,11 @@ const RESPONSE_WINDOW_MS = 4000
 
 interface DrivingPlayerProps {
   queue: SessionItem[]
+  completeMessage: string
+  exitHref: string
 }
 
-export function DrivingPlayer({ queue }: DrivingPlayerProps) {
+export function DrivingPlayer({ queue, completeMessage, exitHref }: DrivingPlayerProps) {
   const [paused, setPaused] = useState(false)
   const { romanianVoice, englishVoice } = useVoices()
   const { state, item, selfAssess, dispatch } = usePlayerMachine('driving', queue)
@@ -97,9 +99,9 @@ export function DrivingPlayer({ queue }: DrivingPlayerProps) {
     return (
       <div className="flex min-h-dvh flex-col items-center justify-center gap-4 bg-flag-blue p-8 text-center text-white">
         <h1 className="text-2xl font-bold">All done</h1>
-        <p className="text-white/80">You're through everything due for now.</p>
-        <Link to="/" className="rounded-xl bg-white px-6 py-3 font-semibold text-flag-blue">
-          Back home
+        <p className="text-white/80">{completeMessage}</p>
+        <Link to={exitHref} className="rounded-xl bg-white px-6 py-3 font-semibold text-flag-blue">
+          Done
         </Link>
       </div>
     )
@@ -115,7 +117,7 @@ export function DrivingPlayer({ queue }: DrivingPlayerProps) {
       style={{ paddingTop: 'var(--safe-top)', paddingBottom: 'var(--safe-bottom)' }}
     >
       <div className="flex items-center justify-between px-6 pt-4">
-        <Link to="/" className="text-white/70">
+        <Link to={exitHref} className="text-white/70">
           Exit
         </Link>
         <p className="text-sm text-white/70">

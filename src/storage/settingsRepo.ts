@@ -7,6 +7,7 @@ const DEFAULT_SETTINGS: Settings = {
   installBannerDismissed: false,
   preferredVoiceURI: null,
   playbackRate: 1,
+  lifeFocus: null,
 }
 
 export function getSettings(): Settings {
