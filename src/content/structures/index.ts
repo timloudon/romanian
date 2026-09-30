@@ -250,6 +250,20 @@ export function nextStructureLesson(id: string): StructureLesson | undefined {
   return index === -1 ? undefined : structureLessons[index + 1]
 }
 
+/** A mixed hands-free run across a whole part: its drills shuffled, capped so a run stays a drive. */
+export function structurePartMix(part: StructurePart, size = 40): Drill[] {
+  const drills = structureLessons.filter((lesson) => lesson.part === part).flatMap(structureDrills)
+  for (let i = drills.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[drills[i], drills[j]] = [drills[j], drills[i]]
+  }
+  return drills.slice(0, size)
+}
+
+export function findStructurePart(name: string | null | undefined): StructurePart | undefined {
+  return structureParts.find((entry) => entry.part === name)?.part
+}
+
 /** The spoken build-up drills in a lesson — the part that goes into Review and Driving Mode. */
 export function structureDrills(lesson: StructureLesson): Drill[] {
   return lesson.steps.flatMap((step) => (step.kind === 'ladder' ? step.rungs : []))

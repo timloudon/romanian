@@ -93,7 +93,8 @@ device's voice. Voice by ElevenLabs.
     word-by-word "think it as" glosses, many-English-into-one-Romanian funnels, a
     yesterday/now/tomorrow dial, spoken Michel Thomas–style build-up ladders (self-assessed, and
     fed into Review), word-tile ordering and "spot the English habit" questions — ending in a
-    one-line shortcut, collected on a Shortcuts page. Lesson text marks Romanian as `{{…}}`,
+    one-line shortcut, collected on a Shortcuts page. Each part also offers a shuffled
+    40-phrase Driving Mode run (`/driving?part=<name>`). Lesson text marks Romanian as `{{…}}`,
     which renders tappable and is picked up by the audio generator.
 - Every drill id is globally unique and permanent — spaced-repetition progress is keyed off it.
   `src/content/content.test.ts` enforces uniqueness; anything that resolves drills by id goes

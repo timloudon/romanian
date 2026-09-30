@@ -76,6 +76,12 @@ export function StructuresRoute() {
               </span>
             </h2>
             <p className="text-sm text-ink-muted">{blurb}</p>
+            <Link
+              to={`/driving?part=${encodeURIComponent(part)}`}
+              className="mt-2 inline-block text-sm font-semibold text-flag-blue"
+            >
+              🚗 Drive with this part, mixed
+            </Link>
             <div className="mt-3 flex flex-col gap-2">
               {lessons.map((lesson) => (
                 <Link
