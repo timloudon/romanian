@@ -1250,3 +1250,66 @@ export const emphasisWords: StructureLesson = {
   shortcut: 'Chiar = really / actually / even / right (now). Tocmai = just / precisely. Și = too, even. Spoken că = because: Hai, că întârziem!',
   useItToday: 'Hurry the family along today with "…, că întârziem!"',
 }
+
+export const signs: StructureLesson = {
+  id: 's-signs',
+  part: 'Sounding natural',
+  title: 'Reading signs and labels',
+  tagline: 'Împingeți / Trageți — the polite "you all" on every door.',
+  shift: {
+    english: 'English signs are short commands and nouns: Push, Pull, Exit, No entry.',
+    romanian: 'Romanian signs use the polite -ți command — {{Împingeți}}, {{Trageți}} — or a single noun: {{Intrare}}, {{Ieșire}}, {{Interzis}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Doors and shops',
+      body: [
+        '{{Împingeți}} — push · {{Trageți}} — pull · {{Intrare}} — entrance · {{Ieșire}} — exit · {{Deschis}} — open · {{Închis}} — closed',
+        '{{Program}} — opening hours · {{Casa}} — checkout · {{Toaletă}} · {{Bărbați}} / {{Femei}} — men / women',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Warnings',
+      body: [
+        '{{Atenție!}} — caution · {{Interzis}} — forbidden · {{Fumatul interzis}} — no smoking · {{Accesul interzis}} — no entry',
+        '{{Câine rău}} — beware of the dog ("bad dog", on half the gates in Romania) · {{Proaspăt vopsit}} — wet paint ("freshly painted")',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Shops and roads',
+      body: [
+        '{{Reduceri}} — sale · {{Ofertă}} — offer · {{Farmacie non-stop}} — 24-hour pharmacy · {{Parcare}} — parking · {{Ocolire}} — diversion · {{Drum închis}} — road closed',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Read the sign',
+      intro: 'Say the sign aloud from its English meaning.',
+      rungs: [
+        { id: 's98-01', prompt: '(door sign) Push.', answer: 'Împingeți.' },
+        { id: 's98-02', prompt: '(door sign) Pull.', answer: 'Trageți.' },
+        { id: 's98-03', prompt: 'Entrance.', answer: 'Intrare.' },
+        { id: 's98-04', prompt: 'Exit.', answer: 'Ieșire.' },
+        { id: 's98-05', prompt: 'Closed.', answer: 'Închis.' },
+        { id: 's98-06', prompt: 'Opening hours.', answer: 'Program.' },
+        { id: 's98-07', prompt: 'No smoking.', answer: 'Fumatul interzis.' },
+        { id: 's98-08', prompt: 'No entry.', answer: 'Accesul interzis.' },
+        { id: 's98-09', prompt: 'Beware of the dog.', answer: 'Câine rău.' },
+        { id: 's98-10', prompt: 'Wet paint.', answer: 'Proaspăt vopsit.' },
+        { id: 's98-11', prompt: 'Sale.', answer: 'Reduceri.' },
+        { id: 's98-12', prompt: 'Diversion.', answer: 'Ocolire.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: 'A sign on a gate says "Câine rău". It means…',
+      options: [{ text: 'Naughty dog' }, { text: 'Beware of the dog', correct: true }, { text: 'Dog for sale' }],
+      explanation: 'Literally "bad dog" — the standard warning on gates.',
+    },
+  ],
+  shortcut: 'Împingeți = push, trageți = pull. Intrare / ieșire. Deschis / închis. Interzis = forbidden. Câine rău = beware of the dog.',
+  useItToday: 'Next time you\'re in Romania, read every sign you pass out loud.',
+}

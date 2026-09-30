@@ -3,6 +3,7 @@ import { arriving } from './topics/arriving'
 import { bedtimeAndMornings } from './topics/bedtime-and-mornings'
 import { bigFeelings } from './topics/big-feelings'
 import { celebrations } from './topics/celebrations'
+import { clothes } from './topics/clothes'
 import { disagreeing } from './topics/disagreeing'
 import { doctor } from './topics/doctor'
 import { familyHome } from './topics/family-home'
@@ -18,9 +19,11 @@ import { market } from './topics/market'
 import { mealtimes } from './topics/mealtimes'
 import { nursery } from './topics/nursery'
 import { plans } from './topics/plans'
+import { playing } from './topics/playing'
 import { pottyAndBath } from './topics/potty-and-bath'
 import { realConversations } from './topics/real-conversations'
 import { romanianFood } from './topics/romanian-food'
+import { storiesAndSongs } from './topics/stories-and-songs'
 import { talkingToHim } from './topics/talking-to-him'
 import { unwell } from './topics/unwell'
 import { weather } from './topics/weather'
@@ -32,9 +35,12 @@ import type { LifeTopic } from './types'
 export const lifeTopics: LifeTopic[] = [
   hisDay,
   talkingToHim,
+  playing,
+  storiesAndSongs,
   holidays,
   arriving,
   bedtimeAndMornings,
+  clothes,
   justUs,
   realConversations,
   grandparents,
