@@ -70,6 +70,7 @@ export const unit17: Unit = {
           id: 'u17-l02-d04',
           prompt: 'We should have left earlier.',
           answer: 'Trebuia să plecăm mai devreme.',
+          acceptedAlternates: ['Ar fi trebuit să plecăm mai devreme'],
           teachingNote: '"Trebuia să" is the everyday "should have."',
         },
         {

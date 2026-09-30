@@ -69,6 +69,7 @@ export const aroundTheHouse: LifeTopic = {
       id: 'life-house-12',
       prompt: "I'm going to bed.",
       answer: 'Mă duc la culcare.',
+      acceptedAlternates: ['Mă culc'],
     },
     {
       id: 'life-house-13',

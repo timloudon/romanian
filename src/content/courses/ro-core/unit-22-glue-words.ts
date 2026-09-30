@@ -41,7 +41,7 @@ export const unit22: Unit = {
           id: 'u22-l01-d06',
           prompt: 'Of course!',
           answer: 'Sigur!',
-          acceptedAlternates: ['Desigur!'],
+          acceptedAlternates: ['Desigur!', 'Normal'],
         },
         {
           id: 'u22-l01-d07',
@@ -102,12 +102,14 @@ export const unit22: Unit = {
           id: 'u22-l02-d06',
           prompt: 'Nobody knows.',
           answer: 'Nimeni nu știe.',
+          acceptedAlternates: ['Nu știe nimeni'],
           teachingNote: '"Nimeni" still needs its "nu."',
         },
         {
           id: 'u22-l02-d07',
           prompt: 'Right away!',
           answer: 'Imediat!',
+          acceptedAlternates: ['Pe loc'],
         },
         {
           id: 'u22-l02-d08',

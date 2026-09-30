@@ -54,6 +54,7 @@ export const feelings: LifeTopic = {
       id: 'life-feelings-09',
       prompt: "Don't worry.",
       answer: 'Nu-ți face griji.',
+      acceptedAlternates: ['Fii fără grijă'],
     },
     {
       id: 'life-feelings-10',

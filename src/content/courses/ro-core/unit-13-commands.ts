@@ -33,12 +33,14 @@ export const unit13: Unit = {
           id: 'u13-l01-d04',
           prompt: 'Look!',
           answer: 'Uită-te!',
+          acceptedAlternates: ['Uite'],
           teachingNote: 'The same flip: "te uiți" becomes "uită-te."',
         },
         {
           id: 'u13-l01-d05',
           prompt: 'Sit down!',
           answer: 'Stai jos!',
+          acceptedAlternates: ['Așază-te'],
           teachingNote: 'Literally "stay down" — "jos" is down, "sus" is up.',
         },
         {
@@ -88,6 +90,7 @@ export const unit13: Unit = {
           id: 'u13-l02-d04',
           prompt: "Don't worry.",
           answer: 'Nu-ți face griji.',
+          acceptedAlternates: ['Fii fără grijă'],
         },
         {
           id: 'u13-l02-d05',

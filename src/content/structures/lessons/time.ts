@@ -98,7 +98,7 @@ export const past: StructureLesson = {
       intro: 'Mixing this lesson with the ones before it. Take your time building each one.',
       rungs: [
         { id: 's06-13', prompt: 'We went to the seaside.', answer: 'Am fost la mare.' },
-        { id: 's06-14', prompt: 'It was lovely.', answer: 'A fost frumos.', teachingNote: 'Looking back on the whole thing — a fost.' },
+        { id: 's06-14', prompt: '(looking back on the day) It was lovely.', answer: 'A fost frumos.', teachingNote: 'Looking back on the whole thing — a fost.' },
         { id: 's06-15', prompt: 'I forgot.', answer: 'Am uitat.' },
         { id: 's06-16', prompt: 'What did you say?', answer: 'Ce ai zis?' },
         { id: 's06-17', prompt: 'I haven\'t finished.', answer: 'N-am terminat.' },
@@ -188,7 +188,7 @@ export const future: StructureLesson = {
       kind: 'ladder',
       title: 'Build it up',
       rungs: [
-        { id: 's07-01', prompt: "I'll call you.", answer: 'O să te sun.', hint: 'te = you, before the verb' },
+        { id: 's07-01', prompt: "I'll call you.", answer: 'O să te sun.', acceptedAlternates: ['Te sun'], hint: 'te = you, before the verb' },
         { id: 's07-02', prompt: "I'll call you tonight.", answer: 'O să te sun diseară.' },
         { id: 's07-03', prompt: "It's going to rain.", answer: 'O să plouă.' },
         {
@@ -433,7 +433,7 @@ export const usedTo: StructureLesson = {
           answer: 'Voiam să-ți spun ceva.',
           teachingNote: 'Voiam is softer than am vrut — like English "I was wanting to…".',
         },
-        { id: 's09-08', prompt: 'It was lovely.', answer: 'Era frumos.' },
+        { id: 's09-08', prompt: '(setting the scene) It was lovely.', answer: 'Era frumos.' },
         { id: 's09-09', prompt: "I didn't know.", answer: 'Nu știam.' },
         {
           id: 's09-10',

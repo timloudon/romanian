@@ -68,6 +68,7 @@ export const unit01: Unit = {
           id: 'u01-l02-d02',
           prompt: 'I have to go.',
           answer: 'Trebuie să merg.',
+          acceptedAlternates: ['Trebuie să plec'],
           teachingNote: '"Trebuie" never changes form — it\'s the same word whether it\'s "I have to," "you have to," or "she has to." One less thing to conjugate.',
           introduces: [{ lemma: 'trebui', pos: 'verb', freqRank: 37 }],
         },

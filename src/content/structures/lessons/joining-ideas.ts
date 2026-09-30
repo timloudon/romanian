@@ -81,7 +81,7 @@ export const commands: StructureLesson = {
       title: 'Mix it up',
       intro: 'Mixing this lesson with the ones before it. Take your time building each one.',
       rungs: [
-        { id: 's16-12', prompt: 'Look!', answer: 'Uite!' },
+        { id: 's16-12', prompt: 'Look!', answer: 'Uite!', acceptedAlternates: ['Uită-te'] },
         { id: 's16-13', prompt: 'Look at me.', answer: 'Uită-te la mine.' },
         { id: 's16-14', prompt: 'Don\'t be scared.', answer: 'Nu-ți fie frică.', teachingNote: 'The "to you it\'s fear" shape, as a command.' },
         { id: 's16-15', prompt: 'Hold my hand.', answer: 'Ține-mă de mână.' },
@@ -158,7 +158,7 @@ export const neverDropThat: StructureLesson = {
           answer: 'Cred că da.',
           teachingNote: '"I think that yes." And "I don\'t think so" is "I think that no".',
         },
-        { id: 's17-02', prompt: "I don't think so.", answer: 'Cred că nu.' },
+        { id: 's17-02', prompt: "I don't think so.", answer: 'Cred că nu.', acceptedAlternates: ['Nu cred'] },
         { id: 's17-03', prompt: "I think he's asleep.", answer: 'Cred că doarme.' },
         { id: 's17-04', prompt: "I know it's hard.", answer: 'Știu că e greu.' },
         { id: 's17-05', prompt: "I hope you're well.", answer: 'Sper că ești bine.' },

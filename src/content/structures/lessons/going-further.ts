@@ -123,7 +123,7 @@ export const wouldHave: StructureLesson = {
         { id: 's25-03', prompt: 'It would have been better.', answer: 'Ar fi fost mai bine.' },
         { id: 's25-04', prompt: 'I could have helped you.', answer: 'Aș fi putut să te ajut.' },
         { id: 's25-05', prompt: 'You should have told me.', answer: 'Ar fi trebuit să-mi spui.' },
-        { id: 's25-06', prompt: 'We should have left earlier.', answer: 'Ar fi trebuit să plecăm mai devreme.' },
+        { id: 's25-06', prompt: 'We should have left earlier.', answer: 'Ar fi trebuit să plecăm mai devreme.', acceptedAlternates: ['Trebuia să plecăm mai devreme'] },
         {
           id: 's25-07',
           prompt: "If I'd known, I'd have come.",

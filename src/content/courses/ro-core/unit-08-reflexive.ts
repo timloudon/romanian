@@ -62,6 +62,7 @@ export const unit08: Unit = {
           id: 'u08-l02-d03',
           prompt: "What's your name?",
           answer: 'Cum te numești?',
+          acceptedAlternates: ['Cum te cheamă'],
         },
         {
           id: 'u08-l02-d04',

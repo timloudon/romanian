@@ -110,6 +110,7 @@ export const talkingToHim: LifeTopic = {
       id: 'life-talking-20',
       prompt: 'Do you want some water?',
       answer: 'Vrei apă?',
+      acceptedAlternates: ['Vrei niște apă'],
     },
     {
       id: 'life-talking-21',

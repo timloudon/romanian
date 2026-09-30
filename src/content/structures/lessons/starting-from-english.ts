@@ -289,7 +289,7 @@ export const endings: StructureLesson = {
       intro: 'Same word, different person. Listen for the end.',
       rungs: [
         { id: 's03-01', prompt: 'I want coffee.', answer: 'Vreau cafea.' },
-        { id: 's03-02', prompt: 'Do you want coffee?', answer: 'Vrei cafea?', hint: '-i = you' },
+        { id: 's03-02', prompt: 'Do you want coffee?', answer: 'Vrei cafea?', acceptedAlternates: ['Vrei o cafea'], hint: '-i = you' },
         { id: 's03-03', prompt: 'We want coffee.', answer: 'Vrem cafea.', hint: '-m = we' },
         {
           id: 's03-04',
@@ -401,7 +401,7 @@ export const saBridge: StructureLesson = {
         { id: 's04-01', prompt: 'I want to sleep.', answer: 'Vreau să dorm.' },
         { id: 's04-02', prompt: 'I want to sleep a bit.', answer: 'Vreau să dorm puțin.', hint: 'puțin = a bit' },
         { id: 's04-03', prompt: "I can't sleep.", answer: 'Nu pot să dorm.' },
-        { id: 's04-04', prompt: 'I have to go.', answer: 'Trebuie să plec.' },
+        { id: 's04-04', prompt: 'I have to go.', answer: 'Trebuie să plec.', acceptedAlternates: ['Trebuie să merg'] },
         {
           id: 's04-05',
           prompt: 'You have to go?',
@@ -505,7 +505,7 @@ export const doubleNegatives: StructureLesson = {
       rungs: [
         { id: 's05-01', prompt: "I don't want anything.", answer: 'Nu vreau nimic.' },
         { id: 's05-02', prompt: "I don't understand anything.", answer: 'Nu înțeleg nimic.' },
-        { id: 's05-03', prompt: 'Nobody knows.', answer: 'Nu știe nimeni.' },
+        { id: 's05-03', prompt: 'Nobody knows.', answer: 'Nu știe nimeni.', acceptedAlternates: ['Nimeni nu știe'] },
         { id: 's05-04', prompt: "I'm not going anywhere.", answer: 'Nu merg nicăieri.' },
         { id: 's05-05', prompt: 'He never sleeps!', answer: 'Nu doarme niciodată!' },
         { id: 's05-06', prompt: 'Me neither.', answer: 'Nici eu.' },
@@ -619,6 +619,7 @@ export const questions: StructureLesson = {
           id: 's18-12',
           prompt: 'How do you say it in Romanian?',
           answer: 'Cum se spune în română?',
+          acceptedAlternates: ['Cum se zice în română'],
           teachingNote: '"How does one say" — the handy se, which has its own lesson later.',
         },
         { id: 's18-13', prompt: "(answering \"Do you want some?\") Yes, I do.", answer: 'Da, vreau.' },
@@ -934,7 +935,7 @@ export const verbPairs: StructureLesson = {
       title: 'Pick the right verb',
       rungs: [
         { id: 's54-01', prompt: 'Tell me what happened.', answer: 'Spune-mi ce s-a întâmplat.' },
-        { id: 's54-02', prompt: 'What do you think?', answer: 'Ce zici?' },
+        { id: 's54-02', prompt: 'What do you think?', answer: 'Ce zici?', acceptedAlternates: ['Ce crezi'] },
         { id: 's54-03', prompt: 'He didn\'t say anything.', answer: 'N-a zis nimic.' },
         { id: 's54-04', prompt: 'Look at this!', answer: 'Uită-te la asta!' },
         { id: 's54-05', prompt: 'I\'m watching a film.', answer: 'Mă uit la un film.' },
@@ -1073,7 +1074,7 @@ export const learnerTools: StructureLesson = {
         { id: 's74-03', prompt: 'I didn\'t understand.', answer: 'N-am înțeles.' },
         { id: 's74-04', prompt: 'What do you mean?', answer: 'Adică?' },
         { id: 's74-05', prompt: 'What does that mean?', answer: 'Ce înseamnă asta?' },
-        { id: 's74-06', prompt: 'How do you say it in Romanian?', answer: 'Cum se zice în română?' },
+        { id: 's74-06', prompt: 'How do you say it in Romanian?', answer: 'Cum se zice în română?', acceptedAlternates: ['Cum se spune în română'] },
         { id: 's74-07', prompt: 'What\'s this called?', answer: 'Cum se numește asta?' },
         { id: 's74-08', prompt: 'Did I get that right?', answer: 'Am înțeles bine?' },
         { id: 's74-09', prompt: 'You mean he\'s not coming?', answer: 'Vrei să zici că nu vine?' },

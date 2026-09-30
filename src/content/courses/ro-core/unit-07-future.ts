@@ -40,6 +40,7 @@ export const unit07: Unit = {
           id: 'u07-l01-d05',
           prompt: "We'll see.",
           answer: 'O să vedem.',
+          acceptedAlternates: ['Vom vedea'],
         },
       ],
     },

@@ -60,6 +60,7 @@ export const unit15: Unit = {
           id: 'u15-l01-d09',
           prompt: 'What do you think?',
           answer: 'Ce crezi?',
+          acceptedAlternates: ['Ce zici'],
         },
       ],
     },

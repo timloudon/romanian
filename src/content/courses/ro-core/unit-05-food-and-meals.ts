@@ -54,6 +54,7 @@ export const unit05: Unit = {
           id: 'u05-l02-d01',
           prompt: 'Do you want coffee?',
           answer: 'Vrei o cafea?',
+          acceptedAlternates: ['Vrei cafea'],
         },
         {
           id: 'u05-l02-d02',

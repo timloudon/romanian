@@ -730,7 +730,7 @@ export const someAny: StructureLesson = {
       title: 'How much, how many',
       rungs: [
         { id: 's43-01', prompt: 'Some bread.', answer: 'Niște pâine.' },
-        { id: 's43-02', prompt: 'Do you want some water?', answer: 'Vrei niște apă?' },
+        { id: 's43-02', prompt: 'Do you want some water?', answer: 'Vrei niște apă?', acceptedAlternates: ['Vrei apă'] },
         { id: 's43-03', prompt: 'Have you got any money?', answer: 'Ai bani?' },
         { id: 's43-04', prompt: 'We haven\'t got any milk.', answer: 'Nu avem lapte.' },
         { id: 's43-05', prompt: '(politely) Any questions?', answer: 'Aveți vreo întrebare?' },
