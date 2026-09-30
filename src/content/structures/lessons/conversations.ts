@@ -836,3 +836,305 @@ export const convPensiune: StructureLesson = {
   shortcut: 'Pe numele meu · pentru trei nopți · Aveți un pătuț? · Micul dejun e între… · parola de la Wi-Fi',
   useItToday: 'Book your next pensiune by phone, in Romanian.',
 }
+
+export const convMoving: StructureLesson = {
+  id: 's-conv-moving',
+  part: 'Conversations',
+  title: 'Should we move to Romania?',
+  tagline: 'Ar fi frumos… Pe de o parte… Hai să ne mai gândim.',
+  shift: {
+    english: 'A big conversation with your partner — the kind English makes easy and a new language makes hard.',
+    romanian: 'It runs on the \'d form ({{ar fi frumos}}, {{am putea}}), weighing up ({{pe de o parte…}}), and the kind way to leave it open: {{Hai să ne mai gândim.}}',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{Ce ne-am face cu…?}} — what would we do about…?',
+        '{{Hai să ne mai gândim.}} — let\'s keep thinking about it (mai = "some more").',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'One evening',
+      setting: 'The little one is asleep. Your partner brings it up.',
+      lines: [
+        { who: 'them', ro: 'Te-ai gândit vreodată să ne mutăm în România?', en: 'Have you ever thought about us moving to Romania?' },
+        { who: 'you', ro: 'Da, uneori. Ar fi frumos să fim aproape de părinții tăi.', en: 'Yes, sometimes. It\'d be lovely to be near your parents.' },
+        { who: 'them', ro: 'Și cel mic ar crește vorbind românește.', en: 'And the little one would grow up speaking Romanian.' },
+        { who: 'you', ro: 'Așa e. Dar ce ne-am face cu serviciul?', en: 'True. But what would we do about work?' },
+        { who: 'them', ro: 'Am putea lucra de acasă, măcar o parte din an.', en: 'We could work from home, at least part of the year.' },
+        { who: 'you', ro: 'Pe de o parte e o idee bună, pe de altă parte mi-ar fi dor de familia mea.', en: 'On the one hand it\'s a good idea; on the other, I\'d miss my family.' },
+        { who: 'them', ro: 'Nu trebuie să hotărâm acum.', en: 'We don\'t have to decide now.' },
+        { who: 'you', ro: 'Nu, dar hai să ne mai gândim.', en: 'No, but let\'s keep thinking about it.' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's133-01', prompt: 'Yes, sometimes. It\'d be lovely to be near your parents.', answer: 'Da, uneori. Ar fi frumos să fim aproape de părinții tăi.' },
+        { id: 's133-02', prompt: 'True. But what would we do about work?', answer: 'Așa e. Dar ce ne-am face cu serviciul?' },
+        { id: 's133-03', prompt: 'On the one hand it\'s a good idea; on the other, I\'d miss my family.', answer: 'Pe de o parte e o idee bună, pe de altă parte mi-ar fi dor de familia mea.' },
+        { id: 's133-04', prompt: 'No, but let\'s keep thinking about it.', answer: 'Nu, dar hai să ne mai gândim.' },
+      ],
+    },
+  ],
+  shortcut: 'Ar fi frumos să… · Ce ne-am face cu…? · Pe de o parte…, pe de altă parte… · Mi-ar fi dor de… · Hai să ne mai gândim.',
+  useItToday: 'Have one "what if…" conversation with your partner this week, in Romanian.',
+}
+
+export const convGrandpaStories: StructureLesson = {
+  id: 's-conv-grandpa',
+  part: 'Conversations',
+  title: 'Grandpa\'s stories',
+  tagline: 'Când eram tânăr… Și cum era atunci? Povestiți-mi mai mult.',
+  shift: {
+    english: 'Grandparents love telling stories — and it\'s the best listening practice there is.',
+    romanian: 'Their stories run on the scenery past ({{lucram}}, {{ne trezeam}}, {{mergeam}}); your job is to keep them going with questions and {{Povestiți-mi mai mult.}}',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        'Listen for the -am / -ea endings: that\'s "used to" and "was -ing".',
+        'Keep them talking: {{Și cum era atunci?}}, {{Incredibil!}}, {{Povestiți-mi mai mult.}}',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'After lunch',
+      setting: 'His grandpa settles back in his chair.',
+      lines: [
+        { who: 'them', ro: 'Când eram tânăr, lucram la fabrică, în oraș.', en: 'When I was young, I worked at the factory, in town.' },
+        { who: 'you', ro: 'Și cum era atunci?', en: 'And what was it like then?' },
+        { who: 'them', ro: 'Greu, dar frumos. Ne trezeam la cinci dimineața.', en: 'Hard, but good. We used to get up at five in the morning.' },
+        { who: 'you', ro: 'La cinci? Și cum ajungeați la fabrică?', en: 'At five? And how did you get to the factory?' },
+        { who: 'them', ro: 'Mergeam pe jos, trei kilometri, iarna prin zăpadă.', en: 'We walked — three kilometres, through the snow in winter.' },
+        { who: 'you', ro: 'Incredibil! Și bunica unde lucra?', en: 'Incredible! And where did Grandma work?' },
+        { who: 'them', ro: 'Era învățătoare la școala din sat.', en: 'She was a teacher at the village school.' },
+        { who: 'you', ro: 'Ce frumos! Povestiți-mi mai mult.', en: 'How lovely! Tell me more.' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's134-01', prompt: 'And what was it like then?', answer: 'Și cum era atunci?' },
+        { id: 's134-02', prompt: 'At five? And how did you get to the factory?', answer: 'La cinci? Și cum ajungeați la fabrică?' },
+        { id: 's134-03', prompt: 'Incredible! And where did Grandma work?', answer: 'Incredibil! Și bunica unde lucra?' },
+        { id: 's134-04', prompt: 'How lovely! Tell me more.', answer: 'Ce frumos! Povestiți-mi mai mult.' },
+      ],
+    },
+  ],
+  shortcut: 'Și cum era atunci? · Și cum ajungeați…? · Incredibil! · Povestiți-mi mai mult.',
+  useItToday: 'Ask a grandparent one question about their past, and just listen.',
+}
+
+export const convJobTalk: StructureLesson = {
+  id: 's-conv-job-talk',
+  part: 'Conversations',
+  title: 'Explaining your job to the grandparents',
+  tagline: 'E greu de explicat… Așa pot să-l iau de la creșă.',
+  shift: {
+    english: 'Explaining your work to your partner\'s parents is a classic — and it\'s fine to keep it simple.',
+    romanian: 'Start with {{E greu de explicat}}, give the simple version, and bring it back to family. Swap in your own job as you practise.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{E greu de explicat.}} — it\'s hard to explain (de + done).',
+        '{{deși}} — although · {{Așa pot să…}} — that way I can…',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'Over coffee',
+      setting: 'His grandma is curious about your work.',
+      lines: [
+        { who: 'them', ro: 'Și ce faci exact la serviciu?', en: 'And what exactly do you do at work?' },
+        { who: 'you', ro: 'E greu de explicat. Lucrez într-o echipă mică, cu clienți.', en: 'It\'s hard to explain. I work in a small team, with clients.' },
+        { who: 'them', ro: 'Și îți place?', en: 'And do you like it?' },
+        { who: 'you', ro: 'Da, foarte mult, deși uneori am mult de lucru.', en: 'Yes, a lot, although sometimes I\'ve got loads to do.' },
+        { who: 'them', ro: 'Lucrezi și de acasă?', en: 'Do you work from home too?' },
+        { who: 'you', ro: 'Da, de două ori pe săptămână. Așa pot să-l iau de la creșă.', en: 'Yes, twice a week. That way I can pick him up from nursery.' },
+        { who: 'them', ro: 'Foarte bine. Familia e cea mai importantă.', en: 'Very good. Family is what matters most.' },
+        { who: 'you', ro: 'Așa e.', en: 'That\'s right.' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's135-01', prompt: 'It\'s hard to explain. I work in a small team, with clients.', answer: 'E greu de explicat. Lucrez într-o echipă mică, cu clienți.' },
+        { id: 's135-02', prompt: 'Yes, a lot, although sometimes I\'ve got loads to do.', answer: 'Da, foarte mult, deși uneori am mult de lucru.' },
+        { id: 's135-03', prompt: 'Yes, twice a week. That way I can pick him up from nursery.', answer: 'Da, de două ori pe săptămână. Așa pot să-l iau de la creșă.' },
+        { id: 's135-04', prompt: 'That\'s right.', answer: 'Așa e.' },
+      ],
+    },
+  ],
+  shortcut: 'E greu de explicat · Lucrez… · deși uneori am mult de lucru · Așa pot să… · Așa e.',
+  useItToday: 'Practise your own two-sentence job explanation until it comes out easily.',
+}
+
+export const convBedtime: StructureLesson = {
+  id: 's-conv-bedtime',
+  part: 'Conversations',
+  title: 'Bedtime negotiations',
+  tagline: 'E ora de culcare. Încă cinci minute. Ne-am înțeles?',
+  shift: {
+    english: 'Every parent negotiates bedtime. Doing it in Romanian gives him the language — and you the practice — every single night.',
+    romanian: 'Short, calm, repeated: {{e ora de culcare}}, {{încă cinci minute}}, {{mai întâi…}}, and the deal-closer {{Ne-am înțeles?}}',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{Ne-am înțeles?}} — "have we understood each other?" — deal?',
+        '{{Mai întâi…}} — first… — the magic word of toddler negotiations.',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'Seven o\'clock',
+      setting: 'He\'s playing and has no intention of stopping.',
+      lines: [
+        { who: 'you', ro: 'Hai, puiule, e ora de culcare.', en: 'Come on, sweetheart, it\'s bedtime.' },
+        { who: 'them', ro: 'Nu! Încă un pic!', en: 'No! A bit longer!' },
+        { who: 'you', ro: 'Încă cinci minute, apoi mergem la baie.', en: 'Five more minutes, then we go to the bathroom.' },
+        { who: 'them', ro: 'Vreau poveste!', en: 'I want a story!' },
+        { who: 'you', ro: 'Bine, dar mai întâi ne spălăm pe dinți.', en: 'OK, but first we brush our teeth.' },
+        { who: 'them', ro: 'Două povești!', en: 'Two stories!' },
+        { who: 'you', ro: 'O poveste și un cântec. Ne-am înțeles?', en: 'One story and one song. Deal?' },
+        { who: 'them', ro: 'Da!', en: 'Yes!' },
+        { who: 'you', ro: 'Noapte bună, puiule. Te iubesc.', en: 'Good night, sweetheart. I love you.' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's136-01', prompt: 'Come on, sweetheart, it\'s bedtime.', answer: 'Hai, puiule, e ora de culcare.' },
+        { id: 's136-02', prompt: 'Five more minutes, then we go to the bathroom.', answer: 'Încă cinci minute, apoi mergem la baie.' },
+        { id: 's136-03', prompt: 'OK, but first we brush our teeth.', answer: 'Bine, dar mai întâi ne spălăm pe dinți.' },
+        { id: 's136-04', prompt: 'One story and one song. Deal?', answer: 'O poveste și un cântec. Ne-am înțeles?' },
+        { id: 's136-05', prompt: 'Good night, sweetheart. I love you.', answer: 'Noapte bună, puiule. Te iubesc.' },
+      ],
+    },
+  ],
+  shortcut: 'E ora de culcare · Încă cinci minute · Mai întâi… · O poveste și un cântec · Ne-am înțeles?',
+  useItToday: 'Do bedtime in Romanian every night this week — the whole negotiation.',
+}
+
+export const convVideoCall: StructureLesson = {
+  id: 's-conv-video-call',
+  part: 'Conversations',
+  title: 'A video call with the grandparents',
+  tagline: 'Ne vedeți? Fă-i cu mâna bunicii! Vă pupăm!',
+  shift: {
+    english: 'Video calls with a toddler are chaos — which makes them perfect practice: short lines, lots of repetition.',
+    romanian: 'You\'re the director: getting him to wave, show things, say bye. {{Arată-i bunicii…}} and {{Fă-i cu mâna…}} do most of the work.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{dragul bunicii}} — "Grandma\'s darling" — you\'ll hear this a lot.',
+        '{{Vă pupăm!}} — kisses from all of us.',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'Sunday afternoon',
+      setting: 'The grandparents call on video.',
+      lines: [
+        { who: 'them', ro: 'Alo! Ne vedeți? Ne auziți?', en: 'Hello! Can you see us? Can you hear us?' },
+        { who: 'you', ro: 'Da, vă vedem! Hai, puiule, fă-i cu mâna bunicii!', en: 'Yes, we can see you! Come on, sweetheart, wave to Grandma!' },
+        { who: 'them', ro: 'Bună, puiule! Ce faci, dragul bunicii?', en: 'Hi, sweetheart! How are you, Grandma\'s darling?' },
+        { who: 'you', ro: 'Arată-i bunicii ce ai desenat!', en: 'Show Grandma what you drew!' },
+        { who: 'them', ro: 'Vai, ce frumos! Ce e?', en: 'Oh, how lovely! What is it?' },
+        { who: 'you', ro: 'E o mașină. Azi a desenat toată dimineața.', en: 'It\'s a car. He\'s been drawing all morning.' },
+        { who: 'them', ro: 'Ce talentat e!', en: 'How talented he is!' },
+        { who: 'you', ro: 'Hai, spune pa-pa! Vă pupăm!', en: 'Come on, say bye-bye! Kisses from all of us!' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's137-01', prompt: 'Yes, we can see you! Come on, sweetheart, wave to Grandma!', answer: 'Da, vă vedem! Hai, puiule, fă-i cu mâna bunicii!' },
+        { id: 's137-02', prompt: 'Show Grandma what you drew!', answer: 'Arată-i bunicii ce ai desenat!' },
+        { id: 's137-03', prompt: 'It\'s a car. He\'s been drawing all morning.', answer: 'E o mașină. Azi a desenat toată dimineața.' },
+        { id: 's137-04', prompt: 'Come on, say bye-bye! Kisses from all of us!', answer: 'Hai, spune pa-pa! Vă pupăm!' },
+      ],
+    },
+  ],
+  shortcut: 'Vă vedem! · Fă-i cu mâna bunicii! · Arată-i bunicii… · Spune pa-pa! · Vă pupăm!',
+  useItToday: 'Run the next video call with the grandparents in Romanian.',
+}
+
+export const convPrices: StructureLesson = {
+  id: 's-conv-prices',
+  part: 'Conversations',
+  title: 'Prices, politics and polite disagreement',
+  tagline: 'Totul s-a scumpit. Înțeleg ce vreți să spuneți. Noroc!',
+  shift: {
+    english: 'Sooner or later, your partner\'s dad will want to talk prices and politicians.',
+    romanian: 'Agree where you can, soften where you don\'t — {{Nu știu dacă toți, dar înțeleg ce vreți să spuneți}} — and follow his lead when he changes the subject.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{s-a scumpit}} — it\'s gone up (in price) · {{pe vremea mea}} — in my day.',
+        '{{Înțeleg ce vreți să spuneți.}} — I see what you mean: the polite way not to fully agree.',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'After dinner',
+      setting: 'Your partner\'s dad pours the wine.',
+      lines: [
+        { who: 'them', ro: 'Ai auzit? Totul s-a scumpit.', en: 'Have you heard? Everything\'s gone up.' },
+        { who: 'you', ro: 'Da, și în Anglia e la fel. Mâncarea e mult mai scumpă.', en: 'Yes, it\'s the same in England. Food\'s much more expensive.' },
+        { who: 'them', ro: 'Pe vremea mea, cu o sută de lei trăiai o lună.', en: 'In my day, you could live for a month on a hundred lei.' },
+        { who: 'you', ro: 'Serios? Acum abia ajung pentru cumpărături.', en: 'Really? Now it barely covers the shopping.' },
+        { who: 'them', ro: 'Politicienii sunt toți la fel.', en: 'Politicians are all the same.' },
+        { who: 'you', ro: 'Nu știu dacă toți, dar înțeleg ce vreți să spuneți.', en: 'I don\'t know about all of them, but I see what you mean.' },
+        { who: 'them', ro: 'Hai, lasă politica. Mai vrei un pahar de vin?', en: 'Come on, forget politics. Another glass of wine?' },
+        { who: 'you', ro: 'Cu plăcere! Noroc!', en: 'With pleasure! Cheers!' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's138-01', prompt: 'Yes, it\'s the same in England. Food\'s much more expensive.', answer: 'Da, și în Anglia e la fel. Mâncarea e mult mai scumpă.' },
+        { id: 's138-02', prompt: 'Really? Now it barely covers the shopping.', answer: 'Serios? Acum abia ajung pentru cumpărături.' },
+        { id: 's138-03', prompt: 'I don\'t know about all of them, but I see what you mean.', answer: 'Nu știu dacă toți, dar înțeleg ce vreți să spuneți.' },
+        { id: 's138-04', prompt: 'With pleasure! Cheers!', answer: 'Cu plăcere! Noroc!' },
+      ],
+    },
+  ],
+  shortcut: 'Totul s-a scumpit · Pe vremea mea… · Înțeleg ce vreți să spuneți · Cu plăcere! Noroc!',
+  useItToday: 'Next time the talk turns to prices or politics, stay in Romanian — politely.',
+}
