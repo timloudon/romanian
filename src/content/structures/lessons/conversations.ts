@@ -1438,3 +1438,250 @@ export const convPlumber: StructureLesson = {
   shortcut: 'Curge apa · Nu merge centrala · Ce problemă aveți? · La ce oră veniți? · Vă aștept.',
   useItToday: 'Learn "Nu merge…" — you can point at anything and say it.',
 }
+
+export const convEaster: StructureLesson = {
+  id: 's-conv-easter',
+  part: 'Conversations',
+  title: 'Easter with the family',
+  tagline: 'Hristos a înviat! Adevărat a înviat! Hai să ciocnim ouă.',
+  shift: {
+    english: 'Romanian Easter (Paștele) is the biggest family feast of the year — with its own greeting and a game with painted eggs.',
+    romanian: 'The greeting pair — {{Hristos a înviat!}} / {{Adevărat a înviat!}} — replaces hello for days, and you\'ll be challenged to {{ciocnit ouă}}: tapping painted eggs together until one cracks.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{Hristos a înviat!}} — Christ is risen! Answer: {{Adevărat a înviat!}} — truly, He is risen!',
+        '{{a ciocni ouă}} — to crack eggs together; the one whose egg survives wins.',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'Easter Sunday',
+      setting: 'Lunch at your partner\'s parents\' house.',
+      lines: [
+        { who: 'them', ro: 'Hristos a înviat!', en: 'Christ is risen!' },
+        { who: 'you', ro: 'Adevărat a înviat!', en: 'Truly, He is risen!' },
+        { who: 'them', ro: 'Hai să ciocnim ouă. Ține oul așa.', en: 'Let\'s crack eggs. Hold your egg like this.' },
+        { who: 'you', ro: 'Al meu s-a spart! Ați câștigat.', en: 'Mine\'s cracked! You\'ve won.' },
+        { who: 'them', ro: 'Anul ăsta am vopsit ouăle cu cel mic.', en: 'This year we dyed the eggs with the little one.' },
+        { who: 'you', ro: 'Sunt foarte frumoase. Le-a pictat singur?', en: 'They\'re lovely. Did he paint them himself?' },
+        { who: 'them', ro: 'Aproape! Vrei drob sau cozonac?', en: 'Almost! Would you like drob or cozonac?' },
+        { who: 'you', ro: 'Puțin din amândouă, vă rog.', en: 'A little of both, please.' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's145-01', prompt: 'Truly, He is risen!', answer: 'Adevărat a înviat!' },
+        { id: 's145-02', prompt: 'Mine\'s cracked! You\'ve won.', answer: 'Al meu s-a spart! Ați câștigat.' },
+        { id: 's145-03', prompt: 'They\'re lovely. Did he paint them himself?', answer: 'Sunt foarte frumoase. Le-a pictat singur?' },
+        { id: 's145-04', prompt: 'A little of both, please.', answer: 'Puțin din amândouă, vă rog.' },
+      ],
+    },
+  ],
+  shortcut: 'Hristos a înviat! — Adevărat a înviat! · Hai să ciocnim ouă · Al meu s-a spart · Puțin din amândouă.',
+  useItToday: 'Greet everyone with "Hristos a înviat!" next Easter — and win at least one egg.',
+}
+
+export const convSeaside: StructureLesson = {
+  id: 's-conv-seaside',
+  part: 'Conversations',
+  title: 'A day at the seaside',
+  tagline: 'Ai pus crema de soare? Stai cu ochii pe el! Porumb fiert?',
+  shift: {
+    english: 'The Black Sea coast in summer: sun cream, cold water, a toddler near the waves, and the corn seller walking past.',
+    romanian: 'Practical, quick exchanges between you and your partner — with {{a sta cu ochii pe}} ("to keep your eyes on") for keeping watch.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{Stai cu ochii pe el!}} — keep an eye on him! ("stay with your eyes on him")',
+        '{{porumb fiert}} — boiled corn on the cob, the classic beach snack.',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'On the beach',
+      setting: 'Mamaia, mid-morning, already hot.',
+      lines: [
+        { who: 'them', ro: 'Ai pus crema de soare pe cel mic?', en: 'Have you put sun cream on the little one?' },
+        { who: 'you', ro: 'Da, și i-am pus și pălăria.', en: 'Yes, and his hat as well.' },
+        { who: 'them', ro: 'Apa e rece?', en: 'Is the water cold?' },
+        { who: 'you', ro: 'Puțin, dar e plăcută. Vii în apă?', en: 'A bit, but it\'s nice. Are you coming in?' },
+        { who: 'them', ro: 'Mai târziu. Stai cu ochii pe el, că valurile sunt mari.', en: 'Later. Keep an eye on him — the waves are big.' },
+        { who: 'you', ro: 'Fii fără grijă, îl țin de mână.', en: 'Don\'t worry, I\'m holding his hand.' },
+        { who: 'them', ro: 'Vrei porumb fiert? Trece un vânzător.', en: 'Do you want some boiled corn? A seller\'s coming past.' },
+        { who: 'you', ro: 'Da! Și o înghețată pentru cel mic.', en: 'Yes! And an ice cream for the little one.' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's146-01', prompt: 'Yes, and his hat as well.', answer: 'Da, și i-am pus și pălăria.' },
+        { id: 's146-02', prompt: 'A bit, but it\'s nice. Are you coming in?', answer: 'Puțin, dar e plăcută. Vii în apă?' },
+        { id: 's146-03', prompt: 'Don\'t worry, I\'m holding his hand.', answer: 'Fii fără grijă, îl țin de mână.' },
+        { id: 's146-04', prompt: 'Yes! And an ice cream for the little one.', answer: 'Da! Și o înghețată pentru cel mic.' },
+      ],
+    },
+  ],
+  shortcut: 'Ai pus crema de soare? · Vii în apă? · Stai cu ochii pe el · Îl țin de mână · Porumb fiert!',
+  useItToday: 'Narrate your next beach or pool day in Romanian.',
+}
+
+export const convCabana: StructureLesson = {
+  id: 's-conv-cabana',
+  part: 'Conversations',
+  title: 'At a mountain cabana',
+  tagline: 'Mai aveți camere libere? Cât durează până la cascadă?',
+  shift: {
+    english: 'Mountain huts (cabane) are simple, friendly and full of hikers — and the conversation is always about rooms, food and trails.',
+    romanian: 'Ask with {{Mai aveți…?}} ("have you still got…?"), and listen for the warnings about the path.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{Mai aveți camere libere?}} — have you got any rooms free?',
+        '{{tochitură}} — a hearty pork stew with polenta and an egg on top.',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'At the hut',
+      setting: 'Late afternoon, high in the Bucegi mountains.',
+      lines: [
+        { who: 'you', ro: 'Bună ziua, mai aveți camere libere pentru la noapte?', en: 'Hello, have you got any rooms free for tonight?' },
+        { who: 'them', ro: 'Mai avem una, cu trei paturi.', en: 'We\'ve got one left, with three beds.' },
+        { who: 'you', ro: 'Perfect. Serviți și masa de seară?', en: 'Perfect. Do you serve dinner as well?' },
+        { who: 'them', ro: 'Da, avem ciorbă și tochitură. Până la nouă.', en: 'Yes, soup and tochitură. Until nine.' },
+        { who: 'you', ro: 'Cât durează până la cascadă?', en: 'How long does it take to the waterfall?' },
+        { who: 'them', ro: 'Cam o oră pe jos. Dar poteca e abruptă, aveți grijă cu copilul.', en: 'About an hour on foot. But the path is steep — be careful with the little one.' },
+        { who: 'you', ro: 'Mulțumim. Mergem mâine dimineață.', en: 'Thanks. We\'ll go tomorrow morning.' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's147-01', prompt: 'Hello, have you got any rooms free for tonight?', answer: 'Bună ziua, mai aveți camere libere pentru la noapte?' },
+        { id: 's147-02', prompt: 'Perfect. Do you serve dinner as well?', answer: 'Perfect. Serviți și masa de seară?' },
+        { id: 's147-03', prompt: 'How long does it take to the waterfall?', answer: 'Cât durează până la cascadă?' },
+        { id: 's147-04', prompt: 'Thanks. We\'ll go tomorrow morning.', answer: 'Mulțumim. Mergem mâine dimineață.' },
+      ],
+    },
+  ],
+  shortcut: 'Mai aveți camere libere? · Serviți și masa de seară? · Cât durează până la…? · Mergem mâine dimineață.',
+  useItToday: 'Plan the route of your next walk out loud in Romanian.',
+}
+
+export const convPetrol: StructureLesson = {
+  id: 's-conv-petrol',
+  part: 'Conversations',
+  title: 'At the petrol station',
+  tagline: 'Pompa trei, vă rog. Unde e toaleta? Îmi dați un bon?',
+  shift: {
+    english: 'A long drive across Romania means petrol stations — and the till conversation is always the same.',
+    romanian: 'Give the pump number, ask for what you need, and get a receipt: {{Îmi dați un bon?}}',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{pompa}} — the pump · {{bonul}} — the receipt.',
+        '{{În spate, pe dreapta.}} — round the back, on the right.',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'At the till',
+      setting: 'Halfway to your partner\'s parents\'.',
+      lines: [
+        { who: 'them', ro: 'Bună ziua. Ce pompă?', en: 'Hello. Which pump?' },
+        { who: 'you', ro: 'Pompa trei, vă rog. Și aveți cafea?', en: 'Pump three, please. And do you have coffee?' },
+        { who: 'them', ro: 'Da, aparatul e acolo. Mai doriți ceva?', en: 'Yes, the machine\'s over there. Anything else?' },
+        { who: 'you', ro: 'Unde e toaleta?', en: 'Where are the toilets?' },
+        { who: 'them', ro: 'În spate, pe dreapta.', en: 'Round the back, on the right.' },
+        { who: 'you', ro: 'Mulțumesc. Îmi dați un bon, vă rog?', en: 'Thank you. Could I have a receipt, please?' },
+        { who: 'them', ro: 'Poftiți bonul. Drum bun!', en: 'Here\'s your receipt. Have a good journey!' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's148-01', prompt: 'Pump three, please. And do you have coffee?', answer: 'Pompa trei, vă rog. Și aveți cafea?' },
+        { id: 's148-02', prompt: 'Where are the toilets?', answer: 'Unde e toaleta?' },
+        { id: 's148-03', prompt: 'Thank you. Could I have a receipt, please?', answer: 'Mulțumesc. Îmi dați un bon, vă rog?' },
+      ],
+    },
+  ],
+  shortcut: 'Pompa trei · Aveți cafea? · Unde e toaleta? · Îmi dați un bon?',
+  useItToday: 'Do your next petrol stop in Romanian — even in the UK, say it in your head.',
+}
+
+export const convDirections: StructureLesson = {
+  id: 's-conv-directions',
+  part: 'Conversations',
+  title: 'Asking the way',
+  tagline: 'Cum ajung la…? Drept înainte, apoi la stânga.',
+  shift: {
+    english: 'Asking directions is easy; understanding the answer is the hard part.',
+    romanian: 'Ask with {{Cum ajung la…?}}, then listen for the key words: {{drept înainte}}, {{la stânga}}, {{la dreapta}}, {{la semafor}}, {{la colț}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{drept înainte}} — straight on · {{la stânga / la dreapta}} — left / right · {{la semafor}} — at the lights · {{la colț}} — on the corner.',
+        '{{cam zece minute pe jos}} — about ten minutes on foot.',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'In Brașov old town',
+      setting: 'You\'re looking for the main square with the pushchair.',
+      lines: [
+        { who: 'you', ro: 'Scuzați-mă, cum ajung la Piața Sfatului?', en: 'Excuse me, how do I get to Piața Sfatului?' },
+        { who: 'them', ro: 'Mergeți drept înainte până la semafor, apoi la stânga.', en: 'Go straight on to the lights, then turn left.' },
+        { who: 'you', ro: 'E departe?', en: 'Is it far?' },
+        { who: 'them', ro: 'Nu, cam zece minute pe jos.', en: 'No, about ten minutes on foot.' },
+        { who: 'you', ro: 'Și e vreo farmacie pe drum?', en: 'And is there a pharmacy on the way?' },
+        { who: 'them', ro: 'Da, chiar la colț, lângă bancă.', en: 'Yes, right on the corner, next to the bank.' },
+        { who: 'you', ro: 'Mulțumesc frumos!', en: 'Thank you very much!' },
+        { who: 'them', ro: 'Cu plăcere, o zi bună!', en: 'You\'re welcome, have a good day!' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's149-01', prompt: 'Excuse me, how do I get to Piața Sfatului?', answer: 'Scuzați-mă, cum ajung la Piața Sfatului?' },
+        { id: 's149-02', prompt: 'Is it far?', answer: 'E departe?' },
+        { id: 's149-03', prompt: 'And is there a pharmacy on the way?', answer: 'Și e vreo farmacie pe drum?' },
+        { id: 's149-04', prompt: 'Thank you very much!', answer: 'Mulțumesc frumos!' },
+      ],
+    },
+  ],
+  shortcut: 'Scuzați-mă, cum ajung la…? · E departe? · drept înainte · la stânga · la colț · Mulțumesc frumos!',
+  useItToday: 'Next time you\'re in a Romanian town, ask the way once — even if you know it.',
+}
