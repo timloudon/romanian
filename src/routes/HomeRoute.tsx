@@ -4,6 +4,7 @@ import { roCore } from '../content/courses/ro-core'
 import { findLifeTopic, lifeTopics } from '../content/life'
 import { structureLessons } from '../content/structures'
 import type { CourseStage, Unit } from '../content/types'
+import { dueQueue } from '../engine/session'
 import { getDueItems } from '../storage/progressRepo'
 import { getSettings } from '../storage/settingsRepo'
 
@@ -27,7 +28,8 @@ export function HomeRoute() {
   useEffect(() => {
     let cancelled = false
     void getDueItems().then((due) => {
-      if (!cancelled) setDueCount(due.length)
+      // Counted the way Review builds its queue: drills only (common words have their own page).
+      if (!cancelled) setDueCount(dueQueue(due).length)
     })
     return () => {
       cancelled = true
