@@ -132,13 +132,21 @@ import {
   verbMap,
 } from './lessons/pulling-it-together'
 import {
+  convBabysit,
   convCarHire,
+  convChristmas,
   convDinner,
+  convDoctor,
+  convGrandparentsArrive,
   convHisDay,
   convMakeUp,
   convMarket,
+  convNeighbour,
+  convPensiune,
   convPharmacy,
   convPhone,
+  convRestaurant,
+  convTaxi,
   convWeekend,
 } from './lessons/conversations'
 import type { StructureLesson, StructurePart } from './types'
@@ -262,13 +270,21 @@ export const structureLessons: StructureLesson[] = [
   pronounMap,
   nounMap,
   convDinner,
+  convGrandparentsArrive,
+  convBabysit,
   convPhone,
+  convNeighbour,
   convPharmacy,
+  convDoctor,
   convMarket,
+  convRestaurant,
+  convTaxi,
   convWeekend,
   convHisDay,
   convMakeUp,
+  convChristmas,
   convCarHire,
+  convPensiune,
 ]
 
 export const structureParts: { part: StructurePart; blurb: string }[] = [

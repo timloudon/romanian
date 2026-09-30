@@ -423,3 +423,416 @@ export const convCarHire: StructureLesson = {
   shortcut: 'Am rezervat online · Asigurarea e inclusă? · Avem nevoie de un scaun pentru copil · Unde returnăm mașina?',
   useItToday: 'Rehearse this one on the plane before your next trip.',
 }
+
+export const convRestaurant: StructureLesson = {
+  id: 's-conv-restaurant',
+  part: 'Conversations',
+  title: 'Eating out with the family',
+  tagline: 'O masă pentru trei. Ce ne recomandați? La pachet.',
+  shift: {
+    english: 'Restaurants are a script: table, menu, recommendation, order, the bill.',
+    romanian: 'Two chunks to know: {{un scaun pentru copil}} (a high chair) and {{la pachet}} — to take away.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{Ce ne recomandați?}} — what do you recommend? gets you the house speciality.',
+        '{{la pachet}} — "in a package" — to take away, or to take leftovers home.',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'Ordering',
+      setting: 'A family restaurant in Brașov, Saturday lunchtime.',
+      lines: [
+        { who: 'them', ro: 'Bună ziua! Aveți rezervare?', en: 'Hello! Do you have a reservation?' },
+        { who: 'you', ro: 'Nu, avem nevoie de o masă pentru trei, cu un scaun pentru copil.', en: 'No, we need a table for three, with a high chair.' },
+        { who: 'them', ro: 'Sigur, poftiți pe aici. Vă aduc meniul.', en: 'Of course, this way. I\'ll bring you the menu.' },
+        { who: 'you', ro: 'Mulțumim. Ce ne recomandați?', en: 'Thanks. What do you recommend?' },
+        { who: 'them', ro: 'Ciorba de burtă e foarte bună, și avem mici proaspeți.', en: 'The tripe soup is very good, and we have fresh mici.' },
+        { who: 'you', ro: 'Atunci două ciorbe și o porție de mici. Și o limonadă.', en: 'Two soups, then, and a portion of mici. And a lemonade.' },
+        { who: 'them', ro: 'Pentru cel mic ceva?', en: 'Anything for the little one?' },
+        { who: 'you', ro: 'O supă de pui, vă rog.', en: 'A chicken soup, please.' },
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'The bill',
+      setting: 'An hour later.',
+      lines: [
+        { who: 'you', ro: 'Nota, vă rog.', en: 'The bill, please.' },
+        { who: 'them', ro: 'Imediat. Plătiți cash sau cu cardul?', en: 'Right away. Cash or card?' },
+        { who: 'you', ro: 'Cu cardul. Și putem să luăm restul la pachet?', en: 'Card. And can we take the rest away?' },
+        { who: 'them', ro: 'Sigur, vă aduc o cutie.', en: 'Of course, I\'ll bring you a box.' },
+        { who: 'you', ro: 'A fost delicios, mulțumim!', en: 'It was delicious, thank you!' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's125-01', prompt: 'No, we need a table for three, with a high chair.', answer: 'Nu, avem nevoie de o masă pentru trei, cu un scaun pentru copil.' },
+        { id: 's125-02', prompt: 'Thanks. What do you recommend?', answer: 'Mulțumim. Ce ne recomandați?' },
+        { id: 's125-03', prompt: 'Two soups, then, and a portion of mici. And a lemonade.', answer: 'Atunci două ciorbe și o porție de mici. Și o limonadă.' },
+        { id: 's125-04', prompt: 'A chicken soup, please.', answer: 'O supă de pui, vă rog.' },
+        { id: 's125-05', prompt: 'The bill, please.', answer: 'Nota, vă rog.' },
+        { id: 's125-06', prompt: 'Card. And can we take the rest away?', answer: 'Cu cardul. Și putem să luăm restul la pachet?' },
+        { id: 's125-07', prompt: 'It was delicious, thank you!', answer: 'A fost delicios, mulțumim!' },
+      ],
+    },
+  ],
+  shortcut: 'O masă pentru trei · un scaun pentru copil · Ce ne recomandați? · Nota, vă rog · la pachet',
+  useItToday: 'Order for the whole family in Romanian next time you eat out.',
+}
+
+export const convNeighbour: StructureLesson = {
+  id: 's-conv-neighbour',
+  part: 'Conversations',
+  title: 'Meeting a neighbour',
+  tagline: 'Suntem în vizită. Vorbesc puțin românește. Să vă trăiască!',
+  shift: {
+    english: 'At your partner\'s family home, the neighbours will come and say hello — and ask where you\'re from.',
+    romanian: 'Have your two lines ready — who you are and that you speak a little — and learn the lovely thing people say about your child: {{Să vă trăiască!}}',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{Vorbesc puțin românește.}} — I speak a little Romanian ({{românește}} — "in Romanian").',
+        '{{Să vă trăiască!}} — "may he live for you" — what people say when they meet your child. Reply with {{Mulțumim!}}',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'Over the fence',
+      setting: 'At the family home. The neighbour comes over to say hello.',
+      lines: [
+        { who: 'them', ro: 'Bună ziua! Sunteți cu familia de la numărul cinci?', en: 'Hello! Are you with the family at number five?' },
+        { who: 'you', ro: 'Da, bună ziua! Suntem în vizită pentru două săptămâni.', en: 'Yes, hello! We\'re visiting for two weeks.' },
+        { who: 'them', ro: 'Ce bine! De unde sunteți?', en: 'How nice! Where are you from?' },
+        { who: 'you', ro: 'Sunt din Anglia, dar vorbesc puțin românește.', en: 'I\'m from England, but I speak a little Romanian.' },
+        { who: 'them', ro: 'Vorbiți foarte bine! Câți ani are băiatul?', en: 'You speak very well! How old is the boy?' },
+        { who: 'you', ro: 'Are doi ani. Și e foarte curios!', en: 'He\'s two. And very curious!' },
+        { who: 'them', ro: 'Să vă trăiască! Dacă aveți nevoie de ceva, sunt aici.', en: 'Bless him! If you need anything, I\'m here.' },
+        { who: 'you', ro: 'Mulțumim frumos, e foarte drăguț din partea dumneavoastră.', en: 'Thank you so much, that\'s very kind of you.' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's126-01', prompt: 'Yes, hello! We\'re visiting for two weeks.', answer: 'Da, bună ziua! Suntem în vizită pentru două săptămâni.' },
+        { id: 's126-02', prompt: 'I\'m from England, but I speak a little Romanian.', answer: 'Sunt din Anglia, dar vorbesc puțin românește.' },
+        { id: 's126-03', prompt: 'He\'s two. And very curious!', answer: 'Are doi ani. Și e foarte curios!' },
+        { id: 's126-04', prompt: 'Thank you so much, that\'s very kind of you.', answer: 'Mulțumim frumos, e foarte drăguț din partea dumneavoastră.' },
+      ],
+    },
+  ],
+  shortcut: 'Suntem în vizită · Vorbesc puțin românește · Să vă trăiască! — Mulțumim! · E foarte drăguț din partea dumneavoastră.',
+  useItToday: 'Introduce yourself in Romanian to the next neighbour you meet on a visit.',
+}
+
+export const convDoctor: StructureLesson = {
+  id: 's-conv-doctor',
+  part: 'Conversations',
+  title: 'At the doctor\'s with him',
+  tagline: 'Are febră de două zile. Ce trebuie să-i dăm?',
+  shift: {
+    english: 'When he\'s ill, you want to explain clearly and understand the advice exactly.',
+    romanian: 'The doctor asks the same things every time: since when, how high, eating and drinking. {{viroză}} — a virus — is the word you\'ll hear most.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{de două zile}} — for two days (the present + de from "I\'ve been waiting an hour").',
+        '{{Dacă nu-i trece…}} — if it doesn\'t pass (for him)… then come back: {{reveniți}}.',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'In the surgery',
+      setting: 'Your son has had a temperature since the weekend.',
+      lines: [
+        { who: 'them', ro: 'Bună ziua. Ce s-a întâmplat?', en: 'Hello. What\'s happened?' },
+        { who: 'you', ro: 'Are febră de două zile și tușește.', en: 'He\'s had a temperature for two days and he\'s coughing.' },
+        { who: 'them', ro: 'Cât de mare e febra?', en: 'How high is the temperature?' },
+        { who: 'you', ro: 'Azi-noapte a avut treizeci și nouă.', en: 'Last night it was thirty-nine.' },
+        { who: 'them', ro: 'Mănâncă și bea normal?', en: 'Is he eating and drinking normally?' },
+        { who: 'you', ro: 'Bea apă, dar nu prea mănâncă.', en: 'He\'s drinking water, but not really eating.' },
+        { who: 'them', ro: 'O să-l consult. Nu vă faceți griji, pare o viroză.', en: 'I\'ll examine him. Don\'t worry, it looks like a virus.' },
+        { who: 'you', ro: 'Ce trebuie să-i dăm?', en: 'What should we give him?' },
+        { who: 'them', ro: 'Sirop pentru febră și multe lichide. Dacă nu-i trece în trei zile, reveniți.', en: 'Fever syrup and plenty of fluids. If it hasn\'t passed in three days, come back.' },
+        { who: 'you', ro: 'Mulțumim mult.', en: 'Thank you very much.' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's127-01', prompt: 'He\'s had a temperature for two days and he\'s coughing.', answer: 'Are febră de două zile și tușește.' },
+        { id: 's127-02', prompt: 'Last night it was thirty-nine.', answer: 'Azi-noapte a avut treizeci și nouă.' },
+        { id: 's127-03', prompt: 'He\'s drinking water, but not really eating.', answer: 'Bea apă, dar nu prea mănâncă.' },
+        { id: 's127-04', prompt: 'What should we give him?', answer: 'Ce trebuie să-i dăm?' },
+        { id: 's127-05', prompt: 'Thank you very much.', answer: 'Mulțumim mult.' },
+      ],
+    },
+  ],
+  shortcut: 'Are febră de două zile · tușește · nu prea mănâncă · Ce trebuie să-i dăm? · viroză · reveniți',
+  useItToday: 'Rehearse the symptoms part once, so it\'s ready if you ever need it.',
+}
+
+export const convGrandparentsArrive: StructureLesson = {
+  id: 's-conv-grandparents-arrive',
+  part: 'Conversations',
+  title: 'The grandparents arrive',
+  tagline: 'Bine ați venit! Cum a fost drumul? Nu trebuia!',
+  shift: {
+    english: 'The door opens, everyone talks at once, and there\'s always a bag of food.',
+    romanian: 'Three things to say: {{Bine ați venit!}}, {{Cum a fost drumul?}} and, when they hand over the food, {{Nu trebuia!}} — "you shouldn\'t have!"',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{Bine ați venit!}} — welcome ("well you came").',
+        '{{Nu trebuia!}} — "it wasn\'t necessary" — the polite response to any gift.',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'At the door',
+      setting: 'His grandparents have driven over for the weekend.',
+      lines: [
+        { who: 'them', ro: 'Am ajuns! Unde e puiul bunicii?', en: 'We\'re here! Where\'s Grandma\'s little chick?' },
+        { who: 'you', ro: 'Bine ați venit! Ce bine că ați ajuns!', en: 'Welcome! So glad you made it!' },
+        { who: 'them', ro: 'Vai, cât a crescut!', en: 'Oh, how he\'s grown!' },
+        { who: 'you', ro: 'Da, se face mare. Cum a fost drumul?', en: 'Yes, he\'s getting big. How was the journey?' },
+        { who: 'them', ro: 'Lung, dar bine. Am adus niște cozonac și zacuscă.', en: 'Long, but fine. We\'ve brought some cozonac and zacuscă.' },
+        { who: 'you', ro: 'Nu trebuia! Poftiți, intrați. Vreți o cafea?', en: 'You shouldn\'t have! Come in. Would you like a coffee?' },
+        { who: 'them', ro: 'Da, o cafea ar fi perfectă.', en: 'Yes, a coffee would be perfect.' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's128-01', prompt: 'Welcome! So glad you made it!', answer: 'Bine ați venit! Ce bine că ați ajuns!' },
+        { id: 's128-02', prompt: 'Yes, he\'s getting big. How was the journey?', answer: 'Da, se face mare. Cum a fost drumul?' },
+        { id: 's128-03', prompt: 'You shouldn\'t have! Come in. Would you like a coffee?', answer: 'Nu trebuia! Poftiți, intrați. Vreți o cafea?' },
+      ],
+    },
+  ],
+  shortcut: 'Bine ați venit! · Ce bine că ați ajuns! · Cum a fost drumul? · Nu trebuia! · Vreți o cafea?',
+  useItToday: 'Welcome the next visitors at the door in Romanian.',
+}
+
+export const convBabysit: StructureLesson = {
+  id: 's-conv-babysit',
+  part: 'Conversations',
+  title: 'Asking the grandparents to babysit',
+  tagline: 'Ați putea să stați cu el? Ne descurcăm!',
+  shift: {
+    english: 'Handing him over for an evening means asking nicely and passing on the routine.',
+    romanian: 'Ask with {{Ați putea să…?}}, give the routine with times, and enjoy the reply you\'re hoping for: {{Ne descurcăm!}}',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{a sta cu}} — to look after a child ("to stay with").',
+        'The routine in times: {{mănâncă la șase}}, {{se culcă la opt}}.',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'The favour',
+      setting: 'You phone his grandparents on Wednesday.',
+      lines: [
+        { who: 'you', ro: 'Ați putea să stați cu el sâmbătă seara?', en: 'Could you look after him on Saturday evening?' },
+        { who: 'them', ro: 'Sigur! Unde mergeți?', en: 'Of course! Where are you going?' },
+        { who: 'you', ro: 'La o cină, doar noi.', en: 'Out for dinner, just the two of us.' },
+        { who: 'them', ro: 'Foarte bine, aveți nevoie. La ce oră să venim?', en: 'Very good, you need it. What time shall we come?' },
+        { who: 'you', ro: 'Pe la șapte. Mănâncă la șase și se culcă la opt.', en: 'Around seven. He eats at six and goes to bed at eight.' },
+        { who: 'them', ro: 'Și dacă plânge?', en: 'And if he cries?' },
+        { who: 'you', ro: 'Îi place să-i citiți o poveste. Și are ursulețul în pat.', en: 'He likes being read a story. And he has his teddy in bed.' },
+        { who: 'them', ro: 'Lăsați, ne descurcăm. Distracție plăcută!', en: 'Don\'t worry, we\'ll manage. Have fun!' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's129-01', prompt: 'Could you look after him on Saturday evening?', answer: 'Ați putea să stați cu el sâmbătă seara?' },
+        { id: 's129-02', prompt: 'Out for dinner, just the two of us.', answer: 'La o cină, doar noi.' },
+        { id: 's129-03', prompt: 'Around seven. He eats at six and goes to bed at eight.', answer: 'Pe la șapte. Mănâncă la șase și se culcă la opt.' },
+        { id: 's129-04', prompt: 'He likes being read a story. And he has his teddy in bed.', answer: 'Îi place să-i citiți o poveste. Și are ursulețul în pat.' },
+      ],
+    },
+  ],
+  shortcut: 'Ați putea să stați cu el? · doar noi · Mănâncă la șase și se culcă la opt · Îi place să-i citiți o poveste.',
+  useItToday: 'Ask for your next favour from the family in Romanian.',
+}
+
+export const convChristmas: StructureLesson = {
+  id: 's-conv-christmas',
+  part: 'Conversations',
+  title: 'Christmas with the family',
+  tagline: 'Crăciun fericit! Ce masă frumoasă! Abia aștept!',
+  shift: {
+    english: 'A Romanian Christmas is long, loud and full of food — and full of set phrases.',
+    romanian: 'The greetings, praise for the table, and saying yes to everything: {{Crăciun fericit!}}, {{Ce masă frumoasă!}}, {{Abia aștept!}}',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{Moș Crăciun}} — Father Christmas. {{sub brad}} — under the tree.',
+        '{{Ce se spune?}} — "what does one say?" — how parents prompt a thank-you.',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'Christmas Eve',
+      setting: 'At your partner\'s family home.',
+      lines: [
+        { who: 'them', ro: 'Crăciun fericit! Hai la masă, am pus sarmalele.', en: 'Merry Christmas! Come to the table, the sarmale are out.' },
+        { who: 'you', ro: 'Crăciun fericit! Ce masă frumoasă!', en: 'Merry Christmas! What a lovely table!' },
+        { who: 'them', ro: 'Moș Crăciun a lăsat ceva sub brad pentru cel mic.', en: 'Father Christmas left something under the tree for the little one.' },
+        { who: 'you', ro: 'Vai, ce cadou frumos! Ce se spune, puiule?', en: 'Oh, what a lovely present! What do we say, sweetheart?' },
+        { who: 'them', ro: 'Mâine mergem la biserică. Veniți și voi?', en: 'Tomorrow we\'re going to church. Are you coming too?' },
+        { who: 'you', ro: 'Da, venim. La ce oră?', en: 'Yes, we\'ll come. What time?' },
+        { who: 'them', ro: 'La zece. Și după aceea, masa de Crăciun!', en: 'At ten. And after that, Christmas dinner!' },
+        { who: 'you', ro: 'Abia aștept!', en: 'I can\'t wait!' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's130-01', prompt: 'Merry Christmas! What a lovely table!', answer: 'Crăciun fericit! Ce masă frumoasă!' },
+        { id: 's130-02', prompt: 'Oh, what a lovely present! What do we say, sweetheart?', answer: 'Vai, ce cadou frumos! Ce se spune, puiule?' },
+        { id: 's130-03', prompt: 'Yes, we\'ll come. What time?', answer: 'Da, venim. La ce oră?' },
+        { id: 's130-04', prompt: 'I can\'t wait!', answer: 'Abia aștept!' },
+      ],
+    },
+  ],
+  shortcut: 'Crăciun fericit! · Ce masă frumoasă! · Ce se spune, puiule? · Veniți și voi? · Abia aștept!',
+  useItToday: 'Learn the greetings before the holidays and use every one of them.',
+}
+
+export const convTaxi: StructureLesson = {
+  id: 's-conv-taxi',
+  part: 'Conversations',
+  title: 'In a taxi',
+  tagline: 'Mergem la…, vă rog. Cât durează? Face… lei.',
+  shift: {
+    english: 'A taxi ride is short and predictable: where, how long, how much.',
+    romanian: 'Say where first — {{Mergem la…, vă rog}} — then the two questions, and {{face}} for the fare.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{Mergem la…}} — "we\'re going to…" is all you need to give the address.',
+        '{{Cu traficul ăsta…}} — with this traffic… — you\'ll hear it a lot in Bucharest.',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'To the station',
+      setting: 'You flag a taxi outside the hotel in Bucharest.',
+      lines: [
+        { who: 'you', ro: 'Bună ziua, mergem la Gara de Nord, vă rog.', en: 'Hello, to Gara de Nord, please.' },
+        { who: 'them', ro: 'Imediat. Aveți bagaje?', en: 'Right away. Any luggage?' },
+        { who: 'you', ro: 'Da, două valize. Cât durează până acolo?', en: 'Yes, two suitcases. How long does it take to get there?' },
+        { who: 'them', ro: 'Cu traficul ăsta, cam douăzeci de minute.', en: 'With this traffic, about twenty minutes.' },
+        { who: 'you', ro: 'Bine. Pot să plătesc cu cardul?', en: 'OK. Can I pay by card?' },
+        { who: 'them', ro: 'Da, sigur. Am ajuns. Face patruzeci de lei.', en: 'Yes, of course. Here we are. That\'s forty lei.' },
+        { who: 'you', ro: 'Poftim. Mulțumesc, o zi bună!', en: 'Here you are. Thanks, have a good day!' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's131-01', prompt: 'Hello, to Gara de Nord, please.', answer: 'Bună ziua, mergem la Gara de Nord, vă rog.' },
+        { id: 's131-02', prompt: 'Yes, two suitcases. How long does it take to get there?', answer: 'Da, două valize. Cât durează până acolo?' },
+        { id: 's131-03', prompt: 'OK. Can I pay by card?', answer: 'Bine. Pot să plătesc cu cardul?' },
+        { id: 's131-04', prompt: 'Here you are. Thanks, have a good day!', answer: 'Poftim. Mulțumesc, o zi bună!' },
+      ],
+    },
+  ],
+  shortcut: 'Mergem la…, vă rog · Cât durează până acolo? · Pot să plătesc cu cardul? · Face… lei · O zi bună!',
+  useItToday: 'Next taxi in Romania: do the whole ride in Romanian.',
+}
+
+export const convPensiune: StructureLesson = {
+  id: 's-conv-pensiune',
+  part: 'Conversations',
+  title: 'Checking into a pensiune',
+  tagline: 'Am rezervat o cameră. Aveți un pătuț?',
+  shift: {
+    english: 'Romanian holidays often mean a pensiune — a family-run guesthouse — and a check-in chat.',
+    romanian: 'Booking name, nights, breakfast times, a cot for him, the Wi-Fi: {{pătuț}} is the word to know.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{pe numele meu}} — in my name · {{pentru trei nopți}} — for three nights.',
+        '{{pătuț}} — a cot. {{vi-l pregătim}} — we\'ll get it ready for you.',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'At reception',
+      setting: 'A pensiune in the mountains, late afternoon.',
+      lines: [
+        { who: 'them', ro: 'Bună ziua, bine ați venit! Pe ce nume e rezervarea?', en: 'Hello, welcome! What name is the booking under?' },
+        { who: 'you', ro: 'Pe numele meu. Am rezervat o cameră pentru trei nopți.', en: 'Mine. I booked a room for three nights.' },
+        { who: 'them', ro: 'Da, aveți camera patru, la etaj. Micul dejun e între opt și zece.', en: 'Yes, you\'re in room four, upstairs. Breakfast is between eight and ten.' },
+        { who: 'you', ro: 'Perfect. Aveți și un pătuț pentru copil?', en: 'Perfect. Do you have a cot for the little one?' },
+        { who: 'them', ro: 'Sigur, vi-l pregătim acum.', en: 'Of course, we\'ll get it ready for you now.' },
+        { who: 'you', ro: 'Mulțumim. Și parola de la Wi-Fi?', en: 'Thanks. And the Wi-Fi password?' },
+        { who: 'them', ro: 'E pe masa din cameră. Ședere plăcută!', en: 'It\'s on the table in the room. Enjoy your stay!' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's132-01', prompt: 'Mine. I booked a room for three nights.', answer: 'Pe numele meu. Am rezervat o cameră pentru trei nopți.' },
+        { id: 's132-02', prompt: 'Perfect. Do you have a cot for the little one?', answer: 'Perfect. Aveți și un pătuț pentru copil?' },
+        { id: 's132-03', prompt: 'Thanks. And the Wi-Fi password?', answer: 'Mulțumim. Și parola de la Wi-Fi?' },
+      ],
+    },
+  ],
+  shortcut: 'Pe numele meu · pentru trei nopți · Aveți un pătuț? · Micul dejun e între… · parola de la Wi-Fi',
+  useItToday: 'Book your next pensiune by phone, in Romanian.',
+}
