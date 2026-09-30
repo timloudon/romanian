@@ -713,3 +713,74 @@ export const everBefore: StructureLesson = {
   shortcut: 'Ever = vreodată. Before / again = mai, right after the "have": Ai mai fost? N-am mai fost niciodată. Nu l-am mai văzut = not since.',
   useItToday: 'Ask your partner "Ai mai fost…?" about a place you\'re planning to go.',
 }
+
+export const timesOfDay: StructureLesson = {
+  id: 's-times-of-day',
+  part: 'Time',
+  title: 'In the morning, on Mondays: "the" does the work',
+  tagline: 'Dimineața, seara, lunea, diseară.',
+  shift: {
+    english: 'English says "in the morning", "at night", "on Mondays", "this evening", "last night".',
+    romanian: 'Romanian just puts "the" on the time word — {{dimineața}} (in the morning), {{lunea}} (on Mondays) — and has single words for {{diseară}}, {{aseară}} and {{azi-noapte}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'The time word with "the"',
+      body: [
+        '{{dimineața}} — in the morning · {{la prânz}} — at lunchtime · {{după-amiaza}} — in the afternoon · {{seara}} — in the evening · {{noaptea}} — at night.',
+        'For habits: {{Dimineața beau cafea.}} — in the mornings I drink coffee.',
+      ],
+      glosses: [
+        { ro: 'Dimineața beau cafea.', words: [['Dimineața', 'the-morning'], ['beau', 'I-drink'], ['cafea', 'coffee']], en: 'In the mornings I drink coffee.' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Days and seasons, the same trick',
+      body: [
+        '{{lunea}} — on Mondays · {{duminica}} — on Sundays · {{vara}} — in summer · {{iarna}} — in winter.',
+        'Without "the" it\'s one particular day: {{luni}} — on Monday (this one).',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Today, tonight, last night',
+      body: [
+        '{{azi-dimineață}} — this morning · {{diseară}} — this evening · {{la noapte}} — tonight · {{aseară}} — yesterday evening · {{azi-noapte}} — last night · {{mâine-dimineață}} — tomorrow morning.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'When?',
+      rungs: [
+        { id: 's91-01', prompt: 'In the morning.', answer: 'Dimineața.' },
+        { id: 's91-02', prompt: 'In the evening.', answer: 'Seara.' },
+        { id: 's91-03', prompt: 'At night he sleeps well.', answer: 'Noaptea doarme bine.' },
+        { id: 's91-04', prompt: 'In the mornings I drink coffee.', answer: 'Dimineața beau cafea.' },
+        { id: 's91-05', prompt: 'On Mondays I work from home.', answer: 'Lunea lucrez de acasă.' },
+        { id: 's91-06', prompt: 'In winter it\'s very cold.', answer: 'Iarna e foarte frig.' },
+        { id: 's91-07', prompt: 'This evening.', answer: 'Diseară.' },
+        { id: 's91-08', prompt: 'Yesterday evening.', answer: 'Aseară.' },
+        { id: 's91-09', prompt: 'Last night.', answer: 'Azi-noapte.' },
+        { id: 's91-10', prompt: 'Tomorrow morning.', answer: 'Mâine-dimineață.' },
+        { id: 's91-11', prompt: 'This morning I overslept.', answer: 'Azi-dimineață am dormit prea mult.' },
+        { id: 's91-12', prompt: 'In the afternoon we go to the park.', answer: 'După-amiaza mergem în parc.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"On Saturdays we go to the market."',
+      options: [{ text: 'Sâmbătă mergem la piață.' }, { text: 'Sâmbăta mergem la piață.', correct: true }],
+      explanation: 'With "the" (sâmbăta) it\'s every Saturday. Sâmbătă is this Saturday.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'Yesterday evening we watched a film.',
+      answer: 'Aseară ne-am uitat la un film.',
+      distractors: ['ieri', 'seara'],
+    },
+  ],
+  shortcut: 'Time word + "the" = in / on: dimineața, seara, lunea, vara. Diseară = this evening, aseară = yesterday evening, azi-noapte = last night.',
+  useItToday: 'Describe your routine in Romanian: "Dimineața…, seara…".',
+}

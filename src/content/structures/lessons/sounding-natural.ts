@@ -1175,3 +1175,78 @@ export const sympathy: StructureLesson = {
   shortcut: 'Îmi pare rău să aud asta · Ce ghinion! · Las\' că trece · Asta e · Ce să-i faci? · Sănătate să fie!',
   useItToday: 'Next time something goes wrong, shrug it off in Romanian: "Asta e. Sănătate să fie!"',
 }
+
+export const emphasisWords: StructureLesson = {
+  id: 's-emphasis',
+  part: 'Sounding natural',
+  title: 'Chiar, tocmai, și — and the spoken că',
+  tagline: 'Mănâncă, că se răcește!',
+  shift: {
+    english: 'English colours sentences with "really", "actually", "even", "just", "exactly" — and "because" in the middle.',
+    romanian: 'Romanian does it with {{chiar}}, {{tocmai}}, {{și}} — and a spoken {{că}} meaning "because": {{Mănâncă, că se răcește!}}',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Chiar: really, actually, even, right',
+      body: [
+        '{{Chiar?}} — really? · {{Chiar e bun.}} — it\'s really good · {{chiar acum}} — right now · {{chiar și el}} — even him · {{Chiar nu știu.}} — I honestly don\'t know.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Tocmai: just, precisely',
+      body: [
+        '{{Tocmai am ajuns.}} — I\'ve just arrived · {{Tocmai asta e problema.}} — that\'s exactly the problem · {{Tocmai de aceea!}} — that\'s precisely why!',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Și: too, even',
+      body: [
+        '{{Vin și eu.}} — I\'m coming too · {{Și ce?}} — so what? · {{Și mai bine!}} — even better!',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The spoken că',
+      body: [
+        'In speech, {{că}} at the start of the second half means "because" or "since": {{Mănâncă, că se răcește!}} — eat up, it\'s getting cold! {{Hai, că întârziem!}} — come on, we\'ll be late!',
+      ],
+      glosses: [
+        { ro: 'Hai, că întârziem!', words: [['Hai', 'come-on'], ['că', 'because'], ['întârziem', 'we-are-late']], en: 'Come on, we\'ll be late!' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Add the colour',
+      rungs: [
+        { id: 's93-01', prompt: 'Really?', answer: 'Chiar?' },
+        { id: 's93-02', prompt: 'It\'s really good.', answer: 'Chiar e bun.' },
+        { id: 's93-03', prompt: 'Right now.', answer: 'Chiar acum.' },
+        { id: 's93-04', prompt: 'I honestly don\'t know.', answer: 'Chiar nu știu.' },
+        { id: 's93-05', prompt: 'That\'s exactly the problem.', answer: 'Tocmai asta e problema.' },
+        { id: 's93-06', prompt: 'That\'s precisely why!', answer: 'Tocmai de aceea!' },
+        { id: 's93-07', prompt: 'So what?', answer: 'Și ce?' },
+        { id: 's93-08', prompt: 'Even better!', answer: 'Și mai bine!' },
+        { id: 's93-09', prompt: 'Eat up, it\'s getting cold!', answer: 'Mănâncă, că se răcește!' },
+        { id: 's93-10', prompt: 'Come on, we\'ll be late!', answer: 'Hai, că întârziem!' },
+        { id: 's93-11', prompt: 'Put your jacket on, it\'s cold!', answer: 'Pune-ți geaca, că e frig!' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: 'In "Mănâncă, că se răcește!", că means…',
+      options: [{ text: 'that' }, { text: 'because', correct: true }, { text: 'like' }],
+      explanation: 'In speech, că starting the second half of a sentence means "because".',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'Hurry up, the bus is coming!',
+      answer: 'Grăbește-te, că vine autobuzul!',
+      distractors: ['ca', 'să'],
+    },
+  ],
+  shortcut: 'Chiar = really / actually / even / right (now). Tocmai = just / precisely. Și = too, even. Spoken că = because: Hai, că întârziem!',
+  useItToday: 'Hurry the family along today with "…, că întârziem!"',
+}

@@ -1171,3 +1171,140 @@ export const mustAndNeed: StructureLesson = {
   shortcut: 'Must = trebuie să. No need = nu e nevoie să (clearer than nu trebuie). Need a thing = am nevoie de / îmi trebuie. Allowed = ai voie să; n-ai voie!',
   useItToday: 'Use "N-ai voie!" and "Ai voie să…" with your son today.',
 }
+
+export const goingAndComing: StructureLesson = {
+  id: 's-motion',
+  part: 'Starting from English',
+  title: 'Go, leave, arrive, come back',
+  tagline: 'Plec, merg, ajung, vin, mă întorc.',
+  shift: {
+    english: 'English "go" covers setting off, travelling and arriving, and "leave" is both "go away" and "leave something behind".',
+    romanian: 'Romanian splits the journey: {{plec}} (set off), {{merg}} / {{mă duc}} (go), {{ajung}} (arrive), {{vin}} (come), {{mă întorc}} (come back) — and leaving something is {{las}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'The journey in five verbs',
+      body: [
+        '{{a pleca}} — leave, set off: {{Plecăm la opt.}}',
+        '{{a merge}} / {{a se duce}} — go: {{Merg la magazin.}} {{Mă duc să iau pâine.}}',
+        '{{a ajunge}} — arrive, get there: {{Ajungem la zece.}}',
+        '{{a veni}} — come: {{Vii cu noi?}} · {{a se întoarce}} — come back: {{Mă întorc imediat.}}',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Leave a place, leave a thing',
+      body: [
+        '{{a pleca}} is leaving a place. Leaving **something** is {{a lăsa}}: {{Am lăsat cheile acasă.}} — I left the keys at home.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'A very Romanian question',
+      body: [
+        '{{Ai ajuns cu bine?}} — "did you arrive with good?" — did you get there safely? Families ask it after every journey.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Make the journey',
+      rungs: [
+        { id: 's90-01', prompt: 'We\'re leaving at eight.', answer: 'Plecăm la opt.' },
+        { id: 's90-02', prompt: 'What time does the train leave?', answer: 'La ce oră pleacă trenul?' },
+        { id: 's90-03', prompt: 'I\'m going to get some bread.', answer: 'Mă duc să iau pâine.' },
+        { id: 's90-04', prompt: 'We\'ll get there at ten.', answer: 'Ajungem la zece.' },
+        { id: 's90-05', prompt: 'Did you get there safely?', answer: 'Ai ajuns cu bine?' },
+        { id: 's90-06', prompt: 'Are you coming with us?', answer: 'Vii cu noi?' },
+        { id: 's90-07', prompt: 'I\'m coming right now!', answer: 'Vin acum!' },
+        { id: 's90-08', prompt: 'I\'ll be right back.', answer: 'Mă întorc imediat.' },
+        { id: 's90-09', prompt: 'When are you coming back?', answer: 'Când te întorci?' },
+        { id: 's90-10', prompt: 'I left the keys at home.', answer: 'Am lăsat cheile acasă.' },
+        { id: 's90-11', prompt: '(the bag) Leave it there.', answer: 'Las-o acolo.' },
+        { id: 's90-12', prompt: 'Text me when you get there.', answer: 'Scrie-mi când ajungi.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"I left my phone in the car."',
+      options: [{ text: 'Am plecat telefonul în mașină.' }, { text: 'Am lăsat telefonul în mașină.', correct: true }],
+      explanation: 'Leaving something behind is a lăsa. A pleca is leaving a place.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'We\'re leaving tomorrow and coming back on Sunday.',
+      answer: 'Plecăm mâine și ne întoarcem duminică.',
+      distractors: ['venim', 'lăsăm'],
+    },
+  ],
+  shortcut: 'Plec = leave / set off. Merg / mă duc = go. Ajung = arrive. Vin = come. Mă întorc = come back. Leave something = las.',
+  useItToday: 'When your partner gets somewhere, text "Ai ajuns cu bine?"',
+}
+
+export const howFar: StructureLesson = {
+  id: 's-how-adj',
+  part: 'Starting from English',
+  title: 'How far, how big, what kind, which of',
+  tagline: 'Cât de departe? Ce fel de? Care dintre ei?',
+  shift: {
+    english: 'English asks "how far", "how big", "how often", "what kind of", "which of them".',
+    romanian: 'Romanian: {{cât de}} + a describing word, {{ce fel de}}, and {{care dintre}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Cât de + a describing word',
+      body: [
+        '{{Cât de departe e?}} — how far is it? {{Cât de mare e?}} — how big? {{Cât de des?}} — how often?',
+        'It works as an exclamation too: {{Cât de frumos!}} — how lovely!',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'What kind, which of',
+      body: [
+        '{{Ce fel de mâncare?}} — what kind of food? {{Care dintre ei?}} — which of them? {{Care dintre voi?}} — which of you?',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'How many, what for, by what',
+      body: [
+        '{{Câți}} / {{câte}} — how many, matching the thing: {{Câți oameni?}}, {{Câte zile?}}',
+        '{{Pentru ce?}} — what for? {{Cu ce mergem?}} — how are we going (by car, by train)?',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Ask it',
+      rungs: [
+        { id: 's92-01', prompt: 'How far is it?', answer: 'Cât de departe e?' },
+        { id: 's92-02', prompt: 'How big is it?', answer: 'Cât de mare e?' },
+        { id: 's92-03', prompt: 'How often?', answer: 'Cât de des?' },
+        { id: 's92-04', prompt: 'What kind of food do you like?', answer: 'Ce fel de mâncare îți place?' },
+        { id: 's92-05', prompt: 'What kind of car is it?', answer: 'Ce fel de mașină e?' },
+        { id: 's92-06', prompt: 'Which of them?', answer: 'Care dintre ei?' },
+        { id: 's92-07', prompt: 'Which of you wants cake?', answer: 'Care dintre voi vrea prăjitură?' },
+        { id: 's92-08', prompt: 'How many days?', answer: 'Câte zile?' },
+        { id: 's92-09', prompt: 'How many people?', answer: 'Câți oameni?' },
+        { id: 's92-10', prompt: 'What for?', answer: 'Pentru ce?' },
+        { id: 's92-11', prompt: 'How are we getting there?', answer: 'Cu ce mergem?' },
+        { id: 's92-12', prompt: 'How long is the film?', answer: 'Cât durează filmul?' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"How far is the seaside?"',
+      options: [{ text: 'Cât departe e marea?' }, { text: 'Cât de departe e marea?', correct: true }],
+      explanation: 'How + a describing word = cât de.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'How many children have they got?',
+      answer: 'Câți copii au?',
+      distractors: ['câte', 'de'],
+    },
+  ],
+  shortcut: 'How + describing word = cât de (cât de departe). What kind = ce fel de. Which of = care dintre. How many = câți / câte.',
+  useItToday: 'Ask one "Cât de…?" question today.',
+}

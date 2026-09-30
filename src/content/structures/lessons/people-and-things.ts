@@ -1428,3 +1428,70 @@ export const asAs: StructureLesson = {
   shortcut: 'As… as = la fel de… ca. Not as… as = nu așa de… ca. Than = decât; with numbers = mai mult de. More and more = din ce în ce mai.',
   useItToday: 'Tell your son "Te faci din ce în ce mai mare!"',
 }
+
+export const youAll: StructureLesson = {
+  id: 's-voi',
+  part: 'People and things',
+  title: 'Talking to more than one person',
+  tagline: 'Veniți! Ce faceți? Vă iubesc!',
+  shift: {
+    english: 'English "you" is the same for one person or a whole room.',
+    romanian: 'Romanian has a separate "you all" — {{voi}} — with its own endings and little words: {{Ce faceți?}}, {{V-am adus ceva}}, {{Vă iubesc!}}',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'The -ți ending, everywhere',
+      body: [
+        'Present: {{faceți}}, {{vreți}}, {{mergeți}}. Past: {{ați mâncat}}, {{ați fost}}. Future: {{o să veniți}}. \'d: {{ați vrea}}.',
+        'It\'s also the polite "you" — so you already half know it.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The little words',
+      body: [
+        '{{vă}} — you all / to you all: {{Vă văd.}} — I can see you all. {{Vă iubesc!}} — I love you all! {{V-am adus ceva.}} — I\'ve brought you something.',
+        'Your: {{vostru}} / {{voastră}}: {{casa voastră}}.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Commands to more than one',
+      body: [
+        '{{Veniți!}} — come! {{Stați!}} — wait! {{Nu plecați!}} — don\'t go! {{Nu vă certați!}} — don\'t argue!',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Talk to everyone',
+      rungs: [
+        { id: 's94-01', prompt: 'Where are you all going?', answer: 'Unde mergeți?' },
+        { id: 's94-02', prompt: 'Have you eaten?', answer: 'Ați mâncat?' },
+        { id: 's94-03', prompt: '(to his grandparents) Are you coming for Christmas?', answer: 'Veniți de Crăciun?' },
+        { id: 's94-04', prompt: '(to guests) Would you like a coffee?', answer: 'Ați vrea o cafea?' },
+        { id: 's94-05', prompt: 'I love you all!', answer: 'Vă iubesc!' },
+        { id: 's94-06', prompt: 'I\'ve brought you something.', answer: 'V-am adus ceva.' },
+        { id: 's94-07', prompt: 'We missed you!', answer: 'Ne-a fost dor de voi!' },
+        { id: 's94-08', prompt: '(to them) Your house is lovely.', answer: 'Casa voastră e minunată.' },
+        { id: 's94-09', prompt: '(to two children) Come here!', answer: 'Veniți aici!' },
+        { id: 's94-10', prompt: '(to two children) Don\'t argue!', answer: 'Nu vă certați!' },
+        { id: 's94-11', prompt: 'Thank you both!', answer: 'Mulțumesc amândurora!' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: 'To both grandparents: "Are you tired?"',
+      options: [{ text: 'Ești obosit?' }, { text: 'Sunteți obosiți?', correct: true }],
+      explanation: 'Two people — the voi forms: sunteți obosiți.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'We\'re coming to see you in the summer.',
+      answer: 'Venim să vă vedem la vară.',
+      distractors: ['te', 'voi'],
+    },
+  ],
+  shortcut: 'You all (and polite you) = -ți on every verb (faceți, ați mâncat). Vă = you all / to you all. Vostru / voastră = your. Commands: veniți! nu plecați!',
+  useItToday: 'At the next family gathering, talk to everyone at once: "Ce faceți? Vă iubesc!"',
+}
