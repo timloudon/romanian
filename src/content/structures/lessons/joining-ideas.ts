@@ -1,0 +1,188 @@
+import type { StructureLesson } from '../types'
+
+export const commands: StructureLesson = {
+  id: 's-commands',
+  part: 'Joining ideas',
+  title: 'Do it! Don\'t do it!',
+  tagline: '"Don\'t" is nu + the dictionary form.',
+  shift: {
+    english: 'English just uses the plain verb: Come! Wait! Don\'t touch!',
+    romanian: 'Romanian commands mostly look like "he does it" — and "don\'t" is {{nu}} + the dictionary form.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Do it',
+      body: [
+        'For most verbs ending in -a, telling one person to do something sounds like "he / she does it": {{Mănâncă!}} (Eat!), {{Așteaptă!}} (Wait!), {{Ascultă!}} (Listen!).',
+        'A handful of the most common ones are short and just worth knowing: {{Vino!}} (Come!), {{Fă!}} (Do!), {{Dă-mi!}} (Give me!), {{Stai!}} (Stay / Wait!), {{Hai!}} (Come on!).',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Don\'t do it: the easy one',
+      body: [
+        '"Don\'t" is {{nu}} + the dictionary form, without its "a": {{a pleca}} → {{Nu pleca!}} (Don\'t go!). {{a atinge}} → {{Nu atinge!}} (Don\'t touch!). {{a plânge}} → {{Nu plânge!}} (Don\'t cry!).',
+        'No new endings to learn — it\'s the form you\'d look up in a dictionary.',
+      ],
+      glosses: [{ ro: 'Nu pleca!', words: [['Nu', 'not'], ['pleca', 'to-leave']], en: "Don't go!" }],
+    },
+    {
+      kind: 'explain',
+      title: 'Me, it, him on the end',
+      body: [
+        'In a command, the little words go on the end with a hyphen: {{Dă-mi!}} (give me), {{Ia-l!}} (take it), {{Sună-mă!}} (call me).',
+        'With "don\'t" they go back to the front: {{Nu-l lua!}} (don\'t take it).',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Softening it',
+      body: [
+        'Romanians soften commands the way English uses "just" or "please": {{Hai, mănâncă!}} (Come on, eat!), {{Te rog, vino.}} (Please come.)',
+        'For your partner\'s parents, use the polite -ți form: {{Veniți!}} (Come!), {{Stați jos.}} (Sit down.)',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Say it',
+      rungs: [
+        { id: 's16-01', prompt: 'Wait!', answer: 'Așteaptă!' },
+        { id: 's16-02', prompt: 'Listen!', answer: 'Ascultă!' },
+        { id: 's16-03', prompt: 'Come here!', answer: 'Vino aici!' },
+        { id: 's16-04', prompt: "Don't go!", answer: 'Nu pleca!', hint: 'a pleca = to leave' },
+        { id: 's16-05', prompt: "Don't cry!", answer: 'Nu plânge!' },
+        { id: 's16-06', prompt: "Don't touch!", answer: 'Nu atinge!' },
+        { id: 's16-07', prompt: 'Give me the phone.', answer: 'Dă-mi telefonul.' },
+        { id: 's16-08', prompt: 'Take it!', answer: 'Ia-l!' },
+        { id: 's16-09', prompt: "Don't eat that!", answer: 'Nu mânca asta!' },
+        {
+          id: 's16-10',
+          prompt: "(politely, to your partner's parents) Please sit down.",
+          answer: 'Vă rog, stați jos.',
+        },
+        { id: 's16-11', prompt: 'Tell me!', answer: 'Spune-mi!' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"Don\'t run!" (a alerga — to run)',
+      options: [{ text: 'Nu aleargă!' }, { text: 'Nu alerga!', correct: true }],
+      explanation: 'Don\'t = nu + the dictionary form: alerga. "Aleargă" is "he runs" — or "Run!"',
+    },
+    {
+      kind: 'assemble',
+      prompt: "Don't forget the keys!",
+      answer: 'Nu uita cheile!',
+      distractors: ['uită', 'chei'],
+    },
+  ],
+  shortcut: 'Do it: mostly the "he / she" form — mănâncă! Don\'t: nu + the dictionary form — nu pleca!',
+  useItToday: 'Give your son his instructions in Romanian all day: "Vino! Stai! Nu atinge! Dă-mi!"',
+  seeAlso: { lessonId: 'u13-l01', label: 'Course: Everyday commands' },
+}
+
+export const neverDropThat: StructureLesson = {
+  id: 's-that',
+  part: 'Joining ideas',
+  title: 'Never drop the "that"',
+  tagline: '"I think it\'s good" needs a că: cred că e bine.',
+  shift: {
+    english: 'English quietly drops "that": I think it\'s good, I know you\'re busy.',
+    romanian: 'Romanian always says it: {{cred că e bine}} — "I think that it\'s good".',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'The glue you can\'t leave out',
+      body: [
+        'English lets you drop "that": "I think (that) he\'s asleep." Romanian never does. The "that" is {{că}}: {{Cred că doarme.}} — "I think that he sleeps".',
+        'It follows thinking, saying, knowing and hoping: {{cred că}} (I think), {{știu că}} (I know), {{zice că}} (he / she says), {{sper că}} (I hope).',
+      ],
+      glosses: [
+        {
+          ro: 'Știu că e greu.',
+          words: [['Știu', 'I-know'], ['că', 'that'], ['e', "it's"], ['greu', 'hard']],
+          en: "I know it's hard.",
+        },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Că or să?',
+      body: [
+        'Two little words, easy to mix up:',
+        '{{că}} is "that" for **facts**: "I know that he\'s asleep" → {{Știu că doarme.}}',
+        '{{să}} is the bridge for **wishes and needs**: "I want him to sleep" → {{Vreau să doarmă.}}',
+        'Facts take că. Wishes take să.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Romanian keeps the tense',
+      body: [
+        'English shifts tenses when reporting: "I didn\'t know you **were** here." Romanian usually keeps what was true at the time: {{Nu știam că ești aici.}} — "I didn\'t know that you **are** here".',
+        'Same with plans: "I told you I\'d be late" → {{Ți-am zis că o să întârzii.}} — "I told you that I\'ll be late".',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The other glue',
+      body: [
+        '{{pentru că}} — because (literally "for that") · {{dacă}} — if, whether · {{când}} — when · {{deci}} — so · {{dar}} — but.',
+        '{{Nu știu dacă vine.}} — I don\'t know if he\'s coming.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Say it',
+      rungs: [
+        {
+          id: 's17-01',
+          prompt: 'I think so.',
+          answer: 'Cred că da.',
+          teachingNote: '"I think that yes." And "I don\'t think so" is "I think that no".',
+        },
+        { id: 's17-02', prompt: "I don't think so.", answer: 'Cred că nu.' },
+        { id: 's17-03', prompt: "I think he's asleep.", answer: 'Cred că doarme.' },
+        { id: 's17-04', prompt: "I know it's hard.", answer: 'Știu că e greu.' },
+        { id: 's17-05', prompt: "I hope you're well.", answer: 'Sper că ești bine.' },
+        { id: 's17-06', prompt: "She says she's coming.", answer: 'Zice că vine.' },
+        { id: 's17-07', prompt: "I don't know if he's coming.", answer: 'Nu știu dacă vine.' },
+        {
+          id: 's17-08',
+          prompt: "I'm staying home because it's raining.",
+          answer: 'Stau acasă pentru că plouă.',
+        },
+        { id: 's17-09', prompt: 'I want him to sleep.', answer: 'Vreau să doarmă.' },
+        { id: 's17-10', prompt: "I told you I'd be late.", answer: 'Ți-am zis că o să întârzii.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"I think it\'s a good idea."',
+      options: [
+        { text: 'Cred e o idee bună.' },
+        { text: 'Cred că e o idee bună.', correct: true },
+        { text: 'Cred să e o idee bună.' },
+      ],
+      explanation: 'Thinking takes că — and it can\'t be dropped.',
+    },
+    {
+      kind: 'choose',
+      question: '"I want you to know."',
+      options: [{ text: 'Vreau că știi.' }, { text: 'Vreau să știi.', correct: true }],
+      explanation: 'A wish, not a fact — so să.',
+    },
+    {
+      kind: 'assemble',
+      prompt: "I didn't know you were here.",
+      answer: 'Nu știam că ești aici.',
+      distractors: ['să', 'sunt'],
+      note: '"That you are here" — Romanian keeps the tense that was true at the time. ("Că erai aici" is fine too.)',
+    },
+  ],
+  shortcut: 'Never drop "that": cred că, știu că. Facts take că; wishes take să.',
+  useItToday: 'Give an opinion today starting with "Cred că…" — about food, the weather, anything.',
+  seeAlso: { lessonId: 'u15-l01', label: 'Course: "Cred că…" — giving an opinion' },
+}

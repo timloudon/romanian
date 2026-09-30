@@ -24,6 +24,8 @@ import { mkdir, readdir, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { roCore } from '../src/content/courses/ro-core/index.ts'
 import { lifeTopics } from '../src/content/life/index.ts'
+import { structureLessons, structureRomanianPhrases } from '../src/content/structures/index.ts'
+import type { Drill } from '../src/content/types.ts'
 
 type Lang = 'ro' | 'en'
 
@@ -91,16 +93,21 @@ function collectPhrases(only?: Lang): Phrase[] {
     seen.add(key)
     phrases.push(phrase)
   }
-  // Priority order for when free credits run out mid-run: the weekly real-life phrases first
-  // (what gets said at home), then the course from the beginning.
-  const drills = [
-    ...lifeTopics.flatMap((topic) => topic.drills),
-    ...roCore.units.flatMap((unit) => unit.lessons.flatMap((lesson) => lesson.drills)),
-  ]
-  for (const drill of drills) {
-    add({ lang: 'ro', text: drill.answer, spoken: drill.answer })
-    add({ lang: 'en', text: drill.prompt, spoken: toSpokenPrompt(drill.prompt) })
+  const addDrills = (drills: Drill[]) => {
+    for (const drill of drills) {
+      add({ lang: 'ro', text: drill.answer, spoken: drill.answer })
+      add({ lang: 'en', text: drill.prompt, spoken: toSpokenPrompt(drill.prompt) })
+    }
   }
+  // Priority order for when free credits run out mid-run: the weekly real-life phrases first
+  // (what gets said at home), then Structures — every Romanian phrase a lesson can play, in
+  // lesson order — then the course from the beginning.
+  addDrills(lifeTopics.flatMap((topic) => topic.drills))
+  for (const lesson of structureLessons) {
+    for (const text of structureRomanianPhrases(lesson)) add({ lang: 'ro', text, spoken: text })
+    for (const step of lesson.steps) if (step.kind === 'ladder') addDrills(step.rungs)
+  }
+  addDrills(roCore.units.flatMap((unit) => unit.lessons.flatMap((lesson) => lesson.drills)))
   return phrases
 }
 

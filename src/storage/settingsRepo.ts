@@ -8,6 +8,7 @@ const DEFAULT_SETTINGS: Settings = {
   preferredVoiceURI: null,
   playbackRate: 1,
   lifeFocus: null,
+  structuresDone: [],
 }
 
 export function getSettings(): Settings {

@@ -1,0 +1,485 @@
+import type { StructureLesson } from '../types'
+
+export const past: StructureLesson = {
+  id: 's-past',
+  part: 'Time',
+  title: 'Every past is "I have done"',
+  tagline: '"I ate", "I\'ve eaten" and "I did eat" are all am mâncat.',
+  shift: {
+    english: 'English has "I ate", "I have eaten", "I did eat" — and you have to pick one.',
+    romanian: 'Everyday Romanian has one past, shaped like "I have eaten": {{am mâncat}}. It covers all of them.',
+  },
+  steps: [
+    {
+      kind: 'funnel',
+      title: 'One past for everything',
+      english: ['I ate', "I've eaten", 'I did eat'],
+      ro: 'Am mâncat.',
+      caption: 'Always think "have": "I have eaten". That one shape is your whole everyday past.',
+    },
+    {
+      kind: 'explain',
+      title: 'Have + done',
+      body: [
+        '{{am}} is "I have" — you know it already from {{Am o întrebare}} (I have a question). Put it in front of the "done" form: {{am mâncat}} — "I have eaten" — I ate.',
+        'The "have" changes for who; the "done" part never does:',
+        '**am** mâncat — I ate · **ai** mâncat — you ate · **a** mâncat — he / she ate',
+        '**am** mâncat — we ate · **ați** mâncat — you all ate · **au** mâncat — they ate',
+        '"I" and "we" are the same word. Context sorts it out, just like "you" does in English.',
+      ],
+      glosses: [
+        { ro: 'Am mâncat.', words: [['Am', 'I-have'], ['mâncat', 'eaten']], en: 'I ate.' },
+        { ro: 'Ce ai făcut?', words: [['Ce', 'what'], ['ai', 'you-have'], ['făcut', 'done']], en: 'What did you do?' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Making the "done" form',
+      body: [
+        'Most verbs: take the "to" form and add **-t**. {{a mânca}} → {{mâncat}}, {{a lucra}} → {{lucrat}}, {{a vorbi}} → {{vorbit}}, {{a dormi}} → {{dormit}}.',
+        'A big family ends in **-ut** — Romanian\'s version of English "done", "seen", "had": {{făcut}} (done / made), {{văzut}} (seen), {{avut}} (had), {{putut}} (been able), {{vrut}} (wanted), {{fost}} (been).',
+      ],
+    },
+    {
+      kind: 'funnel',
+      title: 'No "did" in questions',
+      english: ['Did you eat?', 'Have you eaten?'],
+      ro: 'Ai mâncat?',
+      caption: 'There\'s no "did" to translate. "Have you eaten?" covers both.',
+    },
+    {
+      kind: 'explain',
+      title: '"Didn\'t" is n-am',
+      body: [
+        '{{nu am}} squashes to {{n-am}}: {{N-am mâncat.}} — I didn\'t eat, I haven\'t eaten. {{N-ai}} — you didn\'t. {{N-a}} — he or she didn\'t.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Build it up',
+      rungs: [
+        { id: 's06-01', prompt: 'I ate.', answer: 'Am mâncat.' },
+        { id: 's06-02', prompt: 'Have you eaten?', answer: 'Ai mâncat?' },
+        { id: 's06-03', prompt: "He's eaten everything.", answer: 'A mâncat tot.', hint: 'a = he has; tot = everything' },
+        { id: 's06-04', prompt: "I didn't sleep.", answer: 'N-am dormit.' },
+        { id: 's06-05', prompt: 'Did you sleep well?', answer: 'Ai dormit bine?' },
+        { id: 's06-06', prompt: 'What did you do today?', answer: 'Ce ai făcut azi?' },
+        { id: 's06-07', prompt: 'I worked a lot.', answer: 'Am lucrat mult.' },
+        { id: 's06-08', prompt: 'I talked to your mum.', answer: 'Am vorbit cu mama ta.', hint: 'talked with: vorbit cu' },
+        { id: 's06-09', prompt: 'We saw a film.', answer: 'Am văzut un film.' },
+        { id: 's06-10', prompt: "I couldn't.", answer: 'N-am putut.' },
+        { id: 's06-11', prompt: "I didn't want to.", answer: 'N-am vrut.' },
+        { id: 's06-12', prompt: 'Where have you been?', answer: 'Unde ai fost?' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"Did you understand?"',
+      options: [{ text: 'Ai înțeles?', correct: true }, { text: 'Ai înțelege?' }, { text: 'Făcut înțeles?' }],
+      explanation: '"Have you understood?" — ai + înțeles. Înțeles is one of the odd "done" forms, like English "understood".',
+    },
+    {
+      kind: 'assemble',
+      prompt: "We didn't sleep at all last night.",
+      answer: 'N-am dormit deloc azi-noapte.',
+      distractors: ['nu', 'dormim'],
+      note: 'Deloc — at all. Azi-noapte — last night (literally "today-night").',
+    },
+  ],
+  shortcut: 'Every past is "have done": am / ai / a / am / ați / au + mâncat. No "did": "Ai mâncat?" is "Have you eaten?"',
+  useItToday: 'At the end of the day, tell your partner three things you did, each one starting with "Am…".',
+  seeAlso: { lessonId: 'u03-l01', label: 'Course: "Am mers..." — saying what you did' },
+}
+
+export const future: StructureLesson = {
+  id: 's-future',
+  part: 'Time',
+  title: 'The future costs nothing',
+  tagline: 'Put o să in front of what you already know.',
+  shift: {
+    english: 'English has "I\'ll go" and "I\'m going to go".',
+    romanian: 'Romanian puts {{o să}} in front of the present: {{o să merg}}. The "o" never changes.',
+  },
+  steps: [
+    {
+      kind: 'funnel',
+      title: 'Think "gonna"',
+      english: ["I'll go", "I'm going to go", "I'm gonna go"],
+      ro: 'O să merg.',
+      caption: 'O să is "gonna". Everything after it is the present you already know.',
+    },
+    {
+      kind: 'explain',
+      title: 'Nothing new to learn',
+      body: [
+        '{{o să}} never changes. The verb after it is exactly what comes after {{vreau să}}: {{o să merg}} (I\'ll go), {{o să mergi}} (you\'ll go), {{o să mergem}} (we\'ll go). If you can say it now, you can say it tomorrow.',
+        '"Won\'t" is {{n-o să}}: {{N-o să uit.}} — I won\'t forget.',
+        'And just like English "Tomorrow I\'m working", Romanian often uses the plain present when the time is clear: {{Mâine lucrez.}}',
+      ],
+      glosses: [
+        { ro: 'O să plouă.', words: [['O să', 'gonna'], ['plouă', 'it-rains']], en: "It's going to rain." },
+      ],
+    },
+    {
+      kind: 'timeline',
+      title: 'Yesterday, now, tomorrow',
+      intro: 'Tap between the three and watch what changes. Only the front of the sentence moves.',
+      sentences: [
+        {
+          past: { en: 'I worked from home.', ro: 'Am lucrat de acasă.' },
+          present: { en: "I'm working from home.", ro: 'Lucrez de acasă.' },
+          future: { en: "I'll work from home.", ro: 'O să lucrez de acasă.' },
+        },
+        {
+          past: { en: 'We went to the park.', ro: 'Am mers în parc.' },
+          present: { en: "We're going to the park.", ro: 'Mergem în parc.' },
+          future: { en: "We'll go to the park.", ro: 'O să mergem în parc.' },
+        },
+        {
+          past: { en: 'He slept well.', ro: 'A dormit bine.' },
+          present: { en: "He's sleeping well.", ro: 'Doarme bine.' },
+          future: { en: "He'll sleep well.", ro: 'O să doarmă bine.' },
+        },
+        {
+          past: { en: "I didn't understand.", ro: 'N-am înțeles.' },
+          present: { en: "I don't understand.", ro: 'Nu înțeleg.' },
+          future: { en: "I won't understand.", ro: 'N-o să înțeleg.' },
+        },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The one you\'ll hear on the news',
+      body: [
+        '{{Voi merge}}, {{vom vedea}} — the formal future. You\'ll hear {{Vom vedea}} ("we\'ll see") all the time, but for your own speaking, {{o să}} is all you need.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Build it up',
+      rungs: [
+        { id: 's07-01', prompt: "I'll call you.", answer: 'O să te sun.', hint: 'te = you, before the verb' },
+        { id: 's07-02', prompt: "I'll call you tonight.", answer: 'O să te sun diseară.' },
+        { id: 's07-03', prompt: "It's going to rain.", answer: 'O să plouă.' },
+        {
+          id: 's07-04',
+          prompt: "We'll see.",
+          answer: 'Vom vedea.',
+          acceptedAlternates: ['O să vedem.'],
+          teachingNote: 'The formal future, used as a fixed phrase. "O să vedem" is fine too.',
+        },
+        {
+          id: 's07-05',
+          prompt: "He's going to be tired.",
+          answer: 'O să fie obosit.',
+          teachingNote: 'Fie is how "is" (e) looks after să — the same shift as doarme → doarmă.',
+        },
+        { id: 's07-06', prompt: "I won't be late.", answer: 'N-o să întârzii.' },
+        { id: 's07-07', prompt: 'What are we going to do?', answer: 'Ce o să facem?' },
+        { id: 's07-08', prompt: "Tomorrow I'm working.", answer: 'Mâine lucrez.' },
+        {
+          id: 's07-09',
+          prompt: "You're going to like it.",
+          answer: 'O să-ți placă.',
+          teachingNote: 'From îmi place — "to me it pleases". There\'s a whole lesson on that shape.',
+        },
+        {
+          id: 's07-10',
+          prompt: "We'll talk later.",
+          answer: 'Vorbim mai târziu.',
+          teachingNote: 'The plain present for the future again — very common.',
+        },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"I\'ll do it tomorrow."',
+      options: [
+        { text: 'O să fac asta mâine.', correct: true },
+        { text: 'Voi să fac asta mâine.' },
+        { text: 'O fac să mâine.' },
+      ],
+      explanation: 'O să + fac. Don\'t mix the two: it\'s either "o să fac" or the formal "voi face" — never "voi să".',
+    },
+    {
+      kind: 'assemble',
+      prompt: "We're going to spend Christmas in Romania.",
+      answer: 'O să petrecem Crăciunul în România.',
+      distractors: ['vom', 'petrec'],
+    },
+  ],
+  shortcut: 'Future = o să + the present you already know. Won\'t = n-o să. Or just the present, with a time word.',
+  useItToday: 'Tell your partner your plans for tomorrow with "O să…" — or the plain present: "Mâine lucrez."',
+  seeAlso: { lessonId: 'u07-l01', label: 'Course: "O să..." — talking about the future' },
+}
+
+export const since: StructureLesson = {
+  id: 's-since',
+  part: 'Time',
+  title: '"I\'ve been waiting an hour" = "I wait since an hour"',
+  tagline: 'No "have been -ing": if it\'s still going on, use the present with de.',
+  shift: {
+    english: 'English says "I\'ve been living here for ten years" — a three-part verb.',
+    romanian: 'Romanian says "I live here since ten years" — {{locuiesc aici de zece ani}}. It\'s still happening, so it\'s the present.',
+  },
+  steps: [
+    {
+      kind: 'funnel',
+      title: 'Still going on? Present.',
+      english: ["I've been waiting for an hour", "I've waited an hour (and I'm still waiting)"],
+      ro: 'Aștept de o oră.',
+      caption: 'De means "since" or "for" here.',
+    },
+    {
+      kind: 'explain',
+      title: 'Ask: is it still happening?',
+      body: [
+        'If yes, use the plain present and add {{de}} + the time: {{Lucrez aici de doi ani.}} — "I work here since two years".',
+        'To ask "How long have you…?", use {{De când}} — "since when": {{De când aștepți?}}',
+      ],
+      glosses: [
+        {
+          ro: 'Ne cunoaștem de mult.',
+          words: [['Ne cunoaștem', 'we-know-each-other'], ['de mult', 'since-long']],
+          en: "We've known each other for a long time.",
+        },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'De, the busy little word',
+      body: [
+        '{{de}} does jobs that take several words in English: "of" — {{o cană de cafea}} · "from" — {{de acasă}} · "for / since" — {{de o oră}} · "to" in "something to eat" — {{ceva de mâncare}}.',
+        'When you\'re not sure which little word goes somewhere, {{de}} is a good first guess.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Build it up',
+      rungs: [
+        { id: 's08-01', prompt: "I've been waiting for an hour.", answer: 'Aștept de o oră.' },
+        { id: 's08-02', prompt: 'How long have you been waiting?', answer: 'De când aștepți?' },
+        {
+          id: 's08-03',
+          prompt: "We've been together for twelve years.",
+          answer: 'Suntem împreună de doisprezece ani.',
+          hint: 'suntem = we are; împreună = together',
+        },
+        {
+          id: 's08-04',
+          prompt: "I've been living here for years.",
+          answer: 'Locuiesc aici de ani de zile.',
+          teachingNote: '"Ani de zile" — "years of days" — is how Romanians say "for years".',
+        },
+        { id: 's08-05', prompt: "He's been crying for ten minutes.", answer: 'Plânge de zece minute.' },
+        {
+          id: 's08-06',
+          prompt: "I've known her for a long time.",
+          answer: 'O cunosc de mult.',
+          hint: 'o = her, before the verb',
+        },
+        { id: 's08-07', prompt: "I've been learning Romanian for a year.", answer: 'Învăț română de un an.' },
+        { id: 's08-08', prompt: 'Since when?', answer: 'De când?' },
+        { id: 's08-09', prompt: 'A cup of coffee.', answer: 'O cană de cafea.' },
+        { id: 's08-10', prompt: 'Something to eat.', answer: 'Ceva de mâncare.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"I\'ve been working since eight."',
+      options: [
+        { text: 'Am lucrat de la opt.' },
+        { text: 'Lucrez de la opt.', correct: true },
+        { text: 'Sunt lucrând de la opt.' },
+      ],
+      explanation: 'Still working, so the present. "Since eight o\'clock" is de la opt — "from eight".',
+    },
+    {
+      kind: 'assemble',
+      prompt: "We've been waiting since this morning.",
+      answer: 'Așteptăm de azi-dimineață.',
+      distractors: ['am', 'așteptat'],
+      note: 'Azi-dimineață — this morning, literally "today-morning".',
+    },
+  ],
+  shortcut: 'Still going on? Present + de: "Aștept de o oră." Ask with "De când…?"',
+  useItToday: 'Ask your partner a "De când…?" question — how long they\'ve known a friend, lived somewhere, had something.',
+}
+
+export const usedTo: StructureLesson = {
+  id: 's-used-to',
+  part: 'Time',
+  title: 'Was -ing and used to: one form',
+  tagline: 'The background of a story: mâncam, eram, aveam.',
+  shift: {
+    english: 'English has "I was eating", "I used to eat" and "I would eat (every summer)".',
+    romanian: 'Romanian has one form for all three — {{mâncam}} — the scenery of a story.',
+  },
+  steps: [
+    {
+      kind: 'funnel',
+      title: 'Ongoing or habitual in the past',
+      english: ['I was eating', 'I used to eat', 'I would eat (every summer)'],
+      ro: 'Mâncam.',
+      caption: 'Anything that was going on, or kept happening.',
+    },
+    {
+      kind: 'explain',
+      title: 'Scenery and events',
+      body: [
+        'Think of a story as a stage. {{am mâncat}} is an **event** — something happened. {{mâncam}} is the **scenery** — what was going on, or what used to happen.',
+        '"I was eating (scenery) when you called (event)": {{Mâncam când ai sunat.}}',
+      ],
+      glosses: [
+        {
+          ro: 'Mâncam când ai sunat.',
+          words: [['Mâncam', 'I-was-eating'], ['când', 'when'], ['ai sunat', 'you-have called']],
+          en: 'I was eating when you called.',
+        },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The endings',
+      body: [
+        'They\'re the endings you know from "have": **-am, -ai, -a, -am, -ați, -au**. {{mâncam}}, {{mâncai}}, {{mânca}}…',
+        'Verbs ending in -i or -e use **-eam**: {{dormeam}}, {{făceam}}, {{puteam}}, {{mergeam}}.',
+        'Three to learn as words, because you\'ll use them in every story: {{eram}} (I was), {{aveam}} (I had), {{voiam}} (I wanted).',
+      ],
+      glosses: [
+        { ro: 'Când eram copil…', words: [['Când', 'when'], ['eram', 'I-was'], ['copil', 'child']], en: 'When I was a kid…' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Tell a story',
+      rungs: [
+        { id: 's09-01', prompt: 'I was a kid.', answer: 'Eram copil.' },
+        {
+          id: 's09-02',
+          prompt: 'When I was a kid, I used to play football.',
+          answer: 'Când eram copil, jucam fotbal.',
+        },
+        {
+          id: 's09-03',
+          prompt: 'We used to go to the seaside every summer.',
+          answer: 'Mergeam la mare în fiecare vară.',
+          hint: 'în fiecare vară = every summer',
+        },
+        { id: 's09-04', prompt: 'I was sleeping.', answer: 'Dormeam.' },
+        { id: 's09-05', prompt: 'I was sleeping when you called.', answer: 'Dormeam când ai sunat.' },
+        { id: 's09-06', prompt: 'What were you doing?', answer: 'Ce făceai?' },
+        {
+          id: 's09-07',
+          prompt: 'I wanted to tell you something.',
+          answer: 'Voiam să-ți spun ceva.',
+          teachingNote: 'Voiam is softer than am vrut — like English "I was wanting to…".',
+        },
+        { id: 's09-08', prompt: 'It was lovely.', answer: 'Era frumos.' },
+        { id: 's09-09', prompt: "I didn't know.", answer: 'Nu știam.' },
+        {
+          id: 's09-10',
+          prompt: "We didn't have a car back then.",
+          answer: 'Nu aveam mașină pe atunci.',
+          hint: 'pe atunci = back then',
+        },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"I was cooking when he woke up."',
+      options: [{ text: 'Am gătit când s-a trezit.' }, { text: 'Găteam când s-a trezit.', correct: true }],
+      explanation: 'The cooking is the scenery (găteam); waking up is the event (s-a trezit).',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'When he was little, he used to sleep a lot.',
+      answer: 'Când era mic, dormea mult.',
+      distractors: ['am', 'dormit'],
+    },
+  ],
+  shortcut: 'Events: am mâncat. Scenery and habits — was -ing, used to: mâncam, eram, aveam.',
+  useItToday: 'Tell your partner — or your son — one thing you used to do as a kid: "Când eram copil, …"',
+  seeAlso: { lessonId: 'u16-l01', label: 'Course: Used to, was, were' },
+}
+
+export const would: StructureLesson = {
+  id: 's-would',
+  part: 'Time',
+  title: 'I\'d, you\'d, it\'d: aș, ai, ar',
+  tagline: 'One little word turns "I want" into "I\'d like".',
+  shift: {
+    english: 'English squeezes "would" into \'d: I\'d like, I\'d go, it\'d be.',
+    romanian: 'Romanian has its own little \'d in front of the verb: {{aș vrea}}, {{aș merge}}, {{ar fi}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Aș is "I\'d"',
+      body: [
+        '{{aș}} works just like "I\'d": put it in front of the plain verb. {{Aș vrea}} — I\'d like. {{Aș merge}} — I\'d go.',
+        'You\'ll mostly need three: {{aș}} (I\'d), {{ai}} (you\'d), {{ar}} (it\'d / he\'d / she\'d / they\'d).',
+        'The verb after it is the dictionary form without the "a": {{a merge}} → {{aș merge}}, {{a fi}} → {{ar fi}} (it would be).',
+      ],
+      glosses: [
+        { ro: 'Ar fi frumos.', words: [['Ar', "it'd"], ['fi', 'be'], ['frumos', 'lovely']], en: 'It would be lovely.' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: '"If I\'d have time"',
+      body: [
+        '"If I had time, I\'d go" — Romanian puts the \'d on both halves: {{Dacă aș avea timp, aș merge.}} — "If I\'d have time, I\'d go". Exactly what English teachers correct; exactly what Romanian wants.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Should and could, for free',
+      body: [
+        '"Should" is "it would be necessary": {{ar trebui}}. {{Ar trebui să plecăm.}} — We should go.',
+        '"Could you…?" is "would you be able": {{Ai putea să…?}} — the politest way to ask for something.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Build it up',
+      rungs: [
+        { id: 's10-01', prompt: "I'd like a coffee.", answer: 'Aș vrea o cafea.' },
+        { id: 's10-02', prompt: 'Would you like a coffee?', answer: 'Ai vrea o cafea?' },
+        { id: 's10-03', prompt: 'It would be lovely.', answer: 'Ar fi frumos.' },
+        { id: 's10-04', prompt: 'It would be better.', answer: 'Ar fi mai bine.', hint: 'mai bine = better' },
+        { id: 's10-05', prompt: "I'd go, but I have to work.", answer: 'Aș merge, dar trebuie să lucrez.' },
+        { id: 's10-06', prompt: "If I had time, I'd go.", answer: 'Dacă aș avea timp, aș merge.' },
+        { id: 's10-07', prompt: 'What would you do?', answer: 'Ce ai face?' },
+        {
+          id: 's10-08',
+          prompt: 'Could you help me?',
+          answer: 'Ai putea să mă ajuți?',
+          hint: 'mă = me, before the verb',
+        },
+        { id: 's10-09', prompt: "I'd rather stay at home.", answer: 'Aș prefera să rămân acasă.' },
+        { id: 's10-10', prompt: 'We should go.', answer: 'Ar trebui să mergem.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"You should rest."',
+      options: [
+        { text: 'Trebuie să te odihnești.' },
+        { text: 'Ar trebui să te odihnești.', correct: true },
+        { text: 'Aș trebui să te odihnești.' },
+      ],
+      explanation: '"Should" is "it would need": ar trebui. Trebuie on its own is the stronger "must". Aș would be "I\'d".',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'It would be nice to go to the seaside.',
+      answer: 'Ar fi frumos să mergem la mare.',
+      distractors: ['aș', 'e'],
+      note: 'Romanian says "it would be nice that we go" — să + we.',
+    },
+  ],
+  shortcut: "'d = aș / ai / ar + the plain verb. Should = ar trebui. Could you…? = Ai putea să…?",
+  useItToday: 'Ask for something politely today with "Aș vrea…" or "Ai putea să…?"',
+  seeAlso: { lessonId: 'u09-l01', label: 'Course: "Aș vrea..." — a softer way to ask' },
+}

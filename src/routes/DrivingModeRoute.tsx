@@ -4,23 +4,31 @@ import { unlockAudio } from '../audio/player'
 import { primeSpeechSynthesis } from '../audio/speechSynthesis'
 import { DrivingPlayer } from '../components/driving/DrivingPlayer'
 import { findLifeTopic } from '../content/life'
+import { findStructureLesson, structureDrills } from '../content/structures'
 import { drillQueue, dueQueue, type SessionItem } from '../engine/session'
 import { getDueItems } from '../storage/progressRepo'
 import { getSettings, updateSettings } from '../storage/settingsRepo'
 
-/** Drives either a weekly topic's phrases (`?topic=<id>`, launched from the This week tab) or,
- *  by default, whatever's due for review. */
+/** Drives a weekly topic's phrases (`?topic=<id>`, from This week), a Structures lesson's drills
+ *  (`?structure=<id>`), or, by default, whatever's due for review. */
 export function DrivingModeRoute() {
   const [searchParams] = useSearchParams()
   const topicId = searchParams.get('topic')
+  const structureId = searchParams.get('structure')
   const topic = findLifeTopic(topicId)
-  const topicQueue = useMemo(() => (topic ? drillQueue(topic.drills) : null), [topic])
+  const structure = findStructureLesson(structureId)
+  const sourceId = topicId ?? structureId
+  const sourceQueue = useMemo(() => {
+    if (topic) return drillQueue(topic.drills)
+    if (structure) return drillQueue(structureDrills(structure))
+    return null
+  }, [topic, structure])
   const [dueItems, setDueItems] = useState<SessionItem[] | null>(null)
   const [started, setStarted] = useState(false)
   const [noticeAcknowledged, setNoticeAcknowledged] = useState(() => getSettings().drivingNoticeAcknowledged)
 
   useEffect(() => {
-    if (topicId) return
+    if (sourceId) return
     let cancelled = false
     void getDueItems().then((due) => {
       if (!cancelled) setDueItems(dueQueue(due))
@@ -28,10 +36,12 @@ export function DrivingModeRoute() {
     return () => {
       cancelled = true
     }
-  }, [topicId])
+  }, [sourceId])
 
-  const queue = topicId ? topicQueue : dueItems
-  const exitHref = topicId ? '/week' : '/'
+  const queue = sourceId ? sourceQueue : dueItems
+  let exitHref = '/'
+  if (topicId) exitHref = '/week'
+  else if (structureId) exitHref = `/structures/${structureId}`
 
   function handleStart() {
     // These must run synchronously inside this tap — that's what satisfies iOS's autoplay policy
@@ -45,12 +55,12 @@ export function DrivingModeRoute() {
     setStarted(true)
   }
 
-  if (topicId && !topic) {
+  if (sourceId && !topic && !structure) {
     return (
       <div className="flex min-h-dvh flex-col items-center justify-center gap-4 bg-flag-blue p-6 text-center text-white">
-        <p>That topic doesn't exist.</p>
-        <Link to="/week" className="rounded-xl bg-white px-6 py-3 font-semibold text-flag-blue">
-          Back to This week
+        <p>That doesn't exist.</p>
+        <Link to={topicId ? '/week' : '/structures'} className="rounded-xl bg-white px-6 py-3 font-semibold text-flag-blue">
+          Go back
         </Link>
       </div>
     )
@@ -86,7 +96,9 @@ export function DrivingModeRoute() {
           </p>
         )}
         <p className="text-lg">
-          {topic ? `${topic.emoji} ${topic.title} · ${queue.length} phrases` : `${queue.length} due for review`}
+          {topic && `${topic.emoji} ${topic.title} · ${queue.length} phrases`}
+          {structure && `🧩 ${structure.title} · ${queue.length} phrases`}
+          {!sourceId && `${queue.length} due for review`}
         </p>
         <button
           type="button"
@@ -107,7 +119,11 @@ export function DrivingModeRoute() {
       queue={queue}
       exitHref={exitHref}
       completeMessage={
-        topic ? "That's this week's phrases — now go use them for real." : "You're through everything due for now."
+        topic
+          ? "That's this week's phrases — now go use them for real."
+          : structure
+            ? `That's the lot. The shortcut: ${structure.shortcut}`
+            : "You're through everything due for now."
       }
     />
   )

@@ -1,8 +1,7 @@
 import { useCallback, useReducer } from 'react'
-import { getReviewState, putReviewState } from '../storage/progressRepo'
 import type { ReviewableRef } from '../storage/types'
-import { applyOutcome, seedReviewState } from './srs'
 import { currentItem, initPlayerState, playerReducer, type PlayerMode } from './playerMachine'
+import { recordOutcome } from './recordOutcome'
 import { sessionItemId, type SessionItem } from './session'
 
 function toReviewableRef(item: SessionItem): ReviewableRef {
@@ -18,14 +17,7 @@ export function usePlayerMachine(mode: PlayerMode, queue: SessionItem[]) {
 
   const selfAssess = useCallback(
     (outcome: 'got-it' | 'not-yet') => {
-      if (item) {
-        const ref = toReviewableRef(item)
-        void (async () => {
-          const existing = await getReviewState(ref)
-          const base = existing ?? seedReviewState(ref)
-          await putReviewState(applyOutcome(base, outcome))
-        })()
-      }
+      if (item) void recordOutcome(toReviewableRef(item), outcome)
       dispatch({ type: 'SELF_ASSESS', outcome })
     },
     [item],

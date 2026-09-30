@@ -77,12 +77,20 @@ monthly credit, e.g. `npm run generate:audio -- --only ro --max-chars 8600`, and
   Romanian, and judge yourself — the same loop Michel Thomas and Say Something In... courses use.
   This needs no speech recognition, so it's fully reliable and works while driving.
 - **Spaced repetition** uses a simple Leitner box system (`src/engine/srs.ts`).
-- Content is plain TypeScript data in two areas, both drilled by the same engine:
+- Content is plain TypeScript data in three areas, all drilled by the same engine:
   - **The course** (`src/content/courses/ro-core/`, Home tab) — a Michel Thomas–style
     grammar-building progression. Units are freely navigable, not gated in sequence.
   - **This week** (`src/content/life/`, its own tab) — one real-life topic at a time (his day,
     holidays, the grandparents…): phrases to drill, a Driving Mode run of just those phrases, a
     tap-to-hear phrase list, and prompts for actually using them at home that week.
+  - **Structures** (`src/content/structures/`, its own tab) — how Romanian works, explained from
+    English outwards rather than from Romanian grammar. Each lesson is one "shift" (no am-ing;
+    every past is "I have done"; "to me it's cold"…) taught card by card: explanations with
+    word-by-word "think it as" glosses, many-English-into-one-Romanian funnels, a
+    yesterday/now/tomorrow dial, spoken Michel Thomas–style build-up ladders (self-assessed, and
+    fed into Review), word-tile ordering and "spot the English habit" questions — ending in a
+    one-line shortcut, collected on a Shortcuts page. Lesson text marks Romanian as `{{…}}`,
+    which renders tappable and is picked up by the audio generator.
 - Every drill id is globally unique and permanent — spaced-repetition progress is keyed off it.
   `src/content/content.test.ts` enforces uniqueness; anything that resolves drills by id goes
   through `everyDrill()` in `src/content/index.ts` so both areas feed Review and Driving Mode.

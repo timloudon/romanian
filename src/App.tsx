@@ -12,6 +12,10 @@ import { HomeRoute } from './routes/HomeRoute'
 import { LessonRoute } from './routes/LessonRoute'
 import { ReviewRoute } from './routes/ReviewRoute'
 import { SettingsRoute } from './routes/SettingsRoute'
+import { StructureLessonRoute } from './routes/StructureLessonRoute'
+import { StructurePracticeRoute } from './routes/StructurePracticeRoute'
+import { StructureShortcutsRoute } from './routes/StructureShortcutsRoute'
+import { StructuresRoute } from './routes/StructuresRoute'
 import { WeekPracticeRoute } from './routes/WeekPracticeRoute'
 import { WeekRoute } from './routes/WeekRoute'
 
@@ -47,6 +51,10 @@ function App() {
           <Route path="/lesson/:lessonId" element={<LessonRoute />} />
           <Route path="/week" element={<WeekRoute />} />
           <Route path="/week/:topicId/practice" element={<WeekPracticeRoute />} />
+          <Route path="/structures" element={<StructuresRoute />} />
+          <Route path="/structures/shortcuts" element={<StructureShortcutsRoute />} />
+          <Route path="/structures/:lessonId" element={<StructureLessonRoute />} />
+          <Route path="/structures/:lessonId/practice" element={<StructurePracticeRoute />} />
           <Route path="/review" element={<ReviewRoute />} />
           <Route path="/driving" element={<DrivingModeRoute />} />
           <Route path="/settings" element={<SettingsRoute />} />

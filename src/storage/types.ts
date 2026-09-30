@@ -30,4 +30,6 @@ export interface Settings {
   preferredVoiceURI: string | null
   playbackRate: number
   lifeFocus: LifeFocus | null
+  /** Structures lessons read to the end — shown as a quiet tick, nothing more. */
+  structuresDone: string[]
 }
