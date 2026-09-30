@@ -1829,7 +1829,7 @@ export const jobs: StructureLesson = {
       kind: 'assemble',
       prompt: 'My brother is a cook in a restaurant.',
       answer: 'Fratele meu e bucătar la un restaurant.',
-      distractors: ['un', 'ca'],
+      distractors: ['o', 'ca'],
     },
   ],
   shortcut: 'What do you do? = Cu ce te ocupi? Jobs drop the "a": sunt profesor. Or: lucrez în / la…, lucrez pe cont propriu.',
