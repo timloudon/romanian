@@ -58,7 +58,9 @@ export const bigFeelings: LifeTopic = {
     {
       id: 'life-tantrums-10',
       prompt: 'Do you want the red one or the blue one?',
-      answer: 'Vrei pe cel roșu sau pe cel albastru?',
+      answer: 'Îl vrei pe cel roșu sau pe cel albastru?',
+      acceptedAlternates: ['Vrei pe cel roșu sau pe cel albastru?'],
+      teachingNote: 'The heads-up îl comes along whenever pe points at the thing you want.',
     },
     {
       id: 'life-tantrums-11',

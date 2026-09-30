@@ -21,9 +21,9 @@ export const mealtimes: LifeTopic = {
     {
       id: 'life-mealtimes-03',
       prompt: 'Is he hungry?',
-      answer: 'I-e foame?',
-      acceptedAlternates: ['Îi e foame?', 'Îi este foame?'],
-      teachingNote: '"Mi-e foame" for "to him" — "îi" plus "e" fuses to "i-e."',
+      answer: 'Îi e foame?',
+      acceptedAlternates: ['I-e foame?', 'Îi este foame?'],
+      teachingNote: '"Mi-e foame" for "to him" is "îi e foame" — which in quick speech fuses to "i-e."',
     },
     {
       id: 'life-mealtimes-04',
