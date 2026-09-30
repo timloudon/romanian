@@ -215,7 +215,7 @@ export const hadDone: StructureLesson = {
         { id: 's35-07', prompt: 'We had seen the film.', answer: 'Văzuserăm filmul.' },
         { id: 's35-08', prompt: 'I hadn\'t slept at all.', answer: 'Nu dormisem deloc.' },
         { id: 's35-09', prompt: 'It had stopped raining.', answer: 'Se oprise ploaia.' },
-        { id: 's35-10', prompt: 'She had said it before.', answer: 'O spusese înainte.' },
+        { id: 's35-10', prompt: 'She had said it before.', answer: 'Spusese asta înainte.', acceptedAlternates: ['O spusese înainte.'] },
       ],
     },
     {

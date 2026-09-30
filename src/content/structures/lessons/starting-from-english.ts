@@ -80,7 +80,7 @@ export const cognates: StructureLesson = {
         },
         { id: 's01-07', prompt: 'I have a solution.', answer: 'Am o soluție.', hint: 'am = I have' },
         { id: 's01-08', prompt: "It's a special situation.", answer: 'E o situație specială.' },
-        { id: 's01-09', prompt: 'I prefer coffee.', answer: 'Prefer cafea.' },
+        { id: 's01-09', prompt: 'I prefer coffee.', answer: 'Prefer cafeaua.', acceptedAlternates: ['Prefer cafea.'], teachingNote: 'Liking or preferring something in general takes "the": cafeaua.' },
         { id: 's01-10', prompt: 'I accept.', answer: 'Accept.' },
       ],
     },
