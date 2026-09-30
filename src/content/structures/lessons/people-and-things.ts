@@ -1495,3 +1495,71 @@ export const youAll: StructureLesson = {
   shortcut: 'You all (and polite you) = -ți on every verb (faceți, ați mâncat). Vă = you all / to you all. Vostru / voastră = your. Commands: veniți! nu plecați!',
   useItToday: 'At the next family gathering, talk to everyone at once: "Ce faceți? Vă iubesc!"',
 }
+
+export const describing: StructureLesson = {
+  id: 's-describing',
+  part: 'People and things',
+  title: 'Colours, looks and sizes',
+  tagline: 'Ochi albaștri, o mașină roșie — even colours match.',
+  shift: {
+    english: 'English colours and descriptions never change: a red car, red shoes, blue eyes.',
+    romanian: 'Romanian ones come after the thing and match it: {{o mașină roșie}}, {{pantofi roșii}}, {{ochi albaștri}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Colours match',
+      body: [
+        '{{roșu}} (red): {{un tricou roșu}}, {{o mașină roșie}}, {{pantofi roșii}}.',
+        '{{albastru}} (blue): {{ochi albaștri}}, {{o rochie albastră}}. {{alb}} / {{albă}} (white), {{negru}} / {{neagră}} (black), {{galben}} / {{galbenă}} (yellow), {{verde}} (green, the same for both).',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Some never change',
+      body: [
+        'Colours borrowed from French stay put: {{maro}} (brown), {{roz}} (pink), {{gri}} (grey), {{bej}} — {{o geacă maro}}, {{pantofi gri}}.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Describing people',
+      body: [
+        '{{E înalt}} / {{E înaltă}} — tall · {{scund}} / {{scundă}} — short · {{Are ochi verzi.}} — green eyes · {{Are părul blond / șaten / negru.}} — blond / brown / black hair.',
+        '{{Ce culoare are?}} — what colour is it?',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Describe it',
+      rungs: [
+        { id: 's97-01', prompt: 'A red car.', answer: 'O mașină roșie.' },
+        { id: 's97-02', prompt: 'Red shoes.', answer: 'Pantofi roșii.' },
+        { id: 's97-03', prompt: 'He\'s got blue eyes.', answer: 'Are ochi albaștri.' },
+        { id: 's97-04', prompt: 'A blue dress.', answer: 'O rochie albastră.' },
+        { id: 's97-05', prompt: 'A black cat.', answer: 'O pisică neagră.' },
+        { id: 's97-06', prompt: 'A white T-shirt.', answer: 'Un tricou alb.' },
+        { id: 's97-07', prompt: 'A brown jacket.', answer: 'O geacă maro.' },
+        { id: 's97-08', prompt: 'Grey shoes.', answer: 'Pantofi gri.' },
+        { id: 's97-09', prompt: 'He\'s tall.', answer: 'E înalt.' },
+        { id: 's97-10', prompt: 'She\'s got brown hair.', answer: 'Are părul șaten.' },
+        { id: 's97-11', prompt: 'What colour is it?', answer: 'Ce culoare are?' },
+        { id: 's97-12', prompt: '(the cup) The green one.', answer: 'Cea verde.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"A black car."',
+      options: [{ text: 'O mașină negru' }, { text: 'O mașină neagră', correct: true }],
+      explanation: 'Colours match the thing: negru → neagră for an o-thing.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'He\'s wearing a yellow jacket.',
+      answer: 'Poartă o geacă galbenă.',
+      distractors: ['galben', 'un'],
+    },
+  ],
+  shortcut: 'Colours come after and match: mașină roșie, ochi albaștri. Maro, roz, gri never change. Are ochi… / Are părul…',
+  useItToday: 'Describe what your son is wearing today — colours included.',
+}

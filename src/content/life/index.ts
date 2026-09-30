@@ -19,6 +19,7 @@ import { mealtimes } from './topics/mealtimes'
 import { nursery } from './topics/nursery'
 import { plans } from './topics/plans'
 import { pottyAndBath } from './topics/potty-and-bath'
+import { realConversations } from './topics/real-conversations'
 import { romanianFood } from './topics/romanian-food'
 import { talkingToHim } from './topics/talking-to-him'
 import { unwell } from './topics/unwell'
@@ -35,6 +36,7 @@ export const lifeTopics: LifeTopic[] = [
   arriving,
   bedtimeAndMornings,
   justUs,
+  realConversations,
   grandparents,
   growingUp,
   nursery,

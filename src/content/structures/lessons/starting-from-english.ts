@@ -1308,3 +1308,147 @@ export const howFar: StructureLesson = {
   shortcut: 'How + describing word = cât de (cât de departe). What kind = ce fel de. Which of = care dintre. How many = câți / câte.',
   useItToday: 'Ask one "Cât de…?" question today.',
 }
+
+export const irregularDozen: StructureLesson = {
+  id: 's-irregulars',
+  part: 'Starting from English',
+  title: 'The irregular dozen, in full',
+  tagline: 'Sunt, am, vreau, pot, fac, știu — for everyone.',
+  shift: {
+    english: 'English\'s most common verbs are its irregular ones: be, have, go, do.',
+    romanian: 'Same in Romanian. These twelve are worth knowing for every person: {{sunt}}, {{am}}, {{vreau}}, {{pot}}, {{fac}}, {{știu}}, {{merg}}, {{vin}}, {{dau}}, {{iau}}, {{stau}}, {{zic}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Be and have',
+      body: [
+        '**a fi**: {{sunt}}, {{ești}}, {{e}} / {{este}}, {{suntem}}, {{sunteți}}, {{sunt}} — "I am" and "they are" are the same word.',
+        '**a avea**: {{am}}, {{ai}}, {{are}}, {{avem}}, {{aveți}}, {{au}}.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Want, can, do, know',
+      body: [
+        '**a vrea**: {{vreau}}, {{vrei}}, {{vrea}}, {{vrem}}, {{vreți}}, {{vor}} · **a putea**: {{pot}}, {{poți}}, {{poate}}, {{putem}}, {{puteți}}, {{pot}}',
+        '**a face**: {{fac}}, {{faci}}, {{face}}, {{facem}}, {{faceți}}, {{fac}} · **a ști**: {{știu}}, {{știi}}, {{știe}}, {{știm}}, {{știți}}, {{știu}}',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Go, come, give, take, stay, say',
+      body: [
+        '**a merge**: {{merg}}, {{mergi}}, {{merge}}, {{mergem}}, {{mergeți}}, {{merg}} · **a veni**: {{vin}}, {{vii}}, {{vine}}, {{venim}}, {{veniți}}, {{vin}}',
+        '**a da**: {{dau}}, {{dai}}, {{dă}}, {{dăm}}, {{dați}}, {{dau}} · **a lua**: {{iau}}, {{iei}}, {{ia}}, {{luăm}}, {{luați}}, {{iau}}',
+        '**a sta**: {{stau}}, {{stai}}, {{stă}}, {{stăm}}, {{stați}}, {{stau}} · **a zice**: {{zic}}, {{zici}}, {{zice}}, {{zicem}}, {{ziceți}}, {{zic}}',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The pattern inside the chaos',
+      body: [
+        '"I" and "they" are usually the same word: {{sunt}}, {{pot}}, {{fac}}, {{știu}}, {{merg}}, {{vin}}, {{dau}}, {{iau}}. And the -i "you" and -m "we" endings hold for every one of them.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Everyone, every verb',
+      rungs: [
+        { id: 's95-01', prompt: 'They\'re at home.', answer: 'Sunt acasă.' },
+        { id: 's95-02', prompt: 'We have time.', answer: 'Avem timp.' },
+        { id: 's95-03', prompt: 'They\'ve got a dog.', answer: 'Au un câine.' },
+        { id: 's95-04', prompt: 'They want to come.', answer: 'Vor să vină.', teachingNote: 'Vor is "they want" — and also the formal "they will". Context sorts it out.' },
+        { id: 's95-05', prompt: 'Can he come?', answer: 'Poate să vină?' },
+        { id: 's95-06', prompt: 'What are they doing?', answer: 'Ce fac?' },
+        { id: 's95-07', prompt: 'Does she know?', answer: 'Știe?' },
+        { id: 's95-08', prompt: 'Where are they going?', answer: 'Unde merg?' },
+        { id: 's95-09', prompt: 'Is he coming?', answer: 'Vine?' },
+        { id: 's95-10', prompt: 'What are you giving him?', answer: 'Ce-i dai?' },
+        { id: 's95-11', prompt: 'He\'s taking the car.', answer: 'Ia mașina.' },
+        { id: 's95-12', prompt: 'We\'re taking the train.', answer: 'Luăm trenul.' },
+        { id: 's95-13', prompt: 'We\'re staying at home.', answer: 'Stăm acasă.' },
+        { id: 's95-14', prompt: 'What does he say?', answer: 'Ce zice?' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"They know."',
+      options: [{ text: 'Știe.' }, { text: 'Știu.', correct: true }, { text: 'Știm.' }],
+      explanation: 'For a ști, "I know" and "they know" are the same word — context tells you which.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'They want to stay with us.',
+      answer: 'Vor să stea cu noi.',
+      distractors: ['vrea', 'stau'],
+    },
+  ],
+  shortcut: 'The twelve to know in full: sunt, am, vreau, pot, fac, știu, merg, vin, dau, iau, stau, zic. "I" and "they" usually match; -i = you, -m = we.',
+  useItToday: 'Take one of the twelve each day and say it for everyone in the family.',
+}
+
+export const counting: StructureLesson = {
+  id: 's-counting',
+  part: 'Starting from English',
+  title: 'Counting to a thousand',
+  tagline: 'Unsprezece — "one over ten".',
+  shift: {
+    english: 'English teens and tens are irregular: eleven, twelve, twenty, thirty.',
+    romanian: 'Romanian builds them logically: {{unsprezece}} is "one over ten", {{douăzeci}} is "two tens" — and speech squashes the teens to {{unșpe}}, {{doișpe}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'One to ten',
+      body: [
+        '{{unu}}, {{doi}} / {{două}}, {{trei}}, {{patru}}, {{cinci}}, {{șase}}, {{șapte}}, {{opt}}, {{nouă}}, {{zece}}.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Eleven to nineteen: "over ten"',
+      body: [
+        '{{unsprezece}}, {{doisprezece}}, {{treisprezece}}, {{paisprezece}} (shortened), {{cincisprezece}}, {{șaisprezece}} (shortened), {{șaptesprezece}}, {{optsprezece}}, {{nouăsprezece}}.',
+        'In speech they\'re squashed: {{unșpe}}, {{doișpe}}, {{paișpe}}… You\'ll hear these far more than the full forms.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Tens, hundreds, thousands',
+      body: [
+        '{{douăzeci}} (two tens), {{treizeci}}, {{patruzeci}}, {{cincizeci}}, {{șaizeci}}, {{șaptezeci}}, {{optzeci}}, {{nouăzeci}}. Add the units with {{și}}: {{douăzeci și cinci}}.',
+        '{{o sută}}, {{două sute}}, {{o mie}}, {{două mii}}. And from twenty up, {{de}} comes before the thing.',
+      ],
+      glosses: [
+        { ro: 'Douăzeci și cinci de lei.', words: [['Douăzeci', 'two-tens'], ['și cinci', 'and five'], ['de lei', 'of lei']], en: 'Twenty-five lei.' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Count it',
+      rungs: [
+        { id: 's96-01', prompt: 'Eleven.', answer: 'Unsprezece.' },
+        { id: 's96-02', prompt: 'Twelve.', answer: 'Doisprezece.' },
+        { id: 's96-03', prompt: 'Fourteen.', answer: 'Paisprezece.' },
+        { id: 's96-04', prompt: 'Sixteen.', answer: 'Șaisprezece.' },
+        { id: 's96-05', prompt: 'Twenty.', answer: 'Douăzeci.' },
+        { id: 's96-06', prompt: 'Thirty-five.', answer: 'Treizeci și cinci.' },
+        { id: 's96-07', prompt: 'Forty-two.', answer: 'Patruzeci și doi.' },
+        { id: 's96-08', prompt: 'Sixty.', answer: 'Șaizeci.' },
+        { id: 's96-09', prompt: 'Ninety-nine.', answer: 'Nouăzeci și nouă.' },
+        { id: 's96-10', prompt: 'A hundred and fifty lei.', answer: 'O sută cincizeci de lei.' },
+        { id: 's96-11', prompt: 'Two thousand.', answer: 'Două mii.' },
+        { id: 's96-12', prompt: 'It costs thirty-two lei.', answer: 'Costă treizeci și doi de lei.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"Twelve eggs."',
+      options: [{ text: 'Doisprezece ouă' }, { text: 'Douăsprezece ouă', correct: true }],
+      explanation: 'Ouă is o-like in the plural, so twelve takes its o-form: douăsprezece.',
+    },
+  ],
+  shortcut: '11–19 = unit + sprezece (unsprezece, paisprezece; spoken unșpe). Tens = unit + zeci (douăzeci). Add units with și. From 20, add de.',
+  useItToday: 'Read every price you see today out loud in Romanian.',
+}
