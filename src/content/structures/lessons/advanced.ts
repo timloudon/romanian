@@ -454,6 +454,14 @@ export const beforeAfter: StructureLesson = {
       ],
     },
     {
+      kind: 'explain',
+      title: 'The other "extra nu": fear',
+      body: [
+        'After being afraid, Romanian also adds a {{nu}} that English doesn\'t have: {{Mi-e teamă să nu întârzie.}} — I\'m afraid he\'ll be late (literally "…that he not be late").',
+        '{{Ai grijă să nu cazi!}} — careful you don\'t fall — works the same way, and there the nu makes sense in English too.',
+      ],
+    },
+    {
       kind: 'ladder',
       title: 'Put it in order',
       rungs: [
@@ -467,6 +475,8 @@ export const beforeAfter: StructureLesson = {
         { id: 's39-08', prompt: 'While he\'s asleep, let\'s tidy up.', answer: 'Cât timp doarme, hai să facem ordine.' },
         { id: 's39-09', prompt: 'Since he was born, we haven\'t slept.', answer: 'De când s-a născut, n-am mai dormit.' },
         { id: 's39-10', prompt: 'After he fell asleep, we watched a film.', answer: 'După ce a adormit, ne-am uitat la un film.' },
+        { id: 's39-11', prompt: 'I\'m afraid he\'ll be late.', answer: 'Mi-e teamă să nu întârzie.', teachingNote: 'The nu is "extra" — it doesn\'t make it negative.' },
+        { id: 's39-12', prompt: 'Careful you don\'t fall!', answer: 'Ai grijă să nu cazi!' },
       ],
     },
     {

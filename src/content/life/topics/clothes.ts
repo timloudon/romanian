@@ -52,7 +52,7 @@ export const clothes: LifeTopic = {
     {
       id: 'life-clothes-09',
       prompt: 'Do you have it in a bigger size?',
-      answer: 'Îl aveți pe o mărime mai mare?',
+      answer: 'Aveți o mărime mai mare?',
     },
     {
       id: 'life-clothes-10',
