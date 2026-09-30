@@ -6,14 +6,15 @@ import {
   hadDone,
   mustHave,
   neitherNor,
+  ownThings,
   passive,
   presumptive,
-  soThat,
   someAny,
-  whileDoing,
-  wordBuilding,
-  ownThings,
+  soThat,
   thingsToDo,
+  whileDoing,
+  wishes,
+  wordBuilding,
 } from './lessons/advanced'
 import {
   genitive,
@@ -28,17 +29,21 @@ import {
 } from './lessons/going-further'
 import { commands, neverDropThat, storytelling } from './lessons/joining-ideas'
 import {
+  allEvery,
   beIsHave,
   comparing,
+  firstAndLast,
   himHer,
   myself,
+  otherSame,
   places,
+  plurals,
   possession,
   theOnTheEnd,
   thisAndThat,
   toMe,
-  plurals,
   toSomeone,
+  whereThingsAre,
 } from './lessons/people-and-things'
 import {
   canAndKnow,
@@ -60,13 +65,23 @@ import {
   greetings,
   idioms,
   numbersAndTime,
+  onThePhone,
   opinions,
   polite,
   requests,
+  roughly,
   streetRomanian,
   wordOrder,
 } from './lessons/sounding-natural'
-import { agoAndIn, future, past, since, usedTo, would } from './lessons/time'
+import {
+  agoAndIn,
+  everBefore,
+  future,
+  past,
+  since,
+  usedTo,
+  would,
+} from './lessons/time'
 import type { StructureLesson, StructurePart } from './types'
 
 /** In suggested order — each lesson leans only on the ones before it, but any can be opened. */
@@ -86,6 +101,7 @@ export const structureLessons: StructureLesson[] = [
   future,
   since,
   agoAndIn,
+  everBefore,
   usedTo,
   would,
   theOnTheEnd,
@@ -99,11 +115,16 @@ export const structureLessons: StructureLesson[] = [
   myself,
   himHer,
   toSomeone,
+  allEvery,
+  whereThingsAre,
+  otherSame,
+  firstAndLast,
   commands,
   neverDropThat,
   storytelling,
   saAlone,
   wouldHave,
+  wishes,
   genitive,
   ownThings,
   stillAlready,
@@ -128,12 +149,14 @@ export const structureLessons: StructureLesson[] = [
   greetings,
   requests,
   exclaiming,
+  onThePhone,
   getTakeMake,
   fillers,
   idioms,
   wordOrder,
   polite,
   opinions,
+  roughly,
   numbersAndTime,
   streetRomanian,
 ]

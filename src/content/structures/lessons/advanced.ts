@@ -972,3 +972,72 @@ export const thingsToDo: StructureLesson = {
   shortcut: '"To do" after easy / hard / have / finish / fed up = de + done: ușor de făcut, am de lucru, am terminat de mâncat.',
   useItToday: 'Tell your partner what you\'ve got on today: "Am de…".',
 }
+
+export const wishes: StructureLesson = {
+  id: 's-wishes',
+  part: 'Going further',
+  title: 'I wish, if only',
+  tagline: 'Aș vrea să fii aici. Măcar de-aș ști.',
+  shift: {
+    english: 'English wishes shift the tense back: "I wish you were here", "if only I knew", "I wish I\'d known".',
+    romanian: 'Romanian uses what you already have: {{aș vrea să}} + the să form (no shifting back), {{măcar de}} for "if only", {{păcat că}} for regrets.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'I wish: aș vrea să',
+      body: [
+        '{{Aș vrea să fii aici.}} — I wish you were here ("I\'d like that you be here"). No backshift — just the să form.',
+        '{{Aș vrea să pot.}} — I wish I could.',
+      ],
+      glosses: [
+        { ro: 'Aș vrea să fii aici.', words: [['Aș vrea', 'I\'d-like'], ['să fii', 'that you-be'], ['aici', 'here']], en: 'I wish you were here.' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'If only',
+      body: [
+        '{{Măcar de-aș ști!}} — if only I knew! {{Măcar să nu plouă.}} — let\'s just hope it doesn\'t rain.',
+        '{{Ce bine ar fi dacă…}} — how good it would be if…',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Regrets',
+      body: [
+        '"I wish I\'d known" → {{Păcat că n-am știut.}} — a shame I didn\'t know. Or {{Ar fi trebuit să știu.}}',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Wish it',
+      rungs: [
+        { id: 's72-01', prompt: 'I wish you were here.', answer: 'Aș vrea să fii aici.' },
+        { id: 's72-02', prompt: 'I wish I could.', answer: 'Aș vrea să pot.' },
+        { id: 's72-03', prompt: 'I wish it were summer.', answer: 'Aș vrea să fie vară.' },
+        { id: 's72-04', prompt: 'I wish he\'d sleep more.', answer: 'Aș vrea să doarmă mai mult.' },
+        { id: 's72-05', prompt: 'If only I knew!', answer: 'Măcar de-aș ști!' },
+        { id: 's72-06', prompt: 'Let\'s just hope it doesn\'t rain.', answer: 'Măcar să nu plouă.' },
+        { id: 's72-07', prompt: 'How good it would be if we had a garden.', answer: 'Ce bine ar fi dacă am avea o grădină.' },
+        { id: 's72-08', prompt: 'I wish I\'d known.', answer: 'Păcat că n-am știut.' },
+        { id: 's72-09', prompt: 'I hope so.', answer: 'Sper că da.' },
+        { id: 's72-10', prompt: 'Let\'s hope everything will be fine.', answer: 'Să sperăm că totul va fi bine.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"I wish you were here."',
+      options: [{ text: 'Aș vrea că ești aici.' }, { text: 'Aș vrea să fii aici.', correct: true }],
+      explanation: 'A wish takes să — and no past tense.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'I wish we had more time.',
+      answer: 'Aș vrea să avem mai mult timp.',
+      distractors: ['aveam', 'că'],
+    },
+  ],
+  shortcut: 'I wish = aș vrea să + the să form (no backshift). If only = măcar de / măcar să. I wish I\'d… = păcat că n-am…',
+  useItToday: 'Tell your partner one wish today: "Aș vrea să…".',
+}

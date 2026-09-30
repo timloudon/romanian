@@ -997,3 +997,295 @@ export const toSomeone: StructureLesson = {
   shortcut: 'Giving / telling someone: heads-up îi (le for "them") + lui Andrei / mamei / copiilor — the same endings as "of".',
   useItToday: 'Say who you\'re giving things to today: "Îi dau lui…", "Îi spun mamei…".',
 }
+
+export const allEvery: StructureLesson = {
+  id: 's-all',
+  part: 'People and things',
+  title: 'All, every, each, both',
+  tagline: 'Tot, toată, toți, toate — "all" matches the thing.',
+  shift: {
+    english: 'English "all" and "every" never change: all day, all the kids, everyone.',
+    romanian: 'Romanian\'s "all" matches the thing: {{toată ziua}}, {{toți copiii}}, {{toate jucăriile}} — and "everyone" is "all the world": {{toată lumea}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Tot matches',
+      body: [
+        '{{tot}} (un-thing) · {{toată}} (o-thing) · {{toți}} (people, un-plural) · {{toate}} (o-plural).',
+        '{{tot timpul}} — all the time · {{toată ziua}} — all day · {{toți copiii}} — all the children · {{toate lucrurile}} — all the things. The thing keeps its "the".',
+      ],
+      glosses: [
+        { ro: 'Toată lumea e aici.', words: [['Toată', 'all'], ['lumea', 'the-world'], ['e', 'is'], ['aici', 'here']], en: 'Everyone\'s here.' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Everyone, everything, people',
+      body: [
+        '{{toată lumea}} — everyone · {{tot}} — everything: {{Asta e tot.}} — that\'s all.',
+        '{{lumea}} on its own often just means "people": {{E lume multă.}} — it\'s busy, there are lots of people.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Each, both',
+      body: [
+        '{{fiecare}} — each, every, and it never changes: {{fiecare zi}}, {{fiecare copil}}.',
+        '{{amândoi}} / {{amândouă}} — both (men or mixed / women or o-things): {{amândoi bunicii}}, {{amândouă mâinile}}.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'All of it',
+      rungs: [
+        { id: 's66-01', prompt: 'All day.', answer: 'Toată ziua.' },
+        { id: 's66-02', prompt: 'All the time.', answer: 'Tot timpul.' },
+        { id: 's66-03', prompt: 'All week.', answer: 'Toată săptămâna.' },
+        { id: 's66-04', prompt: 'All the children.', answer: 'Toți copiii.' },
+        { id: 's66-05', prompt: 'All the toys.', answer: 'Toate jucăriile.' },
+        { id: 's66-06', prompt: 'Everyone\'s here.', answer: 'Toată lumea e aici.' },
+        { id: 's66-07', prompt: 'That\'s all.', answer: 'Asta e tot.' },
+        { id: 's66-08', prompt: 'It\'s busy today.', answer: 'E lume multă azi.' },
+        { id: 's66-09', prompt: 'Every child is different.', answer: 'Fiecare copil e diferit.' },
+        { id: 's66-10', prompt: 'Both hands.', answer: 'Amândouă mâinile.' },
+        { id: 's66-11', prompt: 'Both his grandparents are coming.', answer: 'Vin amândoi bunicii.' },
+        { id: 's66-12', prompt: 'All of us.', answer: 'Noi toți.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"All the girls."',
+      options: [{ text: 'Toți fetele' }, { text: 'Toate fetele', correct: true }],
+      explanation: 'Fete is an o-plural, so toate.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'Everyone was asking after you.',
+      answer: 'Toată lumea întreba de tine.',
+      distractors: ['toți', 'despre'],
+      note: 'A întreba de cineva — to ask after someone.',
+    },
+  ],
+  shortcut: 'All = tot / toată / toți / toate, matching the thing (which keeps its "the"). Everyone = toată lumea. Each = fiecare. Both = amândoi / amândouă.',
+  useItToday: 'Call the family to the table: "Toată lumea la masă!"',
+}
+
+export const whereThingsAre: StructureLesson = {
+  id: 's-where-things',
+  part: 'People and things',
+  title: 'Up, down, next to, behind',
+  tagline: 'Sus, jos, lângă, în spatele casei.',
+  shift: {
+    english: 'English: up, down, next to, under, behind, in front of, between.',
+    romanian: 'Romanian: {{sus}}, {{jos}}, {{lângă}}, {{sub}}, {{între}} — and "behind" and "in front of" take the "of" ending: {{în spatele casei}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'The simple ones',
+      body: [
+        '{{sus}} — up, upstairs · {{jos}} — down, downstairs · {{aici}} — here · {{acolo}} — there',
+        '{{lângă}} — next to · {{sub}} — under · {{între}} — between · {{deasupra}} — above',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The ones that take the "of" ending',
+      body: [
+        '{{în fața}} — in front of · {{în spatele}} — behind · {{în mijlocul}} — in the middle of.',
+        'The thing after them takes the "of" ending: {{în fața casei}}, {{în spatele ușii}}, {{în mijlocul camerei}}. With people: {{în fața mea}}, {{lângă mine}}.',
+      ],
+      glosses: [
+        { ro: 'În spatele ușii.', words: [['În spatele', 'in the-back'], ['ușii', 'of-the-door']], en: 'Behind the door.' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Moving',
+      body: [
+        '{{Vino jos!}} — come down(stairs)! {{Stai jos!}} — sit down ("stay down"). {{Ridică-te!}} — stand up! {{Urcă sus!}} — go up(stairs)!',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Where is it?',
+      rungs: [
+        { id: 's67-01', prompt: 'Upstairs.', answer: 'Sus.' },
+        { id: 's67-02', prompt: 'He\'s asleep upstairs.', answer: 'Doarme sus.' },
+        { id: 's67-03', prompt: 'Come downstairs!', answer: 'Vino jos!' },
+        { id: 's67-04', prompt: 'Sit down!', answer: 'Stai jos!' },
+        { id: 's67-05', prompt: 'Stand up!', answer: 'Ridică-te!' },
+        { id: 's67-06', prompt: 'Next to me.', answer: 'Lângă mine.' },
+        { id: 's67-07', prompt: 'Under the bed.', answer: 'Sub pat.' },
+        { id: 's67-08', prompt: 'Behind the door.', answer: 'În spatele ușii.' },
+        { id: 's67-09', prompt: 'In front of the house.', answer: 'În fața casei.' },
+        { id: 's67-10', prompt: 'Between us.', answer: 'Între noi.' },
+        { id: 's67-11', prompt: 'In the middle of the room.', answer: 'În mijlocul camerei.' },
+        { id: 's67-12', prompt: 'The park is next to the shop.', answer: 'Parcul e lângă magazin.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"Behind the house."',
+      options: [{ text: 'În spatele casa' }, { text: 'În spatele casei', correct: true }],
+      explanation: 'After în spatele and în fața, the thing takes the "of" ending.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'The car is parked in front of the house.',
+      answer: 'Mașina e parcată în fața casei.',
+      distractors: ['casa', 'spatele'],
+    },
+  ],
+  shortcut: 'Sus, jos, lângă, sub, între. În fața / în spatele / în mijlocul + the "of" ending: în fața casei. Stai jos = sit down.',
+  useItToday: 'Play "where is it?" with your son: "Unde e mingea? Sub masă! Lângă canapea!"',
+}
+
+export const otherSame: StructureLesson = {
+  id: 's-other-same',
+  part: 'People and things',
+  title: 'Another, one more, else, the same, alone',
+  tagline: 'Alt, încă un, altceva, același, singur.',
+  shift: {
+    english: 'English "another" means both "a different one" and "one more".',
+    romanian: 'Romanian splits them: {{altă cafea}} is a different coffee, {{încă o cafea}} is one more. Plus {{altceva}} (something else), {{același}} (the same), {{singur}} (alone).',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Different, or one more?',
+      body: [
+        '{{alt}} / {{altă}} — another, a different one: {{altă dată}} — another time. Plural {{alți}} / {{alte}}. The other one: {{celălalt}} / {{cealaltă}}.',
+        '{{încă un}} / {{încă o}} — one more: {{încă o cafea}}, {{încă o dată}} — once more.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Else',
+      body: [
+        '{{altceva}} — something else · {{altcineva}} — someone else · {{altundeva}} — somewhere else.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The same',
+      body: [
+        '{{același}} / {{aceeași}} — the same: {{același lucru}}, {{aceeași mașină}}.',
+        '{{la fel}} — the same, likewise: {{E la fel.}} — it\'s the same. {{La fel!}} — same to you!',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Alone, only',
+      body: [
+        '{{singur}} / {{singură}} — alone, by yourself: {{Mănâncă singur.}} — he eats by himself.',
+        '{{singurul}} / {{singura}} — the only one. {{doar}} / {{numai}} — only: {{doar duminica}}.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Say it',
+      rungs: [
+        { id: 's68-01', prompt: 'Another time.', answer: 'Altă dată.' },
+        { id: 's68-02', prompt: 'Another coffee? (one more)', answer: 'Încă o cafea?' },
+        { id: 's68-03', prompt: 'Another beer, please.', answer: 'Încă o bere, vă rog.' },
+        { id: 's68-04', prompt: 'Something else?', answer: 'Altceva?' },
+        { id: 's68-05', prompt: 'Someone else.', answer: 'Altcineva.' },
+        { id: 's68-06', prompt: 'Let\'s go somewhere else.', answer: 'Hai să mergem altundeva.' },
+        { id: 's68-07', prompt: '(the cup) The other one.', answer: 'Cealaltă.' },
+        { id: 's68-08', prompt: 'The same thing.', answer: 'Același lucru.' },
+        { id: 's68-09', prompt: 'Same to you!', answer: 'La fel!' },
+        { id: 's68-10', prompt: 'He eats by himself.', answer: 'Mănâncă singur.' },
+        { id: 's68-11', prompt: '(the key) It\'s the only one.', answer: 'E singura.' },
+        { id: 's68-12', prompt: 'Only on Sundays.', answer: 'Doar duminica.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"Can I have another coffee?" (one more)',
+      options: [{ text: 'Îmi dați altă cafea?' }, { text: 'Îmi dați încă o cafea?', correct: true }],
+      explanation: 'Altă cafea is a different coffee. One more is încă o.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'Can you ask someone else?',
+      answer: 'Poți să întrebi pe altcineva?',
+      distractors: ['alt', 'cine'],
+    },
+  ],
+  shortcut: 'A different one = alt / altă. One more = încă un / o. Else = altceva, altcineva, altundeva. The same = același / aceeași, la fel. Alone = singur.',
+  useItToday: 'Ask for "încă o…" at your next meal or coffee.',
+}
+
+export const firstAndLast: StructureLesson = {
+  id: 's-ordinals',
+  part: 'People and things',
+  title: 'First, second, last, next',
+  tagline: 'Primul, al doilea, ultimul, următorul.',
+  shift: {
+    english: 'English: first, second, third, last, next.',
+    romanian: 'Romanian: {{primul}} / {{prima}}, then {{al doilea}} / {{a doua}} ("the of-two"), and {{ultimul}} / {{ultima}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'First and last',
+      body: [
+        '{{primul}} / {{prima}} — the first (un / o): {{primul copil}}, {{prima dată}} — the first time.',
+        '{{ultimul}} / {{ultima}} — the last: {{ultima zi}}.',
+      ],
+      glosses: [
+        { ro: 'Prima dată.', words: [['Prima', 'the-first'], ['dată', 'time']], en: 'The first time.' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The rest: al + number + -lea',
+      body: [
+        'Un-things: {{al doilea}}, {{al treilea}}, {{al patrulea}}. O-things: {{a doua}}, {{a treia}}, {{a patra}}.',
+        '{{a doua oară}} — the second time. {{A doua zi}} also means "the next day".',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Next, last time, again',
+      body: [
+        '{{următorul}} / {{următoarea}} — the next · {{data trecută}} — last time · {{încă o dată}} — once more · {{pentru prima dată}} — for the first time · {{Cine urmează?}} — who\'s next?',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'In order',
+      rungs: [
+        { id: 's69-01', prompt: 'The first time.', answer: 'Prima dată.' },
+        { id: 's69-02', prompt: 'For the first time.', answer: 'Pentru prima dată.' },
+        { id: 's69-03', prompt: 'The last day.', answer: 'Ultima zi.' },
+        { id: 's69-04', prompt: 'My first child.', answer: 'Primul meu copil.' },
+        { id: 's69-05', prompt: 'The second time.', answer: 'A doua oară.' },
+        { id: 's69-06', prompt: 'The next day.', answer: 'A doua zi.' },
+        { id: 's69-07', prompt: 'On the third floor.', answer: 'La etajul trei.' },
+        { id: 's69-08', prompt: 'The next stop.', answer: 'Următoarea stație.' },
+        { id: 's69-09', prompt: 'Last time.', answer: 'Data trecută.' },
+        { id: 's69-10', prompt: 'He arrived first.', answer: 'A ajuns primul.' },
+        { id: 's69-11', prompt: '(the cake) It\'s the last one.', answer: 'E ultima.' },
+        { id: 's69-12', prompt: 'Who\'s next?', answer: 'Cine urmează?' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"The second day."',
+      options: [{ text: 'A doua zi', correct: true }, { text: 'Al doilea zi' }, { text: 'Doi zi' }],
+      explanation: 'Zi is an o-word, so a doua zi — which also means "the next day".',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'It\'s the first time I\'ve been here.',
+      answer: 'E prima dată când sunt aici.',
+      distractors: ['primul', 'am'],
+      note: 'Romanian says "the first time when I am here" — still true now, so the present.',
+    },
+  ],
+  shortcut: 'First = primul / prima. Last = ultimul / ultima. Second on = al doilea / a doua (al + number + -lea). Next = următorul. Again = încă o dată.',
+  useItToday: 'Count turns with your son: "Primul! Al doilea! Ultimul!"',
+}

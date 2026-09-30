@@ -780,3 +780,138 @@ export const streetRomanian: StructureLesson = {
   shortcut: 'Io = eu, îs = sunt, las\' = lasă, mă = "mate", mișto = cool, nașpa = rubbish, las\' că = never mind. Recognise them; use them sparingly.',
   useItToday: 'Listen for "mă", "las\' că" and "hai că" in the next Romanian conversation you hear.',
 }
+
+export const roughly: StructureLesson = {
+  id: 's-roughly',
+  part: 'Sounding natural',
+  title: 'About, a bit, sort of: cam, vreo, un pic',
+  tagline: 'Cam scump, vreo zece minute, cam așa.',
+  shift: {
+    english: 'English hedges constantly: about ten, a bit pricey, sort of, around eight.',
+    romanian: 'Romanian hedges with {{cam}} (a bit, rather, around), {{vreo}} (about, with numbers), {{un pic}} (a little) and {{cam așa}} (sort of).',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Cam: a bit, rather, around',
+      body: [
+        '{{cam scump}} — a bit pricey · {{cam târziu}} — rather late · {{cam la opt}} — around eight · {{cam așa}} — roughly like that · {{Cam da.}} — kind of, yes.',
+      ],
+      glosses: [
+        { ro: 'E cam scump.', words: [['E', 'it\'s'], ['cam', 'rather'], ['scump', 'expensive']], en: 'It\'s a bit pricey.' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Vreo with numbers',
+      body: [
+        '{{vreo}} before a number = about: {{vreo zece minute}} — about ten minutes, {{vreo două ore}} — a couple of hours. More formal: {{aproximativ}}, {{în jur de}}.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'A little',
+      body: [
+        '{{un pic}} / {{puțin}} — a little: {{Un pic mai încet.}} — a bit more quietly. {{Stai un pic!}} — wait a sec.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Hedge it',
+      rungs: [
+        { id: 's71-01', prompt: 'It\'s a bit pricey.', answer: 'E cam scump.' },
+        { id: 's71-02', prompt: 'It\'s rather late.', answer: 'E cam târziu.' },
+        { id: 's71-03', prompt: 'He\'s a bit tired.', answer: 'E cam obosit.' },
+        { id: 's71-04', prompt: 'Around eight.', answer: 'Cam la opt.' },
+        { id: 's71-05', prompt: 'Roughly like that.', answer: 'Cam așa.' },
+        { id: 's71-06', prompt: 'Kind of, yes.', answer: 'Cam da.' },
+        { id: 's71-07', prompt: 'About ten minutes.', answer: 'Vreo zece minute.' },
+        { id: 's71-08', prompt: 'A couple of hours.', answer: 'Vreo două ore.' },
+        { id: 's71-09', prompt: 'Wait a sec!', answer: 'Stai un pic!' },
+        { id: 's71-10', prompt: 'A bit quieter, please.', answer: 'Un pic mai încet, te rog.' },
+        { id: 's71-11', prompt: 'It\'s around a hundred lei.', answer: 'E în jur de o sută de lei.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"About twenty people."',
+      options: [{ text: 'Cam douăzeci oameni' }, { text: 'Vreo douăzeci de oameni', correct: true }],
+      explanation: 'Vreo before a number — and from twenty up, de.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'We\'ll be there in about ten minutes.',
+      answer: 'Ajungem peste vreo zece minute.',
+      distractors: ['în', 'de'],
+    },
+  ],
+  shortcut: 'Cam = a bit / rather / around (cam scump, cam la opt). Vreo + number = about. Un pic = a little. Cam așa = sort of.',
+  useItToday: 'Hedge like a Romanian today: "E cam…", "Cam așa."',
+}
+
+export const onThePhone: StructureLesson = {
+  id: 's-phone',
+  part: 'Sounding natural',
+  title: 'On the phone and video calls',
+  tagline: 'Alo? Te aud greu. Te sun înapoi.',
+  shift: {
+    english: 'Phone calls have their own script: "hello?", "you\'re breaking up", "I\'ll call you back".',
+    romanian: 'So do Romanian ones: {{Alo?}}, {{Te aud greu}}, {{Te sun înapoi}}, {{Închid}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'The script',
+      body: [
+        '{{Alo?}} — hello? (only on the phone) · {{Cu cine vorbesc?}} — who\'s this? · {{Te aud greu.}} — I can hardly hear you',
+        '{{Mi se termină bateria.}} — my battery\'s dying · {{Te sun înapoi.}} — I\'ll call you back · {{Închid.}} — I\'m hanging up · {{Te pup!}} — love you, bye (family)',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Messages',
+      body: [
+        '{{Scrie-mi.}} — text me ("write me") · {{Ai văzut mesajul?}} · {{Am un apel pierdut de la tine.}} — I\'ve got a missed call from you.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Video calls with the grandparents',
+      body: [
+        '{{Mă vezi?}} — can you see me? · {{S-a blocat.}} — it\'s frozen · {{Întoarce telefonul!}} — turn the phone round! · {{Fă-i cu mâna bunicii!}} — wave to Grandma!',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Make the call',
+      rungs: [
+        { id: 's73-01', prompt: '(answering the phone) Hello?', answer: 'Alo?' },
+        { id: 's73-02', prompt: 'Who\'s this?', answer: 'Cu cine vorbesc?' },
+        { id: 's73-03', prompt: 'I can hardly hear you.', answer: 'Te aud greu.' },
+        { id: 's73-04', prompt: 'My battery\'s dying.', answer: 'Mi se termină bateria.' },
+        { id: 's73-05', prompt: 'I\'ll call you back.', answer: 'Te sun înapoi.' },
+        { id: 's73-06', prompt: 'Text me.', answer: 'Scrie-mi.' },
+        { id: 's73-07', prompt: 'Did you see my message?', answer: 'Ai văzut mesajul meu?' },
+        { id: 's73-08', prompt: 'I\'ve got a missed call from you.', answer: 'Am un apel pierdut de la tine.' },
+        { id: 's73-09', prompt: 'Can you see me?', answer: 'Mă vezi?' },
+        { id: 's73-10', prompt: 'It\'s frozen.', answer: 'S-a blocat.' },
+        { id: 's73-11', prompt: 'Wave to Grandma!', answer: 'Fă-i cu mâna bunicii!' },
+        { id: 's73-12', prompt: 'I\'ll hang up now.', answer: 'Închid acum.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"You\'re breaking up."',
+      options: [{ text: 'Te aud greu.', correct: true }, { text: 'Te rupi.' }],
+      explanation: 'Say what\'s actually happening: "I hear you with difficulty". Te rupi would be "you\'re tearing".',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'I\'ll call you back in ten minutes.',
+      answer: 'Te sun înapoi peste zece minute.',
+      distractors: ['în', 'sună'],
+    },
+  ],
+  shortcut: 'Alo? · Te aud greu · Te sun înapoi · Scrie-mi · Mă vezi? · S-a blocat · Te pup!',
+  useItToday: 'On the next video call with the grandparents, run the whole call in Romanian.',
+}

@@ -643,3 +643,73 @@ export const agoAndIn: StructureLesson = {
   shortcut: 'Ago = acum + time. In (from now) = peste + time. Every = în fiecare. Twice = de două ori. Last year = anul trecut.',
   useItToday: 'Tell your partner one thing that happened "acum…" and one that\'s happening "peste…".',
 }
+
+export const everBefore: StructureLesson = {
+  id: 's-ever-before',
+  part: 'Time',
+  title: 'Have you ever…? Have you been before?',
+  tagline: 'Ai mai fost aici? — "have you again been here?"',
+  shift: {
+    english: 'English says "Have you ever…?", "I\'ve been here before", "I haven\'t seen him since".',
+    romanian: 'Romanian uses {{vreodată}} for "ever" — and a little {{mai}} for "before / again": {{Ai mai fost aici?}} — have you been here before?',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Ever',
+      body: [
+        '{{vreodată}} — ever: {{Ai fost vreodată în Deltă?}} — have you ever been to the Delta? Answers: {{Da, o dată.}} / {{Niciodată.}}',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Mai in the past: before, again',
+      body: [
+        'Right after the "have", {{mai}} means before or again: {{Am mai fost aici.}} — I\'ve been here before. {{N-am mai fost niciodată.}} — I\'ve never been before.',
+        '{{Te mai sun.}} — I\'ll call you again. {{Să nu mai faci asta!}} — don\'t do that again!',
+      ],
+      glosses: [
+        { ro: 'Ai mai fost aici?', words: [['Ai', 'you-have'], ['mai', 'again'], ['fost aici', 'been here']], en: 'Have you been here before?' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Not since',
+      body: [
+        'With nu in the past, mai often means "not since": {{Nu l-am mai văzut.}} — I haven\'t seen him since.',
+        '{{N-am mai văzut așa ceva!}} — I\'ve never seen anything like it!',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Before and again',
+      rungs: [
+        { id: 's70-01', prompt: 'Have you ever been to Romania?', answer: 'Ai fost vreodată în România?' },
+        { id: 's70-02', prompt: 'Never.', answer: 'Niciodată.' },
+        { id: 's70-03', prompt: 'Have you been here before?', answer: 'Ai mai fost aici?' },
+        { id: 's70-04', prompt: 'I\'ve been here before.', answer: 'Am mai fost aici.' },
+        { id: 's70-05', prompt: 'I\'ve never been here before.', answer: 'N-am mai fost niciodată aici.' },
+        { id: 's70-06', prompt: 'Have you ever eaten sarmale?', answer: 'Ai mâncat vreodată sarmale?' },
+        { id: 's70-07', prompt: 'I\'ve never seen anything like it!', answer: 'N-am mai văzut așa ceva!' },
+        { id: 's70-08', prompt: 'Don\'t do that again!', answer: 'Să nu mai faci asta!' },
+        { id: 's70-09', prompt: 'I haven\'t seen him since.', answer: 'Nu l-am mai văzut.' },
+        { id: 's70-10', prompt: 'I\'ll call you again tomorrow.', answer: 'Te mai sun mâine.' },
+        { id: 's70-11', prompt: '(to guests leaving) Come again!', answer: 'Să mai veniți!' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"Have you been here before?"',
+      options: [{ text: 'Ai mai fost aici?', correct: true }, { text: 'Ai fost aici mai?' }],
+      explanation: 'Mai sits right after the "have": ai mai fost.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'We\'ve never been to the mountains before.',
+      answer: 'N-am mai fost niciodată la munte.',
+      distractors: ['vreodată', 'în'],
+    },
+  ],
+  shortcut: 'Ever = vreodată. Before / again = mai, right after the "have": Ai mai fost? N-am mai fost niciodată. Nu l-am mai văzut = not since.',
+  useItToday: 'Ask your partner "Ai mai fost…?" about a place you\'re planning to go.',
+}

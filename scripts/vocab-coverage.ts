@@ -31,7 +31,7 @@ function fold(word: string): string {
 /** Whole words plus the parts of hyphen-fused forms, so "s-a" counts "s-a", "s" and "a". */
 function tokens(text: string): string[] {
   return fold(text.toLowerCase())
-    .replace(/[«»"“”„.,!?;:()]/g, ' ')
+    .replace(/[«»"“”„.,!?;:()…]/g, ' ')
     .split(/\s+/)
     .filter(Boolean)
     .flatMap((word) => [word, ...word.split('-')])
