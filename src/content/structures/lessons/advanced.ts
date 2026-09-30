@@ -1118,3 +1118,133 @@ export const ifLevels: StructureLesson = {
   useItToday: 'Ask your partner a "Ce ai face dacă…?" question tonight.',
   seeAlso: { lessonId: 'u17-l01', label: 'Course: "Dacă aș…" — if I had, I would' },
 }
+
+export const newsRegister: StructureLesson = {
+  id: 's-news',
+  part: 'Going further',
+  title: 'Reading the news: the formal register',
+  tagline: 'Potrivit, urmează să, însă, precum și, va / vor.',
+  shift: {
+    english: 'News English has its own words: according to, is due to, however, as well as, regarding.',
+    romanian: 'So does news Romanian: {{potrivit}}, {{urmează să}}, {{însă}}, {{precum și}}, {{în ceea ce privește}} — plus the formal future {{va}} / {{vor}} and the passive.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'The news words',
+      body: [
+        '{{potrivit}} / {{conform}} — according to: {{potrivit prognozei}} — according to the forecast',
+        '{{urmează să}} — is due to, is going to: {{Ministrul urmează să vorbească.}}',
+        '{{precum și}} — as well as · {{în ceea ce privește}} — as regards · {{a declarat că}} — stated that',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The formal future and the passive',
+      body: [
+        'News uses {{va}} / {{vor}} rather than o să: {{Va ploua.}} — it will rain. {{Drumurile vor fi închise.}} — the roads will be closed.',
+        'And the real passive: {{Rezultatele au fost anunțate ieri.}} — the results were announced yesterday.',
+      ],
+      glosses: [
+        { ro: 'Potrivit prognozei, va ploua.', words: [['Potrivit', 'according-to'], ['prognozei', 'of-the-forecast'], ['va ploua', 'will rain']], en: 'According to the forecast, it will rain.' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Why bother',
+      body: [
+        'You won\'t talk like this. But reading a headline or catching the radio news in the car becomes possible once these few words stop being noise.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Read it out like a newsreader',
+      rungs: [
+        { id: 's84-01', prompt: 'According to the forecast, it will rain.', answer: 'Potrivit prognozei, va ploua.' },
+        { id: 's84-02', prompt: 'The minister is due to speak tomorrow.', answer: 'Ministrul urmează să vorbească mâine.' },
+        { id: 's84-03', prompt: 'However, prices are rising.', answer: 'Totuși, prețurile cresc.' },
+        { id: 's84-04', prompt: 'The weather, however, is changing.', answer: 'Vremea, însă, se schimbă.' },
+        { id: 's84-05', prompt: 'The roads will be closed.', answer: 'Drumurile vor fi închise.' },
+        { id: 's84-06', prompt: 'The results were announced yesterday.', answer: 'Rezultatele au fost anunțate ieri.' },
+        { id: 's84-07', prompt: 'He stated that he will resign.', answer: 'A declarat că va demisiona.' },
+        { id: 's84-08', prompt: 'As regards the schools…', answer: 'În ceea ce privește școlile…' },
+        { id: 's84-09', prompt: 'Bucharest, as well as Cluj.', answer: 'Bucureștiul, precum și Clujul.' },
+        { id: 's84-10', prompt: 'According to the police…', answer: 'Conform poliției…' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"Urmează să" in a headline means…',
+      options: [{ text: 'has just' }, { text: 'is due to', correct: true }, { text: 'refuses to' }],
+      explanation: 'Urmează să — "follows that" — is what\'s scheduled to happen next.',
+    },
+  ],
+  shortcut: 'Potrivit / conform = according to. Urmează să = is due to. Însă = however. Precum și = as well as. News uses va / vor and au fost + done.',
+  useItToday: 'Put Romanian radio news on in the car for five minutes and listen just for these words.',
+}
+
+export const writingEmails: StructureLesson = {
+  id: 's-email',
+  part: 'Going further',
+  title: 'Writing a message or an email',
+  tagline: 'Bună ziua, vă scriu în legătură cu… Cu stimă.',
+  shift: {
+    english: 'English emails run on "Dear…", "I\'m writing regarding…", "Thanks in advance", "Kind regards".',
+    romanian: 'Romanian ones do too: {{Bună ziua}}, {{Vă scriu în legătură cu…}}, {{Vă mulțumesc anticipat}}, {{Cu stimă}} — or {{Cu drag}} for family.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Opening',
+      body: [
+        'Formal: {{Stimată doamnă}} / {{Stimate domnule}} — dear Madam / Sir. Everyday formal: {{Bună ziua,}} — the safe choice.',
+        'Family and friends: {{Dragă Ana,}} / {{Bună,}}.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The middle',
+      body: [
+        '{{Vă scriu în legătură cu…}} — I\'m writing about… · {{Aș dori să…}} — I would like to… · {{Vă rog să-mi confirmați…}} — please confirm… · {{Atașat găsiți…}} — attached you\'ll find…',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Closing',
+      body: [
+        '{{Vă mulțumesc anticipat.}} — thanks in advance · {{Aștept răspunsul dumneavoastră.}} — I look forward to your reply.',
+        '{{Cu stimă,}} — yours sincerely · {{Toate cele bune,}} — all the best · {{Cu drag,}} — love (family) · {{Pupici!}} — kisses (close family).',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Write it',
+      rungs: [
+        { id: 's85-01', prompt: 'Dear Madam,', answer: 'Stimată doamnă,' },
+        { id: 's85-02', prompt: 'I\'m writing about the booking.', answer: 'Vă scriu în legătură cu rezervarea.' },
+        { id: 's85-03', prompt: 'I would like to change the date.', answer: 'Aș dori să schimb data.' },
+        { id: 's85-04', prompt: 'Please confirm the time.', answer: 'Vă rog să-mi confirmați ora.' },
+        { id: 's85-05', prompt: 'Attached you\'ll find the documents.', answer: 'Atașat găsiți documentele.' },
+        { id: 's85-06', prompt: 'Thank you in advance.', answer: 'Vă mulțumesc anticipat.' },
+        { id: 's85-07', prompt: 'I look forward to your reply.', answer: 'Aștept răspunsul dumneavoastră.' },
+        { id: 's85-08', prompt: 'Yours sincerely,', answer: 'Cu stimă,' },
+        { id: 's85-09', prompt: 'All the best,', answer: 'Toate cele bune,' },
+        { id: 's85-10', prompt: '(to family) Love,', answer: 'Cu drag,' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: 'Signing off a message to your partner\'s aunt:',
+      options: [{ text: 'Cu stimă,' }, { text: 'Cu drag,', correct: true }],
+      explanation: 'Cu stimă is for officials and strangers. Family gets cu drag.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'I\'m writing about my son\'s registration.',
+      answer: 'Vă scriu în legătură cu înscrierea fiului meu.',
+      distractors: ['despre', 'pentru'],
+    },
+  ],
+  shortcut: 'Bună ziua / Stimată doamnă → Vă scriu în legătură cu… → Aș dori să… → Vă mulțumesc anticipat → Cu stimă (or Cu drag for family).',
+  useItToday: 'Write your next message to your partner\'s family in Romanian, signed "Cu drag".',
+}

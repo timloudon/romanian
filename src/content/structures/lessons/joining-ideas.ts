@@ -282,3 +282,73 @@ export const storytelling: StructureLesson = {
   shortcut: 'Mai întâi → apoi → după aceea → deodată → până la urmă → în sfârșit. Scenery with -am, events with am / a + done.',
   useItToday: 'Tell your partner about your day as a story tonight, using at least four of these.',
 }
+
+export const contrast: StructureLesson = {
+  id: 's-contrast',
+  part: 'Joining ideas',
+  title: 'But, whereas, instead: dar, iar, ci, însă, totuși',
+  tagline: 'Nu e roșu, ci verde. Eu gătesc, iar tu speli vasele.',
+  shift: {
+    english: 'English gets by with "but" and "and" for every kind of contrast.',
+    romanian: 'Romanian has sharper tools: {{ci}} for "not this but that", {{iar}} for "and, whereas" between two people, plus {{însă}}, {{totuși}} and {{în schimb}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Dar and ci',
+      body: [
+        '{{dar}} — but, the everyday one: {{E scump, dar merită.}} — it\'s expensive, but it\'s worth it.',
+        'After a "not", when you swap one thing for another, it\'s {{ci}}: {{Nu e roșu, ci verde.}} — it\'s not red but green. {{Nu eu, ci el.}}',
+      ],
+      glosses: [
+        { ro: 'Nu e roșu, ci verde.', words: [['Nu e', 'not it\'s'], ['roșu', 'red'], ['ci', 'but-rather'], ['verde', 'green']], en: 'It\'s not red, it\'s green.' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Iar: and, whereas — and "again"',
+      body: [
+        '{{iar}} contrasts two people or things: {{Eu gătesc, iar tu speli vasele.}} — I cook, and you wash up.',
+        'On its own at the start, it means "again": {{Iar plânge.}} — he\'s crying again. {{Iar?!}} — again?!',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'However, still, instead',
+      body: [
+        '{{însă}} — but, however; it can sit second in the sentence: {{Vremea, însă, se schimbă.}}',
+        '{{totuși}} — still, nevertheless: {{Totuși, a fost o zi frumoasă.}} {{în schimb}} — instead, on the other hand.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Contrast it',
+      rungs: [
+        { id: 's83-01', prompt: 'It\'s expensive, but it\'s worth it.', answer: 'E scump, dar merită.' },
+        { id: 's83-02', prompt: 'It\'s not red, it\'s green.', answer: 'Nu e roșu, ci verde.' },
+        { id: 's83-03', prompt: 'Not me, him.', answer: 'Nu eu, ci el.' },
+        { id: 's83-04', prompt: 'I cook, and you wash up.', answer: 'Eu gătesc, iar tu speli vasele.' },
+        { id: 's83-05', prompt: 'Grandma cooks and Grandpa does the shopping.', answer: 'Bunica gătește, iar bunicul face cumpărăturile.' },
+        { id: 's83-06', prompt: 'Not again!', answer: 'Iar?!' },
+        { id: 's83-07', prompt: 'I\'d like to; however, I can\'t.', answer: 'Aș vrea, însă nu pot.' },
+        { id: 's83-08', prompt: 'Still, it was a lovely day.', answer: 'Totuși, a fost o zi frumoasă.' },
+        { id: 's83-09', prompt: 'Instead, we stayed at home.', answer: 'În schimb, am stat acasă.' },
+        { id: 's83-10', prompt: 'He\'s not tired — he\'s hungry.', answer: 'Nu e obosit, ci flămând.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"It\'s not Tuesday, it\'s Wednesday."',
+      options: [{ text: 'Nu e marți, dar miercuri.' }, { text: 'Nu e marți, ci miercuri.', correct: true }],
+      explanation: 'Swapping one thing for another after a "not" takes ci, not dar.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'I work, and she stays at home.',
+      answer: 'Eu lucrez, iar ea stă acasă.',
+      distractors: ['dar', 'ci'],
+    },
+  ],
+  shortcut: 'Dar = but. After "not…", swapping = ci (nu X, ci Y). Iar = and / whereas between two people — and "again". Însă = however. Totuși = still. În schimb = instead.',
+  useItToday: 'Divide the chores in Romanian tonight: "Eu…, iar tu…".',
+}

@@ -915,3 +915,263 @@ export const onThePhone: StructureLesson = {
   shortcut: 'Alo? · Te aud greu · Te sun înapoi · Scrie-mi · Mă vezi? · S-a blocat · Te pup!',
   useItToday: 'On the next video call with the grandparents, run the whole call in Romanian.',
 }
+
+export const pictureIdioms: StructureLesson = {
+  id: 's-picture-idioms',
+  part: 'Sounding natural',
+  title: 'Pictures in words: idioms Romanians love',
+  tagline: 'Floare la ureche, a călca pe bec, cât ai zice pește.',
+  shift: {
+    english: 'English idioms paint pictures: a piece of cake, put your foot in it, when pigs fly.',
+    romanian: 'Romanian ones paint different pictures — {{floare la ureche}} ("a flower at the ear") is a piece of cake. Knowing the picture is what makes them stick.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Easy, fast, blunders',
+      body: [
+        '{{E floare la ureche.}} — it\'s a piece of cake ("a flower at the ear").',
+        '{{cât ai zice pește}} — in a flash ("as fast as you\'d say fish").',
+        '{{a călca pe bec}} — to put your foot in it ("step on the light bulb"). {{a da cu bâta în baltă}} — to make a blunder ("hit the puddle with the stick").',
+      ],
+      glosses: [
+        { ro: 'E floare la ureche.', words: [['E', 'it\'s'], ['floare', 'flower'], ['la ureche', 'at-the ear']], en: 'It\'s a piece of cake.' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'People',
+      body: [
+        '{{Are cei șapte ani de acasă.}} — he\'s got good manners ("the seven years from home"). {{Are capul în nori.}} — head in the clouds.',
+        '{{E cu musca pe căciulă.}} — he\'s got a guilty conscience ("the fly on his hat"). {{a cincea roată la căruță}} — a fifth wheel ("the fifth wheel on the cart").',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Everyday life',
+      body: [
+        '{{Mi-e o foame de lup.}} — I\'m starving ("a wolf\'s hunger"). {{Batem palma.}} — let\'s shake on it. {{Bag mâna în foc pentru el.}} — I\'d vouch for him ("I\'d put my hand in the fire").',
+        '{{a face rost de}} — to get hold of. {{Batem apa-n piuă.}} — we\'re going round in circles ("beating water in a mortar"). {{Când o zbura porcul.}} — when pigs fly.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Say the picture',
+      rungs: [
+        { id: 's86-01', prompt: 'It\'s a piece of cake.', answer: 'E floare la ureche.' },
+        { id: 's86-02', prompt: 'In a flash.', answer: 'Cât ai zice pește.' },
+        { id: 's86-03', prompt: 'I put my foot in it.', answer: 'Am călcat pe bec.' },
+        { id: 's86-04', prompt: 'He made a blunder.', answer: 'A dat cu bâta în baltă.' },
+        { id: 's86-05', prompt: 'He\'s got good manners.', answer: 'Are cei șapte ani de acasă.' },
+        { id: 's86-06', prompt: 'He\'s got his head in the clouds.', answer: 'Are capul în nori.' },
+        { id: 's86-07', prompt: 'He\'s got a guilty conscience.', answer: 'E cu musca pe căciulă.' },
+        { id: 's86-08', prompt: 'I\'m starving.', answer: 'Mi-e o foame de lup.' },
+        { id: 's86-09', prompt: 'Let\'s shake on it.', answer: 'Batem palma.' },
+        { id: 's86-10', prompt: 'I\'d vouch for him.', answer: 'Bag mâna în foc pentru el.' },
+        { id: 's86-11', prompt: 'Can you get hold of some tickets?', answer: 'Poți să faci rost de niște bilete?' },
+        { id: 's86-12', prompt: 'We\'re going round in circles.', answer: 'Batem apa-n piuă.' },
+        { id: 's86-13', prompt: 'When pigs fly.', answer: 'Când o zbura porcul.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: 'Your partner says the flat-pack wardrobe was "floare la ureche". It was…',
+      options: [{ text: 'a nightmare' }, { text: 'really easy', correct: true }, { text: 'very pretty' }],
+      explanation: 'Floare la ureche — "a flower at the ear" — is a piece of cake.',
+    },
+  ],
+  shortcut: 'Floare la ureche = easy. Cât ai zice pește = in a flash. A călca pe bec = put your foot in it. Cei șapte ani de acasă = good manners. O foame de lup = starving.',
+  useItToday: 'Use "Mi-e o foame de lup" before dinner tonight.',
+}
+
+export const proverbs: StructureLesson = {
+  id: 's-proverbs',
+  part: 'Sounding natural',
+  title: 'Proverbs you\'ll hear from the grandparents',
+  tagline: 'Graba strică treaba. Ai carte, ai parte.',
+  shift: {
+    english: 'English has "more haste, less speed", "the early bird catches the worm", "out of sight, out of mind".',
+    romanian: 'Romanian has its own — and grandparents use them constantly: {{Graba strică treaba}} ("haste spoils the job"), {{Ochii care nu se văd se uită}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'The everyday ones',
+      body: [
+        '{{Graba strică treaba.}} — more haste, less speed ("haste spoils the job").',
+        '{{Cine se scoală de dimineață departe ajunge.}} — the early bird catches the worm ("who gets up early gets far").',
+        '{{Ochii care nu se văd se uită.}} — out of sight, out of mind ("eyes that don\'t see each other forget").',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Wisdom and warnings',
+      body: [
+        '{{Nu da vrabia din mână pe cioara de pe gard.}} — a bird in the hand ("don\'t swap the sparrow in your hand for the crow on the fence").',
+        '{{Ce ție nu-ți place, altuia nu-i face.}} — do as you would be done by.',
+        '{{Ai carte, ai parte.}} — education pays ("have books, have your share").',
+        '{{Socoteala de acasă nu se potrivește cu cea din târg.}} — plans rarely survive reality ("the sums at home don\'t match the ones at the market").',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'About people',
+      body: [
+        '{{Lupul își schimbă părul, dar năravul ba.}} — a leopard doesn\'t change its spots ("the wolf changes its fur, not its habits").',
+        '{{Omul sfințește locul.}} — it\'s the people who make a place.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Say the proverb',
+      rungs: [
+        { id: 's87-01', prompt: 'More haste, less speed.', answer: 'Graba strică treaba.' },
+        { id: 's87-02', prompt: 'The early bird catches the worm.', answer: 'Cine se scoală de dimineață departe ajunge.' },
+        { id: 's87-03', prompt: 'Out of sight, out of mind.', answer: 'Ochii care nu se văd se uită.' },
+        { id: 's87-04', prompt: 'A bird in the hand…', answer: 'Nu da vrabia din mână pe cioara de pe gard.' },
+        { id: 's87-05', prompt: 'Do as you would be done by.', answer: 'Ce ție nu-ți place, altuia nu-i face.' },
+        { id: 's87-06', prompt: 'Education pays.', answer: 'Ai carte, ai parte.' },
+        { id: 's87-07', prompt: 'Plans rarely survive reality.', answer: 'Socoteala de acasă nu se potrivește cu cea din târg.' },
+        { id: 's87-08', prompt: 'A leopard doesn\'t change its spots.', answer: 'Lupul își schimbă părul, dar năravul ba.' },
+        { id: 's87-09', prompt: 'People make the place.', answer: 'Omul sfințește locul.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: 'Grandma sees you rushing and says "Graba strică treaba." She means…',
+      options: [{ text: 'Hurry up!' }, { text: 'Slow down, you\'ll mess it up.', correct: true }, { text: 'You\'re late.' }],
+      explanation: 'Graba strică treaba — haste spoils the job.',
+    },
+  ],
+  shortcut: 'Graba strică treaba · Cine se scoală de dimineață departe ajunge · Ochii care nu se văd se uită · Ai carte, ai parte.',
+  useItToday: 'Learn one proverb this week and drop it into a conversation with the grandparents — watch their faces.',
+}
+
+export const texting: StructureLesson = {
+  id: 's-texting',
+  part: 'Sounding natural',
+  title: 'Texting like a Romanian',
+  tagline: 'cf? nmk. pt. ms. pp.',
+  shift: {
+    english: 'English texting has lol, btw, thx, xx.',
+    romanian: 'Romanian texting has its own shorthand — {{ce faci}} becomes "cf", {{mersi}} becomes "ms" — and people often drop the diacritics altogether.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'The shorthand',
+      body: [
+        '"cf?" — {{ce faci?}} · "nmk" — {{nimic}} · "pt" — {{pentru}} · "dc" — {{de ce}} · "tb" — {{trebuie}} · "cv" — {{ceva}} · "ms" — {{mersi}} · "sal" — {{salut}} · "nb" — {{noapte bună}} · "pp" — {{pupici}} (kisses).',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Diacritics disappear',
+      body: [
+        'Many people type without ă, â, î, ș, ț: "sunt in drum, ajung in 10 min". Reading it, you put them back in your head: {{Sunt în drum, ajung în zece minute.}}',
+        'When you write, keeping them is polite and clear — but nobody minds if you don\'t.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Warm sign-offs',
+      body: [
+        '{{Te pup!}} — kiss (love you, bye) · {{Pupici!}} — kisses · {{Noapte bună, pupici!}} — family texts end like this all the time.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Text it',
+      intro: 'Say the full versions — then you\'ll recognise the short ones.',
+      rungs: [
+        { id: 's88-01', prompt: 'I\'m here. (I\'ve arrived)', answer: 'Am ajuns.' },
+        { id: 's88-02', prompt: 'Where are you?', answer: 'Unde ești?' },
+        { id: 's88-03', prompt: 'I\'m on my way, ten minutes.', answer: 'Sunt pe drum, ajung în zece minute.' },
+        { id: 's88-04', prompt: 'Call me when you can.', answer: 'Sună-mă când poți.' },
+        { id: 's88-05', prompt: 'Do you need anything from the shop?', answer: 'Ai nevoie de ceva de la magazin?' },
+        { id: 's88-06', prompt: 'What are you up to? — Nothing.', answer: 'Ce faci? Nimic.' },
+        { id: 's88-07', prompt: 'Thanks!', answer: 'Mersi!' },
+        { id: 's88-08', prompt: 'Why?', answer: 'De ce?' },
+        { id: 's88-09', prompt: 'Good night, kisses!', answer: 'Noapte bună, pupici!' },
+        { id: 's88-10', prompt: 'Love you, bye!', answer: 'Te pup!' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: 'A text says "cf? tb sa vb". It means…',
+      options: [{ text: 'What\'s up? We need to talk.', correct: true }, { text: 'Coffee? I have to go.' }, { text: 'Call me back tomorrow.' }],
+      explanation: 'cf = ce faci, tb = trebuie, sa = să, vb = vorbim.',
+    },
+  ],
+  shortcut: 'cf = ce faci · nmk = nimic · pt = pentru · dc = de ce · tb = trebuie · cv = ceva · ms = mersi · pp = pupici. Diacritics often vanish.',
+  useItToday: 'Send your partner one text today in Romanian — shorthand allowed.',
+}
+
+export const sympathy: StructureLesson = {
+  id: 's-sympathy',
+  part: 'Sounding natural',
+  title: 'Sympathy, complaints and bad luck',
+  tagline: 'Ce ghinion! Asta e. Sănătate să fie!',
+  shift: {
+    english: 'English sympathises with "I\'m sorry to hear that", "what bad luck", "it is what it is".',
+    romanian: 'Romanian has its own comforting set — {{Ce ghinion!}}, {{Asta e.}}, {{Las\' că trece.}} — and a very Romanian shrug: {{Sănătate să fie!}}',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Sympathising',
+      body: [
+        '{{Îmi pare rău să aud asta.}} — I\'m sorry to hear that · {{Ce ghinion!}} — what bad luck! · {{Of, săracul!}} — oh, poor thing! (about him)',
+        '{{Te înțeleg perfect.}} — I completely understand · {{Cum pot să te ajut?}} — how can I help?',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Comforting',
+      body: [
+        '{{Las\' că trece.}} — it\'ll pass · {{Totul o să fie bine.}} — everything will be fine · {{Nu-ți face probleme.}} — don\'t worry about it.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The Romanian shrug',
+      body: [
+        '{{Asta e.}} — that\'s life, it is what it is ("that\'s it"). {{Ce să-i faci?}} — what can you do?',
+        '{{Sănătate să fie!}} — "as long as there\'s health" — said after any setback, big or small. Grandparents love it.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Complaining',
+      body: [
+        '{{Nu-i corect!}} — it\'s not fair! · {{Iar?!}} — again?! · {{Ce nasol!}} — how rubbish! (casual) · {{M-am săturat!}} — I\'ve had enough!',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Say the right thing',
+      rungs: [
+        { id: 's89-01', prompt: 'I\'m sorry to hear that.', answer: 'Îmi pare rău să aud asta.' },
+        { id: 's89-02', prompt: 'What bad luck!', answer: 'Ce ghinion!' },
+        { id: 's89-03', prompt: 'Oh, poor thing! (about him)', answer: 'Of, săracul!' },
+        { id: 's89-04', prompt: 'I completely understand.', answer: 'Te înțeleg perfect.' },
+        { id: 's89-05', prompt: 'How can I help?', answer: 'Cum pot să te ajut?' },
+        { id: 's89-06', prompt: 'It\'ll pass.', answer: 'Las\' că trece.' },
+        { id: 's89-07', prompt: 'Everything will be fine.', answer: 'Totul o să fie bine.' },
+        { id: 's89-08', prompt: 'It is what it is.', answer: 'Asta e.' },
+        { id: 's89-09', prompt: 'What can you do?', answer: 'Ce să-i faci?' },
+        { id: 's89-10', prompt: 'As long as we\'ve got our health!', answer: 'Sănătate să fie!' },
+        { id: 's89-11', prompt: 'It\'s not fair!', answer: 'Nu-i corect!' },
+        { id: 's89-12', prompt: '(casual) That\'s rubbish!', answer: 'Ce nasol!' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: 'The car\'s broken down again, and Grandpa says "Sănătate să fie!" He means…',
+      options: [{ text: 'Bless you!' }, { text: 'Never mind — what matters is we\'re well.', correct: true }, { text: 'Call the mechanic.' }],
+      explanation: 'Sănătate să fie — "may there be health" — is the Romanian way of putting a setback in perspective.',
+    },
+  ],
+  shortcut: 'Îmi pare rău să aud asta · Ce ghinion! · Las\' că trece · Asta e · Ce să-i faci? · Sănătate să fie!',
+  useItToday: 'Next time something goes wrong, shrug it off in Romanian: "Asta e. Sănătate să fie!"',
+}

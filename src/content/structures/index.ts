@@ -7,6 +7,7 @@ import {
   ifLevels,
   mustHave,
   neitherNor,
+  newsRegister,
   ownThings,
   passive,
   presumptive,
@@ -16,6 +17,7 @@ import {
   whileDoing,
   wishes,
   wordBuilding,
+  writingEmails,
 } from './lessons/advanced'
 import {
   genitive,
@@ -28,7 +30,12 @@ import {
   whoWhich,
   wouldHave,
 } from './lessons/going-further'
-import { commands, neverDropThat, storytelling } from './lessons/joining-ideas'
+import {
+  commands,
+  contrast,
+  neverDropThat,
+  storytelling,
+} from './lessons/joining-ideas'
 import {
   allEvery,
   asAs,
@@ -72,10 +79,14 @@ import {
   numbersAndTime,
   onThePhone,
   opinions,
+  pictureIdioms,
   polite,
+  proverbs,
   requests,
   roughly,
   streetRomanian,
+  sympathy,
+  texting,
   wordOrder,
 } from './lessons/sounding-natural'
 import {
@@ -131,6 +142,7 @@ export const structureLessons: StructureLesson[] = [
   firstAndLast,
   commands,
   neverDropThat,
+  contrast,
   storytelling,
   saAlone,
   wouldHave,
@@ -156,14 +168,20 @@ export const structureLessons: StructureLesson[] = [
   asIf,
   someAny,
   wordBuilding,
+  newsRegister,
+  writingEmails,
   thingsToDo,
   greetings,
   requests,
   exclaiming,
+  sympathy,
   onThePhone,
+  texting,
   getTakeMake,
   fillers,
   idioms,
+  pictureIdioms,
+  proverbs,
   wordOrder,
   polite,
   opinions,
