@@ -1563,3 +1563,67 @@ export const describing: StructureLesson = {
   shortcut: 'Colours come after and match: mașină roșie, ochi albaștri. Maro, roz, gri never change. Are ochi… / Are părul…',
   useItToday: 'Describe what your son is wearing today — colours included.',
 }
+
+export const guessingGender: StructureLesson = {
+  id: 's-gender',
+  part: 'People and things',
+  title: 'Guessing un or o from the ending',
+  tagline: '-ă is o, a consonant is un — and a few rules of thumb.',
+  shift: {
+    english: 'English nouns have no gender, so every "un" or "o" is a new thing to remember.',
+    romanian: 'You can guess most of them from the ending: {{-ă}} → o-word, a consonant → un-word, {{-ție}} and {{-tate}} → o-word.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'The endings that tell you',
+      body: [
+        'Ends in **-ă** or **-a** → almost always an o-word: {{o casă}}, {{o mașină}}, {{o cafea}}.',
+        'Ends in a **consonant** or **-u** → an un-word: {{un pat}}, {{un telefon}}, {{un lucru}}.',
+        'Ends in **-ie**, **-ție**, **-tate**, **-ură** → an o-word: {{o familie}}, {{o situație}}, {{o calitate}}, {{o natură}}.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The tricky -e',
+      body: [
+        'Words ending in **-e** could be either: {{o carte}}, {{o floare}}, but {{un frate}}, {{un câine}}. People and animals follow their sex: {{un frate}} (brother), {{o soră}} (sister).',
+        'Words in **-ment**, **-aj**, **-ism** are un-words (and turn o-like in the plural): {{un moment}}, {{un garaj}}.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'When you guess wrong',
+      body: [
+        'Nothing breaks. Romanians will understand {{un casă}} perfectly well — and a guess that\'s right nine times out of ten is worth far more than freezing.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Un or o?',
+      intro: 'Say it with un or o — guess from the ending.',
+      rungs: [
+        { id: 's101-01', prompt: 'A table.', answer: 'O masă.' },
+        { id: 's101-02', prompt: 'A bed.', answer: 'Un pat.' },
+        { id: 's101-03', prompt: 'A family.', answer: 'O familie.' },
+        { id: 's101-04', prompt: 'A situation.', answer: 'O situație.' },
+        { id: 's101-05', prompt: 'A city.', answer: 'Un oraș.' },
+        { id: 's101-06', prompt: 'A university.', answer: 'O universitate.' },
+        { id: 's101-07', prompt: 'A moment.', answer: 'Un moment.' },
+        { id: 's101-08', prompt: 'A book.', answer: 'O carte.' },
+        { id: 's101-09', prompt: 'A dog.', answer: 'Un câine.' },
+        { id: 's101-10', prompt: 'A picture.', answer: 'O pictură.' },
+        { id: 's101-11', prompt: 'A garage.', answer: 'Un garaj.' },
+        { id: 's101-12', prompt: 'A coffee.', answer: 'O cafea.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"Calitate" (quality) is…',
+      options: [{ text: 'un calitate' }, { text: 'o calitate', correct: true }],
+      explanation: 'Words in -tate are o-words.',
+    },
+  ],
+  shortcut: '-ă / -a / -ie / -ție / -tate / -ură → o. Consonant / -u / -ment / -aj → un. -e: could be either — people follow their sex.',
+  useItToday: 'When you meet a new noun today, guess un or o before you check.',
+}

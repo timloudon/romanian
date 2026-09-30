@@ -1248,3 +1248,140 @@ export const writingEmails: StructureLesson = {
   shortcut: 'Bună ziua / Stimată doamnă → Vă scriu în legătură cu… → Aș dori să… → Vă mulțumesc anticipat → Cu stimă (or Cu drag for family).',
   useItToday: 'Write your next message to your partner\'s family in Romanian, signed "Cu drag".',
 }
+
+export const withoutDoing: StructureLesson = {
+  id: 's-without',
+  part: 'Going further',
+  title: 'Without doing, instead of doing, before doing',
+  tagline: 'A plecat fără să zică nimic.',
+  shift: {
+    english: 'English uses "-ing" after without, instead of, before, after: "without saying", "instead of sleeping".',
+    romanian: 'Romanian uses the să form, with the person\'s ending: {{fără să zică}} — "without that he says". {{în loc să dormi}} — "instead that you sleep".',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Fără să, în loc să',
+      body: [
+        '{{fără să}} — without doing: {{A plecat fără să zică nimic.}} — he left without saying anything.',
+        '{{în loc să}} — instead of doing: {{În loc să dormi, te joci!}} — instead of sleeping, you\'re playing!',
+      ],
+      glosses: [
+        { ro: 'Fără să zică nimic.', words: [['Fără', 'without'], ['să zică', 'that he-says'], ['nimic', 'nothing']], en: 'Without saying anything.' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'It\'s good to, it\'s important to',
+      body: [
+        '{{E bine să}} — it\'s good to · {{E important să}} — it\'s important to · {{E posibil să}} — it\'s possible that, maybe · {{E timpul să}} — it\'s time to: {{E timpul să mergem.}}',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The formal version: a + verb',
+      body: [
+        'In writing and formal speech, the "to" form {{a}} + verb appears after {{pentru}}, {{înainte de}}, {{fără}}: {{pentru a înțelege}} — in order to understand, {{înainte de a pleca}} — before leaving. In conversation, the să form does the job.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Say it',
+      rungs: [
+        { id: 's99-01', prompt: 'He left without saying anything.', answer: 'A plecat fără să zică nimic.' },
+        { id: 's99-02', prompt: 'Don\'t go without eating.', answer: 'Nu pleca fără să mănânci.' },
+        { id: 's99-03', prompt: 'Without thinking.', answer: 'Fără să mă gândesc.' },
+        { id: 's99-04', prompt: 'Instead of sleeping, you\'re playing!', answer: 'În loc să dormi, te joci!' },
+        { id: 's99-05', prompt: 'Instead of complaining, let\'s do something.', answer: 'În loc să ne plângem, hai să facem ceva.' },
+        { id: 's99-06', prompt: 'It\'s good to rest.', answer: 'E bine să te odihnești.' },
+        { id: 's99-07', prompt: 'It\'s important to eat well.', answer: 'E important să mănânci bine.' },
+        { id: 's99-08', prompt: 'Maybe it\'ll rain.', answer: 'E posibil să plouă.' },
+        { id: 's99-09', prompt: 'It\'s time to go.', answer: 'E timpul să mergem.' },
+        { id: 's99-10', prompt: 'Before leaving, check the gas.', answer: 'Înainte să pleci, verifică gazul.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"He came in without knocking."',
+      options: [{ text: 'A intrat fără bătând.' }, { text: 'A intrat fără să bată.', correct: true }],
+      explanation: 'After fără, the să form — never -ând.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'Instead of watching TV, let\'s go out.',
+      answer: 'În loc să ne uităm la televizor, hai să ieșim.',
+      distractors: ['fără', 'uitând'],
+    },
+  ],
+  shortcut: 'Without doing = fără să. Instead of doing = în loc să. It\'s good / important / time to = e bine / important / timpul să. Never -ând after these.',
+  useItToday: 'Catch yourself doing something "instead of" something else today, and say it: "În loc să…".',
+}
+
+export const whatToDo: StructureLesson = {
+  id: 's-what-to-do',
+  part: 'Going further',
+  title: 'I don\'t know what to do: ce să, unde să, cum să',
+  tagline: 'Nu știu ce să zic.',
+  shift: {
+    english: 'English says "what to do", "where to go", "how to say it" — a question word + "to".',
+    romanian: 'Romanian uses the question word + {{să}} + the person\'s ending: {{Nu știu ce să fac.}} — "I don\'t know what that I do".',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Question word + să',
+      body: [
+        '{{Nu știu ce să fac.}} — I don\'t know what to do. {{Nu știu unde să mergem.}} — I don\'t know where to go. {{Nu știu cum să-ți spun.}} — I don\'t know how to tell you.',
+        'The verb takes whoever\'s doing it: {{Nu știe ce să facă.}} — he doesn\'t know what to do.',
+      ],
+      glosses: [
+        { ro: 'Nu știu ce să fac.', words: [['Nu știu', 'I-don\'t-know'], ['ce', 'what'], ['să fac', 'that I-do']], en: 'I don\'t know what to do.' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Asking for advice',
+      body: [
+        '{{Ce să fac?}} — what should I do? {{Unde să-l pun?}} — where should I put it? {{Cui să-i spun?}} — who should I tell?',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Knowing, not knowing, wondering',
+      body: [
+        '{{Nu știu dacă să vin.}} — I don\'t know whether to come. {{Mă întreb ce să-i cumpăr.}} — I\'m wondering what to buy him.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Work it out',
+      rungs: [
+        { id: 's100-01', prompt: 'I don\'t know what to do.', answer: 'Nu știu ce să fac.' },
+        { id: 's100-02', prompt: 'I don\'t know what to say.', answer: 'Nu știu ce să zic.' },
+        { id: 's100-03', prompt: 'I don\'t know where to go.', answer: 'Nu știu unde să mergem.' },
+        { id: 's100-04', prompt: 'I don\'t know how to tell you.', answer: 'Nu știu cum să-ți spun.' },
+        { id: 's100-05', prompt: 'He doesn\'t know what to do.', answer: 'Nu știe ce să facă.' },
+        { id: 's100-06', prompt: 'What should I do?', answer: 'Ce să fac?' },
+        { id: 's100-07', prompt: '(the box) Where should I put it?', answer: 'Unde s-o pun?' },
+        { id: 's100-08', prompt: 'Who should I ask?', answer: 'Pe cine să întreb?' },
+        { id: 's100-09', prompt: 'I don\'t know whether to come.', answer: 'Nu știu dacă să vin.' },
+        { id: 's100-10', prompt: 'I\'m wondering what to buy him.', answer: 'Mă întreb ce să-i cumpăr.' },
+        { id: 's100-11', prompt: 'Tell me what to bring.', answer: 'Spune-mi ce să aduc.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"I don\'t know what to cook."',
+      options: [{ text: 'Nu știu ce a găti.' }, { text: 'Nu știu ce să gătesc.', correct: true }],
+      explanation: 'Question word + să + the "I" ending: ce să gătesc.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'We don\'t know where to park.',
+      answer: 'Nu știm unde să parcăm.',
+      distractors: ['a', 'parca'],
+    },
+  ],
+  shortcut: 'What / where / how to… = ce / unde / cum + să + the person\'s ending: nu știu ce să fac, nu știe unde să meargă.',
+  useItToday: 'Next time you\'re stuck on a decision, say it in Romanian: "Nu știu ce să…".',
+}
