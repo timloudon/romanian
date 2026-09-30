@@ -2075,3 +2075,72 @@ export const familyTree: StructureLesson = {
   shortcut: 'Socru / soacră = in-laws. Cumnat(ă) = brother / sister-in-law. Nepot = grandson AND nephew. Unchi, mătușă, văr. Nașii = godparents (a big deal). Tanti = auntie.',
   useItToday: 'Draw the family tree with your partner and label it in Romanian.',
 }
+
+export const stressedMe: StructureLesson = {
+  id: 's-mie-imi',
+  part: 'People and things',
+  title: 'Me too — și mie! Stressing "me"',
+  tagline: 'Mie îmi place. Ție? — and why "me too" is și mie.',
+  shift: {
+    english: 'English stresses with the voice: "I like it — do YOU?", "she called ME". And "me too" never changes.',
+    romanian: 'Romanian adds a stressed word up front and keeps the little one: {{Mie îmi place.}} {{Pe mine m-a sunat.}} And with "to me" verbs, "me too" is {{Și mie!}}',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'The stressed forms',
+      body: [
+        'For "to me, to you…": {{mie}}, {{ție}}, {{lui}}, {{ei}}, {{nouă}}, {{vouă}}, {{lor}}.',
+        'For "me, you…" as the one it\'s done to: {{pe mine}}, {{pe tine}}, {{pe el}}, {{pe ea}}, {{pe noi}}, {{pe voi}}, {{pe ei}}.',
+        'They go first, and the little word stays: {{Mie îmi place, ție nu.}} — I like it, you don\'t. {{Pe mine nu mă întreabă nimeni.}} — nobody asks ME.',
+      ],
+      glosses: [
+        { ro: 'Mie îmi place.', words: [['Mie', 'to-me'], ['îmi', 'to-me'], ['place', 'it-pleases']], en: 'I like it.' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The "me too" trap',
+      body: [
+        'With "to me" verbs — place, e frig, e dor, trebuie — "me too" is {{Și mie!}} and "me neither" is {{Nici mie.}}',
+        'With ordinary verbs it\'s {{Și eu}} / {{Nici eu}}: "I\'m going" — {{Și eu!}}; "I like it" — {{Și mie!}}',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Stress it',
+      rungs: [
+        { id: 's153-01', prompt: 'I like it. Do you?', answer: 'Mie îmi place. Ție?' },
+        { id: 's153-02', prompt: 'I like it, you don\'t.', answer: 'Mie îmi place, ție nu.' },
+        { id: 's153-03', prompt: '(liking something) Me too!', answer: 'Și mie!', teachingNote: 'With "to me" verbs, "me too" is și mie — not și eu.' },
+        { id: 's153-04', prompt: '(not liking something) Me neither.', answer: 'Nici mie.' },
+        { id: 's153-05', prompt: '(going somewhere) Me too!', answer: 'Și eu!' },
+        { id: 's153-06', prompt: 'He likes it, she doesn\'t.', answer: 'Lui îi place, ei nu.' },
+        { id: 's153-07', prompt: 'She called ME, not you.', answer: 'Pe mine m-a sunat, nu pe tine.' },
+        { id: 's153-08', prompt: 'Nobody asks me.', answer: 'Pe mine nu mă întreabă nimeni.' },
+        { id: 's153-09', prompt: 'We\'re cold. What about you?', answer: 'Nouă ne e frig. Vouă?' },
+        { id: 's153-10', prompt: '(missing someone) Me too.', answer: 'Și mie.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: 'Your partner says "Îmi place filmul ăsta." You like it too:',
+      options: [{ text: 'Și eu!' }, { text: 'Și mie!', correct: true }],
+      explanation: '"To me it pleases" — so "and to me": și mie.',
+    },
+    {
+      kind: 'dialogue',
+      title: 'In real life: Pizza or pasta?',
+      setting: 'You and your partner, choosing dinner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Mie îmi place pizza. Ție?', en: 'I like pizza. Do you?' },
+        { who: 'you', ro: 'Și mie! Dar mie îmi e poftă de paste azi.', en: 'Me too! But I fancy pasta today.' },
+        { who: 'them', ro: 'Pe mine nu mă întreabă nimeni ce vreau…', en: 'Nobody ever asks me what I want…' },
+        { who: 'you', ro: 'Te întreb acum! Ce vrei?', en: 'I\'m asking you now! What do you want?' },
+        { who: 'them', ro: 'Pizza, normal.', en: 'Pizza, obviously.' },
+      ],
+    },
+  ],
+  shortcut: 'Stress "me" with mie / pe mine up front: mie îmi place, pe mine m-a sunat. With "to me" verbs: și mie / nici mie; otherwise și eu / nici eu.',
+  useItToday: 'Next time your partner says "Îmi place…", answer "Și mie!"',
+}

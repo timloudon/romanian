@@ -1447,3 +1447,113 @@ export const whatToDo: StructureLesson = {
   shortcut: 'What / where / how to… = ce / unde / cum + să + the person\'s ending: nu știu ce să fac, nu știe unde să meargă.',
   useItToday: 'Next time you\'re stuck on a decision, say it in Romanian: "Nu știu ce să…".',
 }
+
+export const eachAtATime: StructureLesson = {
+  id: 's-cate',
+  part: 'Going further',
+  title: 'One each, two at a time: câte',
+  tagline: 'Luați câte unul. Unul câte unul. Pas cu pas.',
+  shift: {
+    english: 'English uses "each", "at a time", "one by one", "in twos".',
+    romanian: 'Romanian puts {{câte}} before the number: {{câte unul}} — one each, or one at a time — and builds {{unul câte unul}}, {{pas cu pas}}, {{din când în când}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Câte + number',
+      body: [
+        '{{Luați câte unul.}} — take one each. {{Intrați câte doi.}} — come in two at a time. {{Mâncăm câte puțin.}} — we eat a little at a time.',
+      ],
+      glosses: [
+        { ro: 'Luați câte unul.', words: [['Luați', 'take (all)'], ['câte', 'each'], ['unul', 'one']], en: 'Take one each.' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'All of them, both',
+      body: [
+        '{{amândoi}} — both · {{toți trei}} — all three · {{toate patru}} — all four (o).',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Rhythm words',
+      body: [
+        '{{unul câte unul}} — one by one · {{din când în când}} — from time to time · {{zi de zi}} — day after day · {{pas cu pas}} — step by step.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Share it out',
+      rungs: [
+        { id: 's151-01', prompt: 'Take one each.', answer: 'Luați câte unul.' },
+        { id: 's151-02', prompt: '(the sweets) One each!', answer: 'Câte una!' },
+        { id: 's151-03', prompt: 'Two at a time.', answer: 'Câte doi.' },
+        { id: 's151-04', prompt: 'One by one.', answer: 'Unul câte unul.' },
+        { id: 's151-05', prompt: 'A little at a time.', answer: 'Câte puțin.' },
+        { id: 's151-06', prompt: 'All three of us.', answer: 'Toți trei.' },
+        { id: 's151-07', prompt: 'From time to time.', answer: 'Din când în când.' },
+        { id: 's151-08', prompt: 'Step by step.', answer: 'Pas cu pas.' },
+        { id: 's151-09', prompt: 'Day after day.', answer: 'Zi de zi.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: 'Handing out biscuits to the kids: "One each!"',
+      options: [{ text: 'Una fiecare!' }, { text: 'Câte unul!', correct: true }],
+      explanation: 'Each / at a time = câte + the number (biscuitul is an un-word, so câte unul).',
+    },
+  ],
+  shortcut: 'Câte + number = each / at a time (câte unul, câte doi). Unul câte unul · toți trei · din când în când · pas cu pas.',
+  useItToday: 'Share something out today with "Câte unul!"',
+}
+
+export const whoseFormal: StructureLesson = {
+  id: 's-whose',
+  part: 'Going further',
+  title: 'Whose, the formal way: al cărui, a cărei',
+  tagline: 'Femeia a cărei mașină e afară.',
+  shift: {
+    english: 'English "whose" is easy: the woman whose car is outside.',
+    romanian: 'Romanian\'s — {{al cărui}}, {{a cărei}} — matches both the owner and the thing owned. It\'s mostly written; in speech people rephrase.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Two things to match',
+      body: [
+        'The owner: {{cărui}} (un-owner), {{cărei}} (o-owner), {{căror}} (plural). The thing owned: {{al}} / {{a}} / {{ai}} / {{ale}}.',
+        '{{Omul al cărui câine latră.}} — the man whose dog is barking. {{Femeia a cărei mașină e afară.}} — the woman whose car is outside.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The spoken shortcut',
+      body: [
+        'In conversation, rephrase with {{care are}}: {{Vecina care are un câine mare}} — the neighbour with the big dog.',
+        'Asking "whose?" is simpler: {{Al cui e?}} · {{A cui e?}} · {{Ale cui sunt?}}',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Whose',
+      rungs: [
+        { id: 's150-01', prompt: 'The man whose dog is barking.', answer: 'Omul al cărui câine latră.' },
+        { id: 's150-02', prompt: 'The woman whose car is outside.', answer: 'Femeia a cărei mașină e afară.' },
+        { id: 's150-03', prompt: 'The neighbours whose children play with him.', answer: 'Vecinii ai căror copii se joacă cu el.' },
+        { id: 's150-04', prompt: 'A writer whose books I love.', answer: 'Un scriitor ale cărui cărți îmi plac.' },
+        { id: 's150-05', prompt: 'The family whose house is by the sea.', answer: 'Familia a cărei casă e lângă mare.' },
+        { id: 's150-06', prompt: '(spoken) The neighbour with the big dog.', answer: 'Vecina care are un câine mare.' },
+        { id: 's150-07', prompt: '(the keys) Whose are they?', answer: 'Ale cui sunt?' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"The woman whose son…"',
+      options: [{ text: 'Femeia al cărei fiu…', correct: true }, { text: 'Femeia a cărui fiu…' }, { text: 'Femeia care fiu…' }],
+      explanation: 'The owner, femeia, gives cărei; the thing owned, fiu (an un-word), gives al.',
+    },
+  ],
+  shortcut: 'Whose = al / a / ai / ale (the thing owned) + cărui / cărei / căror (the owner). In speech, rephrase: care are…',
+  useItToday: 'Spot "al cărui / a cărei" the next time you read something in Romanian.',
+}

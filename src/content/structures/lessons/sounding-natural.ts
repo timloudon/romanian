@@ -1614,3 +1614,51 @@ export const regions: StructureLesson = {
   shortcut: 'Ardeal: no (= well!), fain, amu, musai. Moldova: îs, softened b and p. Oltenia: făcui, mersei. Bucharest: bre.',
   useItToday: 'Ask your partner which of these their family says — and which they tease other regions for.',
 }
+
+export const esteAdverbs: StructureLesson = {
+  id: 's-este',
+  part: 'Sounding natural',
+  title: '-ește: in Romanian, in a friendly way',
+  tagline: 'Românește, englezește, prietenește, frățește.',
+  shift: {
+    english: 'English says "in Romanian", "in a friendly way", "fairly".',
+    romanian: 'Romanian has one ending for "in the … way": {{-ește}} — {{românește}}, {{englezește}}, {{prietenește}}, {{frățește}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Languages',
+      body: [
+        '{{Vorbești românește?}} — do you speak Romanian? {{Spune-o englezește.}} — say it in English. ({{în română}} and {{în engleză}} work too.)',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Manners',
+      body: [
+        '{{prietenește}} — in a friendly way · {{omenește}} — decently, like a human being · {{frățește}} — fairly, like brothers: {{Împărțim frățește.}} — we split it fairly.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'The -ește way',
+      rungs: [
+        { id: 's152-01', prompt: 'Do you speak Romanian?', answer: 'Vorbești românește?' },
+        { id: 's152-02', prompt: 'Say it in English.', answer: 'Spune-o englezește.' },
+        { id: 's152-03', prompt: 'What\'s that in Romanian?', answer: 'Cum e asta românește?' },
+        { id: 's152-04', prompt: 'In Romanian, please!', answer: 'Românește, te rog!' },
+        { id: 's152-05', prompt: 'He answered in a friendly way.', answer: 'A răspuns prietenește.' },
+        { id: 's152-06', prompt: 'Let\'s split it fairly.', answer: 'Hai s-o împărțim frățește.' },
+        { id: 's152-07', prompt: 'Speak to him nicely.', answer: 'Vorbește-i omenește.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"Do you speak English?"',
+      options: [{ text: 'Vorbești englezește?', correct: true }, { text: 'Vorbești englez?' }],
+      explanation: 'In a language = -ește: englezește, românește.',
+    },
+  ],
+  shortcut: '-ește = in the … way: românește (in Romanian), englezește, prietenește (in a friendly way), frățește (fairly).',
+  useItToday: 'Ask "Cum e asta românește?" whenever you\'re missing a word today.',
+}
