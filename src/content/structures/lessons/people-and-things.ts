@@ -2134,7 +2134,7 @@ export const stressedMe: StructureLesson = {
       setting: 'You and your partner, choosing dinner. Say your lines out loud before revealing them.',
       lines: [
         { who: 'them', ro: 'Mie îmi place pizza. Ție?', en: 'I like pizza. Do you?' },
-        { who: 'you', ro: 'Și mie! Dar mie îmi e poftă de paste azi.', en: 'Me too! But I fancy pasta today.' },
+        { who: 'you', ro: 'Și mie! Dar mie mi-e poftă de paste azi.', en: 'Me too! But I fancy pasta today.' },
         { who: 'them', ro: 'Pe mine nu mă întreabă nimeni ce vreau…', en: 'Nobody ever asks me what I want…' },
         { who: 'you', ro: 'Te întreb acum! Ce vrei?', en: 'I\'m asking you now! What do you want?' },
         { who: 'them', ro: 'Pizza, normal.', en: 'Pizza, obviously.' },
