@@ -1041,3 +1041,80 @@ export const wishes: StructureLesson = {
   shortcut: 'I wish = aș vrea să + the să form (no backshift). If only = măcar de / măcar să. I wish I\'d… = păcat că n-am…',
   useItToday: 'Tell your partner one wish today: "Aș vrea să…".',
 }
+
+export const ifLevels: StructureLesson = {
+  id: 's-if',
+  part: 'Going further',
+  title: 'If: real, imaginary, too late',
+  tagline: 'Dacă plouă · dacă aș avea · dacă aș fi știut.',
+  shift: {
+    english: 'English "if" has three levels: "if it rains" (real), "if I had" (imaginary), "if I\'d known" (too late) — each with its own tense juggling.',
+    romanian: 'Romanian has the same three, more regularly: {{dacă}} + present, {{dacă aș}} + verb, {{dacă aș fi}} + done.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Real: dacă + present',
+      body: [
+        '{{Dacă plouă, rămânem acasă.}} — if it rains, we\'ll stay in. The result can stay in the present too.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Imaginary: \'d on both sides',
+      body: [
+        '{{Dacă aș avea timp, aș învăța mai mult.}} — if I had time, I\'d learn more.',
+        '"If I were you" is "if I were in your place": {{Dacă aș fi în locul tău…}}',
+      ],
+      glosses: [
+        { ro: 'Dacă aș avea timp…', words: [['Dacă', 'if'], ['aș avea', 'I\'d have'], ['timp', 'time']], en: 'If I had time…' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Too late: aș fi + done',
+      body: [
+        '{{Dacă aș fi știut, aș fi venit.}} — if I\'d known, I\'d have come.',
+        'Mixing is fine: {{Dacă am fi plecat mai devreme, acum am fi acasă.}} — if we\'d left earlier, we\'d be home now.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'In case, unless, only if',
+      body: [
+        '{{în caz că}} — in case · {{dacă nu}} — unless ("if not") · {{doar dacă}} — only if · {{cu condiția să}} — as long as, provided.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'If…',
+      rungs: [
+        { id: 's78-01', prompt: 'If it rains, we\'ll stay in.', answer: 'Dacă plouă, rămânem acasă.' },
+        { id: 's78-02', prompt: 'If you want, I\'ll come too.', answer: 'Dacă vrei, vin și eu.' },
+        { id: 's78-03', prompt: 'If I had time, I\'d learn more.', answer: 'Dacă aș avea timp, aș învăța mai mult.' },
+        { id: 's78-04', prompt: 'If I were you, I\'d go.', answer: 'Dacă aș fi în locul tău, aș merge.' },
+        { id: 's78-05', prompt: 'If we\'d left earlier, we\'d be home now.', answer: 'Dacă am fi plecat mai devreme, acum am fi acasă.' },
+        { id: 's78-06', prompt: 'Take an umbrella in case it rains.', answer: 'Ia o umbrelă în caz că plouă.' },
+        { id: 's78-07', prompt: 'We\'ll go, unless it rains.', answer: 'Mergem, dacă nu plouă.' },
+        { id: 's78-08', prompt: 'Only if you want to.', answer: 'Doar dacă vrei.' },
+        { id: 's78-09', prompt: 'As long as you\'re back by six.', answer: 'Cu condiția să te întorci până la șase.' },
+        { id: 's78-10', prompt: 'What would you do if you won the lottery?', answer: 'Ce ai face dacă ai câștiga la loto?' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"If I were you, I\'d stay."',
+      options: [{ text: 'Dacă eram tu, stăteam.' }, { text: 'Dacă aș fi în locul tău, aș rămâne.', correct: true }],
+      explanation: 'Romanian says "if I were in your place" — în locul tău.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'If I had more time, I\'d read more.',
+      answer: 'Dacă aș avea mai mult timp, aș citi mai mult.',
+      distractors: ['aveam', 'voi'],
+    },
+  ],
+  shortcut: 'Real: dacă + present. Imaginary: dacă aș…, aș… Too late: dacă aș fi + done, aș fi + done. If I were you = dacă aș fi în locul tău.',
+  useItToday: 'Ask your partner a "Ce ai face dacă…?" question tonight.',
+  seeAlso: { lessonId: 'u17-l01', label: 'Course: "Dacă aș…" — if I had, I would' },
+}

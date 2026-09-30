@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom'
 import { learningPrinciples, structureLessons, structureParts } from '../content/structures'
 import { getSettings } from '../storage/settingsRepo'
 
+/** In-page anchors — the app uses HashRouter, so these are scrolled to by id rather than linked. */
+function partAnchor(part: string): string {
+  return `part-${part.toLowerCase().replace(/[^a-z]+/g, '-')}`
+}
+
 export function StructuresRoute() {
   const [done] = useState(() => new Set(getSettings().structuresDone))
   const nextUp = structureLessons.find((lesson) => !done.has(lesson.id))
@@ -46,14 +51,33 @@ export function StructuresRoute() {
         </Link>
       </div>
 
-      {structureParts.map(({ part, blurb }) => (
-        <section key={part} className="mt-8">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-flag-blue">{part}</h2>
-          <p className="text-sm text-ink-muted">{blurb}</p>
-          <div className="mt-3 flex flex-col gap-2">
-            {structureLessons
-              .filter((lesson) => lesson.part === part)
-              .map((lesson) => (
+      <nav className="mt-6 flex flex-wrap gap-2" aria-label="Parts">
+        {structureParts.map(({ part }) => (
+          <button
+            key={part}
+            type="button"
+            onClick={() => document.getElementById(partAnchor(part))?.scrollIntoView({ behavior: 'smooth' })}
+            className="rounded-full border border-border bg-surface-muted px-3 py-1.5 text-sm"
+          >
+            {part}
+          </button>
+        ))}
+      </nav>
+
+      {structureParts.map(({ part, blurb }) => {
+        const lessons = structureLessons.filter((lesson) => lesson.part === part)
+        const doneCount = lessons.filter((lesson) => done.has(lesson.id)).length
+        return (
+          <section key={part} id={partAnchor(part)} className="mt-8 scroll-mt-4">
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-flag-blue">
+              {part}{' '}
+              <span className="font-normal normal-case text-ink-muted">
+                · {doneCount} of {lessons.length} done
+              </span>
+            </h2>
+            <p className="text-sm text-ink-muted">{blurb}</p>
+            <div className="mt-3 flex flex-col gap-2">
+              {lessons.map((lesson) => (
                 <Link
                   key={lesson.id}
                   to={`/structures/${lesson.id}`}
@@ -73,9 +97,10 @@ export function StructuresRoute() {
                   </span>
                 </Link>
               ))}
-          </div>
-        </section>
-      ))}
+            </div>
+          </section>
+        )
+      })}
     </div>
   )
 }

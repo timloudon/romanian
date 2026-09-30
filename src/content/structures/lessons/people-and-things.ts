@@ -1289,3 +1289,142 @@ export const firstAndLast: StructureLesson = {
   shortcut: 'First = primul / prima. Last = ultimul / ultima. Second on = al doilea / a doua (al + number + -lea). Next = următorul. Again = încă o dată.',
   useItToday: 'Count turns with your son: "Primul! Al doilea! Ultimul!"',
 }
+
+export const goodAndWell: StructureLesson = {
+  id: 's-good-well',
+  part: 'People and things',
+  title: 'Good or well, bad or badly: bun, bine, rău',
+  tagline: 'Mă simt bine — never "bun".',
+  shift: {
+    english: 'English has good / well and bad / badly.',
+    romanian: 'Romanian has {{bun}} (good — it describes a thing, and matches it) and {{bine}} (well, fine, OK — never changes). {{rău}} does both bad and badly.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Bun or bine?',
+      body: [
+        '{{bun}} / {{bună}} / {{buni}} / {{bune}} describes a thing: {{o idee bună}}, {{un vin bun}}.',
+        '{{bine}} describes how something goes, or how you are: {{Mă simt bine.}} — I feel good. {{E bine.}} — it\'s fine. {{Bine!}} — OK! {{Ai făcut bine.}} — you did well.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Bad and badly',
+      body: [
+        '{{rău}} — bad and badly: {{Mă simt rău.}} — I feel ill. {{E rău.}} — it\'s bad. {{Nu-i rău!}} — not bad!',
+        'As a describing word it matches: {{un vis rău}}, {{o zi rea}}.',
+      ],
+      glosses: [
+        { ro: 'Nu-i rău!', words: [['Nu-i', 'not-it\'s'], ['rău', 'bad']], en: 'Not bad!' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Better and best',
+      body: [
+        'A better thing: {{mai bun}}. Going better: {{mai bine}}: {{E mai bine așa.}} — it\'s better like this. The best: {{cel mai bun}} / {{cel mai bine}}.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Bun, bine or rău?',
+      rungs: [
+        { id: 's76-01', prompt: 'It\'s fine.', answer: 'E bine.' },
+        { id: 's76-02', prompt: 'OK!', answer: 'Bine!' },
+        { id: 's76-03', prompt: 'You did well.', answer: 'Ai făcut bine.' },
+        { id: 's76-04', prompt: 'A good idea.', answer: 'O idee bună.' },
+        { id: 's76-05', prompt: 'Good wine.', answer: 'Vin bun.' },
+        { id: 's76-06', prompt: 'Not bad!', answer: 'Nu-i rău!' },
+        { id: 's76-07', prompt: 'I feel ill.', answer: 'Mă simt rău.' },
+        { id: 's76-08', prompt: 'A bad day.', answer: 'O zi rea.' },
+        { id: 's76-09', prompt: 'It\'s better like this.', answer: 'E mai bine așa.' },
+        { id: 's76-10', prompt: 'He sleeps well.', answer: 'Doarme bine.' },
+        { id: 's76-11', prompt: 'Good luck!', answer: 'Baftă!', teachingNote: 'Colloquial and very common. Noroc! works too.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"I feel good."',
+      options: [{ text: 'Mă simt bun.' }, { text: 'Mă simt bine.', correct: true }],
+      explanation: 'How you feel is bine — it never changes.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'She speaks Romanian very well.',
+      answer: 'Vorbește română foarte bine.',
+      distractors: ['bună', 'bun'],
+    },
+  ],
+  shortcut: 'Bun / bună = good (matches the thing). Bine = well, fine, OK (never changes). Rău = bad and badly (o zi rea).',
+  useItToday: 'Answer "Ce faci?" with "Bine" today — and notice you\'d never say "bun".',
+}
+
+export const asAs: StructureLesson = {
+  id: 's-as-as',
+  part: 'People and things',
+  title: 'As… as, more than, more and more',
+  tagline: 'La fel de frumos ca — "the same of lovely as".',
+  shift: {
+    english: 'English compares with "as big as", "not as… as", "more than", "bigger and bigger".',
+    romanian: 'Romanian: {{la fel de mare ca}} (as big as), {{nu așa de… ca}} (not as… as), {{mai mult de}} with numbers, {{din ce în ce mai}} (more and more).',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'As… as',
+      body: [
+        '{{la fel de}} + describing word + {{ca}}: {{E la fel de înalt ca tine.}} — he\'s as tall as you.',
+        '{{Nu e așa de scump ca…}} — it\'s not as expensive as… Before a whole sentence, {{cum}}: {{nu așa de greu cum credeam}} — not as hard as I thought.',
+      ],
+      glosses: [
+        { ro: 'La fel de bun ca…', words: [['La fel de', 'the-same of'], ['bun', 'good'], ['ca', 'as']], en: 'As good as…' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'More than',
+      body: [
+        'With a thing or person, {{decât}}: {{mai mare decât mine}}. With numbers, {{mai mult de}} / {{mai puțin de}}: {{mai mult de o oră}} — more than an hour.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Of all, more and more',
+      body: [
+        '{{cel mai bun dintre toți}} — the best of all. {{din ce în ce mai}} — more and more: {{din ce în ce mai mare}} — bigger and bigger.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Compare it',
+      rungs: [
+        { id: 's77-01', prompt: 'He\'s as tall as you.', answer: 'E la fel de înalt ca tine.' },
+        { id: 's77-02', prompt: 'It\'s as good as last time.', answer: 'E la fel de bun ca data trecută.' },
+        { id: 's77-03', prompt: 'It\'s not as expensive as in London.', answer: 'Nu e așa de scump ca în Londra.' },
+        { id: 's77-04', prompt: 'Bigger than me.', answer: 'Mai mare decât mine.' },
+        { id: 's77-05', prompt: 'More than an hour.', answer: 'Mai mult de o oră.' },
+        { id: 's77-06', prompt: 'Less than ten lei.', answer: 'Mai puțin de zece lei.' },
+        { id: 's77-07', prompt: 'The best of all.', answer: 'Cel mai bun dintre toți.' },
+        { id: 's77-08', prompt: 'Bigger and bigger.', answer: 'Din ce în ce mai mare.' },
+        { id: 's77-09', prompt: 'It\'s getting colder and colder.', answer: 'Se face din ce în ce mai frig.' },
+        { id: 's77-10', prompt: 'He\'s looking more and more like you.', answer: 'Seamănă din ce în ce mai mult cu tine.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"More than twenty minutes."',
+      options: [{ text: 'Mai mult decât douăzeci de minute' }, { text: 'Mai mult de douăzeci de minute', correct: true }],
+      explanation: 'With numbers, mai mult de. Decât is for comparing with a thing or a person.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'Romanian isn\'t as hard as I thought.',
+      answer: 'Româna nu e așa de grea cum credeam.',
+      distractors: ['ca', 'decât'],
+      note: 'Before a whole sentence ("I thought"), it\'s cum, not ca.',
+    },
+  ],
+  shortcut: 'As… as = la fel de… ca. Not as… as = nu așa de… ca. Than = decât; with numbers = mai mult de. More and more = din ce în ce mai.',
+  useItToday: 'Tell your son "Te faci din ce în ce mai mare!"',
+}

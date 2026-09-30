@@ -4,6 +4,7 @@ import {
   beforeAfter,
   ever,
   hadDone,
+  ifLevels,
   mustHave,
   neitherNor,
   ownThings,
@@ -30,9 +31,11 @@ import {
 import { commands, neverDropThat, storytelling } from './lessons/joining-ideas'
 import {
   allEvery,
+  asAs,
   beIsHave,
   comparing,
   firstAndLast,
+  goodAndWell,
   himHer,
   myself,
   otherSame,
@@ -50,11 +53,13 @@ import {
   cognates,
   doubleNegatives,
   endings,
+  learnerTools,
+  mustAndNeed,
   noIng,
   questions,
   saBridge,
-  verbFamilies,
   sounds,
+  verbFamilies,
   verbPairs,
   verbPrepositions,
 } from './lessons/starting-from-english'
@@ -82,18 +87,21 @@ import {
   usedTo,
   would,
 } from './lessons/time'
+import { allOfDe, allOfMai, allOfPe, saCaCa } from './lessons/pulling-it-together'
 import type { StructureLesson, StructurePart } from './types'
 
 /** In suggested order — each lesson leans only on the ones before it, but any can be opened. */
 export const structureLessons: StructureLesson[] = [
   cognates,
   sounds,
+  learnerTools,
   noIng,
   endings,
   verbFamilies,
   questions,
   saBridge,
   canAndKnow,
+  mustAndNeed,
   verbPairs,
   verbPrepositions,
   doubleNegatives,
@@ -110,6 +118,8 @@ export const structureLessons: StructureLesson[] = [
   possession,
   thisAndThat,
   comparing,
+  asAs,
+  goodAndWell,
   beIsHave,
   toMe,
   myself,
@@ -125,6 +135,7 @@ export const structureLessons: StructureLesson[] = [
   saAlone,
   wouldHave,
   wishes,
+  ifLevels,
   genitive,
   ownThings,
   stillAlready,
@@ -159,6 +170,10 @@ export const structureLessons: StructureLesson[] = [
   roughly,
   numbersAndTime,
   streetRomanian,
+  allOfMai,
+  allOfDe,
+  allOfPe,
+  saCaCa,
 ]
 
 export const structureParts: { part: StructurePart; blurb: string }[] = [
@@ -173,6 +188,10 @@ export const structureParts: { part: StructurePart; blurb: string }[] = [
   {
     part: 'Sounding natural',
     blurb: 'Beyond grammar: the verbs, fillers, idioms, word order and politeness that make you sound like you live there.',
+  },
+  {
+    part: 'Pulling it together',
+    blurb: 'The little words that do the most jobs — mai, de, pe, să / că — each laid out side by side.',
   },
 ]
 

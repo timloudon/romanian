@@ -1030,3 +1030,143 @@ export const verbPrepositions: StructureLesson = {
   shortcut: 'Learn verbs with their little word: mă gândesc la, supărat pe, frică de, depinde de. Nothing at all for wait, look for, listen, pay, ask for.',
   useItToday: 'Next time you\'re waiting for something, say it without a "for": "Aștept…".',
 }
+
+export const learnerTools: StructureLesson = {
+  id: 's-learner-tools',
+  part: 'Starting from English',
+  title: 'When you\'re stuck: staying in Romanian',
+  tagline: 'Poți să repeți? Cum se zice…? Am zis bine?',
+  shift: {
+    english: 'As a learner, half of any real conversation is handling what you didn\'t catch or don\'t know — and the easy escape is switching to English.',
+    romanian: 'A dozen phrases keep you in Romanian instead: {{Poți să repeți?}}, {{Ce înseamnă asta?}}, {{Cum se zice?}}, {{Am zis bine?}}',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'When you didn\'t catch it',
+      body: [
+        '{{Poftim?}} — pardon? · {{Poți să repeți?}} — can you say that again? · {{Mai rar, te rog.}} — more slowly, please · {{N-am înțeles.}} — I didn\'t understand · {{Adică?}} — meaning? what do you mean?',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'When you don\'t know a word',
+      body: [
+        '{{Ce înseamnă asta?}} — what does that mean? · {{Cum se zice în română?}} — how do you say it in Romanian? · {{Cum se numește asta?}} — what\'s this called?',
+        'Describe around the gap: {{E un fel de…}} — it\'s a kind of… · {{chestia aia cu care…}} — that thing you… (plus a gesture).',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Checking, and asking to be corrected',
+      body: [
+        '{{Am înțeles bine?}} — did I get that right? · {{Vrei să zici că…?}} — you mean that…?',
+        '{{Corectează-mă, te rog.}} — please correct me · {{Am zis bine?}} — did I say it right? · {{Se zice așa?}} — is that how you say it? Asking this is the fastest way to improve with a Romanian partner.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Stay in Romanian',
+      rungs: [
+        { id: 's74-01', prompt: 'Can you say that again?', answer: 'Poți să repeți?' },
+        { id: 's74-02', prompt: 'More slowly, please.', answer: 'Mai rar, te rog.' },
+        { id: 's74-03', prompt: 'I didn\'t understand.', answer: 'N-am înțeles.' },
+        { id: 's74-04', prompt: 'What do you mean?', answer: 'Adică?' },
+        { id: 's74-05', prompt: 'What does that mean?', answer: 'Ce înseamnă asta?' },
+        { id: 's74-06', prompt: 'How do you say it in Romanian?', answer: 'Cum se zice în română?' },
+        { id: 's74-07', prompt: 'What\'s this called?', answer: 'Cum se numește asta?' },
+        { id: 's74-08', prompt: 'Did I get that right?', answer: 'Am înțeles bine?' },
+        { id: 's74-09', prompt: 'You mean he\'s not coming?', answer: 'Vrei să zici că nu vine?' },
+        { id: 's74-10', prompt: 'It\'s a kind of cake.', answer: 'E un fel de prăjitură.' },
+        { id: 's74-11', prompt: 'Please correct me.', answer: 'Corectează-mă, te rog.' },
+        { id: 's74-12', prompt: 'Did I say it right?', answer: 'Am zis bine?' },
+        { id: 's74-13', prompt: 'Is that how you say it?', answer: 'Se zice așa?' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: 'You didn\'t catch what your partner\'s dad said. Politely:',
+      options: [{ text: 'Ce?' }, { text: 'Poftim?', correct: true }],
+      explanation: 'Ce? on its own is blunt. Poftim? is the polite "pardon?".',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'What\'s the word for this in Romanian?',
+      answer: 'Cum se zice la asta în română?',
+      distractors: ['ce', 'spune'],
+    },
+  ],
+  shortcut: 'Poftim? · Poți să repeți? · Mai rar · Ce înseamnă…? · Cum se zice…? · Am zis bine? — stay in Romanian even when you\'re stuck.',
+  useItToday: 'Next time you don\'t understand your partner, ask in Romanian instead of switching to English.',
+}
+
+export const mustAndNeed: StructureLesson = {
+  id: 's-obligation',
+  part: 'Starting from English',
+  title: 'Must, need, allowed — and the "mustn\'t" trap',
+  tagline: 'Nu e nevoie să vii — you don\'t have to come.',
+  shift: {
+    english: 'English keeps "mustn\'t" (forbidden) and "don\'t have to" (optional) clearly apart.',
+    romanian: 'Romanian {{nu trebuie să}} can mean either, and often sounds like "mustn\'t". For "no need", say {{nu e nevoie să}}. And for toddlers: {{n-ai voie!}}',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Must, need',
+      body: [
+        '{{trebuie să}} — must, have to · {{ar trebui să}} — should · {{am nevoie de}} + a thing — I need · {{îmi trebuie}} — I need (colloquial): {{Îmi trebuie un pix.}}',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The trap',
+      body: [
+        '{{Nu trebuie să spui.}} — context decides, but it often means "you mustn\'t tell".',
+        'To make it clearly optional, say {{Nu e nevoie să…}} — there\'s no need to: {{Nu e nevoie să vii.}} — you don\'t have to come. Or {{Nu e obligatoriu.}} — it\'s not compulsory.',
+      ],
+      glosses: [
+        { ro: 'Nu e nevoie să vii.', words: [['Nu e', 'there-isn\'t'], ['nevoie', 'need'], ['să vii', 'that you-come']], en: 'You don\'t have to come.' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Allowed',
+      body: [
+        '{{Ai voie să…}} — you\'re allowed to ("you have permission"): {{Ai voie să mănânci o bomboană.}}',
+        '{{N-ai voie!}} — you\'re not allowed! Very useful with a toddler.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Must, need, may',
+      rungs: [
+        { id: 's75-01', prompt: 'We have to leave at eight.', answer: 'Trebuie să plecăm la opt.' },
+        { id: 's75-02', prompt: 'You don\'t have to come.', answer: 'Nu e nevoie să vii.' },
+        { id: 's75-03', prompt: 'There\'s no need.', answer: 'Nu e nevoie.' },
+        { id: 's75-04', prompt: 'Thanks, but there\'s no need.', answer: 'Mersi, dar nu e nevoie.' },
+        { id: 's75-05', prompt: 'You mustn\'t tell him.', answer: 'Nu trebuie să-i spui.' },
+        { id: 's75-06', prompt: 'It\'s not compulsory.', answer: 'Nu e obligatoriu.' },
+        { id: 's75-07', prompt: 'I need a break.', answer: 'Am nevoie de o pauză.' },
+        { id: 's75-08', prompt: 'I need a pen.', answer: 'Îmi trebuie un pix.' },
+        { id: 's75-09', prompt: 'Do I need to bring anything?', answer: 'Trebuie să aduc ceva?' },
+        { id: 's75-10', prompt: 'You\'re allowed to have one sweet.', answer: 'Ai voie să mănânci o bomboană.' },
+        { id: 's75-11', prompt: 'You\'re not allowed!', answer: 'N-ai voie!' },
+        { id: 's75-12', prompt: 'Are we allowed to park here?', answer: 'Avem voie să parcăm aici?' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: 'Telling a guest it\'s optional: "You don\'t have to take your shoes off."',
+      options: [{ text: 'Nu trebuie să te descalți.' }, { text: 'Nu e nevoie să te descalți.', correct: true }],
+      explanation: 'Nu trebuie can sound like "you mustn\'t". Nu e nevoie makes it clearly optional.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'You\'re not allowed to touch that.',
+      answer: 'N-ai voie să atingi asta.',
+      distractors: ['trebuie', 'nu'],
+    },
+  ],
+  shortcut: 'Must = trebuie să. No need = nu e nevoie să (clearer than nu trebuie). Need a thing = am nevoie de / îmi trebuie. Allowed = ai voie să; n-ai voie!',
+  useItToday: 'Use "N-ai voie!" and "Ai voie să…" with your son today.',
+}

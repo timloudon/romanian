@@ -10,7 +10,7 @@ import type { Drill } from '../types'
  * Romanian word or phrase, which is highlighted and plays when tapped.
  */
 
-export type StructurePart = 'Starting from English' | 'Time' | 'People and things' | 'Joining ideas' | 'Going further' | 'Sounding natural'
+export type StructurePart = 'Starting from English' | 'Time' | 'People and things' | 'Joining ideas' | 'Going further' | 'Sounding natural' | 'Pulling it together'
 
 /** A Romanian sentence with a word-by-word literal ("think it as") gloss underneath. */
 export interface Gloss {
