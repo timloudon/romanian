@@ -56,7 +56,7 @@ model and voice, so re-running only generates what's new or changed, and the app
 by exact text — an edited phrase falls back to the built-in voice until regenerated.
 
 This project uses ElevenLabs' **free plan** (10,000 characters a month; library voices aren't
-available to it via the API, so it uses a default voice). Always cap a run below the remaining
+available to it via the API, so the Romanian voice is one made with ElevenLabs' Voice Design). Always cap a run below the remaining
 monthly credit, e.g. `npm run generate:audio -- --only ro --max-chars 8600`, and use
 `--dry-run` first to see the size. Voice by ElevenLabs.
 
@@ -89,8 +89,8 @@ monthly credit, e.g. `npm run generate:audio -- --only ro --max-chars 8600`, and
 
 - Content grows over time — the engine is the finished part.
 - Phrases without a recorded clip use the built-in voice, which on iPhone is muted by the silent
-  switch and is most reliable in Driving Mode with the screen on. The English prompts are
-  currently in this state until next month's free ElevenLabs credits.
+  switch and is most reliable in Driving Mode with the screen on. The English prompts and
+  the later course units are currently in this state until next month's free ElevenLabs credits.
 - Safari (not installed to the Home Screen) can clear a site's offline copy and progress after
   seven days unused. Home Screen apps are exempt.
 - The vocabulary list (`vocab-top10k.json`) is cleaned automatically but still contains some
