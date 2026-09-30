@@ -52,6 +52,17 @@ export interface SpeakOptions {
   signal?: AbortSignal
 }
 
+/** Utterances kept alive until they finish: some browsers garbage-collect an unreferenced
+ *  utterance mid-speech, and its end event is then never delivered. */
+const speaking = new Set<SpeechSynthesisUtterance>()
+
+/** Generous upper bound on how long a phrase takes to say — the safety net for when a browser
+ *  never fires end (or error) at all, which would otherwise stall anything awaiting speech,
+ *  Driving Mode included. */
+function maxSpeechMs(text: string, rate: number): number {
+  return (2000 + text.length * 120) / Math.max(rate, 0.5)
+}
+
 export function speak(text: string, options: SpeakOptions): Promise<void> {
   return new Promise((resolve, reject) => {
     if (options.signal?.aborted) {
@@ -65,22 +76,25 @@ export function speak(text: string, options: SpeakOptions): Promise<void> {
     utterance.rate = options.rate ?? 1
 
     const onAbort = () => window.speechSynthesis.cancel()
-
-    utterance.onend = () => {
+    let watchdog: ReturnType<typeof setTimeout> | undefined
+    const settle = (error?: Error) => {
+      if (!speaking.delete(utterance)) return
+      clearTimeout(watchdog)
       options.signal?.removeEventListener('abort', onAbort)
-      resolve()
+      if (error) reject(error)
+      else resolve()
     }
+
+    utterance.onend = () => settle()
     utterance.onerror = (event) => {
-      options.signal?.removeEventListener('abort', onAbort)
       // These fire when we intentionally cancel() (abort, or a new utterance interrupting this
       // one) — that's a clean stop, not a real failure.
-      if (event.error === 'interrupted' || event.error === 'canceled') {
-        resolve()
-      } else {
-        reject(new Error(`speechSynthesis error: ${event.error}`))
-      }
+      if (event.error === 'interrupted' || event.error === 'canceled') settle()
+      else settle(new Error(`speechSynthesis error: ${event.error}`))
     }
 
+    speaking.add(utterance)
+    watchdog = setTimeout(() => settle(), maxSpeechMs(text, utterance.rate))
     options.signal?.addEventListener('abort', onAbort, { once: true })
     window.speechSynthesis.speak(utterance)
   })

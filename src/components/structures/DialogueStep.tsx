@@ -3,7 +3,7 @@ import type { StructureStep } from '../../content/structures/types'
 
 interface DialogueStepProps {
   step: Extract<StructureStep, { kind: 'dialogue' }>
-  onSpeak: (romanian: string) => void
+  onSpeak: (romanian: string) => void | Promise<void>
   onComplete: () => void
 }
 
@@ -17,6 +17,7 @@ export function DialogueStep({ step, onSpeak, onComplete }: DialogueStepProps) {
   const [shown, setShown] = useState(1)
   const [revealed, setRevealed] = useState(false)
   const [translated, setTranslated] = useState<Set<number>>(new Set())
+  const [playingAll, setPlayingAll] = useState(false)
   const current = step.lines[shown - 1]
   const finished = shown === step.lines.length && (current.who === 'them' || revealed)
 
@@ -45,6 +46,15 @@ export function DialogueStep({ step, onSpeak, onComplete }: DialogueStepProps) {
   }
 
   const waitingForYou = current.who === 'you' && !revealed
+
+  async function playAll() {
+    setPlayingAll(true)
+    for (const line of step.lines) {
+      await onSpeak(line.ro)
+      await new Promise((resolve) => setTimeout(resolve, 400))
+    }
+    setPlayingAll(false)
+  }
 
   return (
     <div>
@@ -109,9 +119,19 @@ export function DialogueStep({ step, onSpeak, onComplete }: DialogueStepProps) {
         </button>
       )}
       {finished && (
-        <p className="mt-5 rounded-xl bg-green-600/10 px-4 py-3 text-green-700">
-          That's the conversation. Try it again with the English covered — then for real.
-        </p>
+        <>
+          <button
+            type="button"
+            disabled={playingAll}
+            onClick={() => void playAll()}
+            className="mt-5 w-full rounded-xl border border-flag-blue px-4 py-3 font-semibold text-flag-blue disabled:opacity-50"
+          >
+            {playingAll ? 'Playing…' : '▶ Listen to the whole conversation'}
+          </button>
+          <p className="mt-3 rounded-xl bg-green-600/10 px-4 py-3 text-green-700">
+            That's the conversation. Listen to it through, then try it again with the English covered — then for real.
+          </p>
+        </>
       )}
     </div>
   )
