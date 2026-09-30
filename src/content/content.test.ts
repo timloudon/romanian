@@ -32,3 +32,12 @@ describe('content integrity', () => {
     }
   })
 })
+
+describe('common words', () => {
+  it('has a unique id and a meaning for every word', async () => {
+    const { coreWords } = await import('./vocab/core-words')
+    const ids = coreWords.map((word) => word.id)
+    expect(new Set(ids).size).toBe(ids.length)
+    for (const word of coreWords) expect(word.translation?.trim(), word.word).toBeTruthy()
+  })
+})

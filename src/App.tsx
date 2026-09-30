@@ -18,6 +18,7 @@ import { StructureShortcutsRoute } from './routes/StructureShortcutsRoute'
 import { StructuresRoute } from './routes/StructuresRoute'
 import { WeekPracticeRoute } from './routes/WeekPracticeRoute'
 import { WeekRoute } from './routes/WeekRoute'
+import { WordsRoute } from './routes/WordsRoute'
 
 function App() {
   const pwa = usePWAUpdate()
@@ -55,6 +56,7 @@ function App() {
           <Route path="/structures/shortcuts" element={<StructureShortcutsRoute />} />
           <Route path="/structures/:lessonId" element={<StructureLessonRoute />} />
           <Route path="/structures/:lessonId/practice" element={<StructurePracticeRoute />} />
+          <Route path="/words" element={<WordsRoute />} />
           <Route path="/review" element={<ReviewRoute />} />
           <Route path="/driving" element={<DrivingModeRoute />} />
           <Route path="/settings" element={<SettingsRoute />} />

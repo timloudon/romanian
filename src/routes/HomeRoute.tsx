@@ -58,6 +58,10 @@ export function HomeRoute() {
             <p className="font-semibold text-flag-blue">🧩 {nextStructure.title}</p>
           </Link>
         )}
+        <Link to="/words" className="rounded-xl border border-flag-blue/30 bg-flag-blue/5 px-4 py-3">
+          <p className="text-sm text-ink-muted">Recognition practice</p>
+          <p className="font-semibold text-flag-blue">📖 Common words</p>
+        </Link>
         {Boolean(dueCount) && (
           <Link to="/review" className="rounded-xl border border-flag-blue/30 bg-flag-blue/5 px-4 py-3">
             <p className="text-sm text-ink-muted">Spaced repetition</p>

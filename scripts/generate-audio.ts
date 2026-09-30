@@ -25,6 +25,7 @@ import path from 'node:path'
 import { roCore } from '../src/content/courses/ro-core/index.ts'
 import { lifeTopics } from '../src/content/life/index.ts'
 import { structureLessons, structureRomanianPhrases } from '../src/content/structures/index.ts'
+import { coreWords } from '../src/content/vocab/core-words.ts'
 import type { Drill } from '../src/content/types.ts'
 
 type Lang = 'ro' | 'en'
@@ -100,13 +101,15 @@ function collectPhrases(only?: Lang): Phrase[] {
     }
   }
   // Priority order for when free credits run out mid-run: Structures first — every Romanian
-  // phrase a lesson can play, in lesson order — then the weekly real-life phrases, then the
-  // course from the beginning. Anything unrecorded plays in the device's voice meanwhile.
+  // phrase a lesson can play, in lesson order — then the weekly real-life phrases, the common
+  // words, then the course from the beginning. Anything unrecorded plays in the device's voice
+  // meanwhile.
   for (const lesson of structureLessons) {
     for (const text of structureRomanianPhrases(lesson)) add({ lang: 'ro', text, spoken: text })
     for (const step of lesson.steps) if (step.kind === 'ladder') addDrills(step.rungs)
   }
   addDrills(lifeTopics.flatMap((topic) => topic.drills))
+  for (const word of coreWords) add({ lang: 'ro', text: word.word, spoken: word.word })
   addDrills(roCore.units.flatMap((unit) => unit.lessons.flatMap((lesson) => lesson.drills)))
   return phrases
 }

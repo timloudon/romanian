@@ -97,6 +97,10 @@ device's voice. Voice by ElevenLabs.
     one-line shortcut, collected on a Shortcuts page. Each part also offers a shuffled
     40-phrase Driving Mode run (`/driving?part=<name>`). Lesson text marks Romanian as `{{…}}`,
     which renders tappable and is picked up by the audio generator.
+- **Common words** (`src/content/vocab/core-words.ts`, linked from Home) — the ~590 most common
+  words, hand-curated from the frequency list with short meanings, practised as recognition
+  cards (see it, recall it, check) in bands of 100. Self-assessments are stored as `vocab`
+  review rows, so "not yet" words come back.
 - Every drill id is globally unique and permanent — spaced-repetition progress is keyed off it.
   `src/content/content.test.ts` enforces uniqueness; anything that resolves drills by id goes
   through `everyDrill()` in `src/content/index.ts` so both areas feed Review and Driving Mode.
