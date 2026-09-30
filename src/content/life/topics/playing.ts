@@ -84,6 +84,12 @@ export const playing: LifeTopic = {
       prompt: 'Let\'s tidy the toys away.',
       answer: 'Hai să strângem jucăriile.',
     },
+    {
+      id: 'life-play-16',
+      prompt: "Tag, you're it!",
+      answer: 'Leapșa, tu ești!',
+      teachingNote: 'De-a leapșa — the game of tag.',
+    },
   ],
   conversationPrompts: [
     'Play one game a day this week entirely in Romanian.',

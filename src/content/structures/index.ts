@@ -114,7 +114,15 @@ import {
   usedTo,
   would,
 } from './lessons/time'
-import { allOfDe, allOfMai, allOfPe, saCaCa } from './lessons/pulling-it-together'
+import {
+  allOfDe,
+  allOfMai,
+  allOfPe,
+  nounMap,
+  pronounMap,
+  saCaCa,
+  verbMap,
+} from './lessons/pulling-it-together'
 import type { StructureLesson, StructurePart } from './types'
 
 /** In suggested order — each lesson leans only on the ones before it, but any can be opened. */
@@ -224,6 +232,9 @@ export const structureLessons: StructureLesson[] = [
   allOfDe,
   allOfPe,
   saCaCa,
+  verbMap,
+  pronounMap,
+  nounMap,
 ]
 
 export const structureParts: { part: StructurePart; blurb: string }[] = [
