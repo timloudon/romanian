@@ -1765,3 +1765,131 @@ export const moreToMeVerbs: StructureLesson = {
   shortcut: 'Îmi convine (suits me), îmi ajunge (enough), îmi lipsește (I\'m missing), îmi lipsești (I miss you), nu-mi pasă, mi-a trecut.',
   useItToday: 'Fix a plan today with "Îți convine…?"',
 }
+
+export const jobs: StructureLesson = {
+  id: 's-jobs',
+  part: 'People and things',
+  title: 'What do you do? Jobs without "a"',
+  tagline: 'Cu ce te ocupi? Sunt profesor.',
+  shift: {
+    english: 'English asks "What do you do?" and answers "I\'m a teacher" — with "a".',
+    romanian: 'Romanian asks "with what do you occupy yourself?" — {{Cu ce te ocupi?}} — and drops the "a": {{Sunt profesor.}}',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Asking',
+      body: [
+        '{{Cu ce te ocupi?}} — what do you do? (polite: {{Cu ce vă ocupați?}}) · {{Unde lucrezi?}} — where do you work?',
+      ],
+      glosses: [
+        { ro: 'Cu ce te ocupi?', words: [['Cu ce', 'with what'], ['te ocupi', 'you-occupy-yourself']], en: 'What do you do?' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Answering — no "a"',
+      body: [
+        '{{Sunt profesor.}} — I\'m a teacher. {{E inginer.}} — he\'s an engineer. Many jobs take -ă for a woman: {{profesoară}}, {{asistentă}}.',
+        'Or say what you do: {{Lucrez în IT.}} · {{Lucrez la o bancă.}} · {{Lucrez pe cont propriu.}} — I\'m self-employed.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Work life',
+      body: [
+        '{{Sunt în concediu.}} — I\'m on leave · {{Mi-am luat liber.}} — I\'ve taken time off · {{Îmi place ce fac.}} — I like what I do.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Talk about work',
+      rungs: [
+        { id: 's111-01', prompt: 'What do you do?', answer: 'Cu ce te ocupi?' },
+        { id: 's111-02', prompt: '(politely) What do you do?', answer: 'Cu ce vă ocupați?' },
+        { id: 's111-03', prompt: 'I\'m a teacher.', answer: 'Sunt profesor.' },
+        { id: 's111-04', prompt: 'He\'s an engineer.', answer: 'E inginer.' },
+        { id: 's111-05', prompt: 'She\'s a teacher.', answer: 'E profesoară.' },
+        { id: 's111-06', prompt: 'I work in IT.', answer: 'Lucrez în IT.' },
+        { id: 's111-07', prompt: 'I work at a bank.', answer: 'Lucrez la o bancă.' },
+        { id: 's111-08', prompt: 'I\'m self-employed.', answer: 'Lucrez pe cont propriu.' },
+        { id: 's111-09', prompt: 'I\'m on leave.', answer: 'Sunt în concediu.' },
+        { id: 's111-10', prompt: 'I\'ve taken today off.', answer: 'Mi-am luat liber azi.' },
+        { id: 's111-11', prompt: 'I like what I do.', answer: 'Îmi place ce fac.' },
+        { id: 's111-12', prompt: 'What does your dad do?', answer: 'Cu ce se ocupă tatăl tău?' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"I\'m a doctor."',
+      options: [{ text: 'Sunt un doctor.' }, { text: 'Sunt doctor.', correct: true }],
+      explanation: 'After "I am", a job drops the "a".',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'My brother is a cook in a restaurant.',
+      answer: 'Fratele meu e bucătar la un restaurant.',
+      distractors: ['un', 'ca'],
+    },
+  ],
+  shortcut: 'What do you do? = Cu ce te ocupi? Jobs drop the "a": sunt profesor. Or: lucrez în / la…, lucrez pe cont propriu.',
+  useItToday: 'Be ready for the question at the next family gathering: say your job three ways.',
+}
+
+export const loveAndHate: StructureLesson = {
+  id: 's-likes',
+  part: 'People and things',
+  title: 'Love it, hate it: ador, mor după, nu suport',
+  tagline: 'Ador marea. Mor după sarmale. Nu suport frigul.',
+  shift: {
+    english: 'English runs from "I like" to "I love", "I\'m crazy about", "I can\'t stand", "I prefer".',
+    romanian: 'Romanian has its own scale: {{îmi place}}, {{ador}}, {{mor după}} ("I die after"), {{prefer}}, {{nu suport}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Up the scale',
+      body: [
+        '{{Îmi place.}} → {{Îmi place mult.}} → {{Ador!}} — I love it → {{Mor după…}} — I\'m crazy about ("I die after").',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Down the scale',
+      body: [
+        '{{Nu prea îmi place.}} → {{Nu-mi place deloc.}} → {{Nu suport…}} — I can\'t stand · {{Urăsc…}} — I hate (strong).',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Preferring',
+      body: [
+        '{{Prefer ceaiul.}} · {{Îmi place mai mult marea decât muntele.}} · {{Oricare e bine.}} — either is fine.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'How much?',
+      rungs: [
+        { id: 's113-01', prompt: 'I love the seaside.', answer: 'Ador marea.' },
+        { id: 's113-02', prompt: 'I\'m crazy about sarmale.', answer: 'Mor după sarmale.' },
+        { id: 's113-03', prompt: 'I love it!', answer: 'Ador!' },
+        { id: 's113-04', prompt: 'He\'s crazy about trains.', answer: 'Moare după trenuri.' },
+        { id: 's113-05', prompt: 'I can\'t stand the cold.', answer: 'Nu suport frigul.' },
+        { id: 's113-06', prompt: 'I hate waiting.', answer: 'Urăsc să aștept.' },
+        { id: 's113-07', prompt: 'I prefer tea.', answer: 'Prefer ceaiul.' },
+        { id: 's113-08', prompt: 'I like the sea more than the mountains.', answer: 'Îmi place mai mult marea decât muntele.' },
+        { id: 's113-09', prompt: 'What do you prefer?', answer: 'Ce preferi?' },
+        { id: 's113-10', prompt: 'Either is fine.', answer: 'Oricare e bine.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"Mor după ciocolată" means…',
+      options: [{ text: 'Chocolate will be the death of me' }, { text: 'I\'m crazy about chocolate', correct: true }],
+      explanation: 'Mor după — "I die after" — is being crazy about something.',
+    },
+  ],
+  shortcut: 'Îmi place < îmi place mult < ador < mor după. Nu prea < deloc < nu suport < urăsc. Prefer…; mai mult… decât…',
+  useItToday: 'Tell your partner one thing you adore and one you can\'t stand — in Romanian.',
+}

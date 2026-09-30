@@ -1430,3 +1430,122 @@ export const compliments: StructureLesson = {
   shortcut: 'Îți stă bine = it suits you. Arăți foarte bine. Ce bună e mâncarea! Aveți mâini de aur. Taking one: mulțumesc frumos, mă bucur că-ți place.',
   useItToday: 'Compliment the cook at the next family meal — in Romanian, and specifically.',
 }
+
+export const banter: StructureLesson = {
+  id: 's-humour',
+  part: 'Sounding natural',
+  title: 'Jokes and banter',
+  tagline: 'Glumesc! Mă iei peste picior?',
+  shift: {
+    english: 'English banter: "I\'m joking", "are you pulling my leg?", "fooled you!", "very funny".',
+    romanian: 'Romanian: {{Glumesc!}}, {{Mă iei peste picior?}} ("are you taking me over the leg?"), {{Te-am păcălit!}}, {{Am murit de râs!}}',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Joking',
+      body: [
+        '{{Glumesc!}} — I\'m joking · {{Am glumit.}} — I was joking · {{Pe bune sau glumești?}} — seriously, or are you joking? · {{Nu te cred!}} — I don\'t believe you!',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Teasing',
+      body: [
+        '{{Mă iei peste picior?}} — are you pulling my leg? ("taking me over the leg") · {{Râzi de mine?}} — are you laughing at me? · {{Te-am păcălit!}} — fooled you! · {{Ha, foarte amuzant.}} — ha, very funny.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Laughing',
+      body: [
+        '{{Am murit de râs!}} — I died laughing · {{Ce haios!}} — how funny! · {{M-a umflat râsul.}} — I burst out laughing.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Banter',
+      rungs: [
+        { id: 's109-01', prompt: 'I\'m joking!', answer: 'Glumesc!' },
+        { id: 's109-02', prompt: 'I was joking.', answer: 'Am glumit.' },
+        { id: 's109-03', prompt: 'Seriously, or are you joking?', answer: 'Pe bune sau glumești?' },
+        { id: 's109-04', prompt: 'I don\'t believe you!', answer: 'Nu te cred!' },
+        { id: 's109-05', prompt: 'Are you pulling my leg?', answer: 'Mă iei peste picior?' },
+        { id: 's109-06', prompt: 'Are you laughing at me?', answer: 'Râzi de mine?' },
+        { id: 's109-07', prompt: 'Fooled you!', answer: 'Te-am păcălit!' },
+        { id: 's109-08', prompt: 'Ha, very funny.', answer: 'Ha, foarte amuzant.' },
+        { id: 's109-09', prompt: 'I died laughing!', answer: 'Am murit de râs!' },
+        { id: 's109-10', prompt: 'How funny!', answer: 'Ce haios!' },
+        { id: 's109-11', prompt: 'Don\'t be cross, I was joking.', answer: 'Nu te supăra, am glumit.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"Mă iei peste picior?" means…',
+      options: [{ text: 'Are you pulling my leg?', correct: true }, { text: 'Are you stepping on my foot?' }, { text: 'Can you carry me?' }],
+      explanation: 'Taking someone "over the leg" is teasing them.',
+    },
+  ],
+  shortcut: 'Glumesc / am glumit · Pe bune? · Mă iei peste picior? · Te-am păcălit! · Am murit de râs · Ce haios!',
+  useItToday: 'Tease your partner gently in Romanian today — then "Glumesc!"',
+}
+
+export const apologising: StructureLesson = {
+  id: 's-sorry',
+  part: 'Sounding natural',
+  title: 'Sorry — and meaning it',
+  tagline: 'Scuze · Îmi pare rău · Te rog să mă ierți.',
+  shift: {
+    english: 'English "sorry" does everything: bumping into someone, regret, a real apology.',
+    romanian: 'Romanian splits it: {{Scuze}} / {{Pardon}} for small things, {{Îmi pare rău}} for regret, {{Te rog să mă ierți}} for a real apology.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Three levels',
+      body: [
+        'Small: {{Scuze!}} / {{Pardon!}} — sorry (bumping, interrupting) · {{Scuze că am întârziat.}} — sorry I\'m late.',
+        'Regret: {{Îmi pare rău.}} — I\'m sorry · {{Îmi pare foarte rău.}}',
+        'A real apology: {{Te rog să mă ierți.}} — please forgive me.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Owning it',
+      body: [
+        '{{A fost vina mea.}} — it was my fault · {{N-am vrut să te supăr.}} — I didn\'t mean to upset you · {{Înțeleg de ce te-ai supărat.}} — I understand why you\'re upset · {{Nu se mai întâmplă.}} — it won\'t happen again.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Accepting one',
+      body: [
+        '{{Nu-i nimic.}} — it\'s nothing · {{Se întâmplă.}} — it happens · {{Te iert.}} — I forgive you · {{Hai să uităm.}} — let\'s forget it.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Apologise',
+      rungs: [
+        { id: 's110-01', prompt: 'Sorry I\'m late.', answer: 'Scuze că am întârziat.' },
+        { id: 's110-02', prompt: 'I\'m sorry.', answer: 'Îmi pare rău.' },
+        { id: 's110-03', prompt: 'I\'m really sorry.', answer: 'Îmi pare foarte rău.' },
+        { id: 's110-04', prompt: 'Please forgive me.', answer: 'Te rog să mă ierți.' },
+        { id: 's110-05', prompt: 'It was my fault.', answer: 'A fost vina mea.' },
+        { id: 's110-06', prompt: 'I didn\'t mean to upset you.', answer: 'N-am vrut să te supăr.' },
+        { id: 's110-07', prompt: 'I understand why you\'re upset.', answer: 'Înțeleg de ce te-ai supărat.' },
+        { id: 's110-08', prompt: 'It won\'t happen again.', answer: 'Nu se mai întâmplă.' },
+        { id: 's110-09', prompt: 'I forgive you.', answer: 'Te iert.' },
+        { id: 's110-10', prompt: 'It\'s nothing, it happens.', answer: 'Nu-i nimic, se întâmplă.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: 'You forgot something important to your partner. You say:',
+      options: [{ text: 'Pardon!' }, { text: 'Îmi pare foarte rău, am uitat.', correct: true }],
+      explanation: 'Pardon is for bumping into someone. Real regret is îmi pare rău.',
+    },
+  ],
+  shortcut: 'Small: scuze / pardon. Regret: îmi pare rău. Real apology: te rog să mă ierți. A fost vina mea · nu se mai întâmplă · te iert.',
+  useItToday: 'Next time you say sorry, pick the right level in Romanian.',
+}

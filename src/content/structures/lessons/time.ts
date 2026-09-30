@@ -784,3 +784,69 @@ export const timesOfDay: StructureLesson = {
   shortcut: 'Time word + "the" = in / on: dimineața, seara, lunea, vara. Diseară = this evening, aseară = yesterday evening, azi-noapte = last night.',
   useItToday: 'Describe your routine in Romanian: "Dimineața…, seara…".',
 }
+
+export const lifeStory: StructureLesson = {
+  id: 's-life-story',
+  part: 'Time',
+  title: 'Telling your life story',
+  tagline: 'M-am născut, am crescut, m-am mutat, ne-am cunoscut.',
+  shift: {
+    english: 'Your partner\'s relatives will ask: where were you born, where did you grow up, how did you two meet?',
+    romanian: 'Have the answers ready: {{M-am născut în…}}, {{Am crescut…}}, {{M-am mutat…}}, {{Ne-am cunoscut…}}',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Born, grew up, moved',
+      body: [
+        '{{M-am născut în Anglia.}} · {{Am crescut la țară.}} — in the countryside · {{Am crescut la oraș.}} — in a town',
+        '{{M-am mutat la Londra.}} — I moved to London · {{Locuiesc aici de zece ani.}}',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'School and work',
+      body: [
+        '{{Am studiat istoria.}} — I studied history · {{Am terminat facultatea în…}} — I graduated in… · {{Lucrez ca…}} — I work as…',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The two of you',
+      body: [
+        '{{Ne-am cunoscut la o petrecere.}} — we met at a party · {{Suntem împreună de ani de zile.}} · {{Avem un băiețel de doi ani.}} — we\'ve got a little boy of two.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your story',
+      intro: 'Swap in your own details as you go.',
+      rungs: [
+        { id: 's112-01', prompt: 'I was born in England.', answer: 'M-am născut în Anglia.' },
+        { id: 's112-02', prompt: 'I grew up in a small town.', answer: 'Am crescut într-un oraș mic.' },
+        { id: 's112-03', prompt: 'I grew up in the countryside.', answer: 'Am crescut la țară.' },
+        { id: 's112-04', prompt: 'I moved to London ten years ago.', answer: 'M-am mutat la Londra acum zece ani.' },
+        { id: 's112-05', prompt: 'I studied history.', answer: 'Am studiat istoria.' },
+        { id: 's112-06', prompt: 'I graduated in 2010.', answer: 'Am terminat facultatea în 2010.' },
+        { id: 's112-07', prompt: 'We met at a party.', answer: 'Ne-am cunoscut la o petrecere.' },
+        { id: 's112-08', prompt: 'We\'ve been together for years.', answer: 'Suntem împreună de ani de zile.' },
+        { id: 's112-09', prompt: 'We\'ve got a little boy of two.', answer: 'Avem un băiețel de doi ani.' },
+        { id: 's112-10', prompt: 'My parents live in England.', answer: 'Părinții mei locuiesc în Anglia.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"I grew up in the countryside."',
+      options: [{ text: 'Am crescut în țară.' }, { text: 'Am crescut la țară.', correct: true }],
+      explanation: 'La țară = in the countryside. În țară = inside the country (the nation).',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'We met in Bucharest twelve years ago.',
+      answer: 'Ne-am cunoscut în București acum doisprezece ani.',
+      distractors: ['la', 'peste'],
+    },
+  ],
+  shortcut: 'M-am născut în… · Am crescut la țară / la oraș · M-am mutat la… · Am studiat… · Ne-am cunoscut… · Avem un băiețel de doi ani.',
+  useItToday: 'Tell your life story out loud in Romanian, start to finish, once this week.',
+}
