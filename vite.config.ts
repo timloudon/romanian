@@ -40,6 +40,9 @@ export default defineConfig({
         // works offline without needing a second load. Updates still wait for the "Reload" tap:
         // this doesn't enable skipWaiting.
         clientsClaim: true,
+        // Serves byte ranges of cached audio — without it, iPhone Safari can't play any clip
+        // from the offline copy. See public/sw-range-requests.js.
+        importScripts: ['sw-range-requests.js'],
       },
     }),
   ],

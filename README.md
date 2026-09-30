@@ -70,6 +70,9 @@ monthly credit, e.g. `npm run generate:audio -- --only ro --max-chars 8600`, and
   first tap anywhere.
 - **Offline:** everything, recorded audio included, is precached by the service worker. The app
   works with no connection once it's been opened once; Settings shows whether it's ready.
+  Safari only plays audio served as byte ranges, so `public/sw-range-requests.js` (loaded into
+  the service worker) answers range requests for cached clips — without it, iPhone silently
+  falls back to the built-in voice for every clip.
 - **Speaking practice is self-assessed**: you speak your answer out loud, hear the correct
   Romanian, and judge yourself — the same loop Michel Thomas and Say Something In... courses use.
   This needs no speech recognition, so it's fully reliable and works while driving.
