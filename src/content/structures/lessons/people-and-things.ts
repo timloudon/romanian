@@ -1627,3 +1627,141 @@ export const guessingGender: StructureLesson = {
   shortcut: '-ă / -a / -ie / -ție / -tate / -ură → o. Consonant / -u / -ment / -aj → un. -e: could be either — people follow their sex.',
   useItToday: 'When you meet a new noun today, guess un or o before you check.',
 }
+
+export const usefulSelfVerbs: StructureLesson = {
+  id: 's-myself-more',
+  part: 'People and things',
+  title: 'Myself-verbs worth knowing: mă descurc, m-am obișnuit',
+  tagline: 'I\'ll manage, I\'ve got used to it, we made up.',
+  shift: {
+    english: 'English has "I\'ll manage", "I\'ve got used to it", "we argued", "we made up", "we get on".',
+    romanian: 'Romanian says every one of them with a myself-verb: {{mă descurc}}, {{m-am obișnuit}}, {{ne-am certat}}, {{ne-am împăcat}}, {{ne înțelegem}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'The golden two',
+      body: [
+        '{{a se descurca}} — to manage, cope, get by: {{Mă descurc.}} — I\'ll manage. {{Te descurci?}} — are you managing?',
+        '{{a se obișnui cu}} — to get used to: {{M-am obișnuit.}} — I\'ve got used to it. {{Te obișnuiești.}} — you\'ll get used to it.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Feelings',
+      body: [
+        '{{a se teme de}} — to be afraid of · {{a se supăra}} — to get upset · {{a se bucura de}} — to enjoy · {{a se plictisi}} — to get bored.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Between people',
+      body: [
+        '{{a se certa}} — to argue · {{a se împăca}} — to make up · {{a se înțelege}} — to get on: {{Ne înțelegem bine.}} · {{a se întâlni}} — to meet up.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Say it',
+      rungs: [
+        { id: 's102-01', prompt: 'I\'ll manage.', answer: 'Mă descurc.' },
+        { id: 's102-02', prompt: 'Are you managing?', answer: 'Te descurci?' },
+        { id: 's102-03', prompt: 'He\'s managing really well.', answer: 'Se descurcă foarte bine.' },
+        { id: 's102-04', prompt: 'I\'ve got used to it.', answer: 'M-am obișnuit.' },
+        { id: 's102-05', prompt: 'You\'ll get used to it.', answer: 'Te obișnuiești.' },
+        { id: 's102-06', prompt: 'He\'s scared of dogs.', answer: 'Se teme de câini.' },
+        { id: 's102-07', prompt: 'Don\'t get upset.', answer: 'Nu te supăra.' },
+        { id: 's102-08', prompt: 'Enjoy the holiday!', answer: 'Bucură-te de vacanță!' },
+        { id: 's102-09', prompt: 'They argued.', answer: 'S-au certat.' },
+        { id: 's102-10', prompt: 'They\'ve made up.', answer: 'S-au împăcat.' },
+        { id: 's102-11', prompt: 'We get on well.', answer: 'Ne înțelegem bine.' },
+        { id: 's102-12', prompt: 'Let\'s meet up on Saturday.', answer: 'Hai să ne întâlnim sâmbătă.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"I\'ll manage."',
+      options: [{ text: 'Mă descurc.', correct: true }, { text: 'Voi manage.' }, { text: 'Pot face.' }],
+      explanation: 'Managing is a myself-verb: mă descurc.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'He\'s getting used to the new nursery.',
+      answer: 'Se obișnuiește cu creșa nouă.',
+      distractors: ['la', 'de'],
+    },
+  ],
+  shortcut: 'Mă descurc = I\'ll manage. M-am obișnuit = I\'ve got used to it. Mă tem de = I\'m afraid of. Ne-am certat / împăcat = we argued / made up. Ne înțelegem = we get on.',
+  useItToday: 'Say "Mă descurc" next time someone offers help you don\'t need.',
+}
+
+export const moreToMeVerbs: StructureLesson = {
+  id: 's-to-me-more',
+  part: 'People and things',
+  title: 'More "to me" verbs: convine, ajunge, lipsește',
+  tagline: 'Îmi convine. Îmi ajunge. Îmi lipsești.',
+  shift: {
+    english: '"That suits me", "that\'s enough for me", "I\'m missing something", "I miss you".',
+    romanian: 'More verbs built like {{îmi place}} — the thing does it, and it happens "to me": {{îmi convine}}, {{îmi ajunge}}, {{îmi lipsește}}, {{îmi lipsești}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Four useful ones',
+      body: [
+        '{{Îmi convine.}} — it suits me. {{Nu-mi convine.}} — it doesn\'t suit me / I\'m not happy with it.',
+        '{{Îmi ajunge.}} — that\'s enough for me. {{Îmi lipsește ceva.}} — I\'m missing something. {{Nu-mi pasă.}} — I don\'t care.',
+        '{{Îmi lipsești.}} — I miss you ("to me you are missing").',
+      ],
+      glosses: [
+        { ro: 'Îmi lipsești.', words: [['Îmi', 'to-me'], ['lipsești', 'you-are-missing']], en: 'I miss you.' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Swap the person',
+      body: [
+        '{{Îți convine mâine?}} — does tomorrow suit you? {{Îi ajunge?}} — is it enough for him? {{Ne lipsește un scaun.}} — we\'re a chair short.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Two more',
+      body: [
+        '{{Îmi vine să…}} — I feel like (doing): {{Îmi vine să râd.}}',
+        '{{Mi-a trecut.}} — it\'s gone, I\'m over it: {{Mi-a trecut durerea de cap.}} — my headache\'s gone.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'To me, to you',
+      rungs: [
+        { id: 's103-01', prompt: 'That suits me.', answer: 'Îmi convine.' },
+        { id: 's103-02', prompt: 'Does tomorrow suit you?', answer: 'Îți convine mâine?' },
+        { id: 's103-03', prompt: 'I\'m not happy with it.', answer: 'Nu-mi convine.' },
+        { id: 's103-04', prompt: 'That\'s enough for me.', answer: 'Îmi ajunge.' },
+        { id: 's103-05', prompt: 'Is it enough for him?', answer: 'Îi ajunge?' },
+        { id: 's103-06', prompt: 'I\'m missing something.', answer: 'Îmi lipsește ceva.' },
+        { id: 's103-07', prompt: 'I miss you.', answer: 'Îmi lipsești.', acceptedAlternates: ['Mi-e dor de tine.'], teachingNote: 'Mi-e dor de tine means the same.' },
+        { id: 's103-08', prompt: 'We\'re a chair short.', answer: 'Ne lipsește un scaun.' },
+        { id: 's103-09', prompt: 'I feel like laughing.', answer: 'Îmi vine să râd.' },
+        { id: 's103-10', prompt: 'My headache\'s gone.', answer: 'Mi-a trecut durerea de cap.' },
+        { id: 's103-11', prompt: 'I\'m over it.', answer: 'Mi-a trecut.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"Does Saturday suit you?"',
+      options: [{ text: 'Convii sâmbătă?' }, { text: 'Îți convine sâmbătă?', correct: true }],
+      explanation: 'Saturday does the suiting, "to you": îți convine.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'We\'re two plates short.',
+      answer: 'Ne lipsesc două farfurii.',
+      distractors: ['lipsește', 'noi'],
+    },
+  ],
+  shortcut: 'Îmi convine (suits me), îmi ajunge (enough), îmi lipsește (I\'m missing), îmi lipsești (I miss you), nu-mi pasă, mi-a trecut.',
+  useItToday: 'Fix a plan today with "Îți convine…?"',
+}

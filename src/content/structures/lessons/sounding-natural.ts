@@ -1313,3 +1313,120 @@ export const signs: StructureLesson = {
   shortcut: 'Împingeți = push, trageți = pull. Intrare / ieșire. Deschis / închis. Interzis = forbidden. Câine rău = beware of the dog.',
   useItToday: 'Next time you\'re in Romania, read every sign you pass out loud.',
 }
+
+export const gettingAWordIn: StructureLesson = {
+  id: 's-word-in',
+  part: 'Sounding natural',
+  title: 'Getting a word in at the family table',
+  tagline: 'Stai să termin! Apropo… Unde rămăsesem?',
+  shift: {
+    english: 'Big family conversations move fast. English has "hang on", "can I just say", "by the way", "anyway, as I was saying".',
+    romanian: 'Romanian has the same toolkit: {{Pot să zic ceva?}}, {{Stai să termin!}}, {{Apropo…}}, {{Revenind la ce ziceam…}}',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Getting in',
+      body: [
+        '{{Pot să zic ceva?}} — can I say something? · {{Scuză-mă că te întrerup.}} — sorry to interrupt · {{Apropo…}} — by the way…',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Holding the floor',
+      body: [
+        '{{Stai să termin!}} — let me finish! · {{Lasă-mă să-ți spun.}} — let me tell you · {{Zi mai departe!}} — go on!',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Changing and coming back',
+      body: [
+        '{{Schimbând subiectul…}} — changing the subject… · {{Revenind la ce ziceam…}} — getting back to what I was saying… · {{Unde rămăsesem?}} — where was I? (the one-word "had" past).',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Get your word in',
+      rungs: [
+        { id: 's104-01', prompt: 'Can I say something?', answer: 'Pot să zic ceva?' },
+        { id: 's104-02', prompt: 'Sorry to interrupt.', answer: 'Scuză-mă că te întrerup.' },
+        { id: 's104-03', prompt: 'By the way…', answer: 'Apropo…' },
+        { id: 's104-04', prompt: 'Let me finish!', answer: 'Stai să termin!' },
+        { id: 's104-05', prompt: 'Let me tell you.', answer: 'Lasă-mă să-ți spun.' },
+        { id: 's104-06', prompt: 'Changing the subject…', answer: 'Schimbând subiectul…' },
+        { id: 's104-07', prompt: 'Getting back to what I was saying…', answer: 'Revenind la ce ziceam…' },
+        { id: 's104-08', prompt: 'Where was I?', answer: 'Unde rămăsesem?' },
+        { id: 's104-09', prompt: 'What were you saying?', answer: 'Ce ziceai?' },
+        { id: 's104-10', prompt: 'Go on!', answer: 'Zi mai departe!' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: 'Everyone\'s talking over you and you want to finish your story:',
+      options: [{ text: 'Stai să termin!', correct: true }, { text: 'Gata, plec!' }, { text: 'Poftim?' }],
+      explanation: 'Stai să termin — "wait so I finish".',
+    },
+  ],
+  shortcut: 'Pot să zic ceva? · Stai să termin! · Apropo… · Revenind la ce ziceam… · Unde rămăsesem? · Zi mai departe!',
+  useItToday: 'At the next family meal, get one whole story in, with "Stai să termin!" if you need it.',
+}
+
+export const compliments: StructureLesson = {
+  id: 's-compliments',
+  part: 'Sounding natural',
+  title: 'Compliments — giving and taking them',
+  tagline: 'Îți stă bine! Aveți mâini de aur!',
+  shift: {
+    english: 'English: "that suits you", "you look great", "this is delicious", "thanks, glad you like it".',
+    romanian: 'Romanian: {{Îți stă bine!}} ("it stays well on you"), {{Arăți foarte bine!}}, {{Aveți mâini de aur!}} — and to take one: {{Mă bucur că-ți place.}}',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Looks and style',
+      body: [
+        '{{Îți stă bine!}} — it suits you ("it stays well on you") · {{Arăți foarte bine.}} — you look great · {{Ce casă frumoasă aveți!}} — what a lovely house!',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Food — the big one',
+      body: [
+        'Praising the cook matters at a Romanian table: {{Ce bună e mâncarea!}} · {{Mai iau puțin, e prea bun!}} — I\'ll have a bit more, it\'s too good!',
+        '{{Aveți mâini de aur.}} — you\'ve got golden hands: the highest compliment for a cook.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Taking one',
+      body: [
+        '{{Mulțumesc frumos!}} · {{Mă bucur că-ți place.}} — I\'m glad you like it · {{Serios? Mersi!}}',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Pay the compliment',
+      rungs: [
+        { id: 's105-01', prompt: 'That suits you!', answer: 'Îți stă bine!' },
+        { id: 's105-02', prompt: 'You look great.', answer: 'Arăți foarte bine.' },
+        { id: 's105-03', prompt: 'What a lovely house you have!', answer: 'Ce casă frumoasă aveți!' },
+        { id: 's105-04', prompt: 'It\'s delicious, honestly!', answer: 'E delicios, pe bune!' },
+        { id: 's105-05', prompt: 'The food is so good!', answer: 'Ce bună e mâncarea!' },
+        { id: 's105-06', prompt: 'I\'ll have a bit more, it\'s too good!', answer: 'Mai iau puțin, e prea bun!' },
+        { id: 's105-07', prompt: 'You\'ve got golden hands.', answer: 'Aveți mâini de aur.' },
+        { id: 's105-08', prompt: 'I\'m glad you like it.', answer: 'Mă bucur că-ți place.' },
+        { id: 's105-09', prompt: '(to him) You\'re so clever!', answer: 'Ce deștept ești!' },
+        { id: 's105-10', prompt: '(to him) What a lovely drawing!', answer: 'Ce desen frumos!' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: 'Your partner\'s mum made sarmale. The best compliment is…',
+      options: [{ text: 'E ok.' }, { text: 'Aveți mâini de aur!', correct: true }],
+      explanation: '"Golden hands" — the highest praise for a cook.',
+    },
+  ],
+  shortcut: 'Îți stă bine = it suits you. Arăți foarte bine. Ce bună e mâncarea! Aveți mâini de aur. Taking one: mulțumesc frumos, mă bucur că-ți place.',
+  useItToday: 'Compliment the cook at the next family meal — in Romanian, and specifically.',
+}
