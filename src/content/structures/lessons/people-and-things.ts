@@ -448,6 +448,19 @@ export const myself: StructureLesson = {
       note: '"We got to know each other" — ne-am cunoscut — is how Romanians say "we met".',
     },
     {
+      kind: 'dialogue',
+      title: 'In real life: A bad morning',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Te-ai trezit?', en: 'Are you awake?' },
+        { who: 'you', ro: 'Da, m-am trezit, dar nu mă simt bine.', en: 'Yes, I\'m awake, but I don\'t feel well.' },
+        { who: 'them', ro: 'Ce ai? Te doare ceva?', en: 'What\'s wrong? Does something hurt?' },
+        { who: 'you', ro: 'Mă doare capul. Mă mai culc puțin.', en: 'I\'ve got a headache. I\'ll lie down a bit longer.' },
+        { who: 'them', ro: 'Bine, mă ocup eu de cel mic.', en: 'OK, I\'ll look after the little one.' },
+        { who: 'you', ro: 'Mersi. Ne vedem la prânz.', en: 'Thanks. See you at lunchtime.' },
+      ],
+    },
+    {
       kind: 'ladder',
       title: 'Mix it up',
       intro: 'Mixing this lesson with the ones before it. Take your time building each one.',
@@ -653,6 +666,18 @@ export const places: StructureLesson = {
       ],
     },
     {
+      kind: 'dialogue',
+      title: 'In real life: Where are you?',
+      setting: 'A phone call with your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Unde ești?', en: 'Where are you?' },
+        { who: 'you', ro: 'Sunt la magazin. Tu ești acasă?', en: 'I\'m at the shop. Are you at home?' },
+        { who: 'them', ro: 'Nu, sunt la mama. Cel mic e cu mine.', en: 'No, I\'m at my mum\'s. The little one\'s with me.' },
+        { who: 'you', ro: 'Bine. Vin la voi după magazin?', en: 'OK. Shall I come to you after the shop?' },
+        { who: 'them', ro: 'Da, vino! Suntem în grădină.', en: 'Yes, come! We\'re in the garden.' },
+      ],
+    },
+    {
       kind: 'choose',
       question: '"We\'re going to the seaside."',
       options: [{ text: 'Mergem în mare.' }, { text: 'Mergem la mare.', correct: true }],
@@ -731,6 +756,19 @@ export const thisAndThat: StructureLesson = {
         { id: 's21-10', prompt: 'I like this.', answer: 'Îmi place asta.' },
         { id: 's21-11', prompt: 'This time.', answer: 'De data asta.' },
         { id: 's21-12', prompt: 'How much is this?', answer: 'Cât costă asta?' },
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'In real life: At the cake shop',
+      setting: 'You\'re buying cakes for the family. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Pe care o vreți, pe asta sau pe aia?', en: 'Which one would you like, this one or that one?' },
+        { who: 'you', ro: 'Pe asta, vă rog. Și cât costă aia?', en: 'This one, please. And how much is that one?' },
+        { who: 'them', ro: 'Aia e zece lei.', en: 'That one\'s ten lei.' },
+        { who: 'you', ro: 'Atunci o iau și pe aia!', en: 'Then I\'ll take that one too!' },
+        { who: 'them', ro: 'Poftim. Mai doriți ceva?', en: 'Here you are. Anything else?' },
+        { who: 'you', ro: 'Nu, asta e tot.', en: 'No, that\'s all.' },
       ],
     },
     {
@@ -817,6 +855,19 @@ export const comparing: StructureLesson = {
       ],
     },
     {
+      kind: 'dialogue',
+      title: 'In real life: Sea or mountains?',
+      setting: 'Planning the summer with your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Ce-ți place mai mult, marea sau muntele?', en: 'What do you like more, the sea or the mountains?' },
+        { who: 'you', ro: 'Muntele. E mai liniștit și mai răcoros.', en: 'The mountains. It\'s quieter and cooler.' },
+        { who: 'them', ro: 'Dar marea e mai frumoasă!', en: 'But the sea is more beautiful!' },
+        { who: 'you', ro: 'Poate, dar e prea cald vara.', en: 'Maybe, but it\'s too hot in summer.' },
+        { who: 'them', ro: 'Bine, atunci anul ăsta mergem la munte.', en: 'OK, the mountains this year, then.' },
+        { who: 'you', ro: 'Cea mai bună idee!', en: 'The best idea!' },
+      ],
+    },
+    {
       kind: 'choose',
       question: '"The best idea."',
       options: [{ text: 'Cel mai bun idee' }, { text: 'Cea mai bună idee', correct: true }, { text: 'Mai bună idee' }],
@@ -891,6 +942,19 @@ export const beIsHave: StructureLesson = {
         { id: 's23-10', prompt: "There's a problem.", answer: 'E o problemă.' },
         { id: 's23-11', prompt: 'There are lots of people here.', answer: 'Sunt mulți oameni aici.' },
         { id: 's23-12', prompt: 'Is there any milk left?', answer: 'Mai e lapte?' },
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'In real life: A birthday coming up',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Ai timp mâine?', en: 'Are you free tomorrow?' },
+        { who: 'you', ro: 'Da, am timp după-amiaza. De ce?', en: 'Yes, I\'m free in the afternoon. Why?' },
+        { who: 'them', ro: 'E ziua mamei. Împlinește șaizeci de ani.', en: 'It\'s Mum\'s birthday. She\'s turning sixty.' },
+        { who: 'you', ro: 'Ai dreptate, am uitat! Avem nevoie de un cadou.', en: 'You\'re right, I forgot! We need a present.' },
+        { who: 'them', ro: 'Avem noroc, e o florărie lângă noi.', en: 'We\'re lucky, there\'s a florist near us.' },
+        { who: 'you', ro: 'Perfect, luăm flori.', en: 'Perfect, we\'ll get flowers.' },
       ],
     },
     {

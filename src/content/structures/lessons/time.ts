@@ -693,6 +693,19 @@ export const agoAndIn: StructureLesson = {
       ],
     },
     {
+      kind: 'dialogue',
+      title: 'In real life: Calling home',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Când ai vorbit cu mama ta?', en: 'When did you speak to your mum?' },
+        { who: 'you', ro: 'Acum două zile. O sun o dată pe săptămână.', en: 'Two days ago. I call her once a week.' },
+        { who: 'them', ro: 'Și când vine în vizită?', en: 'And when is she coming to visit?' },
+        { who: 'you', ro: 'Peste o lună, cred.', en: 'In a month, I think.' },
+        { who: 'them', ro: 'Anul trecut a venit de două ori.', en: 'Last year she came twice.' },
+        { who: 'you', ro: 'Da, poate vine și de Crăciun.', en: 'Yes, maybe she\'ll come for Christmas too.' },
+      ],
+    },
+    {
       kind: 'choose',
       question: '"Three days ago."',
       options: [{ text: 'Trei zile acum.' }, { text: 'Acum trei zile.', correct: true }],
@@ -760,6 +773,19 @@ export const everBefore: StructureLesson = {
         { id: 's70-09', prompt: 'I haven\'t seen him since.', answer: 'Nu l-am mai văzut.' },
         { id: 's70-10', prompt: 'I\'ll call you again tomorrow.', answer: 'Te mai sun mâine.' },
         { id: 's70-11', prompt: '(to guests leaving) Come again!', answer: 'Să mai veniți!' },
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'In real life: A weekend in Sibiu',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Ai mai fost la Sibiu?', en: 'Have you been to Sibiu before?' },
+        { who: 'you', ro: 'Nu, n-am mai fost niciodată. Tu?', en: 'No, never. Have you?' },
+        { who: 'them', ro: 'Am mai fost o dată, acum mulți ani.', en: 'Once, many years ago.' },
+        { who: 'you', ro: 'Ai mâncat vreodată papanași?', en: 'Have you ever had papanași?' },
+        { who: 'them', ro: 'Glumești? Îi mănânc de fiecare dată!', en: 'Are you joking? I have them every time!' },
+        { who: 'you', ro: 'Atunci mergem la Sibiu!', en: 'Then we\'re going to Sibiu!' },
       ],
     },
     {

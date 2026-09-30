@@ -337,6 +337,19 @@ export const endings: StructureLesson = {
       explanation: '-i is "you" (one person). -m is "we". -ți is "you all", or the polite "you".',
     },
     {
+      kind: 'dialogue',
+      title: 'In real life: Sunday lunch',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Venim toți duminică?', en: 'Are we all coming on Sunday?' },
+        { who: 'you', ro: 'Da, venim. Și părinții tăi vin?', en: 'Yes, we\'re coming. Are your parents coming too?' },
+        { who: 'them', ro: 'Vin și ei. Știi unde e restaurantul?', en: 'They\'re coming too. Do you know where the restaurant is?' },
+        { who: 'you', ro: 'Știu, am adresa.', en: 'I know, I\'ve got the address.' },
+        { who: 'them', ro: 'Faci tu rezervarea?', en: 'Will you book the table?' },
+        { who: 'you', ro: 'Fac eu.', en: 'I\'ll do it.' },
+      ],
+    },
+    {
       kind: 'ladder',
       title: 'Mix it up',
       intro: 'Mixing this lesson with the ones before it. Take your time building each one.',
@@ -665,6 +678,19 @@ export const questions: StructureLesson = {
       ],
     },
     {
+      kind: 'dialogue',
+      title: 'In real life: Back from a trip',
+      setting: 'Your partner has just got home. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'you', ro: 'Când ai ajuns?', en: 'When did you get in?' },
+        { who: 'them', ro: 'Adineauri. Cât e ceasul?', en: 'Just now. What time is it?' },
+        { who: 'you', ro: 'E opt. Cum a fost drumul?', en: 'It\'s eight. How was the journey?' },
+        { who: 'them', ro: 'Lung. Mi-e o foame…', en: 'Long. I\'m so hungry…' },
+        { who: 'you', ro: 'Ți-e foame, nu? Vrei paste?', en: 'You\'re hungry, aren\'t you? Do you want pasta?' },
+        { who: 'them', ro: 'Da, te rog!', en: 'Yes, please!' },
+      ],
+    },
+    {
       kind: 'choose',
       question: '"He\'s asleep, isn\'t he?"',
       options: [
@@ -753,6 +779,19 @@ export const canAndKnow: StructureLesson = {
         },
         { id: 's19-11', prompt: 'Do you know Bucharest?', answer: 'Cunoști Bucureștiul?' },
         { id: 's19-12', prompt: "I didn't know that.", answer: 'Nu știam asta.' },
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'In real life: The cozonac question',
+      setting: 'You and your partner, in the kitchen. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Știi să faci cozonac?', en: 'Do you know how to make cozonac?' },
+        { who: 'you', ro: 'Nu, nu știu. Poți să mă înveți?', en: 'No, I don\'t. Can you teach me?' },
+        { who: 'them', ro: 'Pot, dar nu azi. O cunoști pe vecina?', en: 'I can, but not today. Do you know the neighbour?' },
+        { who: 'you', ro: 'O cunosc, dar nu știu cum o cheamă.', en: 'I know her, but I don\'t know her name.' },
+        { who: 'them', ro: 'O cheamă Maria. Ea știe să facă cel mai bun cozonac!', en: 'Her name is Maria. She makes the best cozonac!' },
+        { who: 'you', ro: 'Atunci îi cer rețeta!', en: 'Then I\'ll ask her for the recipe!' },
       ],
     },
     {
@@ -988,6 +1027,19 @@ export const verbPairs: StructureLesson = {
       ],
     },
     {
+      kind: 'dialogue',
+      title: 'In real life: Film night',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Ce zici, ne uităm la un film?', en: 'What do you think, shall we watch a film?' },
+        { who: 'you', ro: 'Da, dar adu-mi mai întâi un ceai.', en: 'Yes, but bring me a tea first.' },
+        { who: 'them', ro: 'Ascultă… cel mic plânge?', en: 'Listen… is the little one crying?' },
+        { who: 'you', ro: 'Nu aud nimic. Du-te și vezi.', en: 'I can\'t hear anything. Go and see.' },
+        { who: 'them', ro: 'Nu, doarme. Mi s-a părut.', en: 'No, he\'s asleep. I imagined it.' },
+        { who: 'you', ro: 'Bine. Spune-mi ce film vrei.', en: 'OK. Tell me which film you want.' },
+      ],
+    },
+    {
       kind: 'choose',
       question: '"Bring me some water."',
       options: [{ text: 'Du-mi apă.' }, { text: 'Adu-mi apă.', correct: true }],
@@ -1052,6 +1104,19 @@ export const verbPrepositions: StructureLesson = {
         { id: 's55-10', prompt: 'He\'s playing with the dog.', answer: 'Se joacă cu câinele.' },
         { id: 's55-11', prompt: 'I dream of a house by the sea.', answer: 'Visez la o casă la mare.' },
         { id: 's55-12', prompt: 'Grandma is proud of him.', answer: 'Bunica e mândră de el.' },
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'In real life: Daydreaming',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'La ce te gândești?', en: 'What are you thinking about?' },
+        { who: 'you', ro: 'Mă gândesc la vacanță.', en: 'I\'m thinking about the holiday.' },
+        { who: 'them', ro: 'Și eu! Visez la mare.', en: 'Me too! I dream of the sea.' },
+        { who: 'you', ro: 'Depinde de bani, știi.', en: 'It depends on money, you know.' },
+        { who: 'them', ro: 'Știu. Nu te supăra pe mine, dar am rezervat deja.', en: 'I know. Don\'t be cross with me, but I\'ve already booked.' },
+        { who: 'you', ro: 'Serios? Ce bine!', en: 'Really? Brilliant!' },
       ],
     },
     {
@@ -1261,6 +1326,19 @@ export const goingAndComing: StructureLesson = {
         { id: 's90-10', prompt: 'I left the keys at home.', answer: 'Am lăsat cheile acasă.' },
         { id: 's90-11', prompt: '(the bag) Leave it there.', answer: 'Las-o acolo.' },
         { id: 's90-12', prompt: 'Text me when you get there.', answer: 'Scrie-mi când ajungi.' },
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'In real life: A work trip',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'La ce oră pleci mâine?', en: 'What time are you leaving tomorrow?' },
+        { who: 'you', ro: 'Plec la șapte și ajung la zece.', en: 'I\'m leaving at seven and getting there at ten.' },
+        { who: 'them', ro: 'Și când te întorci?', en: 'And when are you coming back?' },
+        { who: 'you', ro: 'Mă întorc joi seara.', en: 'I\'m back on Thursday evening.' },
+        { who: 'them', ro: 'Scrie-mi când ajungi.', en: 'Text me when you get there.' },
+        { who: 'you', ro: 'Sigur. Și nu uita, am lăsat cheile la vecini.', en: 'Of course. And don\'t forget, I\'ve left the keys with the neighbours.' },
       ],
     },
     {
