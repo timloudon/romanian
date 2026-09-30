@@ -59,6 +59,19 @@ export const saAlone: StructureLesson = {
       ],
     },
     {
+      kind: 'dialogue',
+      title: 'In real life: Breakfast',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'you', ro: 'Să fac eu cafea?', en: 'Shall I make the coffee?' },
+        { who: 'them', ro: 'Da, te rog. Să-i dau și celui mic ceva?', en: 'Yes, please. Shall I give the little one something too?' },
+        { who: 'you', ro: 'Da, niște lapte. Să nu uiți vitaminele!', en: 'Yes, some milk. Don\'t forget the vitamins!' },
+        { who: 'them', ro: 'Ce să fac cu ele? Le pun în lapte?', en: 'What should I do with them? Put them in the milk?' },
+        { who: 'you', ro: 'Nu, să i le dai după masă.', en: 'No, give them to him after he\'s eaten.' },
+        { who: 'them', ro: 'Bine. Să-mi spui dacă mai ai nevoie de ceva.', en: 'OK. Let me know if you need anything else.' },
+      ],
+    },
+    {
       kind: 'choose',
       question: '"Shall I open the window?"',
       options: [
@@ -139,6 +152,19 @@ export const wouldHave: StructureLesson = {
           answer: 'Dacă mi-ai fi spus, aș fi cumpărat-o.',
           teachingNote: 'Prăjitura is an o-thing, and o goes to the end: cumpărat-o.',
         },
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'In real life: Stuck in traffic',
+      setting: 'You and your partner, in the car. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Ar fi trebuit să plecăm mai devreme.', en: 'We should have left earlier.' },
+        { who: 'you', ro: 'Știu. Dacă aș fi știut de trafic, aș fi luat trenul.', en: 'I know. If I\'d known about the traffic, I\'d have taken the train.' },
+        { who: 'them', ro: 'Ar fi fost mai rapid.', en: 'It would have been quicker.' },
+        { who: 'you', ro: 'Și cel mic ar fi dormit mai bine.', en: 'And the little one would have slept better.' },
+        { who: 'them', ro: 'Data viitoare luăm trenul.', en: 'Next time we take the train.' },
+        { who: 'you', ro: 'Rămâne așa!', en: 'Deal!' },
       ],
     },
     {
@@ -230,6 +256,19 @@ export const genitive: StructureLesson = {
       ],
     },
     {
+      kind: 'dialogue',
+      title: 'In real life: Where is everything?',
+      setting: 'You and your partner, getting ready to go out. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Ai văzut cheile mașinii?', en: 'Have you seen the car keys?' },
+        { who: 'you', ro: 'Sunt în geanta mamei tale.', en: 'They\'re in your mum\'s bag.' },
+        { who: 'them', ro: 'Și telefonul bunicului?', en: 'And Grandpa\'s phone?' },
+        { who: 'you', ro: 'E în camera copilului.', en: 'It\'s in the little one\'s room.' },
+        { who: 'them', ro: 'Ce haos în casa noastră!', en: 'What chaos in our house!' },
+        { who: 'you', ro: 'E casa unei familii fericite!', en: 'It\'s the home of a happy family!' },
+      ],
+    },
+    {
       kind: 'choose',
       question: '"The family\'s house."',
       options: [{ text: 'Casa familia' }, { text: 'Casa familiei', correct: true }, { text: 'Casa de familia' }],
@@ -303,6 +342,19 @@ export const stillAlready: StructureLesson = {
         { id: 's27-11', prompt: "I've just arrived.", answer: 'Tocmai am ajuns.' },
         { id: 's27-12', prompt: "I don't want any more, thanks.", answer: 'Nu mai vreau, mulțumesc.' },
         { id: 's27-13', prompt: '(a shop assistant) Anything else?', answer: 'Mai doriți ceva?' },
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'In real life: Morning check-in',
+      setting: 'Your partner calls from work. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Încă doarme?', en: 'Is he still asleep?' },
+        { who: 'you', ro: 'Nu, s-a trezit deja. A mâncat și se joacă.', en: 'No, he\'s already up. He\'s eaten and he\'s playing.' },
+        { who: 'them', ro: 'Și tu ai mâncat?', en: 'And have you eaten?' },
+        { who: 'you', ro: 'Încă nu. Tocmai am făcut cafea.', en: 'Not yet. I\'ve just made coffee.' },
+        { who: 'them', ro: 'Mai avem lapte?', en: 'Have we got any milk left?' },
+        { who: 'you', ro: 'Nu mai avem. Iau diseară.', en: 'We\'re out. I\'ll get some tonight.' },
       ],
     },
     {
@@ -383,6 +435,19 @@ export const handySe: StructureLesson = {
       ],
     },
     {
+      kind: 'dialogue',
+      title: 'In real life: The internet\'s down',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Ce se întâmplă? Nu merge internetul.', en: 'What\'s going on? The internet isn\'t working.' },
+        { who: 'you', ro: 'S-a stricat routerul. Se întâmplă des.', en: 'The router\'s broken. It happens a lot.' },
+        { who: 'them', ro: 'Se poate repara?', en: 'Can it be fixed?' },
+        { who: 'you', ro: 'Nu știu, se vede că e vechi.', en: 'I don\'t know — you can tell it\'s old.' },
+        { who: 'them', ro: 'Atunci cumpărăm altul. Cum se zice „router” în română?', en: 'Then we\'ll buy another. How do you say "router" in Romanian?' },
+        { who: 'you', ro: 'Tot router! Se zice la fel.', en: 'Router! It\'s the same.' },
+      ],
+    },
+    {
       kind: 'choose',
       question: '"No smoking here."',
       options: [
@@ -457,6 +522,18 @@ export const twoLittleWords: StructureLesson = {
           teachingNote: 'Banii (money) is plural, so "it" is îi — them: ți-i.',
         },
         { id: 's29-11', prompt: '(the keys) Did you give them to her?', answer: 'I le-ai dat?' },
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'In real life: The ball and the book',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Unde e mingea lui?', en: 'Where\'s his ball?' },
+        { who: 'you', ro: 'Mi-a dat-o mie. E în geanta mea.', en: 'He gave it to me. It\'s in my bag.' },
+        { who: 'them', ro: 'Dă-mi-o, te rog. O vrea înapoi.', en: 'Give it to me, please. He wants it back.' },
+        { who: 'you', ro: 'Poftim. Și cartea? Ți-am dat-o ieri.', en: 'Here you are. And the book? I gave it to you yesterday.' },
+        { who: 'them', ro: 'Da, mi-ai dat-o. O citesc diseară.', en: 'Yes, you did. I\'m reading it tonight.' },
       ],
     },
     {
@@ -538,6 +615,19 @@ export const whoWhich: StructureLesson = {
           acceptedAlternates: ['Ziua în care s-a născut.'],
         },
         { id: 's30-12', prompt: "The friends we're visiting.", answer: 'Prietenii pe care îi vizităm.' },
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'In real life: Who was that?',
+      setting: 'You and your partner, walking home. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Cine e omul cu care ai vorbit?', en: 'Who\'s the man you were talking to?' },
+        { who: 'you', ro: 'E vecinul care locuiește lângă parc.', en: 'It\'s the neighbour who lives by the park.' },
+        { who: 'them', ro: 'Cel pe care l-am văzut la piață?', en: 'The one we saw at the market?' },
+        { who: 'you', ro: 'Da, el. Cel care are un câine mare.', en: 'Yes, him. The one with the big dog.' },
+        { who: 'them', ro: 'Aha! Știu pe cine zici.', en: 'Oh! I know who you mean.' },
+        { who: 'you', ro: 'Te salută, apropo.', en: 'He says hi, by the way.' },
       ],
     },
     {
@@ -693,6 +783,19 @@ export const reported: StructureLesson = {
           answer: 'Ne-au rugat să rămânem la masă.',
           teachingNote: 'A ruga — ask someone to do something. A întreba — ask a question.',
         },
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'In real life: What did she say?',
+      setting: 'You\'ve just been on the phone to your partner\'s mum. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Ce a zis mama?', en: 'What did Mum say?' },
+        { who: 'you', ro: 'A zis că vine sâmbătă și m-a rugat să-i trimit poze.', en: 'She said she\'s coming on Saturday, and asked me to send her photos.' },
+        { who: 'them', ro: 'Ți-a zis la ce oră vine?', en: 'Did she say what time?' },
+        { who: 'you', ro: 'Nu, a zis să o sunăm vineri.', en: 'No, she said to call her on Friday.' },
+        { who: 'them', ro: 'Bine. Și a întrebat de cel mic?', en: 'OK. And did she ask about the little one?' },
+        { who: 'you', ro: 'Normal! M-a întrebat dacă a crescut.', en: 'Of course! She asked if he\'d grown.' },
       ],
     },
     {

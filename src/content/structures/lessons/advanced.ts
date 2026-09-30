@@ -60,6 +60,19 @@ export const mustHave: StructureLesson = {
       ],
     },
     {
+      kind: 'dialogue',
+      title: 'In real life: Where\'s Andrei?',
+      setting: 'Waiting for a friend with your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Unde e Andrei? Trebuia să fie aici la opt.', en: 'Where\'s Andrei? He was supposed to be here at eight.' },
+        { who: 'you', ro: 'Trebuie să fi prins trafic.', en: 'He must have hit traffic.' },
+        { who: 'them', ro: 'Sau poate că a uitat.', en: 'Or maybe he forgot.' },
+        { who: 'you', ro: 'Nu se poate să fi uitat. L-am sunat azi.', en: 'He can\'t have forgotten. I called him today.' },
+        { who: 'them', ro: 'Atunci o fi pe drum.', en: 'Then he\'s probably on his way.' },
+        { who: 'you', ro: 'Probabil că ajunge în curând.', en: 'He\'ll probably be here soon.' },
+      ],
+    },
+    {
       kind: 'choose',
       question: '"It must have rained."',
       options: [{ text: 'Trebuie să a plouat.' }, { text: 'Trebuie să fi plouat.', correct: true }, { text: 'Trebuie că plouă.' }],
@@ -121,6 +134,19 @@ export const presumptive: StructureLesson = {
         { id: 's34-08', prompt: 'I wonder what time it is.', answer: 'Oare cât o fi ceasul?' },
         { id: 's34-09', prompt: 'He\'s probably sleeping.', answer: 'O fi dormind.' },
         { id: 's34-10', prompt: 'Whatever will be, will be.', answer: 'Ce-o fi, o fi.' },
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'In real life: A knock at the door',
+      setting: 'Late evening, you and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Cine o fi la ușă la ora asta?', en: 'Who could that be at this hour?' },
+        { who: 'you', ro: 'O fi vecina. Vine mereu seara.', en: 'Probably the neighbour. She always comes in the evening.' },
+        { who: 'them', ro: 'Sau o fi curierul.', en: 'Or it could be the courier.' },
+        { who: 'you', ro: 'Oare am comandat ceva?', en: 'Did we order something, I wonder?' },
+        { who: 'them', ro: 'Nu știu. Du-te și vezi!', en: 'I don\'t know. Go and see!' },
+        { who: 'you', ro: 'E vecina. Ți-am zis!', en: 'It\'s the neighbour. Told you!' },
       ],
     },
     {
@@ -1112,6 +1138,19 @@ export const ifLevels: StructureLesson = {
       ],
     },
     {
+      kind: 'dialogue',
+      title: 'In real life: Plans for tomorrow',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Ce facem dacă plouă mâine?', en: 'What do we do if it rains tomorrow?' },
+        { who: 'you', ro: 'Dacă plouă, mergem la muzeu.', en: 'If it rains, we go to the museum.' },
+        { who: 'them', ro: 'Și dacă e soare?', en: 'And if it\'s sunny?' },
+        { who: 'you', ro: 'Dacă e soare, mergem la lac.', en: 'If it\'s sunny, we go to the lake.' },
+        { who: 'them', ro: 'Dacă am avea mai mult timp, am merge la munte.', en: 'If we had more time, we\'d go to the mountains.' },
+        { who: 'you', ro: 'Data viitoare. Rămâne așa.', en: 'Next time. Deal.' },
+      ],
+    },
+    {
       kind: 'choose',
       question: '"If I were you, I\'d stay."',
       options: [{ text: 'Dacă eram tu, stăteam.' }, { text: 'Dacă aș fi în locul tău, aș rămâne.', correct: true }],
@@ -1377,6 +1416,19 @@ export const whatToDo: StructureLesson = {
         { id: 's100-09', prompt: 'I don\'t know whether to come.', answer: 'Nu știu dacă să vin.' },
         { id: 's100-10', prompt: 'I\'m wondering what to buy him.', answer: 'Mă întreb ce să-i cumpăr.' },
         { id: 's100-11', prompt: 'Tell me what to bring.', answer: 'Spune-mi ce să aduc.' },
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'In real life: A present for Mum',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Nu știu ce să-i cumpăr mamei de ziua ei.', en: 'I don\'t know what to get Mum for her birthday.' },
+        { who: 'you', ro: 'Ce zici de o carte?', en: 'What about a book?' },
+        { who: 'them', ro: 'Nu știu dacă să-i iau o carte. Are prea multe.', en: 'I don\'t know whether to get her a book. She\'s got too many.' },
+        { who: 'you', ro: 'Atunci, în loc să cumpărăm ceva, hai s-o ducem la restaurant.', en: 'Then instead of buying something, let\'s take her out for a meal.' },
+        { who: 'them', ro: 'Bună idee! Fără să-i spunem — surpriză.', en: 'Good idea! Without telling her — a surprise.' },
+        { who: 'you', ro: 'Perfect.', en: 'Perfect.' },
       ],
     },
     {
