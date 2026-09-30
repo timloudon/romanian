@@ -93,6 +93,19 @@ export const past: StructureLesson = {
       note: 'Deloc — at all. Azi-noapte — last night (literally "today-night").',
     },
     {
+      kind: 'dialogue',
+      title: 'In real life: How was your day?',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Ce ai făcut azi?', en: 'What did you do today?' },
+        { who: 'you', ro: 'Am lucrat toată ziua și am mers la magazin.', en: 'I worked all day and went to the shop.' },
+        { who: 'them', ro: 'Ai cumpărat lapte?', en: 'Did you buy milk?' },
+        { who: 'you', ro: 'Da, am cumpărat. Dar am uitat pâinea.', en: 'Yes, I did. But I forgot the bread.' },
+        { who: 'them', ro: 'Nu-i nimic. Cel mic a mâncat?', en: 'Never mind. Has the little one eaten?' },
+        { who: 'you', ro: 'Da, a mâncat tot și a dormit două ore.', en: 'Yes, he ate everything and slept for two hours.' },
+      ],
+    },
+    {
       kind: 'ladder',
       title: 'Mix it up',
       intro: 'Mixing this lesson with the ones before it. Take your time building each one.',
@@ -238,6 +251,19 @@ export const future: StructureLesson = {
       distractors: ['vom', 'petrec'],
     },
     {
+      kind: 'dialogue',
+      title: 'In real life: Tomorrow\'s plan',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Ce facem mâine?', en: 'What are we doing tomorrow?' },
+        { who: 'you', ro: 'O să mergem la bunici.', en: 'We\'re going to the grandparents\'.' },
+        { who: 'them', ro: 'O să plouă, cred.', en: 'It\'s going to rain, I think.' },
+        { who: 'you', ro: 'Atunci o să luăm umbrelele.', en: 'Then we\'ll take the umbrellas.' },
+        { who: 'them', ro: 'Și când ne întoarcem?', en: 'And when are we coming back?' },
+        { who: 'you', ro: 'O să ne întoarcem seara, pe la opt.', en: 'We\'ll come back in the evening, around eight.' },
+      ],
+    },
+    {
       kind: 'ladder',
       title: 'Mix it up',
       intro: 'Mixing this lesson with the ones before it. Take your time building each one.',
@@ -344,6 +370,19 @@ export const since: StructureLesson = {
       answer: 'Așteptăm de azi-dimineață.',
       distractors: ['am', 'așteptat'],
       note: 'Azi-dimineață — this morning, literally "today-morning".',
+    },
+    {
+      kind: 'dialogue',
+      title: 'In real life: Late again',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'De când aștepți?', en: 'How long have you been waiting?' },
+        { who: 'you', ro: 'Aștept de o jumătate de oră!', en: 'I\'ve been waiting half an hour!' },
+        { who: 'them', ro: 'Scuze, e trafic. De când e cel mic treaz?', en: 'Sorry, there\'s traffic. How long has the little one been awake?' },
+        { who: 'you', ro: 'E treaz de la șase.', en: 'He\'s been awake since six.' },
+        { who: 'them', ro: 'Vai. Și de când plânge?', en: 'Oh dear. And how long has he been crying?' },
+        { who: 'you', ro: 'Plânge de zece minute. Îi e foame.', en: 'He\'s been crying for ten minutes. He\'s hungry.' },
+      ],
     },
     {
       kind: 'ladder',
@@ -456,6 +495,19 @@ export const usedTo: StructureLesson = {
       distractors: ['am', 'dormit'],
     },
     {
+      kind: 'dialogue',
+      title: 'In real life: Childhood summers',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Ce făceai în vacanțe când erai copil?', en: 'What did you use to do in the holidays as a kid?' },
+        { who: 'you', ro: 'Mergeam la mare cu părinții mei.', en: 'I used to go to the seaside with my parents.' },
+        { who: 'them', ro: 'Și unde stăteați?', en: 'And where did you stay?' },
+        { who: 'you', ro: 'Stăteam la un camping. Era foarte frumos.', en: 'We stayed at a campsite. It was lovely.' },
+        { who: 'them', ro: 'Noi mergeam la bunici, la țară. Mă jucam toată ziua afară.', en: 'We used to go to my grandparents in the country. I played outside all day.' },
+        { who: 'you', ro: 'Ce frumos! Și ce mâncați acolo?', en: 'How lovely! And what did you eat there?' },
+      ],
+    },
+    {
       kind: 'ladder',
       title: 'Mix it up',
       intro: 'Mixing this lesson with the ones before it. Take your time building each one.',
@@ -550,6 +602,19 @@ export const would: StructureLesson = {
       answer: 'Ar fi frumos să mergem la mare.',
       distractors: ['aș', 'e'],
       note: 'Romanian says "it would be nice that we go" — să + we.',
+    },
+    {
+      kind: 'dialogue',
+      title: 'In real life: Where shall we go?',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Unde ai vrea să mergem în vacanță?', en: 'Where would you like to go on holiday?' },
+        { who: 'you', ro: 'Aș vrea să mergem la mare.', en: 'I\'d like us to go to the seaside.' },
+        { who: 'them', ro: 'Ar fi frumos, dar e scump.', en: 'It\'d be lovely, but it\'s expensive.' },
+        { who: 'you', ro: 'Atunci am putea să mergem la munte.', en: 'Then we could go to the mountains.' },
+        { who: 'them', ro: 'Da, ar fi mai ieftin. Și cel mic ar vedea animale.', en: 'Yes, it\'d be cheaper. And the little one would see animals.' },
+        { who: 'you', ro: 'Perfect, hai la munte!', en: 'Perfect — let\'s do the mountains!' },
+      ],
     },
     {
       kind: 'ladder',

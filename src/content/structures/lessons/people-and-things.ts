@@ -101,6 +101,19 @@ export const theOnTheEnd: StructureLesson = {
       note: 'Sub pat — under the bed, no sticker after sub.',
     },
     {
+      kind: 'dialogue',
+      title: 'In real life: Where\'s the…?',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Unde e telefonul?', en: 'Where\'s the phone?' },
+        { who: 'you', ro: 'Telefonul e pe masă.', en: 'The phone\'s on the table.' },
+        { who: 'them', ro: 'Și cheile?', en: 'And the keys?' },
+        { who: 'you', ro: 'Cheile sunt în mașină.', en: 'The keys are in the car.' },
+        { who: 'them', ro: 'Și mașina unde e?', en: 'And where\'s the car?' },
+        { who: 'you', ro: 'Mașina e afară, bineînțeles!', en: 'The car\'s outside, of course!' },
+      ],
+    },
+    {
       kind: 'ladder',
       title: 'Mix it up',
       intro: 'Mixing this lesson with the ones before it. Take your time building each one.',
@@ -208,6 +221,19 @@ export const possession: StructureLesson = {
       note: 'Cheile tale (the keys yours), geanta mea (the bag my).',
     },
     {
+      kind: 'dialogue',
+      title: 'In real life: Whose is it?',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'A cui e geaca asta?', en: 'Whose is this jacket?' },
+        { who: 'you', ro: 'E a mea.', en: 'It\'s mine.' },
+        { who: 'them', ro: 'Și pantofii ăștia?', en: 'And these shoes?' },
+        { who: 'you', ro: 'Sunt ai tăi!', en: 'They\'re yours!' },
+        { who: 'them', ro: 'Ba nu, ai mei sunt negri.', en: 'No they\'re not — mine are black.' },
+        { who: 'you', ro: 'Atunci sunt ai mei. Scuze!', en: 'Then they\'re mine. Sorry!' },
+      ],
+    },
+    {
       kind: 'ladder',
       title: 'Mix it up',
       intro: 'Mixing this lesson with the ones before it. Take your time building each one.',
@@ -310,6 +336,19 @@ export const toMe: StructureLesson = {
       answer: 'Îți place să locuiești aici?',
       distractors: ['tu', 'plac'],
       note: '"To you it pleases that you live here?"',
+    },
+    {
+      kind: 'dialogue',
+      title: 'In real life: Home, cold and hungry',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Ți-e foame?', en: 'Are you hungry?' },
+        { who: 'you', ro: 'Da, mi-e foarte foame. Și mi-e frig.', en: 'Yes, I\'m really hungry. And I\'m cold.' },
+        { who: 'them', ro: 'Îți fac o supă?', en: 'Shall I make you some soup?' },
+        { who: 'you', ro: 'Da, mersi! Îmi place mult supa ta.', en: 'Yes, thanks! I love your soup.' },
+        { who: 'them', ro: 'Și cel mic? Îi e foame?', en: 'And the little one? Is he hungry?' },
+        { who: 'you', ro: 'Nu, îi e somn.', en: 'No, he\'s sleepy.' },
+      ],
     },
     {
       kind: 'ladder',
@@ -511,6 +550,18 @@ export const himHer: StructureLesson = {
       answer: 'Poți să-l iei de la creșă?',
       distractors: ['îl', 'el'],
       note: 'After să, îl shrinks to -l: să-l.',
+    },
+    {
+      kind: 'dialogue',
+      title: 'In real life: Have you seen them?',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'L-ai văzut pe Andrei?', en: 'Have you seen Andrei?' },
+        { who: 'you', ro: 'Da, l-am văzut ieri.', en: 'Yes, I saw him yesterday.' },
+        { who: 'them', ro: 'Și pe Ana?', en: 'And Ana?' },
+        { who: 'you', ro: 'Nu, pe ea n-am văzut-o. O suni tu?', en: 'No, I haven\'t seen her. Will you call her?' },
+        { who: 'them', ro: 'Da, o sun diseară.', en: 'Yes, I\'ll call her tonight.' },
+      ],
     },
     {
       kind: 'ladder',

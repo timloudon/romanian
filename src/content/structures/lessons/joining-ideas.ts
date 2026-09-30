@@ -77,6 +77,19 @@ export const commands: StructureLesson = {
       distractors: ['uită', 'chei'],
     },
     {
+      kind: 'dialogue',
+      title: 'In real life: At the park',
+      setting: 'You and him, at the park. You play yourself; his lines are his.',
+      lines: [
+        { who: 'you', ro: 'Vino aici, puiule!', en: 'Come here, sweetheart!' },
+        { who: 'them', ro: 'Nu vreau!', en: 'Don\'t want to!' },
+        { who: 'you', ro: 'Hai, vino! Dă-mi mâna.', en: 'Come on, come here! Give me your hand.' },
+        { who: 'them', ro: 'Uite, un câine!', en: 'Look, a dog!' },
+        { who: 'you', ro: 'Nu pune mâna! Stai lângă mine.', en: 'Don\'t touch! Stay next to me.' },
+        { who: 'them', ro: 'Bine…', en: 'OK…' },
+      ],
+    },
+    {
       kind: 'ladder',
       title: 'Mix it up',
       intro: 'Mixing this lesson with the ones before it. Take your time building each one.',
@@ -195,6 +208,19 @@ export const neverDropThat: StructureLesson = {
       answer: 'Nu știam că ești aici.',
       distractors: ['să', 'sunt'],
       note: '"That you are here" — Romanian keeps the tense that was true at the time. ("Că erai aici" is fine too.)',
+    },
+    {
+      kind: 'dialogue',
+      title: 'In real life: Will it rain?',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Crezi că o să plouă?', en: 'Do you think it\'s going to rain?' },
+        { who: 'you', ro: 'Cred că da. Am auzit că vine o furtună.', en: 'I think so. I heard there\'s a storm coming.' },
+        { who: 'them', ro: 'Atunci cred că stăm acasă.', en: 'Then I think we\'ll stay in.' },
+        { who: 'you', ro: 'Sper că nu durează mult.', en: 'I hope it doesn\'t last long.' },
+        { who: 'them', ro: 'La radio zice că e doar o ploaie de vară.', en: 'The radio says it\'s just a summer shower.' },
+        { who: 'you', ro: 'Să sperăm!', en: 'Let\'s hope so!' },
+      ],
     },
     {
       kind: 'ladder',

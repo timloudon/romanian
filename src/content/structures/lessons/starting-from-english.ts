@@ -223,6 +223,19 @@ export const noIng: StructureLesson = {
       note: '"Going to work" — the place — is la serviciu.',
     },
     {
+      kind: 'dialogue',
+      title: 'In real life: An ordinary evening',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Ce faci?', en: 'What are you doing?' },
+        { who: 'you', ro: 'Gătesc. Tu ce faci?', en: 'I\'m cooking. What are you doing?' },
+        { who: 'them', ro: 'Citesc. Cel mic doarme?', en: 'I\'m reading. Is the little one asleep?' },
+        { who: 'you', ro: 'Nu, se joacă în cameră.', en: 'No, he\'s playing in his room.' },
+        { who: 'them', ro: 'Mâncăm la șapte?', en: 'Are we eating at seven?' },
+        { who: 'you', ro: 'Da, la șapte.', en: 'Yes, at seven.' },
+      ],
+    },
+    {
       kind: 'ladder',
       title: 'Mix it up',
       intro: 'Mixing this lesson with the ones before it. Take your time building each one.',
@@ -441,6 +454,19 @@ export const saBridge: StructureLesson = {
       note: 'Cu mine — with me.',
     },
     {
+      kind: 'dialogue',
+      title: 'In real life: Saturday morning',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Ce vrei să facem azi?', en: 'What do you want to do today?' },
+        { who: 'you', ro: 'Vreau să mergem în parc.', en: 'I want us to go to the park.' },
+        { who: 'them', ro: 'Trebuie să cumpăr pâine mai întâi.', en: 'I have to buy bread first.' },
+        { who: 'you', ro: 'Pot să merg eu, dacă vrei.', en: 'I can go, if you like.' },
+        { who: 'them', ro: 'Da, te rog. Vrei să vin și eu?', en: 'Yes, please. Do you want me to come too?' },
+        { who: 'you', ro: 'Nu, rămâi cu cel mic.', en: 'No, stay with the little one.' },
+      ],
+    },
+    {
       kind: 'ladder',
       title: 'Mix it up',
       intro: 'Mixing this lesson with the ones before it. Take your time building each one.',
@@ -536,6 +562,19 @@ export const doubleNegatives: StructureLesson = {
       answer: 'Nu mănânc niciodată nimic dimineața.',
       distractors: ['ceva'],
       note: 'Three negatives in one sentence — and all of them required.',
+    },
+    {
+      kind: 'dialogue',
+      title: 'In real life: A quiet day in',
+      setting: 'You and your partner. Say your lines out loud before revealing them.',
+      lines: [
+        { who: 'them', ro: 'Vrei ceva de la magazin?', en: 'Do you want anything from the shop?' },
+        { who: 'you', ro: 'Nu, nu vreau nimic. Mersi.', en: 'No, I don\'t want anything. Thanks.' },
+        { who: 'them', ro: 'Nu mergi nicăieri azi?', en: 'Aren\'t you going anywhere today?' },
+        { who: 'you', ro: 'Nu, nu merg nicăieri. Stau acasă.', en: 'No, I\'m not going anywhere. I\'m staying in.' },
+        { who: 'them', ro: 'Nici eu. Hai să ne uităm la un film.', en: 'Me neither. Let\'s watch a film.' },
+        { who: 'you', ro: 'Bună idee!', en: 'Good idea!' },
+      ],
     },
     {
       kind: 'ladder',
