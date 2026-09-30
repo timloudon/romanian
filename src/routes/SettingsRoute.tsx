@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useOfflineStatus } from '../hooks/useConnectivity'
 import { useVoices } from '../hooks/useVoices'
 import { getDB } from '../storage/db'
 import { getSettings, updateSettings } from '../storage/settingsRepo'
@@ -7,6 +8,7 @@ const RATES = [0.75, 1, 1.25] as const
 
 export function SettingsRoute() {
   const { status, romanianVoice, englishVoice } = useVoices()
+  const offlineStatus = useOfflineStatus()
   const [playbackRate, setPlaybackRate] = useState(() => getSettings().playbackRate)
   const [resetDone, setResetDone] = useState(false)
 
@@ -30,11 +32,29 @@ export function SettingsRoute() {
         <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-muted">Voice</h2>
         <p className="mt-2 text-sm">
           {status === 'loading' && 'Checking for a Romanian voice…'}
-          {status === 'ready' && `Using "${romanianVoice?.name}" for Romanian.`}
+          {status === 'ready' &&
+            `Using "${romanianVoice?.name}" for Romanian — ${
+              romanianVoice?.localService ? 'on this device, so it works offline' : 'streamed, so it needs a connection'
+            }.`}
           {status === 'no-romanian-voice' &&
             'No Romanian voice found. On iPhone: Settings → Accessibility → Spoken Content → Voices → add Romanian.'}
         </p>
         {englishVoice && <p className="mt-1 text-sm text-ink-muted">Using "{englishVoice.name}" for English prompts.</p>}
+      </section>
+
+      <section className="mt-6">
+        <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-muted">Offline</h2>
+        <p className="mt-2 text-sm">
+          {offlineStatus === 'ready' &&
+            '✓ Saved on this device — lessons, Driving Mode and your progress all work without a connection.'}
+          {offlineStatus === 'pending' && 'Getting ready for offline use — open the app once more while connected.'}
+          {offlineStatus === 'unsupported' && "This browser can't save the app for offline use."}
+        </p>
+        <p className="mt-1 text-sm text-ink-muted">
+          Using it in Safari rather than from your Home Screen? Open it at least once a week — Safari
+          can clear sites that go unused for seven days, including their offline copy and your
+          progress. Home Screen apps are exempt.
+        </p>
       </section>
 
       <section className="mt-6">

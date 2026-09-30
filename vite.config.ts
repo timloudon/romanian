@@ -33,6 +33,10 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,woff2}'],
+        // On a first visit, take control of the open page as soon as everything is cached, so it
+        // works offline without needing a second load. Updates still wait for the "Reload" tap:
+        // this doesn't enable skipWaiting.
+        clientsClaim: true,
         runtimeCaching: [
           {
             // Set up now even though only the driving-mode keepalive file exists today —

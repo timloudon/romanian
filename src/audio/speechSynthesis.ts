@@ -39,7 +39,10 @@ export function getVoicesAsync(): Promise<SpeechSynthesisVoice[]> {
 }
 
 export function findVoice(voices: SpeechSynthesisVoice[], langPrefix: string): SpeechSynthesisVoice | undefined {
-  return voices.find((voice) => voice.lang.toLowerCase().startsWith(langPrefix))
+  const matching = voices.filter((voice) => voice.lang.toLowerCase().startsWith(langPrefix))
+  // Prefer on-device voices: some browsers (desktop/Android Chrome) also list streamed voices
+  // that fail without a connection. iPhone voices are all on-device.
+  return matching.find((voice) => voice.localService) ?? matching[0]
 }
 
 export interface SpeakOptions {

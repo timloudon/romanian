@@ -1,7 +1,9 @@
 import { Route, Routes, useLocation } from 'react-router-dom'
 import { InstallBanner } from './components/ui/InstallBanner'
 import { NavBar } from './components/ui/NavBar'
+import { OfflineBanner } from './components/ui/OfflineBanner'
 import { UpdateToast } from './components/ui/UpdateToast'
+import { usePWAUpdate } from './hooks/usePWAUpdate'
 import { DrivingModeRoute } from './routes/DrivingModeRoute'
 import { HomeRoute } from './routes/HomeRoute'
 import { LessonRoute } from './routes/LessonRoute'
@@ -11,12 +13,14 @@ import { WeekPracticeRoute } from './routes/WeekPracticeRoute'
 import { WeekRoute } from './routes/WeekRoute'
 
 function App() {
+  const pwa = usePWAUpdate()
   // Driving Mode is a deliberately chrome-free, full-viewport experience — no nav bar or
   // banners competing for space or attention while it's meant to be used hands-free.
   const isDriving = useLocation().pathname === '/driving'
 
   return (
     <div className="flex min-h-dvh flex-col bg-surface text-ink">
+      {!isDriving && <OfflineBanner />}
       {!isDriving && <InstallBanner />}
       <main className={isDriving ? 'flex-1' : 'flex-1 pb-20'}>
         <Routes>
@@ -29,7 +33,14 @@ function App() {
           <Route path="/settings" element={<SettingsRoute />} />
         </Routes>
       </main>
-      {!isDriving && <UpdateToast />}
+      {!isDriving && (
+        <UpdateToast
+          needRefresh={pwa.needRefresh}
+          onUpdate={pwa.update}
+          offlineReady={pwa.offlineReady}
+          onDismissOfflineReady={pwa.dismissOfflineReady}
+        />
+      )}
       {!isDriving && <NavBar />}
     </div>
   )
