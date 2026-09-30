@@ -70,6 +70,11 @@ export const aroundTheHouse: LifeTopic = {
       prompt: "I'm going to bed.",
       answer: 'Mă duc la culcare.',
     },
+    {
+      id: 'life-house-13',
+      prompt: 'Did you take the keys?',
+      answer: 'Ai luat cheile?',
+    },
   ],
   conversationPrompts: [
     'Divide up this week\'s chores with your partner in Romanian.',

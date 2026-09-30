@@ -72,6 +72,11 @@ export const mealtimes: LifeTopic = {
       prompt: 'Thanks, it was delicious.',
       answer: 'Mulțumesc, a fost delicios.',
     },
+    {
+      id: 'life-mealtimes-13',
+      prompt: "Anything's fine.",
+      answer: 'Orice e bine.',
+    },
   ],
   conversationPrompts: [
     'Decide what to eat in Romanian every evening this week — start with "Ce mâncăm diseară?" and settle it without switching to English.',

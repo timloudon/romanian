@@ -82,6 +82,12 @@ export const hisDay: LifeTopic = {
       prompt: 'He laughed so much.',
       answer: 'A râs atât de mult.',
     },
+    {
+      id: 'life-his-day-14',
+      prompt: "He's crying again.",
+      answer: 'Iar plânge.',
+      teachingNote: '"Iar" at the front — "again" — usually said with a sigh.',
+    },
   ],
   conversationPrompts: [
     'Every evening this week, ask your partner "Ce a făcut cel mic azi?" — and when they ask you back, answer in Romanian, even if it\'s just "A dormit bine."',

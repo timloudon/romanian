@@ -2,6 +2,7 @@ import type { Unit } from '../../types'
 
 export const unit03: Unit = {
   id: 'u03',
+  stage: 'Foundations',
   title: 'What happened — talking about the past',
   lessons: [
     {

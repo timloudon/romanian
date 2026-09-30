@@ -2,6 +2,7 @@ import type { Unit } from '../../types'
 
 export const unit07: Unit = {
   id: 'u07',
+  stage: 'Building up',
   title: 'What will happen',
   lessons: [
     {
@@ -72,6 +73,41 @@ export const unit07: Unit = {
           id: 'u07-l02-d05',
           prompt: 'They will come too.',
           answer: 'O să vină și ei.',
+        },
+      ],
+    },
+    {
+      id: 'u07-l03',
+      title: 'The formal future — "va, vom, vor"',
+      intro:
+        'You\'ll hear a second future on the news, in announcements, and from older relatives: "va" plus the plain verb. Recognising it matters more than using it — "o să" is what you\'ll actually say.',
+      drills: [
+        {
+          id: 'u07-l03-d01',
+          prompt: 'It will rain.',
+          answer: 'Va ploua.',
+          teachingNote: '"Va" plus the plain verb — the weather forecast\'s future.',
+        },
+        {
+          id: 'u07-l03-d02',
+          prompt: "We'll see.",
+          answer: 'Vom vedea.',
+          acceptedAlternates: ['O să vedem.'],
+        },
+        {
+          id: 'u07-l03-d03',
+          prompt: "They'll come tomorrow.",
+          answer: 'Vor veni mâine.',
+        },
+        {
+          id: 'u07-l03-d04',
+          prompt: "You'll see!",
+          answer: 'Vei vedea!',
+        },
+        {
+          id: 'u07-l03-d05',
+          prompt: '(politely) What will you do?',
+          answer: 'Ce veți face?',
         },
       ],
     },

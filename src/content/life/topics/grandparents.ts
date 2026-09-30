@@ -74,6 +74,11 @@ export const grandparents: LifeTopic = {
       answer: 'Te pup, pa!',
       teachingNote: '"Te pup" (literally "I kiss you") is how family calls end — as automatic as "love you, bye."',
     },
+    {
+      id: 'life-grandparents-13',
+      prompt: 'Is she coming too?',
+      answer: 'Vine și ea?',
+    },
   ],
   conversationPrompts: [
     'On your next call with family, say at least three things in Romanian — even just "Uite, e bunica!" and "Te pup, pa!"',

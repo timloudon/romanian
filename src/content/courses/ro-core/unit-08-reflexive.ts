@@ -2,6 +2,7 @@ import type { Unit } from '../../types'
 
 export const unit08: Unit = {
   id: 'u08',
+  stage: 'Building up',
   title: 'Talking about yourself — reflexive verbs',
   lessons: [
     {

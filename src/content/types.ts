@@ -45,8 +45,12 @@ export interface Lesson {
   drills: Drill[]
 }
 
+/** Groups units on Home into a visible progression. Units are still freely navigable. */
+export type CourseStage = 'Foundations' | 'Building up' | 'Complex conversation'
+
 export interface Unit {
   id: string
+  stage: CourseStage
   title: string
   lessons: Lesson[]
 }

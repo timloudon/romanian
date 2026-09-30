@@ -71,6 +71,11 @@ export const weekends: LifeTopic = {
       answer: 'Hai să mergem acasă.',
       acceptedAlternates: ['Hai acasă.'],
     },
+    {
+      id: 'life-weekends-13',
+      prompt: 'We had a walk around town.',
+      answer: 'Ne-am plimbat prin oraș.',
+    },
   ],
   conversationPrompts: [
     'Plan Saturday with your partner in Romanian — where, when, what to bring.',
