@@ -177,6 +177,14 @@ export const future: StructureLesson = {
       ],
     },
     {
+      kind: 'explain',
+      title: 'Two more futures you\'ll hear',
+      body: [
+        '{{am să merg}} — a slightly more careful everyday future: "I\'m to go". {{Am să-ți spun.}} — I\'ll tell you.',
+        'In Moldova and from older people: {{oi merge}} — "I\'ll go". Recognise both; {{o să}} still does everything you need.',
+      ],
+    },
+    {
       kind: 'ladder',
       title: 'Build it up',
       rungs: [
@@ -562,4 +570,76 @@ export const would: StructureLesson = {
   shortcut: "'d = aș / ai / ar + the plain verb. Should = ar trebui. Could you…? = Ai putea să…?",
   useItToday: 'Ask for something politely today with "Aș vrea…" or "Ai putea să…?"',
   seeAlso: { lessonId: 'u09-l01', label: 'Course: "Aș vrea..." — a softer way to ask' },
+}
+
+export const agoAndIn: StructureLesson = {
+  id: 's-ago',
+  part: 'Time',
+  title: 'Ago, in, every, twice',
+  tagline: '"Two years ago" = "now two years": acum doi ani.',
+  shift: {
+    english: 'English says "two years ago", "in an hour", "every day", "twice a week".',
+    romanian: 'Romanian puts the time word first: {{acum doi ani}} ("now two years"), {{peste o oră}} ("over an hour"), {{în fiecare zi}}, {{de două ori}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Ago and in',
+      body: [
+        '{{acum}} + time = ago: {{acum doi ani}} — two years ago. {{acum o oră}} — an hour ago.',
+        '{{peste}} + time = in (from now): {{peste o oră}} — in an hour. {{peste o săptămână}} — in a week.',
+      ],
+      glosses: [
+        { ro: 'Acum doi ani.', words: [['Acum', 'now'], ['doi ani', 'two years']], en: 'Two years ago.' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Every, once, twice, sometimes',
+      body: [
+        '{{în fiecare zi}} — every day. {{o dată}} — once. {{de două ori}} — twice. {{de trei ori pe săptămână}} — three times a week.',
+        '{{mereu}} — always · {{uneori}} — sometimes · {{rar}} — rarely · {{zilnic}} — daily.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Last, next, and the two extra days',
+      body: [
+        '{{anul trecut}} — last year · {{săptămâna viitoare}} — next week · {{luna asta}} — this month.',
+        'Romanian has single words for {{alaltăieri}} — the day before yesterday — and {{poimâine}} — the day after tomorrow.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'When?',
+      rungs: [
+        { id: 's56-01', prompt: 'Two years ago.', answer: 'Acum doi ani.' },
+        { id: 's56-02', prompt: 'An hour ago.', answer: 'Acum o oră.' },
+        { id: 's56-03', prompt: 'We met ten years ago.', answer: 'Ne-am cunoscut acum zece ani.' },
+        { id: 's56-04', prompt: 'In an hour.', answer: 'Peste o oră.' },
+        { id: 's56-05', prompt: 'I\'ll be home in ten minutes.', answer: 'Ajung acasă peste zece minute.' },
+        { id: 's56-06', prompt: 'Every day.', answer: 'În fiecare zi.' },
+        { id: 's56-07', prompt: 'Twice a week.', answer: 'De două ori pe săptămână.' },
+        { id: 's56-08', prompt: 'Once a year.', answer: 'O dată pe an.' },
+        { id: 's56-09', prompt: 'Sometimes.', answer: 'Uneori.' },
+        { id: 's56-10', prompt: 'Last year.', answer: 'Anul trecut.' },
+        { id: 's56-11', prompt: 'The day after tomorrow.', answer: 'Poimâine.' },
+        { id: 's56-12', prompt: 'The day before yesterday.', answer: 'Alaltăieri.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"Three days ago."',
+      options: [{ text: 'Trei zile acum.' }, { text: 'Acum trei zile.', correct: true }],
+      explanation: '"Ago" comes first, as acum: acum trei zile.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'We go to Romania once a year.',
+      answer: 'Mergem în România o dată pe an.',
+      distractors: ['fiecare', 'de'],
+    },
+  ],
+  shortcut: 'Ago = acum + time. In (from now) = peste + time. Every = în fiecare. Twice = de două ori. Last year = anul trecut.',
+  useItToday: 'Tell your partner one thing that happened "acum…" and one that\'s happening "peste…".',
 }

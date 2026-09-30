@@ -216,3 +216,69 @@ export const neverDropThat: StructureLesson = {
   useItToday: 'Give an opinion today starting with "Cred că…" — about food, the weather, anything.',
   seeAlso: { lessonId: 'u15-l01', label: 'Course: "Cred că…" — giving an opinion' },
 }
+
+export const storytelling: StructureLesson = {
+  id: 's-story',
+  part: 'Joining ideas',
+  title: 'Telling a story: and then, suddenly, in the end',
+  tagline: 'Mai întâi, apoi, deodată, până la urmă.',
+  shift: {
+    english: 'Stories run on "first", "and then", "suddenly", "in the end".',
+    romanian: 'So do Romanian ones: {{mai întâi}}, {{apoi}}, {{deodată}}, {{până la urmă}} — with scenery in the {{mâncam}} form and events in the {{am mâncat}} form.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Sequencing words',
+      body: [
+        '{{mai întâi}} — first · {{apoi}} / {{pe urmă}} — then · {{după aceea}} — after that · {{între timp}} — meanwhile',
+        '{{deodată}} — suddenly · {{până la urmă}} — in the end · {{în sfârșit}} — finally, at last',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Scenery and events, together',
+      body: [
+        '{{Era târziu și ploua}} (scenery) {{când deodată a sunat telefonul}} (event). Scenery takes the -am forms; events take am / a + done.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Keeping your listener with you',
+      body: [
+        '{{Și știi ce?}} — and you know what? · {{Închipuie-ți!}} — imagine! · {{Pe scurt…}} — in short… · {{Ce să-ți mai zic…}} — what can I tell you…',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Tell it',
+      rungs: [
+        { id: 's65-01', prompt: 'First, we had breakfast.', answer: 'Mai întâi am luat micul dejun.' },
+        { id: 's65-02', prompt: 'Then we went to the park.', answer: 'Apoi am mers în parc.' },
+        { id: 's65-03', prompt: 'After that, it started raining.', answer: 'După aceea a început să plouă.' },
+        { id: 's65-04', prompt: 'Suddenly he started crying.', answer: 'Deodată a început să plângă.' },
+        { id: 's65-05', prompt: 'Meanwhile, Grandma was cooking.', answer: 'Între timp, bunica gătea.' },
+        { id: 's65-06', prompt: 'In the end, we went home.', answer: 'Până la urmă, am mers acasă.' },
+        { id: 's65-07', prompt: 'Finally, he fell asleep!', answer: 'În sfârșit, a adormit!' },
+        { id: 's65-08', prompt: 'It was late and it was raining.', answer: 'Era târziu și ploua.' },
+        { id: 's65-09', prompt: 'And you know what?', answer: 'Și știi ce?' },
+        { id: 's65-10', prompt: 'Imagine!', answer: 'Închipuie-ți!' },
+        { id: 's65-11', prompt: 'In short, it was a lovely day.', answer: 'Pe scurt, a fost o zi frumoasă.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"In the end we stayed at home."',
+      options: [{ text: 'Până la urmă am stat acasă.', correct: true }, { text: 'În urmă am stat acasă.' }],
+      explanation: 'În urmă means "behind" or "back then". In the end = până la urmă.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'Then suddenly the phone rang.',
+      answer: 'Apoi deodată a sunat telefonul.',
+      distractors: ['după', 'sună'],
+    },
+  ],
+  shortcut: 'Mai întâi → apoi → după aceea → deodată → până la urmă → în sfârșit. Scenery with -am, events with am / a + done.',
+  useItToday: 'Tell your partner about your day as a story tonight, using at least four of these.',
+}

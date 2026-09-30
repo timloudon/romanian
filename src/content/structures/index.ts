@@ -12,6 +12,8 @@ import {
   someAny,
   whileDoing,
   wordBuilding,
+  ownThings,
+  thingsToDo,
 } from './lessons/advanced'
 import {
   genitive,
@@ -24,7 +26,7 @@ import {
   whoWhich,
   wouldHave,
 } from './lessons/going-further'
-import { commands, neverDropThat } from './lessons/joining-ideas'
+import { commands, neverDropThat, storytelling } from './lessons/joining-ideas'
 import {
   beIsHave,
   comparing,
@@ -35,6 +37,8 @@ import {
   theOnTheEnd,
   thisAndThat,
   toMe,
+  plurals,
+  toSomeone,
 } from './lessons/people-and-things'
 import {
   canAndKnow,
@@ -45,27 +49,47 @@ import {
   questions,
   saBridge,
   verbFamilies,
+  sounds,
+  verbPairs,
+  verbPrepositions,
 } from './lessons/starting-from-english'
-import { fillers, getTakeMake, idioms, numbersAndTime, polite, wordOrder } from './lessons/sounding-natural'
-import { future, past, since, usedTo, would } from './lessons/time'
+import {
+  exclaiming,
+  fillers,
+  getTakeMake,
+  greetings,
+  idioms,
+  numbersAndTime,
+  opinions,
+  polite,
+  requests,
+  streetRomanian,
+  wordOrder,
+} from './lessons/sounding-natural'
+import { agoAndIn, future, past, since, usedTo, would } from './lessons/time'
 import type { StructureLesson, StructurePart } from './types'
 
 /** In suggested order — each lesson leans only on the ones before it, but any can be opened. */
 export const structureLessons: StructureLesson[] = [
   cognates,
+  sounds,
   noIng,
   endings,
   verbFamilies,
   questions,
   saBridge,
   canAndKnow,
+  verbPairs,
+  verbPrepositions,
   doubleNegatives,
   past,
   future,
   since,
+  agoAndIn,
   usedTo,
   would,
   theOnTheEnd,
+  plurals,
   places,
   possession,
   thisAndThat,
@@ -74,11 +98,14 @@ export const structureLessons: StructureLesson[] = [
   toMe,
   myself,
   himHer,
+  toSomeone,
   commands,
   neverDropThat,
+  storytelling,
   saAlone,
   wouldHave,
   genitive,
+  ownThings,
   stillAlready,
   handySe,
   twoLittleWords,
@@ -97,12 +124,18 @@ export const structureLessons: StructureLesson[] = [
   asIf,
   someAny,
   wordBuilding,
+  thingsToDo,
+  greetings,
+  requests,
+  exclaiming,
   getTakeMake,
   fillers,
   idioms,
   wordOrder,
   polite,
+  opinions,
   numbersAndTime,
+  streetRomanian,
 ]
 
 export const structureParts: { part: StructurePart; blurb: string }[] = [

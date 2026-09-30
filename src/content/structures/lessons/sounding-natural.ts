@@ -425,3 +425,358 @@ export const numbersAndTime: StructureLesson = {
   shortcut: 'From 20 up, add de. Quarter to = fără un sfert; half past = și jumătate. On Monday = luni; on Mondays = lunea. On the 5th = pe cinci.',
   useItToday: 'Every time you check the clock today, say it in Romanian: "E patru fără zece."',
 }
+
+export const greetings: StructureLesson = {
+  id: 's-greetings',
+  part: 'Sounding natural',
+  title: 'Hello, goodbye and sărut-mâna',
+  tagline: 'Which greeting for whom — from ceau to sărut-mâna.',
+  shift: {
+    english: 'English gets by with "hi", "hello" and "bye" for almost everyone.',
+    romanian: 'Romanian greetings change with who you\'re talking to and the time of day: {{ceau}} for friends, {{bună ziua}} for strangers, {{sărut-mâna}} for older women.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'By time of day',
+      body: [
+        '{{Bună dimineața}} — good morning (until about eleven) · {{Bună ziua}} — the polite all-day hello · {{Bună seara}} — good evening · {{Noapte bună}} — good night, only when someone\'s off to bed.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'By who you\'re talking to',
+      body: [
+        'Friends and family: {{Bună!}}, {{Salut!}}, {{Ceau!}} (hi and bye). Strangers and shops: {{Bună ziua}}.',
+        'Older women — your partner\'s mum, a grandma — traditionally get {{Sărut-mâna}}, "I kiss your hand": said, not done. It\'s fading in cities, but many older Romanians love hearing it. Ask your partner what their family does.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Goodbye',
+      body: [
+        '{{Pa!}} — bye · {{La revedere}} — goodbye (polite) · {{Pe curând!}} — see you soon · {{Ne vedem!}} — see you · {{Numai bine!}} — all the best · {{O zi bună!}} — have a good day.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'How are you?',
+      body: [
+        '{{Ce faci?}} (friends) / {{Ce mai faceți?}} (polite). Answers: {{Bine, mersi.}} · {{Merge.}} — not bad ("it goes") · {{Ca de obicei.}} — same as ever.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Say hello',
+      rungs: [
+        { id: 's60-01', prompt: '(in a shop) Hello!', answer: 'Bună ziua!' },
+        { id: 's60-02', prompt: 'Good evening!', answer: 'Bună seara!' },
+        { id: 's60-03', prompt: '(to a friend) Hi!', answer: 'Salut!' },
+        { id: 's60-04', prompt: '(to your partner\'s mum) Hello!', answer: 'Sărut-mâna!' },
+        { id: 's60-05', prompt: 'Bye!', answer: 'Pa!' },
+        { id: 's60-06', prompt: '(politely) Goodbye.', answer: 'La revedere.' },
+        { id: 's60-07', prompt: 'See you soon!', answer: 'Pe curând!' },
+        { id: 's60-08', prompt: 'All the best!', answer: 'Numai bine!' },
+        { id: 's60-09', prompt: 'Have a good day!', answer: 'O zi bună!' },
+        { id: 's60-10', prompt: 'Not bad.', answer: 'Merge.' },
+        { id: 's60-11', prompt: 'Same as ever.', answer: 'Ca de obicei.' },
+        { id: 's60-12', prompt: 'Fine, thanks — and you?', answer: 'Bine, mersi. Tu?' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: 'Arriving at your partner\'s grandma\'s house:',
+      options: [{ text: 'Ceau!' }, { text: 'Sărut-mâna!', correct: true }],
+      explanation: 'Ceau is for friends. An older woman in the family traditionally gets sărut-mâna.',
+    },
+    {
+      kind: 'assemble',
+      prompt: '(politely) Good evening, how are you?',
+      answer: 'Bună seara, ce mai faceți?',
+      distractors: ['faci', 'noapte'],
+    },
+  ],
+  shortcut: 'Friends: bună / salut / ceau. Strangers: bună ziua. Older women: sărut-mâna. Bye: pa, la revedere, pe curând. Noapte bună only at bedtime.',
+  useItToday: 'Greet the next shop assistant with "Bună ziua" and leave with "O zi bună!".',
+}
+
+export const requests: StructureLesson = {
+  id: 's-requests',
+  part: 'Sounding natural',
+  title: 'Asking, offering, thanking: poftim and friends',
+  tagline: '"Can I have…?" is "Will you give me…?" — îmi dați…?',
+  shift: {
+    english: 'English asks "Can I have…?" and says "please" constantly.',
+    romanian: 'Romanian asks "will you give me?" — {{Îmi dați…?}} — and has a set of little words for handing over and thanking: {{poftim}}, {{cu plăcere}}, {{n-ai pentru ce}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Asking for things',
+      body: [
+        '{{Îmi dați…?}} (polite) / {{Îmi dai…?}} — "will you give me…?": {{Îmi dați o cafea, vă rog?}} — can I have a coffee, please?',
+        '{{Aș vrea…}} and {{Pot să…?}} work too.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Poftim: one word, many jobs',
+      body: [
+        '{{Poftim!}} — here you are (handing something over) · {{Poftim?}} — pardon? · {{Poftiți!}} — come in / go ahead · {{Serviți!}} — help yourselves.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Thanks, and the replies',
+      body: [
+        '{{Mersi}} / {{Mulțumesc}} — thanks. Replies: {{Cu plăcere}} — you\'re welcome · {{N-ai pentru ce}} — don\'t mention it ("you have nothing for what") · {{Nu-i nimic}} — no problem.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Sorry and excuse me',
+      body: [
+        '{{Pardon!}} / {{Scuze!}} — sorry (bumping into someone) · {{Scuzați-mă}} — excuse me (to get attention) · {{Îmi pare rău}} — I\'m sorry (real regret).',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Ask and thank',
+      rungs: [
+        { id: 's63-01', prompt: '(in a café) Can I have a coffee, please?', answer: 'Îmi dați o cafea, vă rog?' },
+        { id: 's63-02', prompt: 'Will you pass me the bread?', answer: 'Îmi dai pâinea?' },
+        { id: 's63-03', prompt: 'Here you are!', answer: 'Poftim!' },
+        { id: 's63-04', prompt: 'Pardon?', answer: 'Poftim?' },
+        { id: 's63-05', prompt: 'You\'re welcome.', answer: 'Cu plăcere.' },
+        { id: 's63-06', prompt: 'Don\'t mention it.', answer: 'N-ai pentru ce.' },
+        { id: 's63-07', prompt: '(bumping into someone) Sorry!', answer: 'Pardon!' },
+        { id: 's63-08', prompt: '(politely) Excuse me…', answer: 'Scuzați-mă…' },
+        { id: 's63-09', prompt: 'No, thanks.', answer: 'Nu, mulțumesc.' },
+        { id: 's63-10', prompt: '(politely) The bill, please.', answer: 'Nota, vă rog.' },
+        { id: 's63-11', prompt: '(to guests) Help yourselves!', answer: 'Serviți, vă rog!' },
+        { id: 's63-12', prompt: 'Thanks a lot!', answer: 'Mersi mult!' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: 'Someone thanks you for a small favour. You say:',
+      options: [{ text: 'Poftim?' }, { text: 'N-ai pentru ce.', correct: true }, { text: 'Pardon.' }],
+      explanation: 'N-ai pentru ce — "don\'t mention it". Poftim? would be "pardon?", and pardon is "sorry".',
+    },
+    {
+      kind: 'assemble',
+      prompt: '(politely) Can I have the menu, please?',
+      answer: 'Îmi dați meniul, vă rog?',
+      distractors: ['poftim', 'îți'],
+    },
+  ],
+  shortcut: 'Can I have…? = Îmi dați / dai…? Poftim = here you are / pardon? Cu plăcere, n-ai pentru ce = you\'re welcome. Pardon / scuze = sorry.',
+  useItToday: 'Order something today with "Îmi dați…, vă rog?" and hand things over with "Poftim!".',
+}
+
+export const exclaiming: StructureLesson = {
+  id: 's-exclaim',
+  part: 'Sounding natural',
+  title: 'What a…!: ce frumos, vai, of',
+  tagline: 'Ce frumos! Vai de mine! Aoleu!',
+  shift: {
+    english: 'English exclaims with "how lovely!", "what a mess!", "oh no!", "wow!".',
+    romanian: 'Romanian uses {{ce}} for all of them — {{Ce frumos!}}, {{Ce mizerie!}} — plus a set of little sounds: {{vai}}, {{of}}, {{aoleu}}, {{ura}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Ce…!',
+      body: [
+        '{{ce}} + anything = "how…!" or "what a…!": {{Ce frumos!}} — how lovely! {{Ce drăguț!}} — how sweet! {{Ce mizerie!}} — what a mess! {{Ce păcat!}} — what a shame!',
+        'No "a" after it: {{Ce zi!}} — what a day!',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Little sounds',
+      body: [
+        '{{Vai!}} — oh! (surprise or sympathy) · {{Vai de mine!}} — oh my! · {{Of!}} — sigh, ugh · {{Aoleu!}} — ouch, oh no! · {{Ura!}} — hooray! · {{Uau!}} — wow!',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Praise',
+      body: [
+        '{{Bravo!}} — well done · {{Super!}} — great · {{Minunat!}} — wonderful · {{Ce bine!}} — how good, great!',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'React',
+      rungs: [
+        { id: 's61-01', prompt: 'How lovely!', answer: 'Ce frumos!' },
+        { id: 's61-02', prompt: 'How sweet!', answer: 'Ce drăguț!' },
+        { id: 's61-03', prompt: '(to him) How big you\'ve got!', answer: 'Ce mare te-ai făcut!' },
+        { id: 's61-04', prompt: 'What a mess!', answer: 'Ce mizerie!' },
+        { id: 's61-05', prompt: 'What a shame!', answer: 'Ce păcat!' },
+        { id: 's61-06', prompt: 'Great, how good!', answer: 'Ce bine!' },
+        { id: 's61-07', prompt: 'Oh my!', answer: 'Vai de mine!' },
+        { id: 's61-08', prompt: 'Ouch!', answer: 'Aoleu!' },
+        { id: 's61-09', prompt: 'Hooray!', answer: 'Ura!' },
+        { id: 's61-10', prompt: 'Wonderful!', answer: 'Minunat!' },
+        { id: 's61-11', prompt: 'How cold it is!', answer: 'Ce frig e!' },
+        { id: 's61-12', prompt: 'What a day!', answer: 'Ce zi!' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"What a shame!"',
+      options: [{ text: 'Ce o păcat!' }, { text: 'Ce păcat!', correct: true }],
+      explanation: 'No "a" after ce: ce păcat, ce zi, ce frumos.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'How quickly time goes!',
+      answer: 'Ce repede trece timpul!',
+      distractors: ['cât', 'o'],
+    },
+  ],
+  shortcut: 'How…! / What a…! = Ce…!: ce frumos, ce păcat, ce mizerie. Vai = oh!, of = ugh, aoleu = ouch / oh no, ura = hooray.',
+  useItToday: 'React in Romanian today — "Ce frumos!", "Vai!", "Ce păcat!".',
+}
+
+export const opinions: StructureLesson = {
+  id: 's-opinions',
+  part: 'Sounding natural',
+  title: 'Having an opinion like an adult',
+  tagline: 'Sunt de acord, nu prea cred, pe de altă parte.',
+  shift: {
+    english: 'Adult conversation needs "in my view", "I agree", "not really", "on the other hand".',
+    romanian: 'Romanian has ready-made chunks for all of it: {{sunt de acord}}, {{nu prea}}, {{pe de altă parte}}, {{din punctul meu de vedere}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Giving your view',
+      body: [
+        '{{Cred că…}} · {{Mi se pare că…}} — it seems to me · {{După mine…}} — if you ask me · {{Din punctul meu de vedere…}} — from my point of view · {{Sincer…}} — honestly…',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Agreeing and disagreeing',
+      body: [
+        '{{Sunt de acord.}} — I agree · {{Așa e.}} — that\'s right · {{Ai dreptate.}}',
+        '{{Nu prea cred.}} — I don\'t really think so · {{Da, dar…}} — yes, but… · {{Nu știu dacă…}} — I\'m not sure whether…',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Nu prea: the soft no',
+      body: [
+        '{{nu prea}} — "not really, not much" — is everywhere: {{Nu prea îmi place.}} — I don\'t really like it. {{Nu prea am timp.}} — I haven\'t really got time. A gentle, very Romanian "no".',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Weighing it up',
+      body: [
+        '{{Pe de o parte…, pe de altă parte…}} — on the one hand…, on the other… · {{Depinde.}} · {{De fapt…}} — actually · {{În orice caz…}} — in any case · {{Cu alte cuvinte…}} — in other words.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Say what you think',
+      rungs: [
+        { id: 's64-01', prompt: 'I agree.', answer: 'Sunt de acord.' },
+        { id: 's64-02', prompt: 'That\'s right.', answer: 'Așa e.' },
+        { id: 's64-03', prompt: 'It seems to me he\'s right.', answer: 'Mi se pare că are dreptate.' },
+        { id: 's64-04', prompt: 'If you ask me, it\'s a good idea.', answer: 'După mine, e o idee bună.' },
+        { id: 's64-05', prompt: 'Honestly, I don\'t know.', answer: 'Sincer, nu știu.' },
+        { id: 's64-06', prompt: 'I don\'t really think so.', answer: 'Nu prea cred.' },
+        { id: 's64-07', prompt: 'I don\'t really like it.', answer: 'Nu prea îmi place.' },
+        { id: 's64-08', prompt: 'Yes, but it\'s far.', answer: 'Da, dar e departe.' },
+        { id: 's64-09', prompt: 'On the one hand it\'s cheap, on the other it\'s far.', answer: 'Pe de o parte e ieftin, pe de altă parte e departe.' },
+        { id: 's64-10', prompt: 'Actually, I\'ve changed my mind.', answer: 'De fapt, m-am răzgândit.' },
+        { id: 's64-11', prompt: 'In other words, no.', answer: 'Cu alte cuvinte, nu.' },
+        { id: 's64-12', prompt: 'In any case, we\'ll see.', answer: 'În orice caz, vom vedea.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"I haven\'t really got time."',
+      options: [{ text: 'Nu prea am timp.', correct: true }, { text: 'Nu am timp prea.' }],
+      explanation: 'Nu prea goes before the verb: nu prea am, nu prea cred, nu prea îmi place.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'From my point of view, it\'s worth it.',
+      answer: 'Din punctul meu de vedere, merită.',
+      distractors: ['la', 'e'],
+    },
+  ],
+  shortcut: 'Cred că / mi se pare că / după mine. Sunt de acord / așa e. Nu prea = not really. Pe de o parte… pe de altă parte. De fapt = actually.',
+  useItToday: 'Next time you discuss plans, weigh it up in Romanian: "Pe de o parte…, pe de altă parte…".',
+}
+
+export const streetRomanian: StructureLesson = {
+  id: 's-heard',
+  part: 'Sounding natural',
+  title: 'What you\'ll hear but won\'t see written',
+  tagline: 'Io, îs, mă, las\' că, mișto.',
+  shift: {
+    english: 'Spoken English squashes words — gonna, wanna, dunno — and adds "mate", "like".',
+    romanian: 'Spoken Romanian does too: {{io}} for eu, {{îs}} for sunt, {{mă}} tacked onto sentences like "mate", {{las\' că}} for "never mind".',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Squashed words',
+      body: [
+        '{{io}} — eu (I) · {{îs}} — sunt (am / are), especially in Moldova and Transylvania · {{las\'}} — lasă · {{dom\'le}} — domnule (mister, used like "mate").',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Mă and bă',
+      body: [
+        'Friends — especially men — sprinkle {{mă}} into sentences like "mate": {{Hai, mă!}} — come on! {{Ce faci, mă?}}',
+        '{{bă}} is blunter — fine between close friends, not with in-laws.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Handy spoken phrases',
+      body: [
+        '{{Las\' că…}} — never mind, don\'t worry · {{Hai că…}} — OK then, come on then · {{Nu-i bai}} — no worries (Transylvania) · {{mișto}} — cool · {{nașpa}} — rubbish, lame.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Why it matters',
+      body: [
+        'You don\'t need to say these. But you\'ll hear them constantly from your partner\'s friends and family — and recognising them is half of understanding fast speech.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Casual Romanian',
+      rungs: [
+        { id: 's62-01', prompt: '(casual) I don\'t know, mate.', answer: 'Nu știu, mă.' },
+        { id: 's62-02', prompt: '(casual) Come on!', answer: 'Hai, mă!' },
+        { id: 's62-03', prompt: '(casual) Never mind, it\'s fine.', answer: 'Las\' că e bine.' },
+        { id: 's62-04', prompt: '(casual) OK then, see you!', answer: 'Hai că ne vedem!' },
+        { id: 's62-05', prompt: '(casual) Cool!', answer: 'Mișto!' },
+        { id: 's62-06', prompt: '(casual) That\'s rubbish.', answer: 'E nașpa.' },
+        { id: 's62-07', prompt: '(Transylvania) No worries.', answer: 'Nu-i bai.' },
+        { id: 's62-08', prompt: '(casual, Moldova) They\'re at home.', answer: 'Îs acasă.' },
+        { id: 's62-09', prompt: '(casual) Me? I don\'t know.', answer: 'Io? Nu știu.' },
+        { id: 's62-10', prompt: '(casual) Leave it!', answer: 'Las-o!' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: 'A friend of your partner says "Îs obosit, mă." He means:',
+      options: [{ text: 'I\'m tired, mate.', correct: true }, { text: 'He\'s tired of me.' }, { text: 'Are you tired?' }],
+      explanation: 'Îs = sunt (I am), and mă is just "mate".',
+    },
+  ],
+  shortcut: 'Io = eu, îs = sunt, las\' = lasă, mă = "mate", mișto = cool, nașpa = rubbish, las\' că = never mind. Recognise them; use them sparingly.',
+  useItToday: 'Listen for "mă", "las\' că" and "hai că" in the next Romanian conversation you hear.',
+}

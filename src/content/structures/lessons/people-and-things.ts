@@ -858,3 +858,142 @@ export const beIsHave: StructureLesson = {
   shortcut: 'Right, lucky, careful, age, need, time → have: am dreptate, am noroc, am 40 de ani. "There is" = e / sunt.',
   useItToday: 'Tell your partner "Ai dreptate" at least once today — good for the relationship, and for your Romanian.',
 }
+
+export const plurals: StructureLesson = {
+  id: 's-plurals',
+  part: 'People and things',
+  title: 'Plurals, and the third gender',
+  tagline: 'Un scaun, două scaune — "un" in the singular, "o" in the plural.',
+  shift: {
+    english: 'English makes almost every plural with -s.',
+    romanian: 'Romanian has three plural endings — {{-i}}, {{-e}}, {{-uri}} — and a third kind of word: an un-word in the singular, an o-word in the plural.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'The three endings',
+      body: [
+        '**-i** — most un-words, and many o-words: {{un prieten}} → {{doi prieteni}}; {{o carte}} → {{două cărți}}.',
+        '**-e** — most o-words ending in -ă: {{o casă}} → {{două case}}.',
+        '**-uri** — lots of short words: {{un tren}} → {{două trenuri}}, {{un lucru}} → {{două lucruri}}.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The third gender',
+      body: [
+        'Some words are "un" in the singular but behave like "o" in the plural: {{un scaun}} → {{două scaune}}, {{un ou}} → {{două ouă}}.',
+        'That\'s why they take {{două}}, {{astea}} and {{mele}} in the plural. They\'re nearly always things, not people.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Sound changes',
+      body: [
+        'Plurals often nudge a vowel or the last consonant: {{carte}} → {{cărți}}, {{băiat}} → {{băieți}}, {{om}} → {{oameni}}, {{zi}} → {{zile}}, {{soră}} → {{surori}}.',
+        'It\'s the one thing you can\'t reliably guess — so learn the plural along with each new word.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'One, two',
+      rungs: [
+        { id: 's53-01', prompt: 'One friend, two friends.', answer: 'Un prieten, doi prieteni.' },
+        { id: 's53-02', prompt: 'One house, two houses.', answer: 'O casă, două case.' },
+        { id: 's53-03', prompt: 'One book, two books.', answer: 'O carte, două cărți.' },
+        { id: 's53-04', prompt: 'One chair, two chairs.', answer: 'Un scaun, două scaune.' },
+        { id: 's53-05', prompt: 'One egg, two eggs.', answer: 'Un ou, două ouă.' },
+        { id: 's53-06', prompt: 'Two trains.', answer: 'Două trenuri.' },
+        { id: 's53-07', prompt: 'Two children.', answer: 'Doi copii.' },
+        { id: 's53-08', prompt: 'Two days.', answer: 'Două zile.' },
+        { id: 's53-09', prompt: 'My sisters.', answer: 'Surorile mele.' },
+        { id: 's53-10', prompt: 'These things are mine.', answer: 'Lucrurile astea sunt ale mele.', teachingNote: 'Lucru is third-gender, so in the plural: astea, ale mele.' },
+        { id: 's53-11', prompt: 'Two coffees and two teas.', answer: 'Două cafele și două ceaiuri.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"Two eggs."',
+      options: [{ text: 'Doi ouă' }, { text: 'Două ouă', correct: true }],
+      explanation: 'Un ou in the singular, but o-like in the plural — două.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'The children\'s toys are on the chairs.',
+      answer: 'Jucăriile copiilor sunt pe scaune.',
+      distractors: ['scaunele', 'copii'],
+    },
+  ],
+  shortcut: 'Plurals: -i, -e or -uri. Un-words that turn "o" in the plural (un scaun → două scaune) take două, astea, mele. Learn each plural with the word.',
+  useItToday: 'Count things round the house in twos: "două căni, două scaune, doi pantofi".',
+}
+
+export const toSomeone: StructureLesson = {
+  id: 's-dative',
+  part: 'People and things',
+  title: 'To him, to Mum: giving and telling',
+  tagline: 'Îi spun mamei — "to-her I-tell, to-Mum".',
+  shift: {
+    english: '"I gave Andrei the book", "tell Mum" — English just puts the person next to the verb.',
+    romanian: 'Romanian marks the person receiving it: a heads-up {{îi}} before the verb, plus {{lui}} or an ending — {{Îi spun mamei}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'The heads-up and the person',
+      body: [
+        'Giving, telling, showing, sending: whoever receives it gets a heads-up {{îi}} ("to him / to her") before the verb, then the person with a "to" marking.',
+        '{{Îi dau lui Andrei cartea.}} — I\'m giving Andrei the book. {{Îi spun mamei.}} — I\'ll tell Mum.',
+      ],
+      glosses: [
+        { ro: 'Îi spun mamei.', words: [['Îi', 'to-her'], ['spun', 'I-tell'], ['mamei', 'to-Mum']], en: 'I\'ll tell Mum.' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The "to" marking',
+      body: [
+        'Men\'s names and family words: {{lui}} in front — {{lui Andrei}}, {{lui tata}}.',
+        'o-words and women\'s names: **-ei / -ii** — {{mamei}}, {{bunicii}}. un-words: **-ului** — {{bunicului}}.',
+        'Plurals: **-lor**, with {{le}} as the heads-up: {{Le spun copiilor.}} — I\'ll tell the children.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'One set of endings, two jobs',
+      body: [
+        'These "to" endings are exactly the "of" endings from "The \'s: an ending on the owner". Learn them once, use them twice.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Give it, tell them',
+      rungs: [
+        { id: 's57-01', prompt: 'I\'ll tell Mum.', answer: 'Îi spun mamei.' },
+        { id: 's57-02', prompt: 'Give Andrei the ball.', answer: 'Dă-i lui Andrei mingea.' },
+        { id: 's57-03', prompt: 'I sent Grandma a photo.', answer: 'I-am trimis bunicii o poză.' },
+        { id: 's57-04', prompt: 'Show Dad what you drew.', answer: 'Arată-i lui tata ce ai desenat.' },
+        { id: 's57-05', prompt: 'Say thank you to Grandpa!', answer: 'Spune-i mulțumesc bunicului!' },
+        { id: 's57-06', prompt: 'Read him a story.', answer: 'Citește-i o poveste.' },
+        { id: 's57-07', prompt: 'I told the children.', answer: 'Le-am spus copiilor.' },
+        { id: 's57-08', prompt: 'What did you buy your mum?', answer: 'Ce i-ai cumpărat mamei tale?' },
+        { id: 's57-09', prompt: 'Give the dog some water.', answer: 'Dă-i câinelui apă.' },
+        { id: 's57-10', prompt: 'Tell your parents we\'re coming.', answer: 'Spune-le părinților tăi că venim.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '(the book) "I\'ll give it to Andrei."',
+      options: [{ text: 'I-o dau lui Andrei.', correct: true }, { text: 'O dau Andrei.' }, { text: 'Dau ea lui Andrei.' }],
+      explanation: 'The heads-up i- (to him), then o (it, the book), then lui Andrei.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'I\'m reading the children a story.',
+      answer: 'Le citesc copiilor o poveste.',
+      distractors: ['îi', 'copiii'],
+    },
+  ],
+  shortcut: 'Giving / telling someone: heads-up îi (le for "them") + lui Andrei / mamei / copiilor — the same endings as "of".',
+  useItToday: 'Say who you\'re giving things to today: "Îi dau lui…", "Îi spun mamei…".',
+}

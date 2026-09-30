@@ -832,3 +832,143 @@ export const wordBuilding: StructureLesson = {
   shortcut: 'un- = ne-, re- = re-, -er = -tor / -ar, the -ing thing = -are / -ere / -ire. One word becomes four.',
   useItToday: 'When you learn a describing word, try it with ne- in front.',
 }
+
+export const ownThings: StructureLesson = {
+  id: 's-own',
+  part: 'Going further',
+  title: 'His own: îmi, își, și-a',
+  tagline: 'Și-a luat haina — "to himself he took the coat".',
+  shift: {
+    english: 'English says "my / his / her" for your own things and body: "he took his coat", "she lost her keys".',
+    romanian: 'Romanian prefers a "to myself" word and plain "the": {{mi-am luat haina}}, {{și-a luat haina}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'To-myself words',
+      body: [
+        '{{îmi}} (to myself) · {{îți}} (to yourself) · {{își}} (to himself / herself / themselves) · {{ne}} (ourselves) · {{vă}} (yourselves).',
+        'With your own things and body: {{Îmi spăl mâinile.}} — I wash my hands. {{Își caută telefonul.}} — he\'s looking for his phone.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'In the past',
+      body: [
+        '{{mi-am}}, {{ți-ai}}, {{și-a}}, {{ne-am}}, {{v-ați}}, {{și-au}}: {{Și-a pierdut cheile.}} — she\'s lost her keys. {{Ți-ai luat umbrela?}} — have you got your umbrella?',
+      ],
+      glosses: [
+        { ro: 'Și-a luat haina.', words: [['Și-a', 'to-himself he-has'], ['luat', 'taken'], ['haina', 'the-coat']], en: 'He took his coat.' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Verbs that always carry it',
+      body: [
+        '{{a-și aminti}} — to remember. {{a-și dori}} — to wish for. {{a-și da seama}} — to realise: {{Mi-am dat seama.}} — I realised.',
+        'That last one fixes a classic English-speaker slip: {{realizez}} mostly means "I achieve". "I realise" is {{îmi dau seama}}.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your own things',
+      rungs: [
+        { id: 's58-01', prompt: 'I\'m washing my hands.', answer: 'Îmi spăl mâinile.' },
+        { id: 's58-02', prompt: 'He\'s looking for his phone.', answer: 'Își caută telefonul.' },
+        { id: 's58-03', prompt: 'She\'s lost her keys.', answer: 'Și-a pierdut cheile.' },
+        { id: 's58-04', prompt: 'Have you got your umbrella?', answer: 'Ți-ai luat umbrela?' },
+        { id: 's58-05', prompt: 'He took his coat.', answer: 'Și-a luat haina.' },
+        { id: 's58-06', prompt: 'Put your coat on.', answer: 'Pune-ți haina.' },
+        { id: 's58-07', prompt: 'He brushed his teeth.', answer: 'Și-a spălat dinții.' },
+        { id: 's58-08', prompt: 'We bought ourselves a house.', answer: 'Ne-am cumpărat o casă.' },
+        { id: 's58-09', prompt: 'I realised.', answer: 'Mi-am dat seama.' },
+        { id: 's58-10', prompt: 'I didn\'t realise.', answer: 'Nu mi-am dat seama.' },
+        { id: 's58-11', prompt: 'What do you wish for?', answer: 'Ce-ți dorești?' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"I realised."',
+      options: [{ text: 'Am realizat.' }, { text: 'Mi-am dat seama.', correct: true }],
+      explanation: 'Realizez mostly means "I achieve". Realising is a-și da seama.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'She called her mum.',
+      answer: 'Și-a sunat mama.',
+      distractors: ['a', 'ei'],
+    },
+  ],
+  shortcut: 'Your own things and body: îmi / îți / își + "the" (îmi spăl mâinile, și-a luat haina). Realise = îmi dau seama.',
+  useItToday: 'Narrate getting ready to go out: "Îmi iau haina, îmi caut cheile…".',
+}
+
+export const thingsToDo: StructureLesson = {
+  id: 's-supine',
+  part: 'Going further',
+  title: 'Things to do: de + done',
+  tagline: 'Ușor de făcut, am de lucru, mașina de spălat.',
+  shift: {
+    english: 'English uses "to" + a verb: "easy to do", "I have work to do", "I\'ve finished eating".',
+    romanian: 'Romanian uses {{de}} + the "done" form: {{ușor de făcut}} — "easy of done". {{mașina de spălat}} — "the machine of washed".',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'After describing words',
+      body: [
+        '{{ușor de făcut}} — easy to do · {{greu de spus}} — hard to say · {{greu de găsit}} — hard to find.',
+      ],
+      glosses: [
+        { ro: 'E ușor de făcut.', words: [['E', 'it\'s'], ['ușor', 'easy'], ['de făcut', 'of done']], en: 'It\'s easy to do.' },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Things you have to do, have finished doing',
+      body: [
+        '{{Am de lucru.}} — I\'ve got work to do. {{Am multe de făcut.}} — I\'ve got lots to do. {{Ce e de făcut?}} — what\'s to be done?',
+        'After finish and fed up: {{Am terminat de mâncat.}} — I\'ve finished eating. {{M-am săturat de așteptat.}} — I\'m fed up of waiting.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Machines and things for a purpose',
+      body: [
+        '{{mașina de spălat}} — the washing machine · {{mașina de spălat vase}} — the dishwasher · {{apă de băut}} — drinking water.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Say it',
+      rungs: [
+        { id: 's59-01', prompt: 'It\'s easy to do.', answer: 'E ușor de făcut.' },
+        { id: 's59-02', prompt: 'It\'s hard to say.', answer: 'E greu de spus.' },
+        { id: 's59-03', prompt: 'It\'s not easy to find.', answer: 'Nu e ușor de găsit.' },
+        { id: 's59-04', prompt: 'I\'ve got work to do.', answer: 'Am de lucru.' },
+        { id: 's59-05', prompt: 'I\'ve got lots to do.', answer: 'Am multe de făcut.' },
+        { id: 's59-06', prompt: 'What\'s to be done?', answer: 'Ce e de făcut?' },
+        { id: 's59-07', prompt: 'I\'ve finished eating.', answer: 'Am terminat de mâncat.' },
+        { id: 's59-08', prompt: 'I\'m fed up of waiting.', answer: 'M-am săturat de așteptat.' },
+        { id: 's59-09', prompt: 'Is it still far to go?', answer: 'Mai e mult de mers?' },
+        { id: 's59-10', prompt: 'The washing machine.', answer: 'Mașina de spălat.' },
+        { id: 's59-11', prompt: 'The dishwasher.', answer: 'Mașina de spălat vase.' },
+        { id: 's59-12', prompt: 'Drinking water.', answer: 'Apă de băut.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"I\'ve finished cooking."',
+      options: [{ text: 'Am terminat să gătesc.' }, { text: 'Am terminat de gătit.', correct: true }],
+      explanation: 'After finish and fed up, it\'s de + done: de gătit.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'There\'s nothing to be done.',
+      answer: 'Nu e nimic de făcut.',
+      distractors: ['să', 'fac'],
+    },
+  ],
+  shortcut: '"To do" after easy / hard / have / finish / fed up = de + done: ușor de făcut, am de lucru, am terminat de mâncat.',
+  useItToday: 'Tell your partner what you\'ve got on today: "Am de…".',
+}

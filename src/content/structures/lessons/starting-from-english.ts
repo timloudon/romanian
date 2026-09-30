@@ -812,3 +812,221 @@ export const verbFamilies: StructureLesson = {
   shortcut: 'Learn verbs in the "I" form. -ez: -ez, -ezi, -ează, -ăm, -ați. -esc: -esc, -ești, -ește, -im, -iți.',
   useItToday: 'Pick one new verb today and say it for everyone at home: "lucrez, lucrezi, lucrează…".',
 }
+
+export const sounds: StructureLesson = {
+  id: 's-sounds',
+  part: 'Starting from English',
+  title: 'Reading it aloud: the spelling rules',
+  tagline: 'Romanian is spelled the way it sounds — once you know a dozen rules.',
+  shift: {
+    english: 'English spelling is chaos: though, through, tough.',
+    romanian: 'Romanian spelling is almost perfectly regular. Learn about a dozen rules and you can read anything aloud — {{ce}} is "che", {{che}} is "ke".',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'The letters English doesn\'t have',
+      body: [
+        '{{ă}} — the "uh" in "about" or "sofa": {{casă}}, {{mână}}.',
+        '{{â}} and {{î}} — the same sound, a tight "ih" from the back of the throat: {{pâine}}, {{în}}. (â in the middle of a word, î at the start or end.)',
+        '{{ș}} — "sh": {{școală}}. {{ț}} — "ts": {{țară}}.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'C and G: the h works backwards',
+      body: [
+        '{{ce}} / {{ci}} — "che" / "chee", like church: {{cinci}}, {{ceai}}. {{che}} / {{chi}} — "ke" / "kee": {{cheie}}, {{chiar}}.',
+        'The same with g: {{ge}} / {{gi}} — "je" / "jee": {{ger}}. {{ghe}} / {{ghi}} — hard "ge" / "gee": {{ghid}}.',
+        'So the h does the opposite of English: it makes c and g hard.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The sneaky ones',
+      body: [
+        'An **e** at the start of {{el}}, {{e}}, {{este}}, {{eu}}, {{ea}} is said with a "y": "yel", "ye", "yeste", "yeu", "ya".',
+        'A final unstressed **-i** is barely there: {{ochi}} sounds like "ok\'", {{pomi}} like "pom\'".',
+        '**ea** and **oa** glide: {{seară}} is "sya-ruh", {{soare}} is "swa-re".',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Stress',
+      body: [
+        'There\'s no written accent, and the stress moves: {{acasă}} (a-CA-să), {{mâine}} (MÂI-ne), {{frumos}} (fru-MOS).',
+        'A rough guide: words ending in a consonant often stress the last syllable; words ending in -ă or -e the one before. Then listen and copy — that\'s what the 🔊 buttons are for.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Read these aloud',
+      intro: 'Say each one from the spelling, then check against the recording.',
+      rungs: [
+        { id: 's52-01', prompt: '(read aloud) cinci — five', answer: 'Cinci.' },
+        { id: 's52-02', prompt: '(read aloud) cheie — key', answer: 'Cheie.' },
+        { id: 's52-03', prompt: '(read aloud) ceai — tea', answer: 'Ceai.' },
+        { id: 's52-04', prompt: '(read aloud) chiar — really, even', answer: 'Chiar.' },
+        { id: 's52-05', prompt: '(read aloud) ghid — guide', answer: 'Ghid.' },
+        { id: 's52-06', prompt: '(read aloud) pâine — bread', answer: 'Pâine.' },
+        { id: 's52-07', prompt: '(read aloud) este — is', answer: 'Este.' },
+        { id: 's52-08', prompt: '(read aloud) țară — country', answer: 'Țară.' },
+        { id: 's52-09', prompt: '(read aloud) școală — school', answer: 'Școală.' },
+        { id: 's52-10', prompt: '(read aloud) ochi — eyes', answer: 'Ochi.' },
+        { id: 's52-11', prompt: '(read aloud) seară — evening', answer: 'Seară.' },
+        { id: 's52-12', prompt: '(read aloud) mulțumesc frumos — thank you very much', answer: 'Mulțumesc frumos.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: 'How is "chiar" said?',
+      options: [{ text: '"chee-ar", like church' }, { text: '"kee-ar", like key', correct: true }],
+      explanation: 'ch before i or e is a hard k — the h makes it hard, the opposite of English.',
+    },
+  ],
+  shortcut: 'ce / ci = ch; che / chi = k. ge / gi = j; ghe / ghi = hard g. ă = "uh"; â / î = tight "ih"; ș = sh; ț = ts. el, este, eu start with "y".',
+  useItToday: 'Read one Romanian sign, label or message aloud today, using the rules.',
+}
+
+export const verbPairs: StructureLesson = {
+  id: 's-verb-pairs',
+  part: 'Starting from English',
+  title: 'Say, tell, speak; see, look, watch',
+  tagline: 'English splits some verbs Romanian doesn\'t — and the other way round.',
+  shift: {
+    english: 'English has say / tell / speak, see / look / watch, hear / listen, bring / take, learn / teach.',
+    romanian: 'Romanian divides them differently: {{spune}} is both say and tell, {{mă uit}} is look and watch, and {{învăț}} is both learn and teach.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Say, tell, speak',
+      body: [
+        '{{a vorbi}} — speak, talk. {{a spune}} — say **and** tell: {{Spune-mi!}} — tell me. {{Mi-a spus}} — he told me / he said to me.',
+        '{{a zice}} — say, the everyday version: {{Ce zici?}} — what do you say? what do you think?',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'See, look, watch; hear, listen',
+      body: [
+        '{{a vedea}} — see. {{a se uita}} — look **and** watch, with {{la}}: {{Uită-te!}} — look! {{Mă uit la televizor.}} — I\'m watching TV.',
+        '{{a auzi}} — hear: {{Nu te aud.}} {{a asculta}} — listen, with no "to": {{Ascult muzică.}}',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Bring, take',
+      body: [
+        '{{a aduce}} — bring (towards here): {{Adu-mi cheile!}} {{a duce}} — take (away, to somewhere): {{Du-l în pat.}} — take him to bed. {{a lua}} — take, pick up, grab.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Learn and teach are one verb',
+      body: [
+        '{{a învăța}} — learn **and** teach: {{Învăț română.}} — I\'m learning Romanian. {{Mama mă învață.}} — Mum\'s teaching me.',
+        '{{a cunoaște}} — know a person, and meet someone for the first time: {{Ne-am cunoscut la Cluj.}}',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Pick the right verb',
+      rungs: [
+        { id: 's54-01', prompt: 'Tell me what happened.', answer: 'Spune-mi ce s-a întâmplat.' },
+        { id: 's54-02', prompt: 'What do you think?', answer: 'Ce zici?' },
+        { id: 's54-03', prompt: 'He didn\'t say anything.', answer: 'N-a zis nimic.' },
+        { id: 's54-04', prompt: 'Look at this!', answer: 'Uită-te la asta!' },
+        { id: 's54-05', prompt: 'I\'m watching a film.', answer: 'Mă uit la un film.' },
+        { id: 's54-06', prompt: 'I can\'t hear you.', answer: 'Nu te aud.' },
+        { id: 's54-07', prompt: 'Listen to me.', answer: 'Ascultă-mă.' },
+        { id: 's54-08', prompt: 'Bring me the keys!', answer: 'Adu-mi cheile!' },
+        { id: 's54-09', prompt: 'Take him to bed.', answer: 'Du-l în pat.' },
+        { id: 's54-10', prompt: 'I\'m teaching him to count.', answer: 'Îl învăț să numere.' },
+        { id: 's54-11', prompt: 'Who taught you Romanian?', answer: 'Cine te-a învățat română?' },
+        { id: 's54-12', prompt: 'We met in Cluj.', answer: 'Ne-am cunoscut la Cluj.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"Bring me some water."',
+      options: [{ text: 'Du-mi apă.' }, { text: 'Adu-mi apă.', correct: true }],
+      explanation: 'Towards you = a aduce. A duce is taking it away somewhere.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'Mum\'s teaching me to cook.',
+      answer: 'Mama mă învață să gătesc.',
+      distractors: ['îmi', 'învăț'],
+    },
+  ],
+  shortcut: 'Say / tell = spune (or zice). Speak = vorbi. See = vedea; look / watch = mă uit (la). Hear = aud; listen = ascult. Bring = aduc; take = duc / iau. Learn / teach = învăț.',
+  useItToday: 'Ask your partner\'s opinion today with "Ce zici?"',
+}
+
+export const verbPrepositions: StructureLesson = {
+  id: 's-prepositions',
+  part: 'Starting from English',
+  title: 'The little word after the verb',
+  tagline: 'Angry "on" someone, think "at", wait for — nothing.',
+  shift: {
+    english: 'English verbs come with fixed little words: think about, angry with, wait for, look for.',
+    romanian: 'Romanian\'s are different — {{mă gândesc la}} ("think at"), {{supărat pe}} ("angry on"), {{aștept}} (no "for") — so learn each verb with its little word, as one chunk.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Different little words',
+      body: [
+        'think about → {{a se gândi la}} ("at") · dream of → {{a visa la}} · angry with → {{supărat pe}} ("on") · afraid of → {{frică de}}',
+        'married to → {{căsătorit cu}} ("with") · in love with → {{îndrăgostit de}} ("of") · depend on → {{a depinde de}} · proud of → {{mândru de}}',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'No little word at all',
+      body: [
+        'wait for → {{a aștepta}}: {{Te aștept.}} · look for → {{a căuta}}: {{Caut cheile.}} · listen to → {{a asculta}} · pay for → {{a plăti}}: {{Plătesc cafeaua.}} · ask for → {{a cere}}',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'A little word where English has none',
+      body: [
+        'enter → {{a intra în}} · play with → {{a se juca cu}} · remember → {{a-și aminti de}}: {{Îți amintești de el?}}',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Verb + its little word',
+      rungs: [
+        { id: 's55-01', prompt: 'Don\'t think about it.', answer: 'Nu te gândi la asta.' },
+        { id: 's55-02', prompt: 'Is he angry with me?', answer: 'E supărat pe mine?' },
+        { id: 's55-03', prompt: 'He\'s afraid of the dark.', answer: 'Îi e frică de întuneric.' },
+        { id: 's55-04', prompt: 'It depends on you.', answer: 'Depinde de tine.' },
+        { id: 's55-05', prompt: 'I\'m waiting for the bus.', answer: 'Aștept autobuzul.' },
+        { id: 's55-06', prompt: 'I\'m looking for my keys.', answer: 'Îmi caut cheile.' },
+        { id: 's55-07', prompt: 'I\'ll pay for the coffee.', answer: 'Plătesc eu cafeaua.' },
+        { id: 's55-08', prompt: 'Ask for the bill.', answer: 'Cere nota.', teachingNote: 'Nota — the bill at a restaurant.' },
+        { id: 's55-09', prompt: 'Do you remember him?', answer: 'Îți amintești de el?' },
+        { id: 's55-10', prompt: 'He\'s playing with the dog.', answer: 'Se joacă cu câinele.' },
+        { id: 's55-11', prompt: 'I dream of a house by the sea.', answer: 'Visez la o casă la mare.' },
+        { id: 's55-12', prompt: 'Grandma is proud of him.', answer: 'Bunica e mândră de el.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"I\'m waiting for you."',
+      options: [{ text: 'Aștept pentru tine.' }, { text: 'Te aștept.', correct: true }],
+      explanation: 'No "for" — you just "await" someone: te aștept.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'She\'s angry with her brother.',
+      answer: 'E supărată pe fratele ei.',
+      distractors: ['cu', 'de'],
+    },
+  ],
+  shortcut: 'Learn verbs with their little word: mă gândesc la, supărat pe, frică de, depinde de. Nothing at all for wait, look for, listen, pay, ask for.',
+  useItToday: 'Next time you\'re waiting for something, say it without a "for": "Aștept…".',
+}
