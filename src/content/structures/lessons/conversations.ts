@@ -1138,3 +1138,303 @@ export const convPrices: StructureLesson = {
   shortcut: 'Totul s-a scumpit · Pe vremea mea… · Înțeleg ce vreți să spuneți · Cu plăcere! Noroc!',
   useItToday: 'Next time the talk turns to prices or politics, stay in Romanian — politely.',
 }
+
+export const convPlayground: StructureLesson = {
+  id: 's-conv-playground',
+  part: 'Conversations',
+  title: 'At the playground',
+  tagline: 'Câți ani are? Veniți des aici? Ne vedem pe aici.',
+  shift: {
+    english: 'Other parents at the playground are the easiest strangers to talk to — you always have something in common.',
+    romanian: 'The script: the children\'s ages, how often you come, names — and {{Ne vedem pe aici}} to leave it friendly.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{Al dumneavoastră?}} — and yours? (polite, for a boy).',
+        '{{Se joacă frumos împreună}} — they\'re playing nicely together.',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'By the swings',
+      setting: 'Another parent is pushing a child on the next swing.',
+      lines: [
+        { who: 'them', ro: 'Câți ani are?', en: 'How old is he?' },
+        { who: 'you', ro: 'Doi ani. Al dumneavoastră?', en: 'Two. And yours?' },
+        { who: 'them', ro: 'Trei. Se joacă frumos împreună.', en: 'Three. They\'re playing nicely together.' },
+        { who: 'you', ro: 'Da, al nostru e foarte prietenos.', en: 'Yes, ours is very friendly.' },
+        { who: 'them', ro: 'Veniți des în parcul ăsta?', en: 'Do you come to this park often?' },
+        { who: 'you', ro: 'Aproape în fiecare zi, după creșă.', en: 'Almost every day, after nursery.' },
+        { who: 'them', ro: 'Poate ne mai vedem. Eu sunt Ioana.', en: 'Maybe we\'ll see each other again. I\'m Ioana.' },
+        { who: 'you', ro: 'Îmi pare bine! Ne vedem pe aici.', en: 'Nice to meet you! See you around.' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's139-01', prompt: 'Two. And yours?', answer: 'Doi ani. Al dumneavoastră?' },
+        { id: 's139-02', prompt: 'Yes, ours is very friendly.', answer: 'Da, al nostru e foarte prietenos.' },
+        { id: 's139-03', prompt: 'Almost every day, after nursery.', answer: 'Aproape în fiecare zi, după creșă.' },
+        { id: 's139-04', prompt: 'Nice to meet you! See you around.', answer: 'Îmi pare bine! Ne vedem pe aici.' },
+      ],
+    },
+  ],
+  shortcut: 'Câți ani are? · Al dumneavoastră? · Veniți des aici? · Aproape în fiecare zi · Ne vedem pe aici.',
+  useItToday: 'Start one conversation with another parent at the playground — in Romanian, if you\'re in Romania.',
+}
+
+export const convTrain: StructureLesson = {
+  id: 's-conv-train',
+  part: 'Conversations',
+  title: 'Buying train tickets',
+  tagline: 'Două bilete până la Brașov. Dus-întors? De la ce linie?',
+  shift: {
+    english: 'Station ticket offices are quick and noisy — you need your destination, the kind of ticket, and the platform.',
+    romanian: 'Three words do most of it: {{dus}} (one way), {{dus-întors}} (return, "there-back") and {{linia}} — the platform.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{până la Brașov}} — to Brașov ("as far as").',
+        'In Romanian stations the platform is the {{linie}} ("line").',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'At the ticket office',
+      setting: 'Gara de Nord, Bucharest.',
+      lines: [
+        { who: 'you', ro: 'Bună ziua, două bilete până la Brașov, vă rog.', en: 'Hello, two tickets to Brașov, please.' },
+        { who: 'them', ro: 'Dus-întors?', en: 'Return?' },
+        { who: 'you', ro: 'Doar dus. Copilul are nevoie de bilet?', en: 'Just one way. Does the child need a ticket?' },
+        { who: 'them', ro: 'Nu, copiii mici călătoresc gratuit.', en: 'No, small children travel free.' },
+        { who: 'you', ro: 'Perfect. De la ce linie pleacă trenul?', en: 'Perfect. Which platform does the train leave from?' },
+        { who: 'them', ro: 'De la linia trei, la zece și un sfert.', en: 'Platform three, at a quarter past ten.' },
+        { who: 'you', ro: 'Mulțumesc. Cât durează drumul?', en: 'Thanks. How long is the journey?' },
+        { who: 'them', ro: 'Cam două ore și jumătate.', en: 'About two and a half hours.' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's140-01', prompt: 'Hello, two tickets to Brașov, please.', answer: 'Bună ziua, două bilete până la Brașov, vă rog.' },
+        { id: 's140-02', prompt: 'Just one way. Does the child need a ticket?', answer: 'Doar dus. Copilul are nevoie de bilet?' },
+        { id: 's140-03', prompt: 'Perfect. Which platform does the train leave from?', answer: 'Perfect. De la ce linie pleacă trenul?' },
+        { id: 's140-04', prompt: 'Thanks. How long is the journey?', answer: 'Mulțumesc. Cât durează drumul?' },
+      ],
+    },
+  ],
+  shortcut: 'Două bilete până la… · Dus / dus-întors · De la ce linie pleacă? · Cât durează drumul?',
+  useItToday: 'Next train in Romania: buy the tickets in Romanian.',
+}
+
+export const convHairdresser: StructureLesson = {
+  id: 's-conv-hairdresser',
+  part: 'Conversations',
+  title: 'At the hairdresser\'s',
+  tagline: 'Doar vârfurile, vă rog. Cât vă datorez?',
+  shift: {
+    english: 'A haircut abroad is a leap of faith — unless you can say what you want.',
+    romanian: 'Keep it simple: {{doar vârfurile}} (just the ends), a length, and at the end {{Cât vă datorez?}} — how much do I owe you?',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{să vă tund}} — (for me) to cut your hair.',
+        '{{Cât vă datorez?}} — "how much do I owe you?" — the polite way to ask for the bill anywhere.',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'In the chair',
+      setting: 'A small salon near your partner\'s parents\' flat.',
+      lines: [
+        { who: 'them', ro: 'Cum doriți să vă tund?', en: 'How would you like it cut?' },
+        { who: 'you', ro: 'Doar vârfurile, vă rog, cam doi centimetri.', en: 'Just the ends, please, about two centimetres.' },
+        { who: 'them', ro: 'Vreți să vă și spăl părul?', en: 'Would you like a wash as well?' },
+        { who: 'you', ro: 'Da, vă rog.', en: 'Yes, please.' },
+        { who: 'them', ro: 'Așa e bine?', en: 'Is that all right?' },
+        { who: 'you', ro: 'Perfect, mulțumesc. Cât vă datorez?', en: 'Perfect, thanks. How much do I owe you?' },
+        { who: 'them', ro: 'Cincizeci de lei.', en: 'Fifty lei.' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's141-01', prompt: 'Just the ends, please, about two centimetres.', answer: 'Doar vârfurile, vă rog, cam doi centimetri.' },
+        { id: 's141-02', prompt: 'Yes, please.', answer: 'Da, vă rog.' },
+        { id: 's141-03', prompt: 'Perfect, thanks. How much do I owe you?', answer: 'Perfect, mulțumesc. Cât vă datorez?' },
+      ],
+    },
+  ],
+  shortcut: 'Doar vârfurile · cam doi centimetri · Așa e bine? · Cât vă datorez?',
+  useItToday: 'Use "Cât vă datorez?" the next time you pay for a service.',
+}
+
+export const convWedding: StructureLesson = {
+  id: 's-conv-wedding',
+  part: 'Conversations',
+  title: 'A Romanian wedding',
+  tagline: 'Vă distrați? Nu mai pot! Casă de piatră!',
+  shift: {
+    english: 'A Romanian wedding (nuntă) goes on all night: course after course, the horă, and set wishes for the couple.',
+    romanian: 'Know the wish — {{Casă de piatră!}}, "a house of stone" — say yes to the horă, and keep {{Nu mai pot!}} ready for the fourth course.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{mireasa}} — the bride · {{mirele}} — the groom · {{un fel}} — a course (of a meal).',
+        '{{Casă de piatră!}} — the traditional wish for a solid, lasting marriage.',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'Midnight',
+      setting: 'The band has just struck up the horă.',
+      lines: [
+        { who: 'them', ro: 'Ce bine că ați venit! Vă distrați?', en: 'So glad you came! Are you enjoying yourselves?' },
+        { who: 'you', ro: 'Foarte bine! Mireasa e superbă.', en: 'Very much! The bride looks stunning.' },
+        { who: 'them', ro: 'Și mâncarea? Mai vine un fel.', en: 'And the food? There\'s another course coming.' },
+        { who: 'you', ro: 'Încă unul? Nu mai pot!', en: 'Another one? I can\'t manage any more!' },
+        { who: 'them', ro: 'Hai la dans, e hora!', en: 'Come and dance, it\'s the horă!' },
+        { who: 'you', ro: 'Nu știu să dansez hora, dar încerc!', en: 'I don\'t know how to dance the horă, but I\'ll try!' },
+        { who: 'them', ro: 'Nu contează, te învățăm noi!', en: 'Doesn\'t matter, we\'ll teach you!' },
+        { who: 'you', ro: 'Casă de piatră!', en: 'A house of stone! (Wishing the couple a lasting marriage.)' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's142-01', prompt: 'Very much! The bride looks stunning.', answer: 'Foarte bine! Mireasa e superbă.' },
+        { id: 's142-02', prompt: 'Another one? I can\'t manage any more!', answer: 'Încă unul? Nu mai pot!' },
+        { id: 's142-03', prompt: 'I don\'t know how to dance the horă, but I\'ll try!', answer: 'Nu știu să dansez hora, dar încerc!' },
+        { id: 's142-04', prompt: 'A house of stone! (Wishing the couple a lasting marriage.)', answer: 'Casă de piatră!' },
+      ],
+    },
+  ],
+  shortcut: 'Vă distrați? · Mireasa e superbă · Nu mai pot! · Nu știu să dansez hora, dar încerc! · Casă de piatră!',
+  useItToday: 'If there\'s a family wedding coming up, learn "Casă de piatră!" and say it to the couple.',
+}
+
+export const convChristening: StructureLesson = {
+  id: 's-conv-christening',
+  part: 'Conversations',
+  title: 'A christening (botez)',
+  tagline: 'Să vă trăiască! Să crească mare și sănătos!',
+  shift: {
+    english: 'Christenings are big family events in Romania, with the godparents (nașii) at the centre.',
+    romanian: 'Two wishes carry you through: {{Să vă trăiască!}} to the parents, and {{Să crească mare și sănătos!}} — may he grow up big and healthy.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{slujba}} — the service · {{preotul}} — the priest · {{bebelușul}} — the baby.',
+        '{{Să crească mare!}} — "may he grow big" — the classic wish for a baby.',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'After the service',
+      setting: 'A cousin\'s baby has just been christened.',
+      lines: [
+        { who: 'them', ro: 'Bine ați venit la botez!', en: 'Welcome to the christening!' },
+        { who: 'you', ro: 'Mulțumim de invitație! Să vă trăiască!', en: 'Thank you for inviting us! Congratulations!' },
+        { who: 'them', ro: 'Nașii sunt acolo, lângă preot.', en: 'The godparents are over there, by the priest.' },
+        { who: 'you', ro: 'Ce frumos e bebelușul!', en: 'What a beautiful baby!' },
+        { who: 'them', ro: 'Da, și a stat cuminte la slujbă.', en: 'Yes, and the baby was good all through the service.' },
+        { who: 'you', ro: 'Am adus un mic cadou.', en: 'We\'ve brought a little present.' },
+        { who: 'them', ro: 'Nu trebuia! Poftiți la masă.', en: 'You shouldn\'t have! Come to the table.' },
+        { who: 'you', ro: 'Mulțumim. Să crească mare și sănătos!', en: 'Thank you. May the baby grow up big and healthy!' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's143-01', prompt: 'Thank you for inviting us! Congratulations!', answer: 'Mulțumim de invitație! Să vă trăiască!' },
+        { id: 's143-02', prompt: 'What a beautiful baby!', answer: 'Ce frumos e bebelușul!' },
+        { id: 's143-03', prompt: 'We\'ve brought a little present.', answer: 'Am adus un mic cadou.' },
+        { id: 's143-04', prompt: 'Thank you. May the baby grow up big and healthy!', answer: 'Mulțumim. Să crească mare și sănătos!' },
+      ],
+    },
+  ],
+  shortcut: 'Mulțumim de invitație · Să vă trăiască! · Ce frumos e bebelușul! · Nu trebuia! · Să crească mare și sănătos!',
+  useItToday: 'Learn the two wishes before the next family christening, birth or baby visit.',
+}
+
+export const convPlumber: StructureLesson = {
+  id: 's-conv-plumber',
+  part: 'Conversations',
+  title: 'When the plumber comes',
+  tagline: 'Curge apa. Nu merge centrala. Vă aștept.',
+  shift: {
+    english: 'Explaining what\'s broken is hard even in English — the words are all nouns you never needed before.',
+    romanian: 'Describe it simply — {{curge apa}} (water\'s leaking), {{nu merge}} (it doesn\'t work) — and fix a time.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Before you start',
+      body: [
+        '{{centrala}} — the boiler (the central heating unit) · {{chiuveta}} — the sink · {{o piesă}} — a part.',
+        '{{Nu merge}} — "it doesn\'t go" — covers anything that\'s stopped working.',
+        'Say each of your lines out loud before revealing it. Their lines play in Romanian first — listen, then tap for the English only if you need it.',
+      ],
+    },
+    {
+      kind: 'dialogue',
+      title: 'At the door',
+      setting: 'The boiler\'s out and the sink is leaking.',
+      lines: [
+        { who: 'you', ro: 'Bună ziua, sunteți instalatorul?', en: 'Hello, are you the plumber?' },
+        { who: 'them', ro: 'Da. Ce problemă aveți?', en: 'Yes. What\'s the problem?' },
+        { who: 'you', ro: 'Curge apa sub chiuvetă și nu merge centrala.', en: 'Water\'s leaking under the sink, and the boiler isn\'t working.' },
+        { who: 'them', ro: 'Să văd. Aha, e garnitura. O schimb acum.', en: 'Let me see. Ah, it\'s the seal. I\'ll change it now.' },
+        { who: 'you', ro: 'Și centrala?', en: 'And the boiler?' },
+        { who: 'them', ro: 'Pentru centrală trebuie să vin mâine cu o piesă.', en: 'For the boiler I need to come back tomorrow with a part.' },
+        { who: 'you', ro: 'Bine. La ce oră veniți?', en: 'OK. What time will you come?' },
+        { who: 'them', ro: 'Pe la nouă. Vă sun înainte.', en: 'Around nine. I\'ll call you first.' },
+        { who: 'you', ro: 'Perfect, vă aștept.', en: 'Perfect, I\'ll be here.' },
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Your lines, on their own',
+      intro: 'Now just your side — so they come out without the prompt of the conversation.',
+      rungs: [
+        { id: 's144-01', prompt: 'Hello, are you the plumber?', answer: 'Bună ziua, sunteți instalatorul?' },
+        { id: 's144-02', prompt: 'Water\'s leaking under the sink, and the boiler isn\'t working.', answer: 'Curge apa sub chiuvetă și nu merge centrala.' },
+        { id: 's144-03', prompt: 'And the boiler?', answer: 'Și centrala?' },
+        { id: 's144-04', prompt: 'OK. What time will you come?', answer: 'Bine. La ce oră veniți?' },
+        { id: 's144-05', prompt: 'Perfect, I\'ll be here.', answer: 'Perfect, vă aștept.' },
+      ],
+    },
+  ],
+  shortcut: 'Curge apa · Nu merge centrala · Ce problemă aveți? · La ce oră veniți? · Vă aștept.',
+  useItToday: 'Learn "Nu merge…" — you can point at anything and say it.',
+}
