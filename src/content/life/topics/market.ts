@@ -78,6 +78,43 @@ export const market: LifeTopic = {
       answer: 'Doar unul, vă rog.',
       teachingNote: '"Vă rog" is the polite "please" for strangers — "te rog" is for people you know.',
     },
+    {
+      id: 'life-market-14',
+      prompt: 'Can I taste it?',
+      answer: 'Pot să gust?',
+    },
+    {
+      id: 'life-market-15',
+      prompt: 'Are they Romanian?',
+      answer: 'Sunt românești?',
+      teachingNote: 'What people really ask at the market about tomatoes, cherries, peppers — home-grown beats imported.',
+    },
+    {
+      id: 'life-market-16',
+      prompt: 'A loaf of bread, please.',
+      answer: 'O pâine, vă rog.',
+    },
+    {
+      id: 'life-market-17',
+      prompt: 'Do you have any cherries?',
+      answer: 'Aveți cireșe?',
+    },
+    {
+      id: 'life-market-18',
+      prompt: 'Two hundred grams of cheese, please.',
+      answer: 'Două sute de grame de brânză, vă rog.',
+    },
+    {
+      id: 'life-market-19',
+      prompt: "Where's the checkout?",
+      answer: 'Unde e casa?',
+      teachingNote: '"Casa" is both "house" and "checkout" — context makes it obvious.',
+    },
+    {
+      id: 'life-market-20',
+      prompt: 'Could I have the receipt, please?',
+      answer: 'Îmi dați bonul, vă rog?',
+    },
   ],
   conversationPrompts: [
     'On the next trip, do the bread-and-coffee run yourself, in Romanian.',

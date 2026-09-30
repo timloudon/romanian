@@ -74,6 +74,43 @@ export const growingUp: LifeTopic = {
       prompt: 'Time flies!',
       answer: 'Ce repede trece timpul!',
     },
+    {
+      id: 'life-growing-up-14',
+      prompt: 'He climbs the stairs by himself now.',
+      answer: 'Acum urcă singur scările.',
+    },
+    {
+      id: 'life-growing-up-15',
+      prompt: 'He knows lots of words.',
+      answer: 'Știe multe cuvinte.',
+    },
+    {
+      id: 'life-growing-up-16',
+      prompt: 'He can count to ten.',
+      answer: 'Știe să numere până la zece.',
+    },
+    {
+      id: 'life-growing-up-17',
+      prompt: "He's always on the go.",
+      answer: 'Nu stă o clipă locului.',
+      teachingNote: "Literally \"he doesn't stay in place for a moment.\"",
+    },
+    {
+      id: 'life-growing-up-18',
+      prompt: "He's so funny.",
+      answer: 'E tare haios.',
+      teachingNote: '"Haios" — funny and cute at once — is used about small children all the time.',
+    },
+    {
+      id: 'life-growing-up-19',
+      prompt: 'He says no to everything.',
+      answer: 'Zice nu la orice.',
+    },
+    {
+      id: 'life-growing-up-20',
+      prompt: 'He needs bigger shoes.',
+      answer: 'Îi trebuie pantofi mai mari.',
+    },
   ],
   conversationPrompts: [
     'Tell your partner one new thing he did this week in Romanian, before you\'d normally mention it in English.',

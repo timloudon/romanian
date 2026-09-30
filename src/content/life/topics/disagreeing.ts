@@ -73,6 +73,42 @@ export const disagreeing: LifeTopic = {
       prompt: 'Everything is fine.',
       answer: 'E totul în regulă.',
     },
+    {
+      id: 'life-disagreeing-14',
+      prompt: "You're not listening to me.",
+      answer: 'Nu mă asculți.',
+    },
+    {
+      id: 'life-disagreeing-15',
+      prompt: 'I was wrong.',
+      answer: 'Am greșit.',
+    },
+    {
+      id: 'life-disagreeing-16',
+      prompt: "I didn't know.",
+      answer: 'Nu știam.',
+    },
+    {
+      id: 'life-disagreeing-17',
+      prompt: "Why didn't you tell me?",
+      answer: 'De ce nu mi-ai spus?',
+    },
+    {
+      id: 'life-disagreeing-18',
+      prompt: "Let's both calm down a bit.",
+      answer: 'Hai să ne liniștim puțin.',
+    },
+    {
+      id: 'life-disagreeing-19',
+      prompt: "(explaining) It's just tiredness.",
+      answer: 'E doar oboseala.',
+    },
+    {
+      id: 'life-disagreeing-20',
+      prompt: 'Friends again?',
+      answer: 'Facem pace?',
+      teachingNote: 'Literally "shall we make peace?"',
+    },
   ],
   conversationPrompts: [
     'Use "Ce ai?" and "Te înțeleg" this week — the small phrases that keep a conversation kind.',

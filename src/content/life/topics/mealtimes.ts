@@ -77,6 +77,46 @@ export const mealtimes: LifeTopic = {
       prompt: "Anything's fine.",
       answer: 'Orice e bine.',
     },
+    {
+      id: 'life-mealtimes-14',
+      prompt: 'What do you want for breakfast?',
+      answer: 'Ce vrei la micul dejun?',
+    },
+    {
+      id: 'life-mealtimes-15',
+      prompt: 'Is it too hot for him?',
+      answer: 'E prea fierbinte pentru el?',
+    },
+    {
+      id: 'life-mealtimes-16',
+      prompt: 'Can you lay the table?',
+      answer: 'Poți să pui masa?',
+    },
+    {
+      id: 'life-mealtimes-17',
+      prompt: 'Can you clear the table?',
+      answer: 'Poți să strângi masa?',
+    },
+    {
+      id: 'life-mealtimes-18',
+      prompt: "I'll make some pancakes.",
+      answer: 'Fac niște clătite.',
+    },
+    {
+      id: 'life-mealtimes-19',
+      prompt: "He doesn't like vegetables.",
+      answer: 'Nu-i plac legumele.',
+    },
+    {
+      id: 'life-mealtimes-20',
+      prompt: "Let's order a pizza.",
+      answer: 'Hai să comandăm o pizza.',
+    },
+    {
+      id: 'life-mealtimes-21',
+      prompt: 'Taste this!',
+      answer: 'Gustă asta!',
+    },
   ],
   conversationPrompts: [
     'Decide what to eat in Romanian every evening this week — start with "Ce mâncăm diseară?" and settle it without switching to English.',

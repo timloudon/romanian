@@ -65,6 +65,41 @@ export const justUs: LifeTopic = {
       prompt: 'Good night, my love.',
       answer: 'Noapte bună, iubire.',
     },
+    {
+      id: 'life-just-us-01',
+      prompt: 'You look lovely.',
+      answer: 'Arăți foarte bine.',
+    },
+    {
+      id: 'life-just-us-02',
+      prompt: 'Shall we watch a film tonight?',
+      answer: 'Ne uităm la un film diseară?',
+    },
+    {
+      id: 'life-just-us-03',
+      prompt: 'Thank you for everything you do.',
+      answer: 'Mulțumesc pentru tot ce faci.',
+    },
+    {
+      id: 'life-just-us-04',
+      prompt: "Let's go out somewhere, just us.",
+      answer: 'Hai să ieșim undeva, doar noi.',
+    },
+    {
+      id: 'life-just-us-05',
+      prompt: 'You make me laugh.',
+      answer: 'Mă faci să râd.',
+    },
+    {
+      id: 'life-just-us-06',
+      prompt: 'What would you like to do?',
+      answer: 'Ce ți-ar plăcea să faci?',
+    },
+    {
+      id: 'life-just-us-07',
+      prompt: "Let's have an early night.",
+      answer: 'Hai să ne culcăm devreme.',
+    },
   ],
   conversationPrompts: [
     'Say "Mi-e dor de tine" the next time you\'re apart — a message counts.',

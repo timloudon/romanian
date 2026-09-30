@@ -73,6 +73,36 @@ export const work: LifeTopic = {
       prompt: "I've got lots of things to do.",
       answer: 'Am multe de făcut.',
     },
+    {
+      id: 'life-work-14',
+      prompt: 'I have to answer an email.',
+      answer: 'Trebuie să răspund la un email.',
+    },
+    {
+      id: 'life-work-15',
+      prompt: 'My boss called.',
+      answer: 'M-a sunat șeful.',
+    },
+    {
+      id: 'life-work-16',
+      prompt: "I'm in the office on Thursday.",
+      answer: 'Joi merg la birou.',
+    },
+    {
+      id: 'life-work-17',
+      prompt: "I'm off tomorrow.",
+      answer: 'Mâine am zi liberă.',
+    },
+    {
+      id: 'life-work-18',
+      prompt: "I'll call you in a bit.",
+      answer: 'Te sun mai încolo.',
+    },
+    {
+      id: 'life-work-19',
+      prompt: "Let's not talk about work.",
+      answer: 'Hai să nu vorbim despre serviciu.',
+    },
   ],
   conversationPrompts: [
     'Ask "Cum a fost la serviciu?" every day this week, and give a real answer back.',

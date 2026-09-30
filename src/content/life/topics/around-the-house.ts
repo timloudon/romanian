@@ -75,6 +75,37 @@ export const aroundTheHouse: LifeTopic = {
       prompt: 'Did you take the keys?',
       answer: 'Ai luat cheile?',
     },
+    {
+      id: 'life-house-14',
+      prompt: 'Can you hoover?',
+      answer: 'Poți să dai cu aspiratorul?',
+    },
+    {
+      id: 'life-house-15',
+      prompt: "The heating isn't working.",
+      answer: 'Nu merge căldura.',
+    },
+    {
+      id: 'life-house-16',
+      prompt: "Close the door, it's cold.",
+      answer: 'Închide ușa, e frig.',
+    },
+    {
+      id: 'life-house-17',
+      prompt: "There's someone at the door.",
+      answer: 'Sună cineva la ușă.',
+    },
+    {
+      id: 'life-house-18',
+      prompt: "I'll hang the washing out.",
+      answer: 'Întind eu rufele.',
+    },
+    {
+      id: 'life-house-19',
+      prompt: 'Where did you put it?',
+      answer: 'Unde l-ai pus?',
+      teachingNote: "\"L\" is \"it\" for a masculine or neuter thing (the phone, the key-ring); for a feminine one (the bag) it's \"Unde ai pus-o?\"",
+    },
   ],
   conversationPrompts: [
     'Divide up this week\'s chores with your partner in Romanian.',

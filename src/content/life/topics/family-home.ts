@@ -88,6 +88,36 @@ export const familyHome: LifeTopic = {
       answer: 'Ați dormit bine?',
       teachingNote: '"Ați" — the polite "you" form, for your partner\'s parents or anyone older.',
     },
+    {
+      id: 'life-family-home-16',
+      prompt: "(what they'll say to you) Make yourselves at home!",
+      answer: 'Simțiți-vă ca acasă!',
+    },
+    {
+      id: 'life-family-home-17',
+      prompt: 'Just a little, please.',
+      answer: 'Doar puțin, vă rog.',
+    },
+    {
+      id: 'life-family-home-18',
+      prompt: 'We brought you something.',
+      answer: 'V-am adus ceva.',
+    },
+    {
+      id: 'life-family-home-19',
+      prompt: 'Do you need anything from the shop?',
+      answer: 'Aveți nevoie de ceva de la magazin?',
+    },
+    {
+      id: 'life-family-home-20',
+      prompt: 'What time are we eating?',
+      answer: 'La ce oră mâncăm?',
+    },
+    {
+      id: 'life-family-home-21',
+      prompt: 'Grandpa makes his own wine.',
+      answer: 'Bunicul face vin de casă.',
+    },
   ],
   conversationPrompts: [
     'In the weeks before the trip, drill the table phrases until "Poftă bună," "Noroc!" and "Nu mai pot!" come out without thinking.',

@@ -88,6 +88,49 @@ export const hisDay: LifeTopic = {
       answer: 'Iar plânge.',
       teachingNote: '"Iar" at the front — "again" — usually said with a sigh.',
     },
+    {
+      id: 'life-his-day-15',
+      prompt: 'What did he have for lunch?',
+      answer: 'Ce a mâncat la prânz?',
+    },
+    {
+      id: 'life-his-day-16',
+      prompt: 'He had a bath.',
+      answer: 'A făcut baie.',
+      teachingNote: '"A face baie" — literally "to make a bath" — is how you say "to have a bath."',
+    },
+    {
+      id: 'life-his-day-17',
+      prompt: 'He played with his cars.',
+      answer: 'S-a jucat cu mașinuțele.',
+      teachingNote: '"-uțe" makes things small and sweet: mașină (car) → mașinuță (little car).',
+    },
+    {
+      id: 'life-his-day-18',
+      prompt: 'He drew a picture.',
+      answer: 'A făcut un desen.',
+    },
+    {
+      id: 'life-his-day-19',
+      prompt: "He fell over, but he's fine.",
+      answer: 'A căzut, dar e bine.',
+    },
+    {
+      id: 'life-his-day-20',
+      prompt: "He wouldn't sleep.",
+      answer: 'N-a vrut să doarmă.',
+    },
+    {
+      id: 'life-his-day-21',
+      prompt: 'He was asking for you all day.',
+      answer: 'Te-a căutat toată ziua.',
+      teachingNote: 'Literally "he looked for you all day" — how Romanians say a child kept asking for someone.',
+    },
+    {
+      id: 'life-his-day-22',
+      prompt: 'He had a tantrum.',
+      answer: 'A făcut o criză de nervi.',
+    },
   ],
   conversationPrompts: [
     'Every evening this week, ask your partner "Ce a făcut cel mic azi?" — and when they ask you back, answer in Romanian, even if it\'s just "A dormit bine."',

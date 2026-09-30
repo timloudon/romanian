@@ -74,6 +74,36 @@ export const inTheCar: LifeTopic = {
       prompt: "I'll drive.",
       answer: 'Conduc eu.',
     },
+    {
+      id: 'life-car-14',
+      prompt: 'Where did you park?',
+      answer: 'Unde ai parcat?',
+    },
+    {
+      id: 'life-car-15',
+      prompt: 'Watch out!',
+      answer: 'Ai grijă!',
+    },
+    {
+      id: 'life-car-16',
+      prompt: 'Turn right at the lights.',
+      answer: 'Fă la dreapta la semafor.',
+    },
+    {
+      id: 'life-car-17',
+      prompt: "We're lost.",
+      answer: 'Ne-am rătăcit.',
+    },
+    {
+      id: 'life-car-18',
+      prompt: 'Put some music on.',
+      answer: 'Pune niște muzică.',
+    },
+    {
+      id: 'life-car-19',
+      prompt: 'How long does the journey take?',
+      answer: 'Cât durează drumul?',
+    },
   ],
   conversationPrompts: [
     'Be the navigator in Romanian on one drive this week — left, right, straight on.',

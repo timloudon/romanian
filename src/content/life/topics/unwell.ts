@@ -77,6 +77,37 @@ export const unwell: LifeTopic = {
       prompt: "He's feeling better.",
       answer: 'Se simte mai bine.',
     },
+    {
+      id: 'life-unwell-14',
+      prompt: "He's been sick.",
+      answer: 'A vomitat.',
+    },
+    {
+      id: 'life-unwell-15',
+      prompt: 'His ear hurts.',
+      answer: 'Îl doare urechea.',
+      teachingNote: 'Literally "the ear hurts him" — the same shape as "te doare?"',
+    },
+    {
+      id: 'life-unwell-16',
+      prompt: "Where's the thermometer?",
+      answer: 'Unde e termometrul?',
+    },
+    {
+      id: 'life-unwell-17',
+      prompt: 'Give him plenty of water.',
+      answer: 'Dă-i multă apă.',
+    },
+    {
+      id: 'life-unwell-18',
+      prompt: "I think he's coming down with something.",
+      answer: 'Cred că se îmbolnăvește.',
+    },
+    {
+      id: 'life-unwell-19',
+      prompt: "I don't feel well either.",
+      answer: 'Nici eu nu mă simt bine.',
+    },
   ],
   conversationPrompts: [
     'Next time he\'s under the weather, talk it through with your partner in Romanian — symptoms, medicine, whether to call the doctor.',

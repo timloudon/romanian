@@ -78,6 +78,37 @@ export const celebrations: LifeTopic = {
       prompt: '(the reply) Truly, He is risen!',
       answer: 'Adevărat a înviat!',
     },
+    {
+      id: 'life-celebrations-14',
+      prompt: 'Blow out the candles!',
+      answer: 'Suflă în lumânări!',
+    },
+    {
+      id: 'life-celebrations-15',
+      prompt: 'Make a wish!',
+      answer: 'Pune-ți o dorință!',
+    },
+    {
+      id: 'life-celebrations-16',
+      prompt: 'What shall we get your mum?',
+      answer: 'Ce-i luăm mamei tale?',
+    },
+    {
+      id: 'life-celebrations-17',
+      prompt: 'Thank you for the present!',
+      answer: 'Mulțumesc pentru cadou!',
+    },
+    {
+      id: 'life-celebrations-18',
+      prompt: "Let's decorate the tree.",
+      answer: 'Hai să împodobim bradul.',
+    },
+    {
+      id: 'life-celebrations-19',
+      prompt: 'Happy New Year!',
+      answer: 'An nou fericit!',
+      teachingNote: "\"La mulți ani!\" works for New Year too — it's the all-occasion wish.",
+    },
   ],
   conversationPrompts: [
     'Plan the next celebration with your partner in Romanian — who\'s coming, what you\'ll cook, what to get him.',

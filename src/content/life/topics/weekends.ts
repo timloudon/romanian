@@ -76,6 +76,37 @@ export const weekends: LifeTopic = {
       prompt: 'We had a walk around town.',
       answer: 'Ne-am plimbat prin oraș.',
     },
+    {
+      id: 'life-weekends-14',
+      prompt: 'Can I have a lie-in?',
+      answer: 'Pot să dorm mai mult?',
+    },
+    {
+      id: 'life-weekends-15',
+      prompt: "Let's feed the ducks.",
+      answer: 'Hai să hrănim rațele.',
+    },
+    {
+      id: 'life-weekends-16',
+      prompt: "It's a lovely day.",
+      answer: 'E o zi frumoasă.',
+    },
+    {
+      id: 'life-weekends-17',
+      prompt: 'Shall we eat out?',
+      answer: 'Mâncăm în oraș?',
+      teachingNote: '"În oraș" — "in town" — means going out anywhere: to eat, for a drink, for the evening.',
+    },
+    {
+      id: 'life-weekends-18',
+      prompt: "Don't forget his water bottle.",
+      answer: 'Nu uita sticluța lui cu apă.',
+    },
+    {
+      id: 'life-weekends-19',
+      prompt: 'Take a photo!',
+      answer: 'Fă o poză!',
+    },
   ],
   conversationPrompts: [
     'Plan Saturday with your partner in Romanian — where, when, what to bring.',

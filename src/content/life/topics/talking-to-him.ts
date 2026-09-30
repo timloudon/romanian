@@ -79,6 +79,60 @@ export const talkingToHim: LifeTopic = {
       prompt: "Come on, let's go!",
       answer: 'Haide, să mergem!',
     },
+    {
+      id: 'life-talking-15',
+      prompt: "Careful, it's hot!",
+      answer: 'Atenție, frige!',
+      teachingNote: '"Frige" — "it burns" — is what Romanians say to small children about anything hot.',
+    },
+    {
+      id: 'life-talking-16',
+      prompt: "Don't touch that!",
+      answer: 'Nu pune mâna!',
+      teachingNote: "Literally \"don't put your hand\" — the everyday way to say \"don't touch.\"",
+    },
+    {
+      id: 'life-talking-17',
+      prompt: 'Say thank you!',
+      answer: 'Spune mulțumesc!',
+    },
+    {
+      id: 'life-talking-18',
+      prompt: 'Gently!',
+      answer: 'Ușurel!',
+    },
+    {
+      id: 'life-talking-19',
+      prompt: "Let's wash your hands.",
+      answer: 'Hai să ne spălăm pe mâini.',
+    },
+    {
+      id: 'life-talking-20',
+      prompt: 'Do you want some water?',
+      answer: 'Vrei apă?',
+    },
+    {
+      id: 'life-talking-21',
+      prompt: 'Show me!',
+      answer: 'Arată-mi!',
+    },
+    {
+      id: 'life-talking-22',
+      prompt: "What's that?",
+      answer: 'Ce e asta?',
+    },
+    {
+      id: 'life-talking-23',
+      prompt: 'Sit nicely.',
+      answer: 'Stai frumos.',
+      teachingNote: '"Stai frumos" covers "sit nicely," "behave," and "be good."',
+    },
+    {
+      id: 'life-talking-24',
+      prompt: "There, there, don't cry.",
+      answer: 'Gata, nu mai plânge.',
+      teachingNote: "\"Gata\" — \"done, that's it\" — is the all-purpose word for calming things down.",
+    },
   ],
   conversationPrompts: [
     'Talk to him in Romanian for ten minutes a day this week — praise, comfort, play.',

@@ -77,6 +77,47 @@ export const bedtimeAndMornings: LifeTopic = {
       prompt: 'I need a coffee.',
       answer: 'Am nevoie de o cafea.',
     },
+    {
+      id: 'life-bedtime-14',
+      prompt: '(to him) Brush your teeth.',
+      answer: 'Spală-te pe dinți.',
+    },
+    {
+      id: 'life-bedtime-15',
+      prompt: '(to him) Put your pyjamas on.',
+      answer: 'Pune-ți pijamaua.',
+    },
+    {
+      id: 'life-bedtime-16',
+      prompt: "He doesn't want to sleep.",
+      answer: 'Nu vrea să doarmă.',
+    },
+    {
+      id: 'life-bedtime-17',
+      prompt: 'Will you put him to bed tonight?',
+      answer: 'Îl culci tu diseară?',
+      teachingNote: '"A culca" is to put someone to bed; "a se culca" is to go to bed yourself.',
+    },
+    {
+      id: 'life-bedtime-18',
+      prompt: "Quiet, he's asleep.",
+      answer: 'Încet, doarme.',
+    },
+    {
+      id: 'life-bedtime-19',
+      prompt: 'Let him sleep a bit longer.',
+      answer: 'Lasă-l să mai doarmă puțin.',
+    },
+    {
+      id: 'life-bedtime-20',
+      prompt: 'What time did he wake up?',
+      answer: 'La ce oră s-a trezit?',
+    },
+    {
+      id: 'life-bedtime-21',
+      prompt: '(to him) Wakey wakey, sleepyhead!',
+      answer: 'Trezirea, somnorosule!',
+    },
   ],
   conversationPrompts: [
     'Do the whole bedtime routine in Romanian one night this week — bath, story, "Noapte bună, puiule."',

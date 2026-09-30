@@ -77,6 +77,46 @@ export const holidays: LifeTopic = {
       prompt: 'The flight is early in the morning.',
       answer: 'Zborul e dimineața devreme.',
     },
+    {
+      id: 'life-holidays-14',
+      prompt: 'The flight is delayed.',
+      answer: 'Zborul are întârziere.',
+    },
+    {
+      id: 'life-holidays-15',
+      prompt: "Who's picking us up from the airport?",
+      answer: 'Cine ne ia de la aeroport?',
+    },
+    {
+      id: 'life-holidays-16',
+      prompt: "We've landed!",
+      answer: 'Am aterizat!',
+    },
+    {
+      id: 'life-holidays-17',
+      prompt: "Let's hire a car.",
+      answer: 'Hai să închiriem o mașină.',
+    },
+    {
+      id: 'life-holidays-18',
+      prompt: "It's so hot here!",
+      answer: 'Ce cald e aici!',
+    },
+    {
+      id: 'life-holidays-19',
+      prompt: 'Put some sun cream on him.',
+      answer: 'Dă-l cu cremă de soare.',
+    },
+    {
+      id: 'life-holidays-20',
+      prompt: 'The suitcase is too heavy.',
+      answer: 'Valiza e prea grea.',
+    },
+    {
+      id: 'life-holidays-21',
+      prompt: "I don't want to leave.",
+      answer: 'Nu vreau să plec.',
+    },
   ],
   conversationPrompts: [
     'Plan one real thing about the next trip with your partner in Romanian this week — dates, where you\'re staying, who you\'ll see.',

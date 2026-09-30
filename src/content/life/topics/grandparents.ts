@@ -79,6 +79,43 @@ export const grandparents: LifeTopic = {
       prompt: 'Is she coming too?',
       answer: 'Vine și ea?',
     },
+    {
+      id: 'life-grandparents-14',
+      prompt: '(to him) Say hello to Grandma!',
+      answer: 'Salut-o pe bunica!',
+    },
+    {
+      id: 'life-grandparents-15',
+      prompt: 'Send them some photos.',
+      answer: 'Trimite-le niște poze.',
+    },
+    {
+      id: 'life-grandparents-16',
+      prompt: 'Say hi to your parents from me!',
+      answer: 'Salutări alor tăi!',
+      teachingNote: '"Ai tăi" — "yours" — is how Romanians say "your parents"; "alor tăi" is "to yours."',
+    },
+    {
+      id: 'life-grandparents-17',
+      prompt: 'How are they doing?',
+      answer: 'Ce mai fac?',
+    },
+    {
+      id: 'life-grandparents-18',
+      prompt: "Grandma's going to spoil him.",
+      answer: 'Bunica o să-l răsfețe.',
+    },
+    {
+      id: 'life-grandparents-19',
+      prompt: "They're coming for Christmas.",
+      answer: 'Vin de Crăciun.',
+    },
+    {
+      id: 'life-grandparents-20',
+      prompt: 'Can they look after him on Saturday?',
+      answer: 'Pot să stea cu el sâmbătă?',
+      teachingNote: '"A sta cu" — literally "to stay with" — is "to look after" a child.',
+    },
   ],
   conversationPrompts: [
     'On your next call with family, say at least three things in Romanian — even just "Uite, e bunica!" and "Te pup, pa!"',
