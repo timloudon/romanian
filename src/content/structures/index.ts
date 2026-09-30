@@ -1,7 +1,36 @@
 import type { Drill } from '../types'
-import { endings, cognates, doubleNegatives, noIng, saBridge } from './lessons/starting-from-english'
+import {
+  genitive,
+  handySe,
+  reported,
+  saAlone,
+  smallAndSweet,
+  stillAlready,
+  twoLittleWords,
+  whoWhich,
+  wouldHave,
+} from './lessons/going-further'
 import { commands, neverDropThat } from './lessons/joining-ideas'
-import { himHer, myself, possession, theOnTheEnd, toMe } from './lessons/people-and-things'
+import {
+  beIsHave,
+  comparing,
+  himHer,
+  myself,
+  places,
+  possession,
+  theOnTheEnd,
+  thisAndThat,
+  toMe,
+} from './lessons/people-and-things'
+import {
+  canAndKnow,
+  cognates,
+  doubleNegatives,
+  endings,
+  noIng,
+  questions,
+  saBridge,
+} from './lessons/starting-from-english'
 import { future, past, since, usedTo, would } from './lessons/time'
 import type { StructureLesson, StructurePart } from './types'
 
@@ -10,7 +39,9 @@ export const structureLessons: StructureLesson[] = [
   cognates,
   noIng,
   endings,
+  questions,
   saBridge,
+  canAndKnow,
   doubleNegatives,
   past,
   future,
@@ -18,12 +49,25 @@ export const structureLessons: StructureLesson[] = [
   usedTo,
   would,
   theOnTheEnd,
+  places,
   possession,
+  thisAndThat,
+  comparing,
+  beIsHave,
   toMe,
   myself,
   himHer,
   commands,
   neverDropThat,
+  saAlone,
+  wouldHave,
+  genitive,
+  stillAlready,
+  handySe,
+  twoLittleWords,
+  whoWhich,
+  smallAndSweet,
+  reported,
 ]
 
 export const structureParts: { part: StructurePart; blurb: string }[] = [
@@ -31,6 +75,10 @@ export const structureParts: { part: StructurePart; blurb: string }[] = [
   { part: 'Time', blurb: 'Past, future, "used to", "would" — mostly simpler than English.' },
   { part: 'People and things', blurb: 'The, my, to me, myself, him — where the little words go.' },
   { part: 'Joining ideas', blurb: 'Telling people what to do, and gluing thoughts together.' },
+  {
+    part: 'Going further',
+    blurb: 'The advanced shapes that make you sound fluent — should have, whose, the one that, it broke itself.',
+  },
 ]
 
 /** How to learn with this section — Michel Thomas and Say Something In… principles, in plain words. */

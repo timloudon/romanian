@@ -43,6 +43,14 @@ export const theOnTheEnd: StructureLesson = {
       ],
     },
     {
+      kind: 'explain',
+      title: 'Words ending in -e',
+      body: [
+        'o-words ending in **-e** add **-a**: {{carte}} → {{cartea}}, {{floare}} → {{floarea}}.',
+        'un-words ending in **-e** add **-le**: {{frate}} → {{fratele}} (the brother), {{nume}} → {{numele}} (the name).',
+      ],
+    },
+    {
       kind: 'ladder',
       title: 'Say it',
       rungs: [
@@ -91,6 +99,20 @@ export const theOnTheEnd: StructureLesson = {
       answer: 'Jucăriile sunt sub pat.',
       distractors: ['patul', 'jucării'],
       note: 'Sub pat — under the bed, no sticker after sub.',
+    },
+    {
+      kind: 'ladder',
+      title: 'Mix it up',
+      intro: 'Mixing this lesson with the ones before it. Take your time building each one.',
+      rungs: [
+        { id: 's11-11', prompt: 'The door is open.', answer: 'Ușa e deschisă.' },
+        { id: 's11-12', prompt: 'The water is cold.', answer: 'Apa e rece.' },
+        { id: 's11-13', prompt: 'The weather is lovely.', answer: 'Vremea e frumoasă.' },
+        { id: 's11-14', prompt: 'The child is asleep.', answer: 'Copilul doarme.' },
+        { id: 's11-15', prompt: 'The book is on the table in the kitchen.', answer: 'Cartea e pe masa din bucătărie.', teachingNote: 'More description, so masa gets its "the" back.' },
+        { id: 's11-16', prompt: 'I\'m going into town.', answer: 'Merg în oraș.' },
+        { id: 's11-17', prompt: 'The shop is closed.', answer: 'Magazinul e închis.' },
+      ],
     },
   ],
   shortcut: '"The" is a sticker on the end: telefonul, mașina, cheile. After pe / în / la / cu it comes off.',
@@ -141,6 +163,15 @@ export const possession: StructureLesson = {
       ],
     },
     {
+      kind: 'explain',
+      title: 'Often it\'s "to me", not "my"',
+      body: [
+        'With your body and your own things, Romanian often says "to me" + "the" instead of "my": {{Mi-am pierdut cheile}} — "to-me I-have lost the keys" — I\'ve lost my keys.',
+        '{{Îți sună telefonul.}} — your phone\'s ringing. {{Mă doare capul.}} — my head hurts.',
+        'Names work the same way: {{Cum te cheamă?}} — "how do they call you?" — what\'s your name?',
+      ],
+    },
+    {
       kind: 'ladder',
       title: 'Say it',
       rungs: [
@@ -175,6 +206,21 @@ export const possession: StructureLesson = {
       answer: 'Cheile tale sunt în geanta mea.',
       distractors: ['meu', 'tău'],
       note: 'Cheile tale (the keys yours), geanta mea (the bag my).',
+    },
+    {
+      kind: 'ladder',
+      title: 'Mix it up',
+      intro: 'Mixing this lesson with the ones before it. Take your time building each one.',
+      rungs: [
+        { id: 's12-13', prompt: 'I\'ve lost my keys.', answer: 'Mi-am pierdut cheile.' },
+        { id: 's12-14', prompt: 'Your phone\'s ringing.', answer: 'Îți sună telefonul.' },
+        { id: 's12-15', prompt: 'My parents.', answer: 'Părinții mei.' },
+        { id: 's12-16', prompt: 'Our friends.', answer: 'Prietenii noștri.' },
+        { id: 's12-17', prompt: 'Your family.', answer: 'Familia ta.' },
+        { id: 's12-18', prompt: 'Their house is big.', answer: 'Casa lor e mare.' },
+        { id: 's12-19', prompt: 'What\'s his name?', answer: 'Cum îl cheamă?' },
+        { id: 's12-20', prompt: 'What\'s your name?', answer: 'Cum te cheamă?' },
+      ],
     },
   ],
   shortcut: 'The thing first, then "my": casa mea. Meu / mea matches the thing. Lui, ei, lor never change.',
@@ -265,6 +311,21 @@ export const toMe: StructureLesson = {
       distractors: ['tu', 'plac'],
       note: '"To you it pleases that you live here?"',
     },
+    {
+      kind: 'ladder',
+      title: 'Mix it up',
+      intro: 'Mixing this lesson with the ones before it. Take your time building each one.',
+      rungs: [
+        { id: 's13-12', prompt: 'I\'m not hungry.', answer: 'Nu mi-e foame.' },
+        { id: 's13-13', prompt: 'He\'s scared.', answer: 'Îi e frică.' },
+        { id: 's13-14', prompt: 'Do you like the house?', answer: 'Îți place casa?' },
+        { id: 's13-15', prompt: 'I really like it here.', answer: 'Îmi place mult aici.' },
+        { id: 's13-16', prompt: 'We like Romania.', answer: 'Ne place România.' },
+        { id: 's13-17', prompt: 'His tummy hurts.', answer: 'Îl doare burta.' },
+        { id: 's13-18', prompt: 'I don\'t care.', answer: 'Nu-mi pasă.', teachingNote: '"To me it doesn\'t matter."' },
+        { id: 's13-19', prompt: 'I think it\'s too expensive.', answer: 'Mi se pare prea scump.', teachingNote: '"To me it seems" — softer than cred că.' },
+      ],
+    },
   ],
   shortcut: 'Feelings happen to you: mi-e frig, îmi place, mă doare. Think "to me it\'s…".',
   useItToday: 'Say how you feel today using only mi-e: frig, cald, foame, sete, somn, dor.',
@@ -346,6 +407,21 @@ export const myself: StructureLesson = {
       answer: 'Ne-am cunoscut în București.',
       distractors: ['am', 'la'],
       note: '"We got to know each other" — ne-am cunoscut — is how Romanians say "we met".',
+    },
+    {
+      kind: 'ladder',
+      title: 'Mix it up',
+      intro: 'Mixing this lesson with the ones before it. Take your time building each one.',
+      rungs: [
+        { id: 's14-12', prompt: 'I\'m getting ready.', answer: 'Mă pregătesc.' },
+        { id: 's14-13', prompt: 'We\'re getting ready to go.', answer: 'Ne pregătim de plecare.' },
+        { id: 's14-14', prompt: 'Calm down.', answer: 'Calmează-te.' },
+        { id: 's14-15', prompt: 'Sit down!', answer: 'Așază-te!' },
+        { id: 's14-16', prompt: 'Wash your hands.', answer: 'Spală-te pe mâini.' },
+        { id: 's14-17', prompt: 'Did you have fun?', answer: 'Te-ai distrat?' },
+        { id: 's14-18', prompt: 'We had a lovely time.', answer: 'Ne-am distrat foarte bine.' },
+        { id: 's14-19', prompt: 'I don\'t remember.', answer: 'Nu-mi amintesc.', teachingNote: 'This one\'s "to myself": nu-mi amintesc.' },
+      ],
     },
   ],
   shortcut: 'Many verbs carry a "myself": mă simt, mă trezesc, mă gândesc. In the past: m-am, te-ai, s-a.',
@@ -436,8 +512,349 @@ export const himHer: StructureLesson = {
       distractors: ['îl', 'el'],
       note: 'After să, îl shrinks to -l: să-l.',
     },
+    {
+      kind: 'ladder',
+      title: 'Mix it up',
+      intro: 'Mixing this lesson with the ones before it. Take your time building each one.',
+      rungs: [
+        { id: 's15-12', prompt: 'I\'ll take him to the park.', answer: 'Îl duc în parc.' },
+        { id: 's15-13', prompt: 'Did you see her?', answer: 'Ai văzut-o?' },
+        { id: 's15-14', prompt: 'Help me!', answer: 'Ajută-mă!' },
+        { id: 's15-15', prompt: 'I\'ll wait for you.', answer: 'Te aștept.', teachingNote: '"I you-await" — no "for".' },
+        { id: 's15-16', prompt: 'Do you love me?', answer: 'Mă iubești?' },
+        { id: 's15-17', prompt: 'Leave him, he\'s fine.', answer: 'Lasă-l, e bine.' },
+        { id: 's15-18', prompt: 'Tell him!', answer: 'Spune-i!' },
+        { id: 's15-19', prompt: '(the bag) Put it here.', answer: 'Pune-o aici.' },
+        { id: 's15-20', prompt: 'We\'re waiting for you.', answer: 'Te așteptăm.' },
+      ],
+    },
   ],
   shortcut: 'Me, you, him, her, it go in front: îl văd, te iubesc. In commands, on the end: sună-mă.',
   useItToday: 'Use "Te iubesc", "Îl iau eu" and "Nu-l găsesc" today — three of the most useful sentences in family life.',
   seeAlso: { lessonId: 'u02-l01', label: 'Course: "Îl, o" — him/it, her/it' },
+}
+
+export const places: StructureLesson = {
+  id: 's-places',
+  part: 'People and things',
+  title: 'At, to, in: la does most of the work',
+  tagline: '"At mum\'s", "to the shop", "at the seaside" — all la.',
+  shift: {
+    english: 'English picks between at, to, in and on — and needs "\'s" for "at mum\'s".',
+    romanian: 'Romanian uses {{la}} for going to and being at most places — and for someone\'s home: {{la mama}} is "at mum\'s".',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'La: at and to',
+      body: [
+        '{{la}} covers both "to" and "at": {{Merg la magazin}} — I\'m going to the shop. {{Sunt la magazin}} — I\'m at the shop. Romanian doesn\'t care whether you\'re on your way or already there.',
+        'It also does "at someone\'s": {{la bunica}} — at Grandma\'s. {{la noi}} — at ours. {{la voi}} — at yours.',
+      ],
+      glosses: [
+        {
+          ro: 'Suntem la bunica.',
+          words: [['Suntem', 'we-are'], ['la', 'at'], ['bunica', 'the-grandma']],
+          en: "We're at Grandma's.",
+        },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'În and pe',
+      body: [
+        '{{în}} is "in" — inside something, a town, a country: {{în casă}}, {{în București}}, {{în România}}.',
+        '{{pe}} is "on": {{pe masă}}. And Romanians are "on" the street, not in it: {{pe stradă}}.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The odd ones out',
+      body: [
+        '{{acasă}} — home — needs nothing in front: {{Merg acasă}}, {{Sunt acasă}}.',
+        'Seaside, mountains and work all take {{la}}: {{la mare}}, {{la munte}}, {{la serviciu}}.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'From',
+      body: [
+        '{{de la}} — from a place or a person: {{de la magazin}}, {{un cadou de la bunica}}.',
+        '{{din}} — from inside, or from a town or country: {{Sunt din Anglia}} — I\'m from England.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Where is everyone?',
+      rungs: [
+        { id: 's20-01', prompt: "I'm going to the shop.", answer: 'Merg la magazin.' },
+        { id: 's20-02', prompt: "I'm at the shop.", answer: 'Sunt la magazin.' },
+        { id: 's20-03', prompt: "We're at Grandma's.", answer: 'Suntem la bunica.' },
+        { id: 's20-04', prompt: '(to friends) Come round to ours!', answer: 'Veniți la noi!' },
+        { id: 's20-05', prompt: "He's at nursery.", answer: 'E la creșă.' },
+        { id: 's20-06', prompt: "I'm at home.", answer: 'Sunt acasă.' },
+        { id: 's20-07', prompt: "We're going to the mountains.", answer: 'Mergem la munte.' },
+        { id: 's20-08', prompt: 'The phone is on the table.', answer: 'Telefonul e pe masă.' },
+        { id: 's20-09', prompt: "It's in the car.", answer: 'E în mașină.' },
+        { id: 's20-10', prompt: "I'm from England.", answer: 'Sunt din Anglia.' },
+        { id: 's20-11', prompt: "I'm coming from work.", answer: 'Vin de la serviciu.' },
+        { id: 's20-12', prompt: 'A present from Grandma.', answer: 'Un cadou de la bunica.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"We\'re going to the seaside."',
+      options: [{ text: 'Mergem în mare.' }, { text: 'Mergem la mare.', correct: true }],
+      explanation: '"În mare" would be into the sea itself. The seaside is la mare.',
+    },
+    {
+      kind: 'assemble',
+      prompt: "We're spending the weekend at my parents'.",
+      answer: 'Petrecem weekendul la părinții mei.',
+      distractors: ['în', 'de'],
+    },
+  ],
+  shortcut: 'La = at / to / at someone\'s. În = inside. Pe = on. Acasă needs nothing. From = de la, or din for towns and countries.',
+  useItToday: 'Say where everyone is today: "Sunt la serviciu. E la creșă. Suntem acasă."',
+}
+
+export const thisAndThat: StructureLesson = {
+  id: 's-this-that',
+  part: 'People and things',
+  title: 'This one, that one',
+  tagline: 'Ăsta, asta, ăla, aia — the everyday pointing words.',
+  shift: {
+    english: 'English "this" and "that" go in front and never change.',
+    romanian: 'Romanian\'s go after the thing and match it, just like "my": {{mașina asta}} — "the car this".',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'The spoken set',
+      body: [
+        '{{ăsta}} / {{asta}} — this (for an un-thing / an o-thing). {{ăla}} / {{aia}} — that.',
+        'For more than one: {{ăștia}} / {{astea}} (these), {{ăia}} / {{alea}} (those).',
+        'They come after the thing, which keeps its "the": {{telefonul ăsta}} — "the phone this". {{casa aia}} — that house.',
+      ],
+      glosses: [
+        {
+          ro: 'Vreau rochia asta.',
+          words: [['Vreau', 'I-want'], ['rochia', 'the-dress'], ['asta', 'this']],
+          en: 'I want this dress.',
+        },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Asta on its own',
+      body: [
+        '{{asta}} alone means "this" or "that" as an idea: {{Ce e asta?}} — what\'s this? {{Asta e!}} — that\'s it! {{Nu asta!}} — not that!',
+        '"This time" is {{de data asta}}.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The written ones',
+      body: [
+        '{{acesta}}, {{aceasta}}, {{acela}}, {{aceea}} are the formal versions. You\'ll read them and hear them on the news; you\'ll rarely need to say them.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Point at things',
+      rungs: [
+        { id: 's21-01', prompt: 'This phone.', answer: 'Telefonul ăsta.' },
+        { id: 's21-02', prompt: 'This house.', answer: 'Casa asta.' },
+        { id: 's21-03', prompt: 'That car.', answer: 'Mașina aia.' },
+        {
+          id: 's21-04',
+          prompt: '(a dress) I want this one.',
+          answer: 'O vreau pe asta.',
+          teachingNote: '"Her I-want, this one" — o for an o-thing, with the pe tag.',
+        },
+        { id: 's21-05', prompt: "What's this?", answer: 'Ce e asta?' },
+        { id: 's21-06', prompt: "That's it!", answer: 'Asta e!' },
+        { id: 's21-07', prompt: '(the cup) Not that one!', answer: 'Nu aia!' },
+        { id: 's21-08', prompt: 'These tomatoes are very good.', answer: 'Roșiile astea sunt foarte bune.' },
+        { id: 's21-09', prompt: 'Those shoes.', answer: 'Pantofii ăia.' },
+        { id: 's21-10', prompt: 'I like this.', answer: 'Îmi place asta.' },
+        { id: 's21-11', prompt: 'This time.', answer: 'De data asta.' },
+        { id: 's21-12', prompt: 'How much is this?', answer: 'Cât costă asta?' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"This car."',
+      options: [{ text: 'Asta mașină' }, { text: 'Mașina asta', correct: true }],
+      explanation: 'The thing first, with its "the", then "this" — the same shape as mașina mea.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'How much are these apples?',
+      answer: 'Cât costă merele astea?',
+      distractors: ['ăștia', 'acesta'],
+      note: 'Un măr, but in the plural mere behaves like an o-word — so astea.',
+    },
+  ],
+  shortcut: 'Thing + "the" + this / that: mașina asta, telefonul ăla. Asta on its own = this / that idea.',
+  useItToday: 'Point at things today: "Asta. Ăla. Cana asta. Jucăria aia."',
+}
+
+export const comparing: StructureLesson = {
+  id: 's-more',
+  part: 'People and things',
+  title: 'Bigger, better, best: just add mai',
+  tagline: 'No -er, no -est, no "good, better, best".',
+  shift: {
+    english: 'English adds -er and -est (bigger, biggest), uses "more" for long words, and has odd ones like good–better–best.',
+    romanian: 'Romanian puts {{mai}} in front of everything: {{mai mare}} (bigger), {{mai bun}} (better). "The most" is {{cel mai}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Mai = more',
+      body: [
+        '{{mare}} (big) → {{mai mare}} (bigger). {{bun}} (good) → {{mai bun}} (better). {{frumos}} → {{mai frumos}}. No irregulars.',
+        '"Than" is {{decât}}: {{E mai înalt decât mine.}} — he\'s taller than me.',
+        '"The biggest" is {{cel mai mare}} — "the most big". The best: {{cel mai bun}}, or for an o-thing {{cea mai bună}}.',
+      ],
+      glosses: [{ ro: 'E mai bine.', words: [['E', "it's"], ['mai', 'more'], ['bine', 'well']], en: "It's better." }],
+    },
+    {
+      kind: 'explain',
+      title: 'Describing words come after, and match',
+      body: [
+        'As you\'ve seen: {{o casă mare}} — "a house big".',
+        'They match the thing: {{un băiat mic}} but {{o casă mică}}; {{un vin bun}} but {{o idee bună}}. For an o-thing, the describing word usually adds **-ă**.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Mai does two more jobs',
+      body: [
+        '"More" as in "again" or "another": {{Mai vrei?}} — do you want more? {{Mai vreau.}} — I want more.',
+        'With nu, "not any more": {{Nu mai plânge.}} — he\'s not crying any more.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Very, too, so, quite',
+      body: ['{{foarte}} — very · {{prea}} — too · {{atât de}} — so · {{destul de}} — quite, fairly.'],
+    },
+    {
+      kind: 'ladder',
+      title: 'Compare it',
+      rungs: [
+        { id: 's22-01', prompt: 'Bigger.', answer: 'Mai mare.' },
+        { id: 's22-02', prompt: "It's better.", answer: 'E mai bine.' },
+        { id: 's22-03', prompt: "This one's better.", answer: 'Ăsta e mai bun.' },
+        { id: 's22-04', prompt: "He's taller than me.", answer: 'E mai înalt decât mine.' },
+        { id: 's22-05', prompt: 'The best.', answer: 'Cel mai bun.' },
+        { id: 's22-06', prompt: "It's the best pizza.", answer: 'E cea mai bună pizza.' },
+        { id: 's22-07', prompt: "It's cheaper at the market.", answer: 'E mai ieftin la piață.' },
+        { id: 's22-08', prompt: 'Do you want more?', answer: 'Mai vrei?' },
+        { id: 's22-09', prompt: "He's not crying any more.", answer: 'Nu mai plânge.' },
+        { id: 's22-10', prompt: "It's too hot.", answer: 'E prea cald.' },
+        { id: 's22-11', prompt: "It's quite far.", answer: 'E destul de departe.' },
+        { id: 's22-12', prompt: 'A small house.', answer: 'O casă mică.' },
+        {
+          id: 's22-13',
+          prompt: '(politely) Speak more slowly, please.',
+          answer: 'Vorbiți mai rar, vă rog.',
+          teachingNote: 'For speech, Romanians say "more rarely" — mai rar — rather than "more slowly".',
+        },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"The best idea."',
+      options: [{ text: 'Cel mai bun idee' }, { text: 'Cea mai bună idee', correct: true }, { text: 'Mai bună idee' }],
+      explanation: 'Idee is an o-word, so cea mai bună.',
+    },
+    {
+      kind: 'assemble',
+      prompt: "It's the most beautiful place.",
+      answer: 'E cel mai frumos loc.',
+      distractors: ['cea', 'mult'],
+    },
+  ],
+  shortcut: 'Mai = more / -er: mai mare, mai bun. The best = cel / cea mai. Than = decât. Nu mai = not any more.',
+  useItToday: 'Compare two things today — "Asta e mai bună", "E mai frig azi" — and ask "Mai vrei?" at a meal.',
+}
+
+export const beIsHave: StructureLesson = {
+  id: 's-have',
+  part: 'People and things',
+  title: 'When English "be" is Romanian "have"',
+  tagline: 'I\'m right, I\'m forty, I\'m lucky — all "I have".',
+  shift: {
+    english: 'English uses "to be" for your age, being right, being lucky, being careful.',
+    romanian: 'Romanian uses "have": {{am dreptate}} — "I have rightness". {{am patruzeci de ani}} — "I have forty years".',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Have where English has be',
+      body: [
+        '{{Am dreptate}} — I\'m right. {{Ai dreptate}} — you\'re right.',
+        '{{Am noroc}} — I\'m lucky ("I have luck"). {{Am grijă}} — I\'m careful ("I have care"). {{Am timp}} — I\'m free ("I have time"). {{Am nevoie de}} — I need ("I have need of").',
+      ],
+      glosses: [{ ro: 'Ai dreptate.', words: [['Ai', 'you-have'], ['dreptate', 'rightness']], en: "You're right." }],
+    },
+    {
+      kind: 'explain',
+      title: 'Age',
+      body: [
+        '{{Am patruzeci de ani}} — "I have forty years". {{Câți ani ai?}} — how old are you?',
+        'From twenty upwards, numbers take {{de}}: {{doi ani}}, but {{douăzeci de ani}}.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: '"Have a…" is just the wish',
+      body: [
+        'English says "have a good trip", "have fun". Romanian just says the wish: {{Drum bun!}} ("good road"), {{Distracție plăcută!}} ("pleasant fun"), {{Poftă bună!}} ("good appetite").',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: '"There is" needs no "there"',
+      body: [
+        '"There\'s a problem" — {{E o problemă.}} "There are lots of people" — {{Sunt mulți oameni.}} Just "is" and "are".',
+        '"Is there any milk left?" — {{Mai e lapte?}} ("is there still milk?")',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Say it',
+      rungs: [
+        { id: 's23-01', prompt: "You're right.", answer: 'Ai dreptate.' },
+        { id: 's23-02', prompt: 'I was right!', answer: 'Am avut dreptate!' },
+        { id: 's23-03', prompt: "We're lucky.", answer: 'Avem noroc.' },
+        { id: 's23-04', prompt: 'I need help.', answer: 'Am nevoie de ajutor.' },
+        { id: 's23-05', prompt: "He's two.", answer: 'Are doi ani.' },
+        { id: 's23-06', prompt: "I'm forty.", answer: 'Am patruzeci de ani.' },
+        { id: 's23-07', prompt: 'Are you free tomorrow?', answer: 'Ai timp mâine?' },
+        { id: 's23-08', prompt: 'Have a good trip!', answer: 'Drum bun!' },
+        { id: 's23-09', prompt: 'Have fun!', answer: 'Distracție plăcută!' },
+        { id: 's23-10', prompt: "There's a problem.", answer: 'E o problemă.' },
+        { id: 's23-11', prompt: 'There are lots of people here.', answer: 'Sunt mulți oameni aici.' },
+        { id: 's23-12', prompt: 'Is there any milk left?', answer: 'Mai e lapte?' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"I\'m right."',
+      options: [{ text: 'Sunt drept.' }, { text: 'Am dreptate.', correct: true }],
+      explanation: '"Sunt drept" would be "I\'m straight / upright". Being right is having rightness: am dreptate.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'My mum is sixty.',
+      answer: 'Mama mea are șaizeci de ani.',
+      distractors: ['e', 'sunt'],
+    },
+  ],
+  shortcut: 'Right, lucky, careful, age, need, time → have: am dreptate, am noroc, am 40 de ani. "There is" = e / sunt.',
+  useItToday: 'Tell your partner "Ai dreptate" at least once today — good for the relationship, and for your Romanian.',
 }

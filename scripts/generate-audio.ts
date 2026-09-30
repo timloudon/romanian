@@ -99,14 +99,14 @@ function collectPhrases(only?: Lang): Phrase[] {
       add({ lang: 'en', text: drill.prompt, spoken: toSpokenPrompt(drill.prompt) })
     }
   }
-  // Priority order for when free credits run out mid-run: the weekly real-life phrases first
-  // (what gets said at home), then Structures — every Romanian phrase a lesson can play, in
-  // lesson order — then the course from the beginning.
-  addDrills(lifeTopics.flatMap((topic) => topic.drills))
+  // Priority order for when free credits run out mid-run: Structures first — every Romanian
+  // phrase a lesson can play, in lesson order — then the weekly real-life phrases, then the
+  // course from the beginning. Anything unrecorded plays in the device's voice meanwhile.
   for (const lesson of structureLessons) {
     for (const text of structureRomanianPhrases(lesson)) add({ lang: 'ro', text, spoken: text })
     for (const step of lesson.steps) if (step.kind === 'ladder') addDrills(step.rungs)
   }
+  addDrills(lifeTopics.flatMap((topic) => topic.drills))
   addDrills(roCore.units.flatMap((unit) => unit.lessons.flatMap((lesson) => lesson.drills)))
   return phrases
 }

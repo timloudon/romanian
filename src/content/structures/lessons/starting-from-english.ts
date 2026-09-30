@@ -48,6 +48,16 @@ export const cognates: StructureLesson = {
       ],
     },
     {
+      kind: 'explain',
+      title: 'More swaps, and no -ly',
+      body: [
+        '**-ence / -ance** become **-ență / -anță**: {{diferență}}, {{experiență}}, {{distanță}}.',
+        '**-ure** becomes **-ură**: {{natură}}, {{cultură}}, {{temperatură}}, {{aventură}}.',
+        '**-ous** (and **-cious**) become **-os**: {{curios}}, {{generos}}, {{delicios}}.',
+        'And English **-ly** simply disappears: the describing word does both jobs. Perfectly → {{perfect}}, normally → {{normal}}, quickly → {{rapid}}.',
+      ],
+    },
+    {
       kind: 'ladder',
       title: 'Say it',
       intro: "Think it out, then say it out loud before you reveal. There's no rush.",
@@ -86,6 +96,26 @@ export const cognates: StructureLesson = {
       answer: 'E o situație complicată.',
       distractors: ['un', 'complicat'],
       note: 'The situation comes first, then what it\'s like.',
+    },
+    {
+      kind: 'ladder',
+      title: 'Mix it up',
+      intro: 'Mixing this lesson with the ones before it. Take your time building each one.',
+      rungs: [
+        { id: 's01-11', prompt: 'It\'s a big difference.', answer: 'E o diferență mare.' },
+        { id: 's01-12', prompt: 'It\'s too complicated.', answer: 'E prea complicat.', hint: 'prea = too' },
+        { id: 's01-13', prompt: 'He\'s very curious.', answer: 'E foarte curios.' },
+        { id: 's01-14', prompt: 'It\'s delicious!', answer: 'E delicios!' },
+        { id: 's01-15', prompt: 'It\'s an adventure!', answer: 'E o aventură!' },
+        { id: 's01-16', prompt: 'It\'s perfectly normal.', answer: 'E perfect normal.', teachingNote: 'No -ly: perfect does the job of "perfectly".' },
+        { id: 's01-17', prompt: 'It\'s an interesting situation.', answer: 'E o situație interesantă.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: 'Which is Romanian for "generous"?',
+      options: [{ text: 'generos', correct: true }, { text: 'generuș' }, { text: 'generositate' }],
+      explanation: '-ous → -os. (Generositate is "generosity" — -ity → -itate again.)',
     },
   ],
   shortcut: '-tion → -ție, -ity → -itate, -ible → -ibil. Stuck for a word? Try the English one with a Romanian ending.',
@@ -192,6 +222,26 @@ export const noIng: StructureLesson = {
       distractors: ['sunt', 'fac'],
       note: '"Going to work" — the place — is la serviciu.',
     },
+    {
+      kind: 'ladder',
+      title: 'Mix it up',
+      intro: 'Mixing this lesson with the ones before it. Take your time building each one.',
+      rungs: [
+        { id: 's02-12', prompt: 'I\'m cooking.', answer: 'Gătesc.' },
+        { id: 's02-13', prompt: 'What are you cooking?', answer: 'Ce gătești?' },
+        { id: 's02-14', prompt: 'I\'m not cooking tonight.', answer: 'Nu gătesc diseară.' },
+        { id: 's02-15', prompt: 'Are you listening?', answer: 'Asculți?' },
+        { id: 's02-16', prompt: 'He\'s playing outside.', answer: 'Se joacă afară.', teachingNote: '"He plays himself" — se joacă. There\'s a lesson on these "myself" verbs later.' },
+        { id: 's02-17', prompt: 'Where do you work?', answer: 'Unde lucrezi?' },
+        { id: 's02-18', prompt: 'I\'m coming!', answer: 'Vin!', teachingNote: 'The classic reply when someone calls you from the other room.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"Are you coming?"',
+      options: [{ text: 'Ești venind?' }, { text: 'Vii?', correct: true }, { text: 'Faci vii?' }],
+      explanation: 'No "are", no "-ing", no "do" — just vii, with your voice going up.',
+    },
   ],
   shortcut: 'Strip the English down: "I\'m going" → "I go" → merg. No am, no -ing, no do.',
   useItToday:
@@ -273,6 +323,20 @@ export const endings: StructureLesson = {
       options: [{ text: 'facem' }, { text: 'faci', correct: true }, { text: 'faceți' }],
       explanation: '-i is "you" (one person). -m is "we". -ți is "you all", or the polite "you".',
     },
+    {
+      kind: 'ladder',
+      title: 'Mix it up',
+      intro: 'Mixing this lesson with the ones before it. Take your time building each one.',
+      rungs: [
+        { id: 's03-11', prompt: 'Can we?', answer: 'Putem?' },
+        { id: 's03-12', prompt: 'Are you all coming?', answer: 'Veniți?', teachingNote: 'Also how you\'d ask your partner\'s parents.' },
+        { id: 's03-13', prompt: 'We\'re coming too.', answer: 'Venim și noi.' },
+        { id: 's03-14', prompt: 'What do you want?', answer: 'Ce vrei?' },
+        { id: 's03-15', prompt: 'We\'re working today.', answer: 'Lucrăm azi.' },
+        { id: 's03-16', prompt: '(politely) Do you understand?', answer: 'Înțelegeți?' },
+        { id: 's03-17', prompt: 'I know, I know.', answer: 'Știu, știu.' },
+      ],
+    },
   ],
   shortcut: '-i = you, -m = we, -ți = you all (or polite you). Leave out "I" and "you" unless you\'d stress them.',
   useItToday: 'Ask your partner things with the -i form and no "tu": "Vrei…? Poți…? Știi…?"',
@@ -324,6 +388,13 @@ export const saBridge: StructureLesson = {
       ],
     },
     {
+      kind: 'explain',
+      title: 'A shortcut after pot',
+      body: [
+        'After {{pot}} you can skip the bridge and use the dictionary form: {{Nu pot veni.}} means the same as {{Nu pot să vin.}} Both are everyday.',
+      ],
+    },
+    {
       kind: 'ladder',
       title: 'Build it up',
       rungs: [
@@ -368,6 +439,21 @@ export const saBridge: StructureLesson = {
       answer: 'Vreau să vii cu mine.',
       distractors: ['tu', 'la'],
       note: 'Cu mine — with me.',
+    },
+    {
+      kind: 'ladder',
+      title: 'Mix it up',
+      intro: 'Mixing this lesson with the ones before it. Take your time building each one.',
+      rungs: [
+        { id: 's04-12', prompt: 'Can you help me?', answer: 'Poți să mă ajuți?' },
+        { id: 's04-13', prompt: 'I have to work tomorrow.', answer: 'Trebuie să lucrez mâine.' },
+        { id: 's04-14', prompt: 'Let\'s go home.', answer: 'Hai să mergem acasă.' },
+        { id: 's04-15', prompt: 'Do you want to go out tonight?', answer: 'Vrei să ieșim diseară?', teachingNote: '"Do you want that we go out?" — Romanian naturally makes it "we".' },
+        { id: 's04-16', prompt: 'I don\'t want to go.', answer: 'Nu vreau să merg.' },
+        { id: 's04-17', prompt: 'I want him to eat.', answer: 'Vreau să mănânce.' },
+        { id: 's04-18', prompt: 'He has to sleep.', answer: 'Trebuie să doarmă.' },
+        { id: 's04-19', prompt: 'We can\'t come.', answer: 'Nu putem să venim.', acceptedAlternates: ['Nu putem veni.'] },
+      ],
     },
   ],
   shortcut: '"To" after want / can / must = să + the verb with its normal ending. "I want you to…" = vreau să + the "you" ending.',
@@ -451,7 +537,203 @@ export const doubleNegatives: StructureLesson = {
       distractors: ['ceva'],
       note: 'Three negatives in one sentence — and all of them required.',
     },
+    {
+      kind: 'ladder',
+      title: 'Mix it up',
+      intro: 'Mixing this lesson with the ones before it. Take your time building each one.',
+      rungs: [
+        { id: 's05-10', prompt: 'I haven\'t got anything.', answer: 'N-am nimic.' },
+        { id: 's05-11', prompt: 'There\'s nothing to eat.', answer: 'Nu e nimic de mâncare.' },
+        { id: 's05-12', prompt: 'He never wants to sleep.', answer: 'Nu vrea niciodată să doarmă.' },
+        { id: 's05-13', prompt: 'Nobody wants to go.', answer: 'Nu vrea nimeni să meargă.' },
+        { id: 's05-14', prompt: 'Not now.', answer: 'Nu acum.' },
+        { id: 's05-15', prompt: 'I don\'t like it at all.', answer: 'Nu-mi place deloc.', teachingNote: 'Deloc — at all. It goes with nu, like the other "no" words.' },
+        { id: 's05-16', prompt: 'No way!', answer: 'Nici vorbă!', teachingNote: 'Literally "not even talk (of it)".' },
+      ],
+    },
   ],
   shortcut: 'Keep the nu, and make the "any" word a "no" word: nimic, nimeni, niciodată, nicăieri.',
   useItToday: 'Say "Nu contează", "Nici eu" and "Nimic" at least once today — they come up all the time.',
+}
+
+export const questions: StructureLesson = {
+  id: 's-questions',
+  part: 'Starting from English',
+  title: 'Question words, and one tag for all',
+  tagline: '"Isn\'t it?", "don\'t you?", "haven\'t we?" — all just nu?',
+  shift: {
+    english:
+      'English questions reshuffle the words and add do / does / did — and tags like "isn\'t it?", "don\'t you?", "haven\'t we?" change every time.',
+    romanian: 'Romanian keeps the normal order, and has one tag for everything: {{nu?}} or {{nu-i așa?}}',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'The question words',
+      body: [
+        '{{Ce?}} what · {{Cine?}} who · {{Unde?}} where · {{Când?}} when · {{Cum?}} how · {{De ce?}} why · {{Cât?}} how much · {{Care?}} which.',
+        'Put the question word first, then say the rest exactly as normal: {{Unde mergi?}} — "where you-go?" No "are", no "do".',
+      ],
+      glosses: [
+        { ro: 'Când pleci?', words: [['Când', 'when'], ['pleci', 'you-leave']], en: 'When are you leaving?' },
+        { ro: 'De ce plângi?', words: [['De ce', 'of what'], ['plângi', 'you-cry']], en: 'Why are you crying?' },
+      ],
+    },
+    {
+      kind: 'funnel',
+      title: 'One tag for every English tag',
+      english: ["…isn't it?", "…don't you?", "…haven't we?", "…wasn't he?"],
+      ro: 'Nu-i așa?',
+      caption: 'In quick speech it\'s just a rising "nu?" on the end: "E frumos, nu?"',
+    },
+    {
+      kind: 'explain',
+      title: 'Cât: how much, how many, how long',
+      body: [
+        '{{Cât costă?}} — how much is it? · {{Câți ani are?}} — how old is he? ("how many years has he?") · {{Cât durează?}} — how long does it take? · {{Cât e ceasul?}} — what time is it? ("how much is the clock?")',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Short answers',
+      body: [
+        'English answers "Yes, I do", "No, I haven\'t". Romanian just says {{Da}} or {{Nu}} — or repeats the verb: "Do you want some?" — {{Vreau.}} ("I want.")',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Ask it',
+      rungs: [
+        { id: 's18-01', prompt: 'Where are you going?', answer: 'Unde mergi?' },
+        { id: 's18-02', prompt: 'When are you leaving?', answer: 'Când pleci?' },
+        { id: 's18-03', prompt: 'Why are you crying?', answer: 'De ce plângi?' },
+        { id: 's18-04', prompt: 'Who is it?', answer: 'Cine e?' },
+        { id: 's18-05', prompt: 'How much is it?', answer: 'Cât costă?' },
+        { id: 's18-06', prompt: 'How old is he?', answer: 'Câți ani are?', teachingNote: '"How many years has he?"' },
+        { id: 's18-07', prompt: 'What time is it?', answer: 'Cât e ceasul?' },
+        { id: 's18-08', prompt: 'How long does it take?', answer: 'Cât durează?' },
+        { id: 's18-09', prompt: 'Which one?', answer: 'Care?' },
+        { id: 's18-10', prompt: "It's lovely, isn't it?", answer: 'E frumos, nu?' },
+        { id: 's18-11', prompt: "You're coming too, aren't you?", answer: 'Vii și tu, nu-i așa?' },
+        {
+          id: 's18-12',
+          prompt: 'How do you say it in Romanian?',
+          answer: 'Cum se spune în română?',
+          teachingNote: '"How does one say" — the handy se, which has its own lesson later.',
+        },
+        { id: 's18-13', prompt: "(answering \"Do you want some?\") Yes, I do.", answer: 'Da, vreau.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"He\'s asleep, isn\'t he?"',
+      options: [
+        { text: 'Doarme, nu-i așa?', correct: true },
+        { text: 'Doarme, nu e el?' },
+        { text: 'Doarme, nu doarme?' },
+      ],
+      explanation: 'No need to build the tag from the verb — it\'s always nu-i așa?, or just nu?',
+    },
+    {
+      kind: 'assemble',
+      prompt: "Why aren't you eating?",
+      answer: 'De ce nu mănânci?',
+      distractors: ['faci', 'tu'],
+    },
+  ],
+  shortcut: 'Question word first, then say it normally: Unde mergi? Every English tag is just "nu?" or "nu-i așa?"',
+  useItToday: 'End a few sentences today with "nu?" — "E frumos, nu?" — it\'s how Romanians invite you to agree.',
+}
+
+export const canAndKnow: StructureLesson = {
+  id: 's-can-know',
+  part: 'Starting from English',
+  title: 'Two kinds of "can", two kinds of "know"',
+  tagline: 'Able (pot) or know-how (știu să). A fact (știu) or a person (cunosc).',
+  shift: {
+    english: 'English "can" covers being able and knowing how; "know" covers facts, people and places.',
+    romanian:
+      'Romanian splits them: {{pot}} (I\'m able) or {{știu să}} (I know how) — and {{știu}} (a fact) or {{cunosc}} (a person or a place).',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Can: able, or know how?',
+      body: [
+        '{{Pot să vin}} — I can come: nothing\'s stopping me.',
+        '{{Știu să înot}} — I can swim: I know how. If it\'s a skill, it\'s {{știu să}}: {{Știi să conduci?}} — can you drive?',
+        'Asking permission is {{Pot să…?}}: {{Pot să intru?}} — can I come in?',
+      ],
+      glosses: [
+        {
+          ro: 'Știu să gătesc.',
+          words: [['Știu', 'I-know'], ['să', 'that'], ['gătesc', 'I-cook']],
+          en: 'I can cook.',
+        },
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Know: a fact, or a person?',
+      body: [
+        '{{știu}} is knowing a fact: {{Știu unde e.}} — I know where it is.',
+        '{{cunosc}} is knowing a person or a place: {{O cunosc.}} — I know her. {{Cunosc Bucureștiul.}} — I know Bucharest.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Which one?',
+      intro: 'Before you say each one, ask yourself: skill or possible? Fact or person?',
+      rungs: [
+        { id: 's19-01', prompt: 'I can swim.', answer: 'Știu să înot.' },
+        { id: 's19-02', prompt: 'Can you drive?', answer: 'Știi să conduci?' },
+        {
+          id: 's19-03',
+          prompt: "I can't cook.",
+          answer: 'Nu știu să gătesc.',
+          teachingNote: '"I don\'t know how to cook" — a skill.',
+        },
+        {
+          id: 's19-04',
+          prompt: "I can't come tomorrow.",
+          answer: 'Nu pot să vin mâine.',
+          acceptedAlternates: ['Nu pot veni mâine.'],
+          teachingNote: 'Not a skill — just not possible, so pot.',
+        },
+        { id: 's19-05', prompt: 'Can I come in?', answer: 'Pot să intru?' },
+        { id: 's19-06', prompt: 'I know.', answer: 'Știu.' },
+        { id: 's19-07', prompt: 'I know where it is.', answer: 'Știu unde e.' },
+        { id: 's19-08', prompt: 'Do you know him?', answer: 'Îl cunoști?' },
+        { id: 's19-09', prompt: "I don't know anyone here.", answer: 'Nu cunosc pe nimeni aici.' },
+        {
+          id: 's19-10',
+          prompt: 'He can already count to ten.',
+          answer: 'Știe deja să numere până la zece.',
+          hint: 'deja = already',
+        },
+        { id: 's19-11', prompt: 'Do you know Bucharest?', answer: 'Cunoști Bucureștiul?' },
+        { id: 's19-12', prompt: "I didn't know that.", answer: 'Nu știam asta.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"I know your mum."',
+      options: [{ text: 'Știu mama ta.' }, { text: 'O cunosc pe mama ta.', correct: true }],
+      explanation: 'A person, so cunosc. (The "o… pe" is the heads-up-plus-tag pattern from "Him, her and it go in front".)',
+    },
+    {
+      kind: 'choose',
+      question: '"Do you speak Romanian?"',
+      options: [{ text: 'Poți vorbi română?' }, { text: 'Vorbești română?', correct: true }],
+      explanation: 'For languages, Romanians just ask "do you speak…?". "Poți vorbi" would mean "are you able to speak right now?"',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'Do you know how to make sarmale?',
+      answer: 'Știi să faci sarmale?',
+      distractors: ['poți', 'cunoști'],
+    },
+  ],
+  shortcut: 'Skill → știu să. Possible → pot să. A fact → știu. A person or place → cunosc.',
+  useItToday: 'Tell your partner one thing you can do and one you can\'t: "Știu să…", "Nu știu să…".',
 }

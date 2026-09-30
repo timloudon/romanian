@@ -58,7 +58,11 @@ by exact text — an edited phrase falls back to the built-in voice until regene
 This project uses ElevenLabs' **free plan** (10,000 characters a month; library voices aren't
 available to it via the API, so the Romanian voice is one made with ElevenLabs' Voice Design). Always cap a run below the remaining
 monthly credit, e.g. `npm run generate:audio -- --only ro --max-chars 8600`, and use
-`--dry-run` first to see the size. Voice by ElevenLabs.
+`--dry-run` first to see the size. (Running without a cap is also safe on the free plan — it has
+no overage, so ElevenLabs refuses once the month's credits are gone and the script stops.)
+Phrases are recorded in priority order — Structures first, then This week, then the course — so
+each month's credits go where they matter most, and anything not yet recorded plays in the
+device's voice. Voice by ElevenLabs.
 
 ## How it's built
 
