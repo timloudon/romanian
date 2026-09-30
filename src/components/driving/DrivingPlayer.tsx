@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { audioResolver, phraseId } from '../../audio/AudioResolver'
+import { audioResolver } from '../../audio/AudioResolver'
 import { setMediaSessionHandlers, setMediaSessionMetadata, setMediaSessionPlaybackState } from '../../audio/mediaSession'
-import { stopKeepAlive } from '../../audio/silentKeepAlive'
-import { getAnswerText, getPromptText, sessionItemId, type SessionItem } from '../../engine/session'
+import { setKeepAlive } from '../../audio/player'
+import { getAnswerText, getPromptText, type SessionItem } from '../../engine/session'
 import { usePlayerMachine } from '../../engine/usePlayerMachine'
 import { useVoices } from '../../hooks/useVoices'
 import { sleep } from '../../lib/sleep'
@@ -23,8 +23,16 @@ interface DrivingPlayerProps {
 
 export function DrivingPlayer({ queue, completeMessage, exitHref }: DrivingPlayerProps) {
   const [paused, setPaused] = useState(false)
-  const { romanianVoice, englishVoice } = useVoices()
   const { state, item, selfAssess, dispatch } = usePlayerMachine('driving', queue)
+
+  // Read at speak time rather than as effect dependencies: the device's voice list often
+  // arrives a moment after mount, and restarting speech then is exactly what iPhone Safari
+  // mishandles (a cancel immediately followed by a new utterance can silently drop the new one).
+  const voices = useVoices()
+  const voicesRef = useRef(voices)
+  useEffect(() => {
+    voicesRef.current = voices
+  })
 
   // Lock-screen / Bluetooth media controls.
   useEffect(
@@ -46,10 +54,12 @@ export function DrivingPlayer({ queue, completeMessage, exitHref }: DrivingPlaye
     setMediaSessionPlaybackState(paused ? 'paused' : 'playing')
   }, [paused])
 
-  // Stop everything if the learner navigates away.
+  // The keep-alive loop lives exactly as long as this player, so it survives remounts; the
+  // "Start" tap has already unlocked the audio element, so starting it here is allowed.
   useEffect(() => {
+    setKeepAlive(true)
     return () => {
-      stopKeepAlive()
+      setKeepAlive(false)
       audioResolver.stop()
     }
   }, [])
@@ -64,9 +74,9 @@ export function DrivingPlayer({ queue, completeMessage, exitHref }: DrivingPlaye
     void (async () => {
       try {
         if (state.phase.kind === 'prompt') {
-          await audioResolver.speak(phraseId(sessionItemId(item), 'prompt'), getPromptText(item), {
+          await audioResolver.speak(getPromptText(item), {
             lang: 'en-US',
-            voice: englishVoice,
+            voice: voicesRef.current.englishVoice,
             rate,
             signal: controller.signal,
           })
@@ -75,9 +85,9 @@ export function DrivingPlayer({ queue, completeMessage, exitHref }: DrivingPlaye
           if (controller.signal.aborted) return
           dispatch({ type: 'REVEAL' })
         } else if (state.phase.kind === 'awaiting-self-assessment') {
-          await audioResolver.speak(phraseId(sessionItemId(item), 'answer'), getAnswerText(item), {
+          await audioResolver.speak(getAnswerText(item), {
             lang: 'ro-RO',
-            voice: romanianVoice,
+            voice: voicesRef.current.romanianVoice,
             rate,
             signal: controller.signal,
           })
@@ -93,7 +103,7 @@ export function DrivingPlayer({ queue, completeMessage, exitHref }: DrivingPlaye
     })()
 
     return () => controller.abort()
-  }, [item, state.phase.kind, paused, englishVoice, romanianVoice, dispatch])
+  }, [item, state.phase.kind, paused, dispatch])
 
   if (state.phase.kind === 'complete') {
     return (

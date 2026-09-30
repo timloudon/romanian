@@ -1,4 +1,7 @@
+import { useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
+import { unlockAudio } from './audio/player'
+import { primeSpeechSynthesis } from './audio/speechSynthesis'
 import { InstallBanner } from './components/ui/InstallBanner'
 import { NavBar } from './components/ui/NavBar'
 import { OfflineBanner } from './components/ui/OfflineBanner'
@@ -14,6 +17,22 @@ import { WeekRoute } from './routes/WeekRoute'
 
 function App() {
   const pwa = usePWAUpdate()
+
+  // iPhone only allows audio to start on its own once it's been started from a tap, so unlock
+  // both audio paths on the first tap anywhere — otherwise the first lesson plays in silence.
+  useEffect(() => {
+    const unlock = () => {
+      unlockAudio()
+      primeSpeechSynthesis()
+    }
+    window.addEventListener('touchend', unlock, { capture: true })
+    window.addEventListener('click', unlock, { capture: true })
+    return () => {
+      window.removeEventListener('touchend', unlock, { capture: true })
+      window.removeEventListener('click', unlock, { capture: true })
+    }
+  }, [])
+
   // Driving Mode is a deliberately chrome-free, full-viewport experience — no nav bar or
   // banners competing for space or attention while it's meant to be used hands-free.
   const isDriving = useLocation().pathname === '/driving'

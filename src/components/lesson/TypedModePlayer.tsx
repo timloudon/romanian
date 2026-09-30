@@ -1,6 +1,7 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { audioResolver, phraseId } from '../../audio/AudioResolver'
+import { audioResolver } from '../../audio/AudioResolver'
+import { recordedClipUrl } from '../../audio/recordedAudio'
 import { gradeTypedAnswer } from '../../engine/grading'
 import type { SessionItem } from '../../engine/session'
 import { usePlayerMachine } from '../../engine/usePlayerMachine'
@@ -34,16 +35,22 @@ export function TypedModePlayer({
   const { state, item, selfAssess, dispatch } = usePlayerMachine('typed', queue)
   const drill = item?.kind === 'drill' ? item.drill : undefined
 
+  // Read at speak time, not as a dependency, so the voice list arriving late never re-speaks.
+  const romanianVoiceRef = useRef(romanianVoice)
+  useEffect(() => {
+    romanianVoiceRef.current = romanianVoice
+  })
+
   useEffect(() => {
     if (!drill) return
     if (state.phase.kind === 'revealed' || state.phase.kind === 'graded') {
-      void audioResolver.speak(phraseId(drill.id, 'answer'), drill.answer, {
+      void audioResolver.speak(drill.answer, {
         lang: 'ro-RO',
-        voice: romanianVoice,
+        voice: romanianVoiceRef.current,
         rate: getSettings().playbackRate,
       })
     }
-  }, [drill, state.phase.kind, romanianVoice])
+  }, [drill, state.phase.kind])
 
   if (queue.length === 0) {
     return (
@@ -75,7 +82,7 @@ export function TypedModePlayer({
       <p className="text-sm text-ink-muted">
         {headerLabel} · {state.index + 1} / {state.queue.length}
       </p>
-      {voiceStatus === 'no-romanian-voice' && (
+      {voiceStatus === 'no-romanian-voice' && !recordedClipUrl(drill.answer, 'ro') && (
         <p className="mt-2 rounded-lg bg-flag-red/10 p-3 text-sm text-flag-red">
           No Romanian voice found on this device. On iPhone: Settings → Accessibility → Spoken
           Content → Voices, and add Romanian.

@@ -9,7 +9,9 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "test": "vitest run",
-    "build:vocab": "tsx scripts/build-vocab.ts"
+    "build:vocab": "tsx scripts/build-vocab.ts",
+    "coverage:vocab": "tsx scripts/vocab-coverage.ts",
+    "generate:audio": "tsx scripts/generate-audio.ts"
   },
   "dependencies": {
     "idb": "^8.0.3",

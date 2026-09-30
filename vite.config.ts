@@ -32,24 +32,14 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,woff2}'],
+        // Recorded phrase audio (mp3) is precached rather than cached on first play, so every
+        // clip works offline from the start — not just the ones already heard while online.
+        // Only new or changed files are downloaded when the content updates.
+        globPatterns: ['**/*.{js,css,html,svg,woff2,mp3}'],
         // On a first visit, take control of the open page as soon as everything is cached, so it
         // works offline without needing a second load. Updates still wait for the "Reload" tap:
         // this doesn't enable skipWaiting.
         clientsClaim: true,
-        runtimeCaching: [
-          {
-            // Set up now even though only the driving-mode keepalive file exists today —
-            // pre-generated phrase audio (added later) then gets offline-cached automatically,
-            // with no service-worker config changes.
-            urlPattern: /\/audio\/.*\.mp3$/,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'phrase-audio',
-              expiration: { maxEntries: 2000, maxAgeSeconds: 60 * 60 * 24 * 365 },
-            },
-          },
-        ],
       },
     }),
   ],

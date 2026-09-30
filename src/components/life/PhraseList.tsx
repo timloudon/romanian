@@ -1,4 +1,4 @@
-import { audioResolver, phraseId } from '../../audio/AudioResolver'
+import { audioResolver } from '../../audio/AudioResolver'
 import type { Drill } from '../../content/types'
 import { useVoices } from '../../hooks/useVoices'
 import { getSettings } from '../../storage/settingsRepo'
@@ -14,7 +14,7 @@ export function PhraseList({ drills }: PhraseListProps) {
   function play(drill: Drill) {
     // Without this, tapping several phrases quickly queues them all up behind each other.
     if (window.speechSynthesis.speaking) audioResolver.stop()
-    void audioResolver.speak(phraseId(drill.id, 'answer'), drill.answer, {
+    void audioResolver.speak(drill.answer, {
       lang: 'ro-RO',
       voice: romanianVoice,
       rate: getSettings().playbackRate,

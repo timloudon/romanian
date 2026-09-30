@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { startKeepAlive } from '../audio/silentKeepAlive'
+import { unlockAudio } from '../audio/player'
+import { primeSpeechSynthesis } from '../audio/speechSynthesis'
 import { DrivingPlayer } from '../components/driving/DrivingPlayer'
 import { findLifeTopic } from '../content/life'
 import { drillQueue, dueQueue, type SessionItem } from '../engine/session'
@@ -33,11 +34,10 @@ export function DrivingModeRoute() {
   const exitHref = topicId ? '/week' : '/'
 
   function handleStart() {
-    // Both calls must happen synchronously inside this gesture handler — that's what satisfies
-    // iOS's autoplay policy for the rest of the session (the driving player's own effects then
-    // speak asynchronously without issue).
-    startKeepAlive()
-    window.speechSynthesis.speak(new SpeechSynthesisUtterance(''))
+    // These must run synchronously inside this tap — that's what satisfies iOS's autoplay policy
+    // for the rest of the session (the driving player's own effects then play on timers).
+    unlockAudio()
+    primeSpeechSynthesis()
     if (!noticeAcknowledged) {
       updateSettings({ drivingNoticeAcknowledged: true })
       setNoticeAcknowledged(true)

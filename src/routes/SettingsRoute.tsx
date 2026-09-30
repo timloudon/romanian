@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { recordedClipCount } from '../audio/recordedAudio'
 import { useOfflineStatus } from '../hooks/useConnectivity'
 import { useVoices } from '../hooks/useVoices'
 import { getDB } from '../storage/db'
@@ -30,6 +31,12 @@ export function SettingsRoute() {
 
       <section className="mt-6">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-muted">Voice</h2>
+        {recordedClipCount > 0 && (
+          <p className="mt-2 text-sm">
+            {recordedClipCount} phrases have recorded audio (voice by ElevenLabs) — these work offline and
+            play even with your silent switch on. Anything else uses the built-in voice below.
+          </p>
+        )}
         <p className="mt-2 text-sm">
           {status === 'loading' && 'Checking for a Romanian voice…'}
           {status === 'ready' &&

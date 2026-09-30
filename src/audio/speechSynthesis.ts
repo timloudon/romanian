@@ -89,3 +89,13 @@ export function speak(text: string, options: SpeakOptions): Promise<void> {
 export function stopSpeaking(): void {
   window.speechSynthesis.cancel()
 }
+
+let primed = false
+
+/** iOS won't let speech start outside a tap until it's been started from one once. An empty
+ *  utterance from inside any tap handler is enough to unlock it for the rest of the session. */
+export function primeSpeechSynthesis(): void {
+  if (primed || !('speechSynthesis' in window)) return
+  primed = true
+  window.speechSynthesis.speak(new SpeechSynthesisUtterance(''))
+}

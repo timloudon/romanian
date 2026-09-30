@@ -40,13 +40,36 @@ literals, so a root-absolute path silently 404s under the subpath.
 - `npm run build:vocab` — regenerate `src/content/generated/vocab-top10k.json` from the
   [hermitdave/FrequencyWords](https://github.com/hermitdave/FrequencyWords) Romanian frequency
   list (fetched automatically into the gitignored `scripts/vocab-raw/` on first run)
+- `npm run coverage:vocab [-- <n>]` — how much of the most common vocabulary the drills use,
+  and which of the top `n` words are still missing — a guide for choosing words in new content
+- `npm run generate:audio` — generate recorded audio for new or changed phrases (see below)
+
+## Recorded audio (ElevenLabs)
+
+Phrases play from pre-generated audio files when they exist, and from the device's built-in
+voice otherwise. Recorded clips play offline (they're precached by the service worker), with the
+iPhone's silent switch on, and more reliably in Driving Mode with the screen locked.
+
+Generation reads `ELEVENLABS_API_KEY` and `ELEVENLABS_VOICE_RO` / `ELEVENLABS_VOICE_EN` from
+`.env.local` (gitignored). Files in `public/audio/phrases/` are named by a hash of the text,
+model and voice, so re-running only generates what's new or changed, and the app matches clips
+by exact text — an edited phrase falls back to the built-in voice until regenerated.
+
+This project uses ElevenLabs' **free plan** (10,000 characters a month; library voices aren't
+available to it via the API, so it uses a default voice). Always cap a run below the remaining
+monthly credit, e.g. `npm run generate:audio -- --only ro --max-chars 8600`, and use
+`--dry-run` first to see the size. Voice by ElevenLabs.
 
 ## How it's built
 
 - **No backend.** Progress lives entirely in the browser (IndexedDB), nothing is sent anywhere.
-- **Audio** is the device's built-in text-to-speech (`speechSynthesis`) — free, offline, no API
-  keys. `src/audio/AudioResolver.ts` is written so pre-generated audio files can be dropped in
-  later (e.g. from a paid TTS service) without changing any lesson content or components.
+- **Audio** goes through `src/audio/AudioResolver.ts`: a recorded clip if one exists, otherwise
+  the built-in voice. All clip playback, Driving Mode's keep-alive loop and the lock-screen
+  session share one `<audio>` element (`src/audio/player.ts`) — iOS only lets an element play
+  without a fresh tap once that same element has been played from a tap, so it's unlocked on the
+  first tap anywhere.
+- **Offline:** everything, recorded audio included, is precached by the service worker. The app
+  works with no connection once it's been opened once; Settings shows whether it's ready.
 - **Speaking practice is self-assessed**: you speak your answer out loud, hear the correct
   Romanian, and judge yourself — the same loop Michel Thomas and Say Something In... courses use.
   This needs no speech recognition, so it's fully reliable and works while driving.
@@ -65,9 +88,11 @@ literals, so a root-absolute path silently 404s under the subpath.
 ## Known limitations (by design, for now)
 
 - Content grows over time — the engine is the finished part.
-- On iPhone, Driving Mode's audio is most reliable with the screen on/dimmed rather than fully
-  locked — a documented WebKit limitation of live `speechSynthesis` in the background. This
-  improves once pre-generated audio files replace live TTS.
+- Phrases without a recorded clip use the built-in voice, which on iPhone is muted by the silent
+  switch and is most reliable in Driving Mode with the screen on. The English prompts are
+  currently in this state until next month's free ElevenLabs credits.
+- Safari (not installed to the Home Screen) can clear a site's offline copy and progress after
+  seven days unused. Home Screen apps are exempt.
 - The vocabulary list (`vocab-top10k.json`) is cleaned automatically but still contains some
   residual noise (mostly proper names from the subtitle corpus it's derived from) —
   `scripts/vocab-exclusions.json` is extended opportunistically, not exhaustively audited.
