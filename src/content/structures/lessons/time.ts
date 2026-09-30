@@ -850,3 +850,63 @@ export const lifeStory: StructureLesson = {
   shortcut: 'M-am născut în… · Am crescut la țară / la oraș · M-am mutat la… · Am studiat… · Ne-am cunoscut… · Avem un băiețel de doi ani.',
   useItToday: 'Tell your life story out loud in Romanian, start to finish, once this week.',
 }
+
+export const arranging: StructureLesson = {
+  id: 's-arranging',
+  part: 'Time',
+  title: 'Making arrangements: when, where, it\'s settled',
+  tagline: 'Ne vedem la opt? Rămâne așa.',
+  shift: {
+    english: 'Arranging to meet: "shall we say eight?", "where shall we meet?", "that\'s settled", "let\'s play it by ear".',
+    romanian: '{{Zicem la opt?}}, {{Unde ne întâlnim?}}, {{Rămâne așa.}} ("it stays like that"), {{Vedem pe parcurs.}} ("we\'ll see along the way").',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Fixing it',
+      body: [
+        '{{La ce oră ne vedem?}} · {{Unde ne întâlnim?}} · {{Zicem la opt?}} — shall we say eight? · {{Te aștept la…}} — I\'ll see you at…',
+        '{{Rămâne așa.}} — that\'s settled ("it stays like that").',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Changing it',
+      body: [
+        '{{Putem s-o mutăm pe mâine?}} — can we move it to tomorrow? · {{Întârzii puțin.}} — I\'m running a bit late · {{Hai să anulăm.}} — let\'s cancel · {{Vedem pe parcurs.}} — let\'s play it by ear.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Confirming',
+      body: [
+        '{{Rămâne valabil?}} — is it still on? · {{Stabilim mâine.}} — we\'ll decide tomorrow.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Fix the plan',
+      rungs: [
+        { id: 's116-01', prompt: 'What time shall we meet?', answer: 'La ce oră ne vedem?' },
+        { id: 's116-02', prompt: 'Where shall we meet?', answer: 'Unde ne întâlnim?' },
+        { id: 's116-03', prompt: 'Shall we say eight?', answer: 'Zicem la opt?' },
+        { id: 's116-04', prompt: 'I\'ll see you at the café.', answer: 'Te aștept la cafenea.' },
+        { id: 's116-05', prompt: 'That\'s settled.', answer: 'Rămâne așa.' },
+        { id: 's116-06', prompt: 'Is it still on for tomorrow?', answer: 'Rămâne valabil pentru mâine?' },
+        { id: 's116-07', prompt: 'Can we move it to tomorrow?', answer: 'Putem s-o mutăm pe mâine?' },
+        { id: 's116-08', prompt: 'I\'m running a bit late.', answer: 'Întârzii puțin.' },
+        { id: 's116-09', prompt: 'Let\'s cancel.', answer: 'Hai să anulăm.' },
+        { id: 's116-10', prompt: 'Let\'s play it by ear.', answer: 'Vedem pe parcurs.' },
+        { id: 's116-11', prompt: 'We\'ll decide tomorrow.', answer: 'Stabilim mâine.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"That\'s settled, then."',
+      options: [{ text: 'Rămâne așa.', correct: true }, { text: 'E stabil așa.' }, { text: 'Stă așa.' }],
+      explanation: 'Rămâne așa — "it stays like that" — is how Romanians close an arrangement.',
+    },
+  ],
+  shortcut: 'La ce oră ne vedem? · Unde ne întâlnim? · Zicem la opt? · Rămâne așa · Putem s-o mutăm? · Vedem pe parcurs.',
+  useItToday: 'Make your next plan with your partner in Romanian, and close it with "Rămâne așa."',
+}

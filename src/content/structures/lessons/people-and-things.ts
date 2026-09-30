@@ -1893,3 +1893,70 @@ export const loveAndHate: StructureLesson = {
   shortcut: 'Îmi place < îmi place mult < ador < mor după. Nu prea < deloc < nu suport < urăsc. Prefer…; mai mult… decât…',
   useItToday: 'Tell your partner one thing you adore and one you can\'t stand — in Romanian.',
 }
+
+export const familyTree: StructureLesson = {
+  id: 's-family-tree',
+  part: 'People and things',
+  title: 'The family tree: in-laws, godparents, and nepot',
+  tagline: 'Soacra, cumnatul, nașii — and nepot means two things.',
+  shift: {
+    english: 'English family words are simple: "in-law" covers everything, and a nephew is never a grandson.',
+    romanian: 'Romanian has a word for each in-law — {{socru}}, {{soacră}}, {{cumnat}} — {{nepot}} is both grandson and nephew, and the godparents, {{nașii}}, are family for life.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'In-laws',
+      body: [
+        '{{socrul}} — father-in-law · {{soacra}} — mother-in-law · {{cumnatul}} / {{cumnata}} — brother- / sister-in-law · {{ginerele}} — son-in-law · {{nora}} — daughter-in-law.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Nepot: grandson and nephew',
+      body: [
+        '{{nepot}} / {{nepoată}} means grandson / granddaughter **and** nephew / niece. Context tells you which: {{Bunica își iubește nepotul.}} — Grandma loves her grandson.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Aunts, uncles, cousins',
+      body: [
+        '{{unchi}} — uncle · {{mătușă}} — aunt · {{văr}} / {{verișoară}} — cousin.',
+        '{{tanti}} — "auntie", used affectionately for any older woman a child knows: {{Salut-o pe tanti!}}',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Godparents',
+      body: [
+        '{{nașul}} / {{nașa}} — godfather / godmother. They\'re often the couple who were the witnesses at the wedding too, and the bond lasts a lifetime. {{finul}} / {{fina}} — godson / goddaughter.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Who\'s who',
+      rungs: [
+        { id: 's114-01', prompt: 'Father-in-law and mother-in-law.', answer: 'Socrul și soacra.' },
+        { id: 's114-02', prompt: 'My brother-in-law is coming too.', answer: 'Vine și cumnatul meu.' },
+        { id: 's114-03', prompt: 'Grandma loves her grandson.', answer: 'Bunica își iubește nepotul.' },
+        { id: 's114-04', prompt: 'My nephew is five.', answer: 'Nepotul meu are cinci ani.' },
+        { id: 's114-05', prompt: 'His granddaughter.', answer: 'Nepoata lui.' },
+        { id: 's114-06', prompt: 'My uncle and aunt.', answer: 'Unchiul și mătușa mea.' },
+        { id: 's114-07', prompt: 'Your cousin.', answer: 'Vărul tău.' },
+        { id: 's114-08', prompt: 'The godparents are coming for Easter.', answer: 'Vin nașii de Paște.' },
+        { id: 's114-09', prompt: 'He\'s our godson.', answer: 'E finul nostru.' },
+        { id: 's114-10', prompt: '(to him) Say hello to auntie!', answer: 'Salut-o pe tanti!' },
+        { id: 's114-11', prompt: 'The whole family\'s here.', answer: 'E toată familia aici.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: 'Grandma says "Nepotul meu e cel mai frumos!" about your son. Nepot here means…',
+      options: [{ text: 'nephew' }, { text: 'grandson', correct: true }],
+      explanation: 'Nepot is both — from Grandma, it\'s her grandson.',
+    },
+  ],
+  shortcut: 'Socru / soacră = in-laws. Cumnat(ă) = brother / sister-in-law. Nepot = grandson AND nephew. Unchi, mătușă, văr. Nașii = godparents (a big deal). Tanti = auntie.',
+  useItToday: 'Draw the family tree with your partner and label it in Romanian.',
+}

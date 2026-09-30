@@ -1549,3 +1549,68 @@ export const apologising: StructureLesson = {
   shortcut: 'Small: scuze / pardon. Regret: îmi pare rău. Real apology: te rog să mă ierți. A fost vina mea · nu se mai întâmplă · te iert.',
   useItToday: 'Next time you say sorry, pick the right level in Romanian.',
 }
+
+export const regions: StructureLesson = {
+  id: 's-regions',
+  part: 'Sounding natural',
+  title: 'Regional flavours: what you\'ll hear where',
+  tagline: 'No, fain, amu · îs · făcui · bre.',
+  shift: {
+    english: 'British English changes from Glasgow to Cornwall, and you learn to hear "wee" and "innit".',
+    romanian: 'Romanian changes too: Transylvania says {{no}} and {{fain}}, Moldova says {{îs}}, Oltenia keeps a one-word past ({{făcui}}), Bucharest says {{bre}}.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'Transylvania (Ardeal)',
+      body: [
+        '{{No}} — well, so, OK (it doesn\'t mean "no"!) · {{fain}} — nice, great · {{amu}} — now · {{musai}} — must · {{Nu-i bai.}} — no worries. The speech is slower, with a sing-song lilt.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Moldova',
+      body: [
+        '{{îs}} — sunt (am / are). Some sounds soften: bine can sound like "ghine", piatră like "chiatră", and pe like "pi".',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Oltenia',
+      body: [
+        'A one-word past for things that just happened: {{făcui}} (I did), {{mersei}} (I went), {{zisei}} (I said) — the "simple past" the rest of Romania only writes.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Bucharest and the south',
+      body: [
+        '{{bre}} — mate, hey: {{Hai, bre!}} · lots of {{mișto}} and {{nașpa}} · quick, clipped speech.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Hear the region',
+      intro: 'Say each one the regional way.',
+      rungs: [
+        { id: 's115-01', prompt: '(Transylvania) Well, let\'s go!', answer: 'No, hai!' },
+        { id: 's115-02', prompt: '(Transylvania) It\'s nice!', answer: 'E fain!' },
+        { id: 's115-03', prompt: '(Transylvania) Now.', answer: 'Amu.' },
+        { id: 's115-04', prompt: '(Transylvania) I really must go.', answer: 'Musai să plec.' },
+        { id: 's115-05', prompt: '(Moldova) Where are they?', answer: 'Unde îs?' },
+        { id: 's115-06', prompt: '(Oltenia) I went to the market.', answer: 'Mersei la piață.' },
+        { id: 's115-07', prompt: '(Oltenia) What did I say?', answer: 'Ce zisei?' },
+        { id: 's115-08', prompt: '(Bucharest) Come on, mate!', answer: 'Hai, bre!' },
+        { id: 's115-09', prompt: '(Bucharest) Cool, mate!', answer: 'Mișto, bre!' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: 'Someone from Cluj says "No, hai!" They mean…',
+      options: [{ text: 'No, go away!' }, { text: 'Well, come on then!', correct: true }],
+      explanation: 'In Transylvania, no is a filler — "well", "so", "OK".',
+    },
+  ],
+  shortcut: 'Ardeal: no (= well!), fain, amu, musai. Moldova: îs, softened b and p. Oltenia: făcui, mersei. Bucharest: bre.',
+  useItToday: 'Ask your partner which of these their family says — and which they tease other regions for.',
+}
