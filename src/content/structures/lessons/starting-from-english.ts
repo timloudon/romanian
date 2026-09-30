@@ -737,3 +737,78 @@ export const canAndKnow: StructureLesson = {
   shortcut: 'Skill → știu să. Possible → pot să. A fact → știu. A person or place → cunosc.',
   useItToday: 'Tell your partner one thing you can do and one you can\'t: "Știu să…", "Nu știu să…".',
 }
+
+export const verbFamilies: StructureLesson = {
+  id: 's-verb-families',
+  part: 'Starting from English',
+  title: 'The one table worth knowing: -ez and -esc verbs',
+  tagline: 'Learn the "I" form, and the rest follows.',
+  shift: {
+    english: 'English verbs barely change: I work, you work, he works.',
+    romanian: 'Romanian verbs change for everyone — but most belong to two big families. Know the family and you can say any verb for anyone.',
+  },
+  steps: [
+    {
+      kind: 'explain',
+      title: 'The -ez family',
+      body: [
+        'Lots of -a verbs, especially modern ones: {{lucrez}} (I work), {{lucrezi}}, {{lucrează}}, {{lucrăm}}, {{lucrați}}, {{lucrează}}.',
+        'The same pattern: {{organizez}}, {{visez}} (I dream), {{lucrez}}, {{parchez}} (I park).',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The -esc family',
+      body: [
+        'Most -i verbs: {{vorbesc}} (I speak), {{vorbești}}, {{vorbește}}, {{vorbim}}, {{vorbiți}}, {{vorbesc}}.',
+        'The same pattern: {{citesc}}, {{iubesc}}, {{mulțumesc}}, {{gândesc}}.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'Which family?',
+      body: [
+        'You can\'t always guess, so learn every new verb in its "I" form — {{lucrez}}, {{vorbesc}} — and the family is obvious.',
+        '**I** -ez / -esc · **you** -ezi / -ești · **he / she** -ează / -ește · **we** -ăm / -im · **you all** -ați / -iți · **they** -ează / -esc.',
+      ],
+    },
+    {
+      kind: 'explain',
+      title: 'The irregular dozen',
+      body: [
+        'The most common verbs are their own thing, and worth learning whole: {{sunt}}, {{am}}, {{vreau}}, {{pot}}, {{fac}}, {{știu}}, {{merg}}, {{vin}}, {{dau}}, {{iau}}, {{stau}}, {{zic}}.',
+      ],
+    },
+    {
+      kind: 'ladder',
+      title: 'Everyone, every verb',
+      rungs: [
+        { id: 's45-01', prompt: 'He\'s working.', answer: 'Lucrează.' },
+        { id: 's45-02', prompt: 'We\'re working.', answer: 'Lucrăm.' },
+        { id: 's45-03', prompt: 'Do you all work here?', answer: 'Lucrați aici?' },
+        { id: 's45-04', prompt: 'She speaks Romanian.', answer: 'Vorbește română.' },
+        { id: 's45-05', prompt: 'We speak English at home.', answer: 'Vorbim engleză acasă.' },
+        { id: 's45-06', prompt: '(politely) Do you speak English?', answer: 'Vorbiți engleză?' },
+        { id: 's45-07', prompt: 'He\'s reading.', answer: 'Citește.' },
+        { id: 's45-08', prompt: 'They love each other.', answer: 'Se iubesc.' },
+        { id: 's45-09', prompt: '(from both of you) Thank you.', answer: 'Vă mulțumim.' },
+        { id: 's45-10', prompt: 'He dreams a lot.', answer: 'Visează mult.' },
+        { id: 's45-11', prompt: 'We\'re thinking about it.', answer: 'Ne gândim.' },
+      ],
+    },
+    {
+      kind: 'choose',
+      question: '"She works a lot."',
+      options: [{ text: 'Lucrez mult.' }, { text: 'Lucrează mult.', correct: true }, { text: 'Lucrezi mult.' }],
+      explanation: '-ează is he / she. -ez is I, -ezi is you.',
+    },
+    {
+      kind: 'assemble',
+      prompt: 'We speak Romanian with his grandparents.',
+      answer: 'Vorbim română cu bunicii lui.',
+      distractors: ['vorbesc', 'vorbiți'],
+    },
+  ],
+  shortcut: 'Learn verbs in the "I" form. -ez: -ez, -ezi, -ează, -ăm, -ați. -esc: -esc, -ești, -ește, -im, -iți.',
+  useItToday: 'Pick one new verb today and say it for everyone at home: "lucrez, lucrezi, lucrează…".',
+}

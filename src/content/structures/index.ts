@@ -1,5 +1,19 @@
 import type { Drill } from '../types'
 import {
+  asIf,
+  beforeAfter,
+  ever,
+  hadDone,
+  mustHave,
+  neitherNor,
+  passive,
+  presumptive,
+  soThat,
+  someAny,
+  whileDoing,
+  wordBuilding,
+} from './lessons/advanced'
+import {
   genitive,
   handySe,
   reported,
@@ -30,7 +44,9 @@ import {
   noIng,
   questions,
   saBridge,
+  verbFamilies,
 } from './lessons/starting-from-english'
+import { fillers, getTakeMake, idioms, numbersAndTime, polite, wordOrder } from './lessons/sounding-natural'
 import { future, past, since, usedTo, would } from './lessons/time'
 import type { StructureLesson, StructurePart } from './types'
 
@@ -39,6 +55,7 @@ export const structureLessons: StructureLesson[] = [
   cognates,
   noIng,
   endings,
+  verbFamilies,
   questions,
   saBridge,
   canAndKnow,
@@ -68,6 +85,24 @@ export const structureLessons: StructureLesson[] = [
   whoWhich,
   smallAndSweet,
   reported,
+  mustHave,
+  presumptive,
+  hadDone,
+  whileDoing,
+  passive,
+  ever,
+  beforeAfter,
+  soThat,
+  neitherNor,
+  asIf,
+  someAny,
+  wordBuilding,
+  getTakeMake,
+  fillers,
+  idioms,
+  wordOrder,
+  polite,
+  numbersAndTime,
 ]
 
 export const structureParts: { part: StructurePart; blurb: string }[] = [
@@ -77,7 +112,11 @@ export const structureParts: { part: StructurePart; blurb: string }[] = [
   { part: 'Joining ideas', blurb: 'Telling people what to do, and gluing thoughts together.' },
   {
     part: 'Going further',
-    blurb: 'The advanced shapes that make you sound fluent — should have, whose, the one that, it broke itself.',
+    blurb: 'The advanced shapes that make you sound fluent — should have, whose, the one that, I wonder, had done.',
+  },
+  {
+    part: 'Sounding natural',
+    blurb: 'Beyond grammar: the verbs, fillers, idioms, word order and politeness that make you sound like you live there.',
   },
 ]
 
