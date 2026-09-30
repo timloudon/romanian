@@ -131,6 +131,16 @@ import {
   saCaCa,
   verbMap,
 } from './lessons/pulling-it-together'
+import {
+  convCarHire,
+  convDinner,
+  convHisDay,
+  convMakeUp,
+  convMarket,
+  convPharmacy,
+  convPhone,
+  convWeekend,
+} from './lessons/conversations'
 import type { StructureLesson, StructurePart } from './types'
 
 /** In suggested order — each lesson leans only on the ones before it, but any can be opened. */
@@ -251,6 +261,14 @@ export const structureLessons: StructureLesson[] = [
   verbMap,
   pronounMap,
   nounMap,
+  convDinner,
+  convPhone,
+  convPharmacy,
+  convMarket,
+  convWeekend,
+  convHisDay,
+  convMakeUp,
+  convCarHire,
 ]
 
 export const structureParts: { part: StructurePart; blurb: string }[] = [
@@ -269,6 +287,10 @@ export const structureParts: { part: StructurePart; blurb: string }[] = [
   {
     part: 'Pulling it together',
     blurb: 'The little words that do the most jobs — mai, de, pe, să / că — each laid out side by side.',
+  },
+  {
+    part: 'Conversations',
+    blurb: 'Whole exchanges from your real life, where you play your side out loud — dinner, phone calls, the pharmacy, the market.',
   },
 ]
 
@@ -357,6 +379,9 @@ export function structureRomanianPhrases(lesson: StructureLesson): string[] {
         break
       case 'assemble':
         phrases.push(step.answer)
+        break
+      case 'dialogue':
+        phrases.push(...step.lines.map((line) => line.ro))
         break
       case 'choose':
         break

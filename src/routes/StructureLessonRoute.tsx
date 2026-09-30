@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { AssembleStep } from '../components/structures/AssembleStep'
 import { ChooseStep } from '../components/structures/ChooseStep'
+import { DialogueStep } from '../components/structures/DialogueStep'
 import { ExplainStep } from '../components/structures/ExplainStep'
 import { FunnelStep } from '../components/structures/FunnelStep'
 import { LadderStep } from '../components/structures/LadderStep'
@@ -14,7 +15,7 @@ import { getSettings, updateSettings } from '../storage/settingsRepo'
 
 /** Steps you have to do something in before moving on; the rest are there to read. */
 function isInteractive(step: StructureStep): boolean {
-  return step.kind === 'ladder' || step.kind === 'assemble' || step.kind === 'choose'
+  return step.kind === 'ladder' || step.kind === 'assemble' || step.kind === 'choose' || step.kind === 'dialogue'
 }
 
 export function StructureLessonRoute() {
@@ -134,6 +135,8 @@ function StepView({
       return <AssembleStep step={step} onSpeak={onSpeak} onComplete={onComplete} />
     case 'choose':
       return <ChooseStep step={step} onComplete={onComplete} />
+    case 'dialogue':
+      return <DialogueStep step={step} onSpeak={onSpeak} onComplete={onComplete} />
   }
 }
 

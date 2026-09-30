@@ -92,7 +92,8 @@ device's voice. Voice by ElevenLabs.
     every past is "I have done"; "to me it's cold"…) taught card by card: explanations with
     word-by-word "think it as" glosses, many-English-into-one-Romanian funnels, a
     yesterday/now/tomorrow dial, spoken Michel Thomas–style build-up ladders (self-assessed, and
-    fed into Review), word-tile ordering and "spot the English habit" questions — ending in a
+    fed into Review), word-tile ordering, "spot the English habit" questions, and scripted
+    dialogues where you play your side of a real exchange out loud — ending in a
     one-line shortcut, collected on a Shortcuts page. Each part also offers a shuffled
     40-phrase Driving Mode run (`/driving?part=<name>`). Lesson text marks Romanian as `{{…}}`,
     which renders tappable and is picked up by the audio generator.

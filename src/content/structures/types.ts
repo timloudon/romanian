@@ -10,7 +10,15 @@ import type { Drill } from '../types'
  * Romanian word or phrase, which is highlighted and plays when tapped.
  */
 
-export type StructurePart = 'Starting from English' | 'Time' | 'People and things' | 'Joining ideas' | 'Going further' | 'Sounding natural' | 'Pulling it together'
+export type StructurePart =
+  | 'Starting from English'
+  | 'Time'
+  | 'People and things'
+  | 'Joining ideas'
+  | 'Going further'
+  | 'Sounding natural'
+  | 'Pulling it together'
+  | 'Conversations'
 
 /** A Romanian sentence with a word-by-word literal ("think it as") gloss underneath. */
 export interface Gloss {
@@ -18,6 +26,12 @@ export interface Gloss {
   /** [Romanian chunk, literal English] pairs, in Romanian order. */
   words: [string, string][]
   /** How you'd actually say it in English. */
+  en: string
+}
+
+export interface DialogueLine {
+  who: 'them' | 'you'
+  ro: string
   en: string
 }
 
@@ -45,6 +59,10 @@ export type StructureStep =
   | { kind: 'assemble'; prompt: string; answer: string; distractors?: string[]; note?: string }
   /** "Spot the English habit": one right option, and why. */
   | { kind: 'choose'; question: string; options: { text: string; correct?: true }[]; explanation: string }
+  /** A scripted exchange where you play one side: their lines play in Romanian (English on tap),
+   *  your lines give the English cue for you to say before revealing — the Say Something In
+   *  conversation drill. */
+  | { kind: 'dialogue'; title: string; setting: string; lines: DialogueLine[] }
 
 export interface StructureLesson {
   id: string
